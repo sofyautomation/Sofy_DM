@@ -1,0 +1,2417 @@
+{
+  "id" : "551f28de-b9b2-4f38-aa90-93562716ca8f",
+  "name" : "Github Config Template 1721991342788",
+  "description" : "Description created for github 1721991342968",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox",
+  "createdBy" : "Automation source",
+  "updatedBy" : "Automation source",
+  "createdOn" : "2024-07-26T10:55:49.322Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ {
+      "segregationKeys" : [ "hiPages_WF_023_BulkLoad_PaymentMethod", "Print Invoices", "Chargebacks -> Write Off Invoice + Cancel Subscription", "Custom Invoice", "Invoice 30 Days Past Due, Account Summary", "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ", "Resume Subscriptions for Accounts with Zero Balance Limit 1", "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1" ],
+      "originalPayload" : {
+        "export" : {
+          "1" : {
+            "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 1,
+                "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ ]
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : "0 0 0 /1 * *",
+                "timezone" : "Eastern Time (US & Canada)",
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "35px"
+                },
+                "notifications" : { },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 1,
+                "name" : "Notify About Late Fee",
+                "parameters" : {
+                  "email" : {
+                    "cc" : [ ],
+                    "to" : [ "test@test.com" ],
+                    "bcc" : [ ],
+                    "from" : "",
+                    "name" : "",
+                    "subject" : "Late Payment Fee Applied",
+                    "reply_to" : "",
+                    "template" : "<p><br></p>\r\n\r\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\r\n<meta http-equiv=\"Content-Language\" content=\"en-us\">\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<title>Zuora - Workflow Email Templates</title>\r\n\r\n<style type=\"text/css\">.zuora a, .zuora a:link { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; } .zuora a:visited { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; } .zuora a:hover  { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; text-decoration:underline; } .zuora_font {font-family: verdana,arial; font-size: 11px; color: rgb(0, 0, 0); line-height: 16px;} </style>\r\n\r\n<div style=\"text-align: center;\"><img src=\"https://workflow.apps.zuora.com/zuora_header.png\" style=\"width: 685px;\"></div>\r\n<center>\r\n  <table class=\"zuora\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"685\" style=\"margin-top:0px\">\r\n    <tbody>\r\n      <tr>\r\n        <td colspan=\"3\" bgcolor=\"#d5d5d5\" height=\"1\"></td>\r\n      </tr>\r\n      <tr>\r\n        <td bgcolor=\"#d5d5d5\" width=\"1\"></td>\r\n        <td align=\"left\" bgcolor=\"#ffffff\" height=\"130\" valign=\"top\" width=\"683\">\r\n          <table cellpadding=\"0\" cellspacing=\"0\" width=\"647\" style=\"margin-left:10px\">\r\n            <tbody>\r\n              <tr>\r\n                <td colspan=\"3\" height=\"15\">&nbsp;</td>\r\n              </tr>\r\n              <tr>\r\n                <td align=\"left\" valign=\"top\" width=\"647\">\r\n                  <p>\r\n                    <font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\">\r\n                      Hello {{Data.Account.Name}},\r\n                    </font>\r\n                  </p>\r\n                  <p>\r\n                    <font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\">\r\n                      </font></p><p><font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\">We would like to inform you that a late payment fee has been applied to your subscription &nbsp;{{Data.Subscription.Name}} due to an unpaid balance on your account. Please update your payment information or call to provide payment of </font><span style=\"background-color: transparent;\">{{Data.Account.Balance}}.</span></p><p><font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\"></font></p>\r\n                </td>\r\n              </tr>\r\n              <tr>\r\n                <td align=\"left\" valign=\"top\" width=\"647\">\r\n                  <font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\">\r\n                    <br>\r\n                    <p>Thanks,&nbsp;</p>\r\n                    <br>\r\n                    Zuora, Inc. - Powering the subscription economy\r\n                  </font>\r\n                </td>\r\n              </tr>\r\n              <tr><td>&nbsp;</td></tr>\r\n            </tbody>\r\n          </table>\r\n        </td>\r\n        <td bgcolor=\"#d5d5d5\" height=\"1\" width=\"1\"></td>\r\n      </tr>\r\n      <tr>\r\n        <td colspan=\"3\" bgcolor=\"#d5d5d5\" height=\"1px\"></td>\r\n      </tr>\r\n      <tr>\r\n        <td height=\"10\"></td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n  <table cellpadding=\"0\" cellspacing=\"0\" width=\"685\">\r\n    <tbody>\r\n      <tr>\r\n        <td align=\"center\" height=\"10\">\r\n          <font class=\"zuora_font\" color=\"#666666\" face=\"arial,verdana\" size=\"1\">\r\n            Copyright © 2008-2016, Zuora Inc. All Rights Reserved.\r\n          </font>\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n</center>",
+                    "preview_only" : "true"
+                  },
+                  "files" : { },
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Email",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 2,
+                "css" : {
+                  "top" : "200px",
+                  "left" : "544px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 2,
+                "name" : "Apply Late Fee - Edit to select RatePlan",
+                "parameters" : {
+                  "fields" : {
+                    "Amendment" : {
+                      "Name" : "Add Late Fee",
+                      "Product" : "2c92c0f9590007a201590f3397093bef",
+                      "RatePlanId" : "2c92c0f859067f4401590f33f50c2d4a",
+                      "Description" : "Add Late Fee",
+                      "ContractEffectiveDate" : "{{Data.Workflow.ExecutionDate}}",
+                      "ServiceActivationDate" : "{{Data.Workflow.ExecutionDate}}",
+                      "CustomerAcceptanceDate" : "{{Data.Workflow.ExecutionDate}}"
+                    }
+                  },
+                  "options" : {
+                    "Amendment" : {
+                      "GenerateInvoice" : "true",
+                      "ProcessPayments" : "false",
+                      "ApplyCreditBalance" : "false"
+                    }
+                  },
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "NewProduct",
+                "object" : "Amendment",
+                "object_id" : "{{Data.Subscription.Id}}",
+                "call_type" : "SOAP",
+                "task_id" : 3,
+                "css" : {
+                  "top" : "200px",
+                  "left" : "184px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 3,
+                "name" : "Iterate Subscriptions",
+                "parameters" : {
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Default",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Iterate",
+                "object" : "Subscription__4.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 4,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "624px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 4,
+                "name" : "Export Subscriptions tied to Late Accounts",
+                "parameters" : {
+                  "fields" : {
+                    "Account" : {
+                      "Name" : "true",
+                      "Balance" : "true",
+                      "AccountNumber" : "true"
+                    },
+                    "Subscription" : {
+                      "Id" : "true",
+                      "Name" : "true"
+                    }
+                  },
+                  "where_clause" : "Subscription.Status = 'Active' AND Account.Balance > 0 AND Account.LastInvoiceDate  < 'today - 10 day' Limit 1",
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Export",
+                "object" : "Subscription",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "314px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : 1,
+                "source_task_id" : null,
+                "target_task_id" : 4,
+                "linkage_type" : "Start"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 4,
+                "target_task_id" : 3,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 3,
+                "target_task_id" : 2,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 2,
+                "target_task_id" : 1,
+                "linkage_type" : "Success"
+              } ]
+            }
+          },
+          "2" : {
+            "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 2,
+                "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+                "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+                "parameters" : {
+                  "fields" : [ ]
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : null,
+                "timezone" : null,
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "35px"
+                },
+                "notifications" : {
+                  "emails" : [ ],
+                  "failure" : false,
+                  "pending" : false,
+                  "success" : false
+                },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 5,
+                "name" : "Pull Refunds from Chargebacks where Invoice Balance > 0 ",
+                "parameters" : {
+                  "fields" : {
+                    "Refund" : {
+                      "Id" : "true",
+                      "ReasonCode" : "true",
+                      "RefundDate" : "true"
+                    },
+                    "Invoice" : {
+                      "Id" : "true",
+                      "Balance" : "true",
+                      "InvoiceDate" : "true",
+                      "InvoiceNumber" : "true"
+                    }
+                  },
+                  "where_clause" : "Refund.ReasonCode = 'Chargeback' and Invoice.Balance > 0",
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Export",
+                "object" : "RefundInvoicePayment",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "39.9844px",
+                  "left" : "339.984px"
+                },
+                "concurrent_limit" : 4,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 6,
+                "name" : "Cancel Subscription",
+                "parameters" : {
+                  "fields" : {
+                    "Amendment" : {
+                      "Name" : "Chargeback Cancellation",
+                      "Description" : "Chargeback Cancellation",
+                      "EffectiveDate" : "{% if Data.Workflow.ExecutionDate > Data.Subscription.SubscriptionEndDate %}{{ Data.Subscription.SubscriptionEndDate }}{% else %}{{ Data.Workflow.ExecutionDate }}{% endif %}",
+                      "ContractEffectiveDate" : "{{Data.Workflow.ExecutionDate}}"
+                    }
+                  },
+                  "options" : {
+                    "Amendment" : {
+                      "GenerateInvoice" : "false"
+                    }
+                  },
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Cancel",
+                "object" : "Amendment",
+                "object_id" : "{{Data.Subscription.Id}}",
+                "call_type" : "SOAP",
+                "task_id" : 7,
+                "css" : {
+                  "top" : "170px",
+                  "left" : "910px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 7,
+                "name" : "Iterate Subscriptions",
+                "parameters" : {
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "Id",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Iterate",
+                "object" : "Subscription__5.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 10,
+                "css" : {
+                  "top" : "170px",
+                  "left" : "640px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 8,
+                "name" : "Iterate Unique Invoices",
+                "parameters" : {
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "Invoice.Id",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Iterate",
+                "object" : "RefundInvoicePayment__5.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 9,
+                "css" : {
+                  "top" : "30px",
+                  "left" : "640px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 9,
+                "name" : "Write-off Invoice",
+                "parameters" : {
+                  "fields" : {
+                    "write_off" : {
+                      "ReasonCode" : "Chargeback",
+                      "ReferenceId" : "",
+                      "AdjustmentDate" : "{{Data.Refund.RefundDate}}",
+                      "DeferredRevenueAccount" : "",
+                      "RecognizedRevenueAccount" : "",
+                      "TaxationItemDeferredRevenueAccount" : "",
+                      "TaxationItemRecognizedRevenueAccount" : ""
+                    }
+                  },
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "WriteOff",
+                "object" : null,
+                "object_id" : "{{Data.Invoice.Id}}",
+                "call_type" : "SOAP",
+                "task_id" : 8,
+                "css" : {
+                  "top" : "30px",
+                  "left" : "910px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 10,
+                "name" : "Get Active Subscriptions",
+                "parameters" : {
+                  "fields" : {
+                    "Subscription" : {
+                      "Id" : "true",
+                      "Status" : "true",
+                      "SubscriptionEndDate" : "true",
+                      "SubscriptionStartDate" : "true"
+                    }
+                  },
+                  "batch_size" : "2000",
+                  "where_clause" : "Id = '{{ Data.InvoiceItem | map: \"SubscriptionId\" | join: \"' OR Id = '\"}}' AND Status = 'Active'",
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Query",
+                "object" : "Subscription",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 9,
+                "css" : {
+                  "top" : "170px",
+                  "left" : "340px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : null,
+                "source_task_id" : 7,
+                "target_task_id" : 6,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 10,
+                "target_task_id" : 7,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 9,
+                "target_task_id" : 10,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 8,
+                "target_task_id" : 9,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 5,
+                "target_task_id" : 8,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : 2,
+                "source_task_id" : null,
+                "target_task_id" : 5,
+                "linkage_type" : "Start"
+              } ]
+            }
+          },
+          "3" : {
+            "Custom Invoice_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Custom Invoice",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 3,
+                "name" : "Custom Invoice",
+                "description" : "",
+                "parameters" : { },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : null,
+                "timezone" : null,
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "30px"
+                },
+                "notifications" : { },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 11,
+                "name" : "Get Usage Invoice Items",
+                "parameters" : {
+                  "fields" : {
+                    "InvoiceItem" : {
+                      "ChargeId" : "true",
+                      "ChargeName" : "true",
+                      "ChargeType" : "true",
+                      "ChargeNumber" : "true"
+                    }
+                  },
+                  "placement" : "",
+                  "batch_size" : "1",
+                  "where_clause" : "InvoiceId = '{{Data.Invoice[0].Id}}' AND ChargeType = 'Usage'",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Query",
+                "object" : "InvoiceItem",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 658,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "710px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 12,
+                "name" : "Get Usage",
+                "parameters" : {
+                  "fields" : {
+                    "Usage" : {
+                      "UOM" : "true",
+                      "Quantity" : "true",
+                      "StartDateTime" : "true"
+                    }
+                  },
+                  "placement" : "",
+                  "batch_size" : "2000",
+                  "where_clause" : " ChargeNumber = '{{Data.InvoiceItem[0].ChargeNumber}}'",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Query",
+                "object" : "Usage",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 658,
+                "css" : {
+                  "top" : "370px",
+                  "left" : "270px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 13,
+                "name" : "Invoice Items Exists",
+                "parameters" : {
+                  "if_clause" : "{% if Data.InvoiceItem[0] %}\r\nTrue\r\n{% else %}\r\nFalse\r\n{% endif %}",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "If",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 11,
+                "css" : {
+                  "top" : "170px",
+                  "left" : "620px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 14,
+                "name" : "Create Invoice",
+                "parameters" : {
+                  "template" : "<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<meta charset=\"utf-8\" />\r\n\r\n<head>\r\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/paper-css/0.4.1/paper.css\">\r\n    <style>\r\n        @page {\r\n            size: A4\r\n        }\r\n\r\n        * {\r\n            box-sizing: border-box;\r\n        }\r\n\r\n        html,\r\n        body {\r\n            font-family: \"brandon-grotesque\", sans-serif;\r\n            font-size: 10px;\r\n        }\r\n\r\n        .sheet {\r\n            display: flex;\r\n        }\r\n\r\n        .section {\r\n            margin-bottom: 7px;\r\n        }\r\n\r\n        .sectionInner{\r\n            border-top: none;\r\n            padding: 5px;\r\n        }\r\n\r\n        .sectionHeader {\r\n            -webkit-print-color-adjust: exact;\r\n            background-color: #E7873C;\r\n            color: white;\r\n            padding: 8px;\r\n            font-weight: 600;\r\n        }\r\n\r\n        .sectionBody h4 {\r\n            font-size: 20px;\r\n            color:#ff8c00 ;\r\n            margin-top: 0;\r\n            letter-spacing: 1px;\r\n            padding-bottom: 10px;\r\n        }\r\n\r\n        .row {\r\n            display: flex;\r\n            flex-direction: row;\r\n            flex-wrap: wrap;\r\n            width: 100%;\r\n        }\r\n\r\n        .column {\r\n            display: flex;\r\n            flex: 1;\r\n            flex-direction: column;\r\n        }\r\n\r\n        .highcharts-credits {\r\n            display: none;\r\n        }\r\n\r\n        .chart-container {\r\n            width: 160px;\r\n            float: left;\r\n            height: 120px;\r\n        }\r\n\r\n        #graph-usage, #graph-cost {\r\n            height: 310px;\r\n        }\r\n    </style>\r\n    <script src=\"https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/barcodes/JsBarcode.code128.min.js\"></script>\r\n    <script src=\"https://code.highcharts.com/highcharts.js\"></script>\r\n    <script src=\"https://code.highcharts.com/modules/series-label.js\"></script>\r\n    <script src=\"https://code.highcharts.com/modules/exporting.js\"></script>\r\n    <script src=\"https://code.highcharts.com/modules/export-data.js\"></script>\r\n    <script src=\"https://code.highcharts.com/highcharts-more.js\"></script>\r\n    <script src=\"https://code.highcharts.com/modules/solid-gauge.js\"></script>\r\n    <script src=\"//use.typekit.net/crs1vlu.js\"></script>\r\n    <script>try{Typekit.load();}catch(e){}</script>\r\n    <title>Electric Bill</title>\r\n</head>\r\n<body class=\"A4\">\r\n<section class=\"sheet padding-10mm\" style=\"flex-direction: column;\">\r\n    <div>\r\n        <div>\r\n            <div>\r\n                <table style=\"width: 100%;\">\r\n                    <tr>\r\n                        <td>\r\n                            <div>\r\n                                <img id=\"barcode\"/>\r\n                                <div style='font-size: 10px'>{%- if Data.Invoice.size > 0 and Data.Invoice[0].InvoiceNumber and Data.Invoice[0].InvoiceNumber != \"\" -%} {{- Data.Invoice[0].InvoiceNumber }}{%- else -%}0001{%- endif -%}</div>\r\n                                {%- if Data.Callout.billToContact and Data.Callout.billToContact != \"\" -%} {{- Data.Callout.billToContact.firstName | upcase }} {{ Data.Callout.billToContact.lastName | upcase -}} {%- else -%}MR JOHN DOE{%- endif -%}\r\n                                <br/>\r\n                                {%- if Data.Callout.billToContact.address1 and Data.Callout.billToContact.address1 != \"\" -%} {{- Data.Callout.billToContact.address1 | upcase -}} {%- else -%}123 ABC LANE{%- endif -%}&nbsp;\r\n                                {%- if Data.Callout.billToContact.city and Data.Callout.billToContact.city != \"\" -%} {{- Data.Callout.billToContact.city | upcase -}}, {%- else -%}BOSTON, {%- endif -%}&nbsp;\r\n                                {%- if Data.Callout.billToContact.state and Data.Callout.billToContact.state != \"\" -%} {{- Data.Callout.billToContact.state | upcase -}} {%- else -%}MA {%- endif -%}&nbsp;\r\n                                {%- if Data.Callout.billToContact.zipCode and Data.Callout.billToContact.zipCode != \"\" -%} {{- Data.Callout.billToContact.zipCode | upcase -}} {%- else -%}02108 {%- endif -%}\r\n                            </div>\r\n                        </td>\r\n                        <td style=\"text-align: right;\">\r\n                            <div style=\"  border: 5px solid #6C96A1;\">\r\n                                <div class=\"section\">\r\n                                    <div class=\"sectionHeader\" style=\"background: #6C96A1;\">\r\n                                        YOUR ACCOUNT DETAILS\r\n                                    </div>\r\n                                    <div class=\"sectionInner\">\r\n                                        <div class='row'>\r\n                                            <div style=\"font-size: 15px;\">\r\n                                                <div>Total Amount Due</div>\r\n                                                <div style=\"text-align: left\">by&nbsp;{%- if Data.Invoice.size > 0 and Data.Invoice[0].DueDate and Data.Invoice[0].DueDate != \"\" -%} {{ Data.Invoice[0].DueDate | date: \"%m/%d/%y\" }}{%- else -%}08/27/19{%- endif -%}</div>\r\n                                            </div>\r\n                                            <div class='column'>\r\n                                                <span style=\"font-size: 40px\">{%- if Data.Invoice.size > 0 and Data.Invoice[0].Amount and Data.Invoice[0].Amount != \"\" -%} ${{- Data.Invoice[0].Amount }}{%- else -%}$411.04{%- endif -%}</span>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div class='row' style=\"margin-top: 15px;\">\r\n                                            <div class='column'>\r\n                                                <div>\r\n                                                    <div>Account Number</div>\r\n                                                    {%- if Data.Callout.basicInfo.accountNumber != \"\" -%} {{- Data.Callout.basicInfo.accountNumber -}} {%- else -%}123 456 789 000{%- endif -%}\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div class='row'>\r\n                                            <div class='column'>\r\n                                                <div>\r\n                                                    <div>Issue date</div>\r\n                                                    {%- if Data.Invoice.size > 0 and Data.Invoice[0].InvoiceDate and Data.Invoice[0].InvoiceDate != \"\" -%}{{- Data.Invoice[0].InvoiceDate | date: \"%m/%d/%y\" }}{%- else -%}08/07/19{%- endif -%}\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div class='row'>\r\n                                            <div class='row'>\r\n                                                <div class='column'>\r\n                                                    <div>\r\n                                                        <div>Joint Account Holders</div>\r\n                                                        MRS JANE DOE\r\n                                                    </div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </td>\r\n                    </tr>\r\n                </table>\r\n                <div>\r\n                    <table style='width:100%'>\r\n                        <tr>\r\n                            <td>\r\n                                <span style='font-size: 20px;'>Your electricity bill</span>\r\n                            </td>\r\n                            <td style='text-align: right'>\r\n                                <span style='font-size: 16px;'>Jul 3 - Aug 3</span>\r\n                            </td>\r\n                        </tr>\r\n\r\n                    </table>\r\n                </div>\r\n            </div>\r\n            <div>\r\n                <table style=\"width: 100%;\">\r\n                    <tr style=\"vertical-align: top;\">\r\n                        <td style=\"width: 50%\">\r\n                            <div style=\"border: 5px solid #6EC5AB\">\r\n                                <div class=\"section\">\r\n                                    <div class=\"sectionHeader\" style=\"background:#6EC5AB; font-size: 15px;\">\r\n                                        Electricity History\r\n                                    </div>\r\n                                    <div id=\"graph-usage\"></div>\r\n                                    <div id=\"graph-cost\"></div>\r\n                                </div>\r\n                            </div>\r\n                        </td>\r\n                        <td style=\"width: 50%;\">\r\n                            <div style=\"border: 5px solid #6EC5AB; padding-bottom: 2px\">\r\n                                <div class=\"section\">\r\n                                    <div class=\"sectionHeader\" style=\"background:#6EC5AB; font-size: 15px;\">\r\n                                        Billing Details\r\n                                    </div>\r\n                                    <div class=\"sectionInner\" style=\"padding-top: 10px\">\r\n                                        <div class=\"row\">\r\n                                            <div id=\"gauge-cost\" class=\"chart-container\"></div>\r\n                                            <div id=\"gauge-usage\" class=\"chart-container\"></div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                            <div style=\"border: 5px solid #6EC5AB; margin-top: 10px\">\r\n                                <div class=\"section\">\r\n                                    <div class=\"sectionHeader\" style=\"background:#6EC5AB\">\r\n                                        TOTAL ELECTRICITY CHARGES\r\n                                    </div>\r\n                                    <div style=\"padding: 5px;\">\r\n                                        <div style=\"display: flex;\">\r\n                                            <div style=\"flex: 1;\">\r\n                                                <div style=\"margin: 10px 0;\">\r\n                                                    <div><b>Supply Address</b></div>\r\n                                                    <div>\r\n                                                      {%- if Data.Callout.billToContact.address1 and Data.Callout.billToContact.address1 != \"\" -%} {{- Data.Callout.billToContact.address1 | upcase -}} {%- else -%}123 ABC LANE{%- endif -%}&nbsp;\r\n                                \t\t\t\t\t\t\t\t\t\t\t{%- if Data.Callout.billToContact.city and Data.Callout.billToContact.city != \"\" -%} {{- Data.Callout.billToContact.city | upcase -}}, {%- else -%}BOSTON, {%- endif -%}&nbsp;\r\n                                \t\t\t\t\t\t\t\t\t\t\t{%- if Data.Callout.billToContact.state and Data.Callout.billToContact.state != \"\" -%} {{- Data.Callout.billToContact.state | upcase -}} {%- else -%}MA {%- endif -%}&nbsp;\r\n                                \t\t\t\t\t\t\t\t\t\t\t{%- if Data.Callout.billToContact.zipCode and Data.Callout.billToContact.zipCode != \"\" -%} {{- Data.Callout.billToContact.zipCode | upcase -}} {%- else -%}02108 {%- endif -%}\r\n                                                  </div>\r\n                                                </div>\r\n                                                <div style=\"margin: 10px 0;\">\r\n                                                    <div><b>Meter Read</b></div>\r\n                                                    <div>Actual</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 10px 0;\">\r\n                                                    <div><b>National Meter Identifier (NMI)</b></div>\r\n                                                    <div>12345678901</div>\r\n                                                </div>\r\n\r\n                                                <div style=\"margin: 10px 0;\">\r\n                                                    <div><b>Next billing Date</b></div>\r\n                                                    <div>{%- if Data.Invoice.size > 0 and Data.Invoice[0].InvoiceDate and Data.Invoice[0].InvoiceDate != \"\" -%}{{- Data.Invoice[0].InvoiceDate | date_manip: '+', 30, 'day' | date: \"%m/%d/%y\" }}{%- else -%}09/07/19{%- endif -%}</div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <div style=\"padding: 5px;\">\r\n                                        Period : Jul 3 19 - Aug 3 19 (30 days)\r\n                                        <div>Your rate: Fixed</div>\r\n                                        <div style=\"display: flex ;flex-direction: row; background-color: #f2f1f0; width: 100%;height: 100%;\">\r\n                                            <div style=\"display: flex ;flex-direction: row; background-color: #f2f1f0; width: 100%;height: 100%;margin-bottom: 0\">\r\n                                                <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                    <div style=\"margin: 3px 0;\">\r\n                                                        <div>Meter no</div>\r\n                                                    </div>\r\n                                                </div>\r\n                                                <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                    <div style=\"margin: 3px 0;\">\r\n                                                        <div>Usage Type</div>\r\n                                                    </div>\r\n                                                </div>\r\n                                                <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                    <div style=\"margin: 3px 0;\">\r\n                                                        <div>Previous read</div>\r\n                                                    </div>\r\n                                                </div>\r\n                                                <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                    <div style=\"margin: 3px 0;\">\r\n                                                        <div>Current read</div>\r\n                                                    </div>\r\n                                                </div>\r\n                                                <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                    <div style=\"margin: 3px 0;\">\r\n                                                        <div>Usage(kWh)</div>\r\n                                                    </div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div style=\"display: flex ;flex-direction: row; background-color: #f2f1f0; width: 100%;height: 100%; margin-bottom: 0\">\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div>ABC12345</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div>Peak</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div style=\"margin-left: 30px;\">4109.79</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div style=\"margin-left: 30px;\">5340.9</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div style=\"margin-left: 15px;\">636.003</div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div style=\"display: flex ;flex-direction: row; background-color: #f2f1f0; width: 100%;height: 100%;\">\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div>&nbsp;</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div>Off-Peak</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div style=\"margin-left: 30px;\">4109.79</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div style=\"margin-left: 30px;\">5340.9</div>\r\n                                                </div>\r\n                                            </div>\r\n\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div style=\"margin-left: 20px;\">595.101</div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div style=\"display: flex ;flex-direction: row; background-color: #f2f1f0; width: 100%;height: 100%;\">\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div>&nbsp;</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div>Off-Peak DC</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div style=\"margin-left: 35px;\">954.76</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div style=\"margin-left: 32px;\">989.21</div>\r\n                                                </div>\r\n                                            </div>\r\n                                            <div style=\"flex: 1; margin-left: 5px;\">\r\n                                                <div style=\"margin: 3px 0;\">\r\n                                                    <div style=\"margin-left: 25px;\">34.455</div>\r\n                                                </div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <hr/>\r\n                                    <div style=\"display: flex ; width: 100%;height: 100%; margin-bottom: 3px\">\r\n                                        <div style=\"flex: 3; margin-left: 5px;\">\r\n                                            <div style=\"margin: 10px 0;\">\r\n                                                <div>Total kWh for period Jul 3 19 - Aug 3 19</div>\r\n                                            </div>\r\n\r\n                                        </div>\r\n\r\n                                        <div style=\"flex: 0.5; margin-left: 5px;\">\r\n                                            <div style=\"margin: 10px 0;\">\r\n                                                <div>1265.559</div>\r\n                                            </div>\r\n\r\n                                        </div>\r\n                                    </div>\r\n                                    <hr/>\r\n                                    <div style=\"display: flex ; width: 100%;height: 100%; margin-bottom: 3px\">\r\n\r\n                                        <div style=\"flex: 3; margin-left: 5px; background: #FFFFFF\">\r\n                                            <div style=\"margin: 10px 0;\">\r\n                                                <div>Charges</div>\r\n                                                <div>Peak Usage</div>\r\n                                                <div>Off-Peak Usage</div>\r\n                                                <div>Off-Peak(Dedicated Circuit)</div>\r\n                                                <div>Supply Charge</div>\r\n\r\n                                            </div>\r\n                                        </div>\r\n                                        <div style=\"flex: 1; margin-left: 5px;  background: #FFFFFF\">\r\n                                            <div style=\"margin: 10px 0;\">\r\n                                                <div>Usage(kWh)</div>\r\n                                                <div>636.003</div>\r\n                                                <div style=\"margin-left: 6%;\">595.101</div>\r\n                                                <div style=\"margin-left: 9%;\">34.344</div>\r\n\r\n                                            </div>\r\n                                        </div>\r\n                                        <div style=\"flex: 1; margin-left: 5px;  background: #FFFFFF\">\r\n                                            <div style=\"margin: 10px 0;\">\r\n                                                <div>Charge</div>\r\n                                                <div>38.13 c/kwh</div>\r\n                                                <div>20.20 c/kwh</div>\r\n                                                <div>19.53 c/kwh</div>\r\n                                                <div>131.02 c/Day</div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div style=\"flex: 1; margin-left: 5px;  background: #FFFFFF\">\r\n                                            <div style=\"margin: 10px 0;\">\r\n                                                <div>Amount</div>\r\n                                                <div style=\"margin-left: 6%;\">$242.51</div>\r\n                                                <div style=\"margin-left: 6%;\">$120.21</div>\r\n                                                <div style=\"margin-left: 16%;\">$6.73</div>\r\n                                                <div style=\"margin-left: 6%;\">$125.78</div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                    <hr/>\r\n                                    <div style=\"display: flex ; width: 100%;height: 100%; margin-bottom: 3px\">\r\n                                        <div style=\"flex: 3; margin-left: 5px;\">\r\n                                            <div style=\"margin: 10px 0;\">\r\n                                                <div>Total for period Jul 3 19 - Aug 3 19</div>\r\n                                            </div>\r\n                                        </div>\r\n                                        <div style=\"flex: 0.5; margin-left: 5px;\">\r\n                                            <div style=\"margin: 10px 0;\">\r\n                                                <div>{%- if Data.Invoice.size > 0 and Data.Invoice[0].Amount and Data.Invoice[0].Amount != \"\" -%} ${{- Data.Invoice[0].Amount }}{%- else -%}$411.04{%- endif -%}</div>\r\n                                            </div>\r\n                                        </div>\r\n                                    </div>\r\n                                </div>\r\n                            </div>\r\n                        </td>\r\n                    </tr>\r\n                </table>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</section>\r\n</body>\r\n<script>\r\n    JsBarcode('#barcode', {%- if Data.Callout.basicInfo.accountNumber and Data.Callout.basicInfo.accountNumber != \"\" -%} '{{- Data.Callout.basicInfo.accountNumber -}}{{- Data.Invoice[0].InvoiceNumber -}}' {%- else -%}'A00000001INV00000001'{%- endif -%}, {\r\n        displayValue: false,\r\n        height: 30,\r\n        margin: 0,\r\n        width: 1\r\n    });\r\n\r\n    const gaugeOptions = {\r\n        chart: {\r\n            type: 'solidgauge'\r\n        },\r\n        title: null,\r\n        pane: {\r\n            center: ['50%', '85%'],\r\n            size: '140%',\r\n            startAngle: -90,\r\n            endAngle: 90,\r\n            background: {\r\n                backgroundColor: '#EEE',\r\n                innerRadius: '60%',\r\n                outerRadius: '100%',\r\n                shape: 'arc'\r\n            }\r\n        },\r\n        tooltip: {\r\n            enabled: false\r\n        },\r\n        yAxis: {\r\n            stops: [\r\n                [0, '#6C96A1']\r\n            ],\r\n            lineWidth: 0,\r\n            minorTickInterval: null,\r\n            tickAmount: 2,\r\n            title: {\r\n                y: -40\r\n            },\r\n            labels: {\r\n                y: 16\r\n            }\r\n        },\r\n        navigation: {\r\n            buttonOptions: {\r\n                enabled: false\r\n            }\r\n        },\r\n        plotOptions: {\r\n            solidgauge: {\r\n                dataLabels: {\r\n                    y: 5,\r\n                    borderWidth: 0,\r\n                    useHTML: true\r\n                }\r\n            },\r\n            series: {\r\n                animation: false\r\n            }\r\n        }\r\n    };\r\n\r\n    Highcharts.chart('gauge-cost', Highcharts.merge(gaugeOptions, {\r\n        yAxis: {\r\n            min: 0,\r\n            max: 20,\r\n            title: {\r\n                text: 'Average cost per day'\r\n            }\r\n        },\r\n\r\n        credits: {\r\n            enabled: false\r\n        },\r\n\r\n        series: [{\r\n            name: 'Cost',\r\n            data: [13.70],\r\n            dataLabels: {\r\n                format:\r\n                    '<div style=\"text-align:center\">' +\r\n                    '<span style=\"font-size:10px\">{y}</span><br/>' +\r\n                    '<span style=\"font-size:8px;opacity:0.4\">$</span>' +\r\n                    '</div>'\r\n            },\r\n            tooltip: {\r\n                valueSuffix: ' $'\r\n            }\r\n        }]\r\n\r\n    }));\r\n\r\n    Highcharts.chart('gauge-usage', Highcharts.merge(gaugeOptions, {\r\n        yAxis: {\r\n            min: 0,\r\n            max: 100,\r\n            title: {\r\n                text: 'Average daily usage'\r\n            }\r\n        },\r\n        series: [{\r\n            name: 'Usage',\r\n            data: [42.19],\r\n            dataLabels: {\r\n                format:\r\n                    '<div style=\"text-align:center\">' +\r\n                    '<span style=\"font-size:10px\">{y}</span><br/>' +\r\n                    '<span style=\"font-size:8px;opacity:0.4\">kWh</span>' +\r\n                    '</div>'\r\n            },\r\n            tooltip: {\r\n                valueSuffix: ' kWh'\r\n            }\r\n        }]\r\n\r\n    }));\r\n  \r\n   const amount = {%- if Data.Invoice.size > 0 and Data.Invoice[0].Amount and Data.Invoice[0].Amount != \"\" -%}{{- Data.Invoice[0].Amount }}{%- else -%}411.04{%- endif -%};\r\n\r\n    Highcharts.chart('graph-cost', {\r\n        colors: ['#6C96A1'],\r\n        title: {\r\n            text: null\r\n        },\r\n        xAxis: {\r\n            categories: ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']\r\n        },\r\n        yAxis: {\r\n            title: {\r\n                text: 'Cost'\r\n            }\r\n        },\r\n        navigation: {\r\n            buttonOptions: {\r\n                enabled: false\r\n            }\r\n        },\r\n        plotOptions: {\r\n            series: {\r\n                animation: false\r\n            }\r\n        },\r\n        series: [{\r\n            type: 'column',\r\n            data: [400.90, 411.50, 385.40, 328.20, 330.00, 340.00, 320.60, 340.50, 390.40, 370.10, 420.60, amount],\r\n            showInLegend: false\r\n        }]\r\n\r\n    });\r\n\r\n    const usages =  {% if Data.Usage %}\r\n    \t\t\t\t\t\t\t\t\t\t{{- Data.Usage | to_json -}};\r\n\t\t\t\t\t\t\t\t\t\t{%- else -%}\r\n\t\t\t\t\t\t\t\t\t\t\t\t[{\"UOM\":\"kWh\",\"Quantity\":1229.9,\"StartDateTime\":\"2018-08-01T00:00:00.000-07:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1271.5,\"StartDateTime\":\"2018-09-01T00:00:00.000-07:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1206.4,\"StartDateTime\":\"2018-10-01T00:00:00.000-07:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1029.2,\"StartDateTime\":\"2018-11-01T00:00:00.000-07:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1044.0,\"StartDateTime\":\"2018-12-01T00:00:00.000-08:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1076.0,\"StartDateTime\":\"2019-01-01T00:00:00.000-08:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1005.6,\"StartDateTime\":\"2019-02-01T00:00:00.000-08:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1048.5,\"StartDateTime\":\"2019-03-01T00:00:00.000-08:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1216.4,\"StartDateTime\":\"2019-04-01T00:00:00.000-07:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1094.1,\"StartDateTime\":\"2019-05-01T00:00:00.000-07:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1295.6,\"StartDateTime\":\"2019-06-01T00:00:00.000-07:00\"},\r\n                         {\"UOM\":\"kWh\",\"Quantity\":1265.56,\"StartDateTime\":\"2019-07-01T00:00:00.000-07:00\"}];\r\n\t\t\t\t\t\t\t\t\t\t{%- endif -%}\r\n    Highcharts.chart('graph-usage', {\r\n        colors: ['#6C96A1'],\r\n        title: {\r\n            text: null\r\n        },\r\n        xAxis: {\r\n            categories: usages.map(usage => new Date(usage.StartDateTime).toLocaleString('default', { month: 'short' }))\r\n        },\r\n        yAxis: {\r\n            title: {\r\n                text: 'Usage'\r\n            }\r\n        },\r\n        navigation: {\r\n            buttonOptions: {\r\n                enabled: false\r\n            }\r\n        },\r\n        plotOptions: {\r\n            series: {\r\n                animation: false\r\n            }\r\n        },\r\n        series: [{\r\n            type: 'column',\r\n            data: usages.map(usage => usage.Quantity),\r\n            showInLegend: false\r\n        }]\r\n    });\r\n</script>\r\n</html>\r\n",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Billing::CustomBillingDocument",
+                "object" : null,
+                "object_id" : "{{Data.Invoice[0].Id}}",
+                "call_type" : "SOAP",
+                "task_id" : 15,
+                "css" : {
+                  "top" : "370px",
+                  "left" : "1000px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 15,
+                "name" : "Get Invoices",
+                "parameters" : {
+                  "fields" : {
+                    "Invoice" : {
+                      "Id" : "true",
+                      "Amount" : "true",
+                      "Balance" : "true",
+                      "DueDate" : "true",
+                      "AccountId" : "true",
+                      "InvoiceDate" : "true",
+                      "IncludesUsage" : "true",
+                      "InvoiceNumber" : "true",
+                      "PaymentAmount" : "true"
+                    }
+                  },
+                  "placement" : "",
+                  "batch_size" : "1",
+                  "where_clause" : "Balance > 0 AND Status = 'Posted'",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Query",
+                "object" : "Invoice",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "350px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 16,
+                "name" : "Get Account",
+                "parameters" : {
+                  "url" : "{{ Credentials.zuora.rest_endpoint }}accounts/{{Data.Invoice[0].AccountId}}",
+                  "datas" : [ {
+                    "key" : "",
+                    "value" : ""
+                  } ],
+                  "files" : [ ],
+                  "method" : "GET",
+                  "headers" : [ {
+                    "key" : "",
+                    "value" : ""
+                  } ],
+                  "raw_body" : "",
+                  "body_type" : "raw",
+                  "validation" : {
+                    "zuora_call" : "false",
+                    "status_codes" : [ "", "200" ]
+                  },
+                  "retry_rules" : {
+                    "retry_count" : "0",
+                    "retry_window" : "30",
+                    "current_retry_count" : "0"
+                  },
+                  "authorization" : {
+                    "type" : "zuora"
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "validate_response" : "false",
+                  "validation_scheme" : "",
+                  "delete_payload_paths" : [ ],
+                  "include_response_code" : "false"
+                },
+                "action_type" : "Callout",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 11,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "1150px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : null,
+                "source_task_id" : 15,
+                "target_task_id" : 11,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 13,
+                "target_task_id" : 14,
+                "linkage_type" : "False"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 16,
+                "target_task_id" : 13,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 11,
+                "target_task_id" : 16,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 13,
+                "target_task_id" : 12,
+                "linkage_type" : "True"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 12,
+                "target_task_id" : 14,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : 3,
+                "source_task_id" : null,
+                "target_task_id" : 15,
+                "linkage_type" : "Start"
+              } ]
+            }
+          },
+          "4" : {
+            "Invoice 30 Days Past Due, Account Summary_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Invoice 30 Days Past Due, Account Summary",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 4,
+                "name" : "Invoice 30 Days Past Due, Account Summary",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ ]
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : "0 0 3 /1 * *",
+                "timezone" : "Pacific Time (US & Canada)",
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "210px",
+                  "left" : "90px"
+                },
+                "notifications" : {
+                  "emails" : [ ],
+                  "failure" : false,
+                  "pending" : false,
+                  "success" : false
+                },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 17,
+                "name" : "Iterate Unique Accounts",
+                "parameters" : {
+                  "chunk_size" : "0",
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "Account.Id",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Iterate",
+                "object" : "InvoiceItem__20.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 20,
+                "css" : {
+                  "top" : "210px",
+                  "left" : "720px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 18,
+                "name" : "30 Days Past Due Email",
+                "parameters" : {
+                  "email" : {
+                    "cc" : [ ],
+                    "to" : [ "{{Data.BillToContact.WorkEmail}}", "{{Data.BillToContact.PersonalEmail}}" ],
+                    "bcc" : [ ],
+                    "from" : "workflow@zuora.com",
+                    "name" : "Workflow Template",
+                    "subject" : "  Action Required {{Data.Account.Name}} Invoice 30 Days Past Due",
+                    "reply_to" : "",
+                    "template" : "{% assign total_balance = 0.0 %}\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n<meta name=\"viewport\" content=\"initial-scale=1.0\"/>\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n<meta name=\"format-detection\" content=\"telephone=no\"/>\r\n<title>30 Days Overdue</title>\r\n<link href=\"http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:400,700,300&subset=latin,cyrillic,greek\" rel=\"stylesheet\" type=\"text/css\">\r\n<style type=\"text/css\">\r\n\r\n    /* Resets: see reset.css for details */\r\n    .ReadMsgBody { width: 100%; background-color: #ffffff;}\r\n    .ExternalClass {width: 100%; background-color: #ffffff;}\r\n    .ExternalClass, .ExternalClass p, .ExternalClass span,\r\n    .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}\r\n    #outlook a{ padding:0;}\r\n    body{width: 100%; height: 100%; background-color: #ffffff; margin:0; padding:0;}\r\n    body{ -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }\r\n    html{width:100%;}\r\n    table {mso-table-lspace:0pt; mso-table-rspace:0pt; border-spacing:0;}\r\n    table td {border-collapse:collapse;}\r\n    table p{margin:0;}\r\n    br, strong br, b br, em br, i br { line-height:100%; }\r\n    div, p, a, li, td { -webkit-text-size-adjust:none; -ms-text-size-adjust:none;}\r\n    h1, h2, h3, h4, h5, h6 { line-height: 100% !important; -webkit-font-smoothing: antialiased; }\r\n    span a { text-decoration: none !important;}\r\n    a{ text-decoration: none !important; }\r\n    img{height: auto !important; line-height: 100%; outline: none; text-decoration: none;  -ms-interpolation-mode:bicubic;}\r\n    .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited,\r\n    .yshortcuts a:hover, .yshortcuts a span { text-decoration: none !important; border-bottom: none !important;}\r\n    /*mailChimp class*/\r\n    .default-edit-image{\r\n    height:20px;\r\n    }\r\n    ul{padding-left:10px; margin:0;}\r\n    .tpl-repeatblock {\r\n    padding: 0px !important;\r\n    border: 1px dotted rgba(0,0,0,0.2);\r\n    }\r\n    .tpl-content{\r\n    padding:0px !important;\r\n    }\r\n    @media only screen and (max-width:800px){\r\n    table[style*=\"max-width:800px\"]{width:100%!important; max-width:100%!important; min-width:100%!important; clear: both;}\r\n    table[style*=\"max-width:800px\"] img{width:100% !important; height:auto !important; max-width:100% !important;}\r\n    }\r\n    @media only screen and (max-width: 640px){\r\n    /* mobile setting */\r\n    table[class=\"container\"]{width:100%!important; max-width:100%!important; min-width:100%!important;\r\n    padding-left:20px!important; padding-right:20px!important; text-align: center!important; clear: both;}\r\n    td[class=\"container\"]{width:100%!important; padding-left:20px!important; padding-right:20px!important; clear: both;}\r\n    table[class=\"full-width\"]{width:100%!important; max-width:100%!important; min-width:100%!important; clear: both;}\r\n    table[class=\"full-width-center\"] {width: 100%!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    table[class=\"force-240-center\"]{width:240px !important; clear: both; margin:0 auto; float:none;}\r\n    table[class=\"auto-center\"] {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    *[class=\"auto-center-all\"]{width: auto!important; max-width:75%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    *[class=\"auto-center-all\"] * {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    table[class=\"col-3\"],table[class=\"col-3-not-full\"]{width:30.35%!important; max-width:100%!important;}\r\n    table[class=\"col-2\"]{width:47.3%!important; max-width:100%!important;}\r\n    *[class=\"full-block\"]{width:100% !important; display:block !important; clear: both; padding-top:10px; padding-bottom:10px;}\r\n    /* image */\r\n    td[class=\"image-full-width\"] img{width:100% !important; height:auto !important; max-width:100% !important;}\r\n    /* helper */\r\n    table[class=\"space-w-20\"]{width:3.57%!important; max-width:20px!important; min-width:3.5% !important;}\r\n    table[class=\"space-w-20\"] td:first-child{width:3.5%!important; max-width:20px!important; min-width:3.5% !important;}\r\n    table[class=\"space-w-25\"]{width:4.45%!important; max-width:25px!important; min-width:4.45% !important;}\r\n    table[class=\"space-w-25\"] td:first-child{width:4.45%!important; max-width:25px!important; min-width:4.45% !important;}\r\n    table[class=\"space-w-30\"] td:first-child{width:5.35%!important; max-width:30px!important; min-width:5.35% !important;}\r\n    table[class=\"fix-w-20\"]{width:20px!important; max-width:20px!important; min-width:20px!important;}\r\n    table[class=\"fix-w-20\"] td:first-child{width:20px!important; max-width:20px!important; min-width:20px !important;}\r\n    *[class=\"h-10\"]{display:block !important;  height:10px !important;}\r\n    *[class=\"h-20\"]{display:block !important;  height:20px !important;}\r\n    *[class=\"h-30\"]{display:block !important; height:30px !important;}\r\n    *[class=\"h-40\"]{display:block !important;  height:40px !important;}\r\n    *[class=\"remove-640\"]{display:none !important;}\r\n    *[class=\"text-left\"]{text-align:left !important;}\r\n    *[class=\"clear-pad\"]{padding:0 !important;}\r\n    }\r\n    @media only screen and (max-width: 479px){\r\n    /* mobile setting */\r\n    table[class=\"container\"]{width:100%!important; max-width:100%!important; min-width:124px!important;\r\n    padding-left:15px!important; padding-right:15px!important; text-align: center!important; clear: both;}\r\n    td[class=\"container\"]{width:100%!important; padding-left:15px!important; padding-right:15px!important; text-align: center!important; clear: both;}\r\n    table[class=\"full-width\"],table[class=\"full-width-479\"]{width:100%!important; max-width:100%!important; min-width:124px!important; clear: both;}\r\n    table[class=\"full-width-center\"] {width: 100%!important; max-width:100%!important; min-width:124px!important; text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    *[class=\"auto-center-all\"]{width: 100%!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    *[class=\"auto-center-all\"] * {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    table[class=\"col-3\"]{width:100%!important; max-width:100%!important; text-align: center!important; clear: both;}\r\n    table[class=\"col-3-not-full\"]{width:30.35%!important; max-width:100%!important; }\r\n    table[class=\"col-2\"]{width:100%!important; max-width:100%!important; text-align: center!important; clear: both;}\r\n    *[class=\"full-block-479\"]{display:block !important; width:100% !important; clear: both; padding-top:10px; padding-bottom:10px; }\r\n    /* image */\r\n    td[class=\"image-full-width\"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:124px !important;}\r\n    td[class=\"image-min-80\"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:80px !important;}\r\n    td[class=\"image-min-100\"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:100px !important;}\r\n    /* halper */\r\n    table[class=\"space-w-20\"]{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-20\"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-25\"]{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-25\"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-30\"]{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-30\"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    *[class=\"remove-479\"]{display:none !important;}\r\n    table[width=\"595\"]{width:100% !important;}\r\n    img{max-width:280px !important;}\r\n    .resize-font, .resize-font *{\r\n      font-size: 37px !important;\r\n      line-height: 48px !important;\r\n    }\r\n    }\r\n    table.stripped tr.stripe:nth-child(odd){\r\n    \tbackground:#f0f2f9;\r\n    }\r\n    \r\n    td ul{list-style: initial; margin:0; padding-left:20px;}\r\n\r\n\t@media only screen and (max-width: 640px){ .image-100-percent{ width:100%!important; height: auto !important; max-width: 100% !important; min-width: 124px !important;}}body{background-color:#efefef;} .default-edit-image{height:20px;} tr.tpl-repeatblock , tr.tpl-repeatblock > td{ display:block !important;} .tpl-repeatblock {padding: 0px !important;border: 1px dotted rgba(0,0,0,0.2);} table[width=\"595\"]{width:100% !important;}a img{ border: 0 !important;}\r\na:active{color:initial } a:visited{color:initial }\r\n.tpl-content{padding:0 !important;}\r\n.full-mb,*[fix=\"full-mb\"]{width:100%!important;} .auto-mb,*[fix=\"auto-mb\"]{width:auto!important;}\r\n</style>\r\n<!--[if gte mso 15]>\r\n<style type=\"text/css\">\r\na{text-decoration: none !important;}\r\nbody { font-size: 0; line-height: 0; }\r\ntr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }\r\ntable { font-size:1px; line-height:0; mso-margin-top-alt:1px; }\r\nbody,table,td,span,a,font{font-family: Arial, Helvetica, sans-serif !important;}\r\na img{ border: 0 !important;}\r\n</style>\r\n<![endif]-->\r\n<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->\r\n</head>\r\n<body  style=\"font-size:12px; width:100%; height:100%;\">\r\n<table id=\"mainStructure\" width=\"800\" class=\"full-width\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"background-color: #efefef; width: 800px; max-width: 800px; outline: rgb(239, 239, 239) solid 1px; box-shadow: rgb(224, 224, 224) 0px 0px 5px; margin: 0px auto;\"><!--START LAYOUT-1 (LOGO AND MENU) --><tbody><tr><td align=\"center\" valign=\"top\" class=\"container\" style=\"background-color: #ffffff;\" bgcolor=\"#ffffff\">\r\n            <!-- start container -->\r\n            <table width=\"600\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"container\" style=\"min-width: 600px; background-color: #ffffff; padding-left: 20px; padding-right: 20px; width: 600px; margin: 0px auto;\"><tbody><tr><td valign=\"top\">\r\n                  <table width=\"560\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" class=\"full-width\" style=\"width: 560px; margin: 0px auto;\"><!-- start space --><tbody><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                      </td>\r\n                    </tr><!-- end space --><!-- start content container--><tr><td valign=\"top\">\r\n                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style=\"margin: 0px auto;\"><tbody><tr><td valign=\"middle\">\r\n                              \r\n                              <table align=\"left\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"full-width-center\" width=\"auto\" style=\"mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tbody><tr><td align=\"center\" valign=\"top\" width=\"136\" style=\"width: 136px;\">\r\n                                    <a href=\"#\" style=\"text-decoration: none !important; font-size: inherit; border-style: none;\" border=\"0\">\r\n                                      <img src=\"https://www.zuora.com/wp-content/uploads/2017/03/Zuora-Logo-Navy-small.jpg\" width=\"136\" style=\"max-width: 240px; display: block !important; width: 136px; height: auto;\" alt=\"set3-logo\" border=\"0\" hspace=\"0\" vspace=\"0\" height=\"auto\"></a>\r\n                                  </td>\r\n                                </tr></tbody></table><!--[if (gte mso 9)|(IE)]></td><td valign=\"top\" ><![endif]--><table width=\"20\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" align=\"left\" class=\"full-width\" style=\"height: 1px; border-spacing: 0px; width: 20px;mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tbody><tr><td height=\"1\" class=\"h-20\" style=\"height: 1px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                                  </td>\r\n                                </tr></tbody></table><!--[if (gte mso 9)|(IE)]></td><td valign=\"top\" ><![endif]--><table align=\"right\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"full-width-center\" width=\"auto\" style=\"mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tbody><tr><td valign=\"top\">\r\n                                    <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"full-width-center\" width=\"auto\" style=\"mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tbody><tr><td align=\"center\" style=\"font-size: 14px; color: #8c8c8c; font-weight: normal; text-align: center; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif; word-break: break-word; line-height: 22px;\"><br style=\"font-size: 14px; font-weight: 400; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif;\"></td>\r\n                                      </tr></tbody></table></td>\r\n                                </tr></tbody></table></td>\r\n                          </tr></tbody></table></td>\r\n                    </tr><!-- end content container--><!-- start space --><tr><td valign=\"top\" height=\"14\" style=\"height: 14px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                      </td>\r\n                    </tr><!-- end space --></tbody></table></td>\r\n              </tr></tbody></table><!-- end container --></td>\r\n        </tr><!--END LAYOUT-1 (LOGO AND MENU) --></tbody><!-- START ORDER-TABLE --><tbody><tr><td valign=\"top\" align=\"center\" class=\"container\" style=\"background-color: #fff;\" bgcolor=\"#ffffff\">\r\n            <table width=\"600\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"container\" style=\"background-color: #ffffff; min-width: 600px; width: 600px; margin: 0px auto;\"><tbody><tr><td valign=\"top\" align=\"center\">\r\n                  <table width=\"560\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"full-width\" style=\"width: 560px; margin: 0px auto;\"><!-- start title --><tbody><tr dup=\"0\"><td valign=\"top\">\r\n                        <table width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0px auto;\"><!-- start space --><tbody><tr><td valign=\"top\" height=\"11\" style=\"height: 11px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --><tr><td align=\"left\" style=\"font-size: 24px; color: #333333; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: left; word-break: break-word; line-height: 32px;\"><p style=\"text-align: left; line-height: 20px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><span style=\"color: #384b5d; line-height: 22px; font-size: 14px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Dear {{Data.BillToContact.FirstName}} {{Data.BillToContact.LastName}},</span></p></td>\r\n                          </tr><!-- start space --><tr><td valign=\"top\" height=\"10\" style=\"height: 10px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --></tbody></table></td>\r\n                    </tr><tr dup=\"0\"><td valign=\"top\">\r\n                        <table width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0px auto;\"><!-- start space --><tbody><tr><td valign=\"top\" height=\"1\" style=\"height: 1px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --><tr><td align=\"left\" style=\"font-size: 24px; color: #333333; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: left; word-break: break-word; line-height: 32px;\"><p style=\"text-align: left; line-height: 20px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><span style=\"color: #999999; line-height: 22px; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">We would like to inform you of the invoice past due situation on your account, {{Data.Account.Name}}. The following is an itemized listing of all past due invoice(s) on your account. </span> <br/> <br/></p></td>\r\n                          </tr><!-- start space --><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --></tbody></table></td>\r\n                    </tr><!-- end title --><tr dup=\"0\"><td valign=\"top\" align=\"center\">\r\n\r\n                    <!-- start of new table-->\r\n\r\n                    <table class=\"stripped\" width=\"100%\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n\t\t\t\t\t\t<tr style=\"background-color: #f0f2f9; margin: 0px auto;\">\r\n\t\t\t\t\t\t\t<th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Invoice Number</th>\r\n\t\t\t\t\t\t\t<th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Balance</th>\r\n\t\t\t\t\t\t\t<th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Invoice Date</th>\r\n\t\t\t\t\t\t\t<th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Due Date</th>\r\n              <th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Days Overdue</th>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t{% for invoice in Data.Invoice %}\r\n                {% comment %} convert our dates to Number of seconds since 1970-01-01 00:00:00 UTC {% endcomment %}\r\n                {% assign dateStart = invoice.DueDate | date: '%s' %}\r\n                {% assign nowTimestamp = 'now' | date: '%s' %}\r\n\r\n                {% comment %} difference in seconds {% endcomment %}\r\n                {% assign diffSeconds = nowTimestamp | minus: dateStart %}\r\n\r\n                {% comment %} difference in days {% endcomment %}\r\n                {% assign diffDays = diffSeconds | divided_by: 3600 | divided_by: 24 %}\r\n\r\n\r\n                <tr class=\"stripe\">\r\n                  <td style=\"font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">{{ invoice.InvoiceNumber }}</td>\r\n                  <td style=\"font-size: 14px; color: #C05F68; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><strong>{{ invoice.Balance | money: Data.Account.Currency }}</strong></td>\r\n                  <td style=\"font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">{{ invoice.InvoiceDate | date: \"%b %e %Y\" }}</td>\r\n                  <td style=\"font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">{{ invoice.DueDate | date: \"%b %e %Y\" }}</td>\r\n                  <td style=\"font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">{{ diffDays }}</td>\r\n                </tr>\r\n                {% assign total_balance = total_balance | plus: invoice.Balance %}\r\n\t\t\t\t\t\t\t{% endfor %}\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t<table width=\"100%\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n\t\t\t\t\t\t<tr style=\"background-color: #EFD1D1; margin: 0px auto;\">\r\n\r\n                                <td style=\"font-size: 14px; color: #C05F68; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Outstanding Balance:  <strong>{{ total_balance | money: Data.Account.Currency}}</strong></td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\r\n\r\n\r\n                    <!-- end of new table-->\r\n                      </td>\r\n                    </tr><tr dup=\"0\"><td valign=\"top\" align=\"center\" class=\"clear-pad\">\r\n                        <table width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0px auto;\"><tbody><tr dup=\"0\"><td valign=\"top\" align=\"center\">\r\n                              <table width=\"95%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 40px auto 0 auto;\"><tbody><tr><td align=\"left\" style=\"font-size: 14px; color: #999999; font-weight: normal; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: left; word-break: break-word; line-height: 22px;\"><div style=\"text-align: left; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><span style=\"line-height: 22px; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Please confirm the date payment will be remitted for the outstanding invoice(s).  If you have any questions regarding this payment or if we can help in any way please contact<span style=\"color: #384b5d; line-height: 22px; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><span style=\"line-height: 22px; font-size: 14px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"> Your Rep at 000-000-000</span>.</span><br style=\"font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"></span>\r\n                              <br/> Regards,\r\n                              <br/> Zuora Inc.\r\n                              </div></td>\r\n                                </tr><!-- start space --><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                                  </td>\r\n                                </tr><!-- end space --></tbody></table></td>\r\n                          </tr><tr><td valign=\"top\" align=\"center\" class=\"clear-pad\" style=\"padding-left:20px; padding-right:20px;\">\r\n                              <table width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0px auto;\"><!--start button--><tbody><tr><td valign=\"top\" align=\"center\">\r\n                                    <table width=\"auto\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"margin: 0px auto;\"><tbody><tr><!-- start duplicate button -->\r\n                                        <!-- end duplicate button -->\r\n                                      </tr></tbody></table></td>\r\n                                </tr><!--end button--></tbody></table></td>\r\n                          </tr><!-- start space --><tr><td valign=\"top\" height=\"5\" style=\"height: 5px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --></tbody></table></td>\r\n                    </tr></tbody></table></td>\r\n              </tr></tbody></table></td>\r\n        </tr><!-- END ORDER-TABLE --></tbody><!--START LAYOUT-16 ( UNSUBSCRIBE ) --><tbody><tr><td align=\"center\" valign=\"top\" class=\"container\" style=\"background-color: #ffffff;\" bgcolor=\"#ffffff\">\r\n            <!-- start container -->\r\n            <table width=\"600\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"container\" style=\"min-width: 600px; background-color: #ffffff; padding-left: 20px; padding-right: 20px; width: 600px; margin: 0px auto;\"><tbody><tr><td valign=\"top\">\r\n                  <table width=\"560\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"full-width\" style=\"width: 560px; margin: 0px auto;\"><!-- start space --><tbody><tr><td valign=\"top\" height=\"14\" style=\"height: 14px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                      </td>\r\n                    </tr><!-- end space --><tr dup=\"0\"><td valign=\"top\">\r\n                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style=\"margin: 0px auto;\"><!-- start rights reserved --><tbody><tr><td align=\"center\" style=\"font-size: 13px; color: #999999; font-weight: normal; text-align: center; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif; word-break: break-word; line-height: 21px;\"><span style=\"line-height: 21px; font-size: 13px; font-weight: 400; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif;\">Copyright © 2008-2016, Zuora Inc. All Rights Reserved.</span></td>\r\n                          </tr><!-- end rights reserved --><!-- start space --><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                              </td>\r\n                            </tr><!-- end space --></tbody></table></td>\r\n                    </tr><!-- start space --><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                    </td>\r\n                  </tr><!-- end space --></tbody></table></td>\r\n            </tr></tbody></table><!-- end container --></td>\r\n      </tr><!--END LAYOUT-16 ( UNSUBSCRIBE ) --></tbody></table></body>\r\n</html>",
+                    "attachments" : {
+                      "invoices" : "true"
+                    },
+                    "preview_only" : "true",
+                    "disable_editor" : "true"
+                  },
+                  "files" : {
+                    "InvoiceItem__20.csv.zip" : {
+                      "name" : "",
+                      "attach" : "false"
+                    }
+                  },
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Email",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 19,
+                "css" : {
+                  "top" : "310px",
+                  "left" : "720px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 19,
+                "name" : "Refetch Matched Invoices Per Account",
+                "parameters" : {
+                  "fields" : {
+                    "Invoice" : {
+                      "Id" : "true",
+                      "Amount" : "true",
+                      "Status" : "true",
+                      "Balance" : "true",
+                      "DueDate" : "true",
+                      "AccountId" : "true",
+                      "InvoiceDate" : "true",
+                      "InvoiceNumber" : "true",
+                      "PaymentAmount" : "true"
+                    }
+                  },
+                  "batch_size" : "2000",
+                  "where_clause" : "DueDate <= '{{Data.Invoice.DueDate}}' AND Balance > 0 AND Status = 'Posted' AND AccountId = '{{Data.Account.Id}}' ",
+                  "workflow_tags" : [ ],
+                  "zero_query_proceed" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Query",
+                "object" : "Invoice",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 17,
+                "css" : {
+                  "top" : "400px",
+                  "left" : "180px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 20,
+                "name" : "Get Invoice >30 Days",
+                "parameters" : {
+                  "fields" : {
+                    "Account" : {
+                      "Id" : "true",
+                      "Name" : "true",
+                      "Batch" : "true",
+                      "CrmId" : "true",
+                      "Currency" : "true",
+                      "SalesRepName" : "true",
+                      "AccountNumber" : "true",
+                      "CommunicationProfileId" : "true",
+                      "AdditionalEmailAddresses" : "true"
+                    },
+                    "Invoice" : {
+                      "Id" : "true",
+                      "Amount" : "true",
+                      "Status" : "true",
+                      "Balance" : "true",
+                      "DueDate" : "true",
+                      "InvoiceDate" : "true",
+                      "InvoiceNumber" : "true"
+                    },
+                    "BillToContact" : {
+                      "State" : "true",
+                      "County" : "true",
+                      "Address1" : "true",
+                      "Address2" : "true",
+                      "LastName" : "true",
+                      "FirstName" : "true",
+                      "WorkEmail" : "true",
+                      "PersonalEmail" : "true"
+                    },
+                    "DefaultPaymentMethod" : {
+                      "Type" : "true"
+                    }
+                  },
+                  "where_clause" : " Invoice.DueDate <= 'today - 30 days' AND Invoice.Balance > 0 AND Invoice.Status = 'Posted' Order By Invoice.DueDate Desc",
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Export",
+                "object" : "InvoiceItem",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "210px",
+                  "left" : "400px"
+                },
+                "concurrent_limit" : 4,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : null,
+                "source_task_id" : 19,
+                "target_task_id" : 18,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 17,
+                "target_task_id" : 19,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 20,
+                "target_task_id" : 17,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : 4,
+                "source_task_id" : null,
+                "target_task_id" : 20,
+                "linkage_type" : "Start"
+              } ]
+            }
+          },
+          "5" : {
+            "Print Invoices_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Print Invoices",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 5,
+                "name" : "Print Invoices",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ {
+                    "index" : "0",
+                    "default" : "",
+                    "datatype" : "Text",
+                    "required" : true,
+                    "callout_id" : "BillRunID",
+                    "field_name" : "Id",
+                    "object_name" : "BillingRun"
+                  } ]
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : null,
+                "timezone" : null,
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "70px",
+                  "left" : "-10px"
+                },
+                "notifications" : {
+                  "emails" : [ ],
+                  "failure" : false,
+                  "pending" : false,
+                  "success" : false
+                },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 21,
+                "name" : "Iterate Invoices",
+                "parameters" : {
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "Invoice.Id",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Iterate",
+                "object" : "InvoiceItem__22.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 22,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "580px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 22,
+                "name" : "Get Invoices From Bill Run",
+                "parameters" : {
+                  "fields" : {
+                    "Account" : {
+                      "Id" : "true",
+                      "Name" : "true"
+                    },
+                    "Invoice" : {
+                      "Id" : "true"
+                    },
+                    "InvoiceItem" : {
+                      "Id" : "true",
+                      "Quantity" : "true",
+                      "ChargeDate" : "true",
+                      "ChargeName" : "true"
+                    }
+                  },
+                  "where_clause" : "Invoice.SourceId =  '{{Data.BillingRun.Id}}' ",
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Export",
+                "object" : "InvoiceItem",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "220px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 23,
+                "name" : "Print Service",
+                "parameters" : {
+                  "url" : "",
+                  "files" : [ {
+                    "key" : "InvoiceItem__22.csv.zip",
+                    "name" : "",
+                    "upload" : "false",
+                    "filename" : ""
+                  } ],
+                  "method" : "GET",
+                  "headers" : [ {
+                    "key" : "Content-Type",
+                    "value" : "application/json"
+                  } ],
+                  "api_name" : "",
+                  "raw_body" : "",
+                  "body_type" : "raw",
+                  "form_datas" : [ {
+                    "key" : "",
+                    "value" : "",
+                    "upload" : "false"
+                  } ],
+                  "validation" : {
+                    "replace" : "false",
+                    "zuora_call" : "false",
+                    "status_codes" : [ "", "200" ],
+                    "payload_location" : "Callout"
+                  },
+                  "api_doc_url" : "",
+                  "retry_rules" : {
+                    "retry_count" : "0",
+                    "retry_window" : "30",
+                    "current_retry_count" : "0"
+                  },
+                  "authorization" : {
+                    "type" : "none"
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "validate_response" : "false",
+                  "validation_scheme" : "",
+                  "disable_validation" : "true",
+                  "delete_payload_paths" : [ ],
+                  "include_response_code" : "true",
+                  "notification_history_enabled" : "false"
+                },
+                "action_type" : "Callout",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 21,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "1000px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : null,
+                "source_task_id" : 22,
+                "target_task_id" : 21,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : 5,
+                "source_task_id" : null,
+                "target_task_id" : 22,
+                "linkage_type" : "Start"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 21,
+                "target_task_id" : 23,
+                "linkage_type" : "For Each"
+              } ]
+            }
+          },
+          "6" : {
+            "Resume Subscriptions for Accounts with Zero Balance Limit 1_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 6,
+                "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ ]
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : null,
+                "timezone" : null,
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "35px"
+                },
+                "notifications" : { },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 24,
+                "name" : "Resume Notification",
+                "parameters" : {
+                  "email" : {
+                    "cc" : [ ],
+                    "to" : [ "test@test.com" ],
+                    "bcc" : [ ],
+                    "from" : "",
+                    "name" : "",
+                    "subject" : "Subscription Resumed",
+                    "reply_to" : "",
+                    "template" : "<p><br></p>\r\n\r\n<meta http-equiv=\"Content-Type\" content=\"text/html;charset=utf-8\">\r\n<meta http-equiv=\"Content-Language\" content=\"en-us\">\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\">\r\n<title>Zuora - Workflow Email Templates</title>\r\n\r\n<style type=\"text/css\">.zuora a, .zuora a:link { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; } .zuora a:visited { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; } .zuora a:hover  { font-family:verdana,arial; font-size:11px; color:#666666; line-height:16px; text-decoration:underline; } .zuora_font {font-family: verdana,arial; font-size: 11px; color: rgb(0, 0, 0); line-height: 16px;} </style>\r\n\r\n<div style=\"text-align: center;\"><img src=\"https://workflow.apps.zuora.com/zuora_header.png\" style=\"width: 685px;\"></div>\r\n<center>\r\n  <table class=\"zuora\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"685\" style=\"margin-top:0px\">\r\n    <tbody>\r\n      <tr>\r\n        <td colspan=\"3\" bgcolor=\"#d5d5d5\" height=\"1\"></td>\r\n      </tr>\r\n      <tr>\r\n        <td bgcolor=\"#d5d5d5\" width=\"1\"></td>\r\n        <td align=\"left\" bgcolor=\"#ffffff\" height=\"130\" valign=\"top\" width=\"683\">\r\n          <table cellpadding=\"0\" cellspacing=\"0\" width=\"647\" style=\"margin-left:10px\">\r\n            <tbody>\r\n              <tr>\r\n                <td colspan=\"3\" height=\"15\">&nbsp;</td>\r\n              </tr>\r\n              <tr>\r\n                <td align=\"left\" valign=\"top\" width=\"647\">\r\n                  <p>\r\n                    <font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\">\r\n                      Hello {{Data.Account.Name}},\r\n                    </font>\r\n                  </p>\r\n                  <p>\r\n                    <font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\">\r\n                      </font></p><p><font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\">\r\n                        We would like to inform you that your subscription, {{Data.Subscription.Name}} , has been resumed as your account balance has been paid off. Please contact support if you think there has been a mistake.</font></p><p><font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\"></font></p>\r\n                </td>\r\n              </tr>\r\n              <tr>\r\n                <td align=\"left\" valign=\"top\" width=\"647\">\r\n                  <font class=\"zuora_font\" color=\"#000000\" face=\"verdana,arial\" size=\"1\">\r\n                    <br>\r\n                    <p>Thanks,</p>\r\n                    <br>\r\n                    Zuora, Inc. - Powering the subscription economy\r\n                  </font>\r\n                </td>\r\n              </tr>\r\n              <tr><td>&nbsp;</td></tr>\r\n            </tbody>\r\n          </table>\r\n        </td>\r\n        <td bgcolor=\"#d5d5d5\" height=\"1\" width=\"1\"></td>\r\n      </tr>\r\n      <tr>\r\n        <td colspan=\"3\" bgcolor=\"#d5d5d5\" height=\"1px\"></td>\r\n      </tr>\r\n      <tr>\r\n        <td height=\"10\"></td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n  <table cellpadding=\"0\" cellspacing=\"0\" width=\"685\">\r\n    <tbody>\r\n      <tr>\r\n        <td align=\"center\" height=\"10\">\r\n          <font class=\"zuora_font\" color=\"#666666\" face=\"arial,verdana\" size=\"1\">\r\n            Copyright © 2008-2016, Zuora Inc. All Rights Reserved.\r\n          </font>\r\n        </td>\r\n      </tr>\r\n    </tbody>\r\n  </table>\r\n</center>",
+                    "preview_only" : "true"
+                  },
+                  "files" : { },
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Email",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 25,
+                "css" : {
+                  "top" : "190px",
+                  "left" : "490px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 25,
+                "name" : "Resume Subscription",
+                "parameters" : {
+                  "fields" : {
+                    "Amendment" : {
+                      "extendsTerm" : "false",
+                      "resumePolicy" : "SpecificDate",
+                      "resumeSpecificDate" : "{{Data.Workflow.ExecutionDate}}",
+                      "contractEffectiveDate" : "{{Data.Workflow.ExecutionDate}}"
+                    }
+                  },
+                  "options" : {
+                    "Amendment" : {
+                      "GenerateInvoice" : "true",
+                      "ProcessPayments" : "false",
+                      "ApplyCreditBalance" : "false"
+                    }
+                  },
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Resume",
+                "object" : "Amendment",
+                "object_id" : "{{Data.Subscription.Id}}",
+                "call_type" : "REST",
+                "task_id" : 26,
+                "css" : {
+                  "top" : "190px",
+                  "left" : "114px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 26,
+                "name" : "Iterate Subscriptions",
+                "parameters" : {
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Default",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Iterate",
+                "object" : "Subscription__27.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 27,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "764px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 27,
+                "name" : "Export Subscriptions",
+                "parameters" : {
+                  "fields" : {
+                    "Account" : {
+                      "Name" : "true",
+                      "Balance" : "true",
+                      "AccountNumber" : "true"
+                    },
+                    "Subscription" : {
+                      "Id" : "true",
+                      "Name" : "true",
+                      "Status" : "true",
+                      "RenewalTerm" : "true",
+                      "RenewalSetting" : "true",
+                      "RenewalTermPeriodType" : "true"
+                    },
+                    "SubscriptionVersionAmendment" : {
+                      "Type" : "true",
+                      "Status" : "true",
+                      "RenewalTerm" : "true",
+                      "SuspendDate" : "true",
+                      "RenewalSetting" : "true"
+                    }
+                  },
+                  "where_clause" : " Subscription.Status = 'Suspended' AND SubscriptionVersionAmendment.SuspendDate < 'today' AND Account.Balance = 0 Limit 1",
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Export",
+                "object" : "Subscription",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "404px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : 6,
+                "source_task_id" : null,
+                "target_task_id" : 27,
+                "linkage_type" : "Start"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 27,
+                "target_task_id" : 26,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 26,
+                "target_task_id" : 25,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 25,
+                "target_task_id" : 24,
+                "linkage_type" : "Success"
+              } ]
+            }
+          },
+          "7" : {
+            "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 _0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 7,
+                "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ ]
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : null,
+                "timezone" : null,
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "35px"
+                },
+                "notifications" : { },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 28,
+                "name" : "Suspend Subscription",
+                "parameters" : {
+                  "fields" : {
+                    "Amendment" : {
+                      "Name" : "Suspend Subscription",
+                      "Description" : "No Payment 10 Days",
+                      "SuspendDate" : "{{Data.Workflow.ExecutionDate}}",
+                      "ContractEffectiveDate" : "{{Data.Workflow.ExecutionDate}}"
+                    }
+                  },
+                  "options" : {
+                    "Amendment" : {
+                      "GenerateInvoice" : "true",
+                      "ProcessPayments" : "false",
+                      "ApplyCreditBalance" : "false"
+                    }
+                  },
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Suspend",
+                "object" : "Amendment",
+                "object_id" : "{{Data.Subscription.Id}}",
+                "call_type" : "SOAP",
+                "task_id" : 29,
+                "css" : {
+                  "top" : "220px",
+                  "left" : "114px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 29,
+                "name" : "Iterate Unique Subs",
+                "parameters" : {
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "Subscription.Id",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Iterate",
+                "object" : "InvoiceItem__30.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 30,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "754px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 30,
+                "name" : "Export Subscriptions Tied to Unpaid Invoices",
+                "parameters" : {
+                  "fields" : {
+                    "Account" : {
+                      "Name" : "true",
+                      "AccountNumber" : "true"
+                    },
+                    "Invoice" : {
+                      "Amount" : "true",
+                      "Balance" : "true",
+                      "DueDate" : "true",
+                      "InvoiceDate" : "true",
+                      "InvoiceNumber" : "true"
+                    },
+                    "Subscription" : {
+                      "Id" : "true",
+                      "Name" : "true",
+                      "Status" : "true"
+                    }
+                  },
+                  "where_clause" : "Invoice.Balance > 0 AND Invoice.DueDate < 'today - 10 day' AND Invoice.Status = 'Posted' AND Subscription.Status ='Active'  Limit 1",
+                  "workflow_tags" : [ ],
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Export",
+                "object" : "InvoiceItem",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "404px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : 7,
+                "source_task_id" : null,
+                "target_task_id" : 30,
+                "linkage_type" : "Start"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 30,
+                "target_task_id" : 29,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 29,
+                "target_task_id" : 28,
+                "linkage_type" : "For Each"
+              } ]
+            }
+          },
+          "8" : {
+            "hiPages_WF_023_BulkLoad_PaymentMethod_0.0.2" : {
+              "workflow_definition" : {
+                "name" : "hiPages_WF_023_BulkLoad_PaymentMethod",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 8,
+                "name" : "hiPages_WF_023_BulkLoad_PaymentMethod",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ {
+                    "index" : "0",
+                    "default" : "",
+                    "datatype" : "File-Field",
+                    "required" : true,
+                    "field_name" : "PaymentMethodFile",
+                    "object_name" : "Files"
+                  } ],
+                  "skipping_check" : null,
+                  "file_encryption" : null,
+                  "show_run_prompt" : "true",
+                  "callout_response" : null,
+                  "secure_error_msgs" : null,
+                  "disable_pending_status" : false
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : false,
+                "scheduled_trigger" : false,
+                "interval" : "",
+                "timezone" : "",
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "35px"
+                },
+                "notifications" : {
+                  "failure" : false,
+                  "pending" : false,
+                  "success" : false
+                },
+                "call_type" : "BATCH",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.2",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 31,
+                "name" : "Iterate over tokens",
+                "parameters" : {
+                  "file_type" : "CSV",
+                  "chunk_size" : "0",
+                  "skip_headers" : "0",
+                  "skip_trailer" : "false",
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Default",
+                  "strict_variables" : "true",
+                  "csv_header_filter" : "",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ],
+                  "generate_auto_headers" : "false"
+                },
+                "action_type" : "Iterate",
+                "object" : "PaymentMethodFile",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "120px",
+                  "left" : "310px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 32,
+                "name" : "Create Payment Method",
+                "parameters" : {
+                  "url" : "{{ Credentials.zuora.rest_endpoint | replace: \"/v1/\", \"\" }}/v1/payment-methods",
+                  "files" : [ {
+                    "key" : "PaymentMethodFile",
+                    "name" : "",
+                    "upload" : "false",
+                    "filename" : ""
+                  } ],
+                  "method" : "POST",
+                  "headers" : [ {
+                    "key" : "Content-Type",
+                    "value" : "application/json"
+                  } ],
+                  "api_name" : "",
+                  "raw_body" : "{\r\n\"type\": \"EwayGateway__c_10001444\",\r\n\"ewayTokenCustomerID\": \"{{Data.PaymentMethodFile.EwayCustomerToken}}\",\r\n\"accountKey\":\"{{Data.PaymentMethodFile.AccountNumber}}\",\r\n\"CreditCardMaskedNumber__c\": \"{{Data.PaymentMethodFile.CreditCardMaskedNumber}}\",\r\n\"FirstName__c\": \"{{Data.PaymentMethodFile.FirstName}}\",\r\n\"LastName__c\": \"{{Data.PaymentMethodFile.LastName}}\",\r\n\"ExpirationMonth__c\": \"{{Data.PaymentMethodFile.ExpirationMonth}}\",\r\n\"ExpirationYear__c\": \"{{Data.PaymentMethodFile.ExpirationYear}}\"\r\n}",
+                  "body_type" : "raw",
+                  "form_datas" : [ {
+                    "key" : "",
+                    "value" : "",
+                    "upload" : "false"
+                  } ],
+                  "validation" : {
+                    "replace" : "false",
+                    "zuora_call" : "true",
+                    "status_codes" : [ "", "200", "" ],
+                    "payload_location" : "Callout"
+                  },
+                  "api_doc_url" : "https://www.zuora.com/developer/api-reference/#operation/POST_PaymentMethods",
+                  "retry_rules" : {
+                    "retry_count" : "0",
+                    "retry_window" : "30",
+                    "current_retry_count" : "0"
+                  },
+                  "authorization" : {
+                    "type" : "zuora"
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "validate_response" : "false",
+                  "validation_scheme" : "",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ],
+                  "include_response_code" : "true",
+                  "notification_history_enabled" : "false"
+                },
+                "action_type" : "Callout",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 31,
+                "css" : {
+                  "top" : "190px",
+                  "left" : "630px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ "{{Data.paymentMethodFile.AccountId}}" ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : 8,
+                "source_task_id" : null,
+                "target_task_id" : 31,
+                "linkage_type" : "Start"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 31,
+                "target_task_id" : 32,
+                "linkage_type" : "For Each"
+              } ]
+            }
+          }
+        },
+        "featureDisabled" : false
+      },
+      "response" : [ {
+        "id" : "a15e1266-68d2-4333-982d-99b43439d2df",
+        "key" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1_0.0.1",
+        "segregationKey" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+        "componentType" : "WorkFlows",
+        "url" : "1",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 1,
+          "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : "0 0 0 /1 * *",
+          "timezone" : "Eastern Time (US & Canada)",
+          "createdAt" : "2024-07-23T07:33:16.438Z",
+          "updatedAt" : "2024-07-23T07:33:16.438Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 1,
+            "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+            "definitionId" : 1,
+            "definitionName" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 0 /1 * *",
+            "timezone" : "Eastern Time (US & Canada)",
+            "createdAt" : "2024-07-23T07:33:16.438Z",
+            "updatedAt" : "2024-07-23T07:33:16.438Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 1,
+            "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+            "definitionId" : 1,
+            "definitionName" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 0 /1 * *",
+            "timezone" : "Eastern Time (US & Canada)",
+            "createdAt" : "2024-07-23T07:33:16.438Z",
+            "updatedAt" : "2024-07-23T07:33:16.438Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "551f28de-b9b2-4f38-aa90-93562716ca8f"
+      }, {
+        "id" : "495b1c92-7932-4637-9ed2-9c8576783ff8",
+        "key" : "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1",
+        "segregationKey" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+        "componentType" : "WorkFlows",
+        "url" : "2",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 2,
+          "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T07:33:17.230Z",
+          "updatedAt" : "2024-07-23T07:33:17.230Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 2,
+            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "definitionId" : 2,
+            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:17.230Z",
+            "updatedAt" : "2024-07-23T07:33:17.230Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 2,
+            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "definitionId" : 2,
+            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:17.230Z",
+            "updatedAt" : "2024-07-23T07:33:17.230Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "551f28de-b9b2-4f38-aa90-93562716ca8f"
+      }, {
+        "id" : "e028e742-9293-4197-9289-e64e41352a49",
+        "key" : "Custom Invoice_0.0.1",
+        "segregationKey" : "Custom Invoice",
+        "componentType" : "WorkFlows",
+        "url" : "3",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 3,
+          "name" : "Custom Invoice",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T07:33:18.094Z",
+          "updatedAt" : "2024-07-23T07:33:18.094Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 3,
+            "name" : "Custom Invoice",
+            "definitionId" : 3,
+            "definitionName" : "Custom Invoice",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:18.094Z",
+            "updatedAt" : "2024-07-23T07:33:18.094Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 3,
+            "name" : "Custom Invoice",
+            "definitionId" : 3,
+            "definitionName" : "Custom Invoice",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:18.094Z",
+            "updatedAt" : "2024-07-23T07:33:18.094Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "551f28de-b9b2-4f38-aa90-93562716ca8f"
+      }, {
+        "id" : "4a4e828d-f0b8-42a5-a982-75e8db9b28d7",
+        "key" : "Invoice 30 Days Past Due, Account Summary_0.0.1",
+        "segregationKey" : "Invoice 30 Days Past Due, Account Summary",
+        "componentType" : "WorkFlows",
+        "url" : "4",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 4,
+          "name" : "Invoice 30 Days Past Due, Account Summary",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : "0 0 3 /1 * *",
+          "timezone" : "Pacific Time (US & Canada)",
+          "createdAt" : "2024-07-23T07:33:19.002Z",
+          "updatedAt" : "2024-07-23T07:33:19.002Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 4,
+            "name" : "Invoice 30 Days Past Due, Account Summary",
+            "definitionId" : 4,
+            "definitionName" : "Invoice 30 Days Past Due, Account Summary",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 3 /1 * *",
+            "timezone" : "Pacific Time (US & Canada)",
+            "createdAt" : "2024-07-23T07:33:19.002Z",
+            "updatedAt" : "2024-07-23T07:33:19.002Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 4,
+            "name" : "Invoice 30 Days Past Due, Account Summary",
+            "definitionId" : 4,
+            "definitionName" : "Invoice 30 Days Past Due, Account Summary",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 3 /1 * *",
+            "timezone" : "Pacific Time (US & Canada)",
+            "createdAt" : "2024-07-23T07:33:19.002Z",
+            "updatedAt" : "2024-07-23T07:33:19.002Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "551f28de-b9b2-4f38-aa90-93562716ca8f"
+      }, {
+        "id" : "dbb47679-69be-4f6d-86ce-93e54a5a035a",
+        "key" : "Print Invoices_0.0.1",
+        "segregationKey" : "Print Invoices",
+        "componentType" : "WorkFlows",
+        "url" : "5",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 5,
+          "name" : "Print Invoices",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T07:33:19.839Z",
+          "updatedAt" : "2024-07-23T07:33:19.839Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 5,
+            "name" : "Print Invoices",
+            "definitionId" : 5,
+            "definitionName" : "Print Invoices",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:19.839Z",
+            "updatedAt" : "2024-07-23T07:33:19.839Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "callout_id" : "BillRunID",
+              "field_name" : "Id",
+              "object_name" : "BillingRun"
+            } ],
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 5,
+            "name" : "Print Invoices",
+            "definitionId" : 5,
+            "definitionName" : "Print Invoices",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:19.839Z",
+            "updatedAt" : "2024-07-23T07:33:19.839Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "callout_id" : "BillRunID",
+              "field_name" : "Id",
+              "object_name" : "BillingRun"
+            } ],
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "551f28de-b9b2-4f38-aa90-93562716ca8f"
+      }, {
+        "id" : "061cf4d6-343c-4495-b1ab-0fb9ca928f94",
+        "key" : "Resume Subscriptions for Accounts with Zero Balance Limit 1_0.0.1",
+        "segregationKey" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+        "componentType" : "WorkFlows",
+        "url" : "6",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 6,
+          "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T07:33:21.100Z",
+          "updatedAt" : "2024-07-23T07:33:21.100Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 6,
+            "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+            "definitionId" : 6,
+            "definitionName" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:21.100Z",
+            "updatedAt" : "2024-07-23T07:33:21.100Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 6,
+            "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+            "definitionId" : 6,
+            "definitionName" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:21.100Z",
+            "updatedAt" : "2024-07-23T07:33:21.100Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "551f28de-b9b2-4f38-aa90-93562716ca8f"
+      }, {
+        "id" : "80eb4caf-eb7d-4625-be29-468ad25dcf92",
+        "key" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 _0.0.1",
+        "segregationKey" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+        "componentType" : "WorkFlows",
+        "url" : "7",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 7,
+          "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T07:33:22.222Z",
+          "updatedAt" : "2024-07-23T07:33:22.222Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 7,
+            "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+            "definitionId" : 7,
+            "definitionName" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:22.222Z",
+            "updatedAt" : "2024-07-23T07:33:22.222Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 7,
+            "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+            "definitionId" : 7,
+            "definitionName" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T07:33:22.222Z",
+            "updatedAt" : "2024-07-23T07:33:22.222Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "551f28de-b9b2-4f38-aa90-93562716ca8f"
+      }, {
+        "id" : "e46d16e6-37fa-4264-a861-dd065ca2a5b0",
+        "key" : "hiPages_WF_023_BulkLoad_PaymentMethod_0.0.2",
+        "segregationKey" : "hiPages_WF_023_BulkLoad_PaymentMethod",
+        "componentType" : "WorkFlows",
+        "url" : "8",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 8,
+          "name" : "hiPages_WF_023_BulkLoad_PaymentMethod",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : false,
+          "scheduledTrigger" : false,
+          "interval" : "",
+          "timezone" : "",
+          "createdAt" : "2024-07-23T07:33:22.872Z",
+          "updatedAt" : "2024-07-23T07:33:22.872Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 8,
+            "name" : "hiPages_WF_023_BulkLoad_PaymentMethod",
+            "definitionId" : 8,
+            "definitionName" : "hiPages_WF_023_BulkLoad_PaymentMethod",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.2",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : false,
+            "scheduledTrigger" : false,
+            "interval" : "",
+            "timezone" : "",
+            "createdAt" : "2024-07-23T07:33:22.872Z",
+            "updatedAt" : "2024-07-23T07:33:22.872Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "",
+              "datatype" : "File-Field",
+              "required" : true,
+              "field_name" : "PaymentMethodFile",
+              "object_name" : "Files"
+            } ],
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 8,
+            "name" : "hiPages_WF_023_BulkLoad_PaymentMethod",
+            "definitionId" : 8,
+            "definitionName" : "hiPages_WF_023_BulkLoad_PaymentMethod",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.2",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : false,
+            "scheduledTrigger" : false,
+            "interval" : "",
+            "timezone" : "",
+            "createdAt" : "2024-07-23T07:33:22.872Z",
+            "updatedAt" : "2024-07-23T07:33:22.872Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "",
+              "datatype" : "File-Field",
+              "required" : true,
+              "field_name" : "PaymentMethodFile",
+              "object_name" : "Files"
+            } ],
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "551f28de-b9b2-4f38-aa90-93562716ca8f"
+      } ],
+      "errors" : [ ]
+    } ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "awsInfo" : null
+  }
+}
