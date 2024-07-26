@@ -1,5 +1,5 @@
 {
-  "id" : "5579cb9b-9d6b-4300-815d-1817aedddd31",
+  "id" : "c3826d79-0fa4-4b03-99d0-8468122b1785",
   "name" : "DirectMeter_Test",
   "description" : "DirectMeter_Test",
   "status" : "DONE",
@@ -10,7 +10,7 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Automation source",
   "updatedBy" : "Automation source",
-  "createdOn" : "2024-07-26T13:12:55.454Z",
+  "createdOn" : "2024-07-26T13:18:49.660Z",
   "type" : "Others",
   "repo" : false,
   "connectorId" : null,
@@ -295,7 +295,7 @@
         }
       },
       "response" : [ {
-        "id" : "cf7735b0-db25-4b3b-938e-34eb0ad457fa",
+        "id" : "8e18782e-d01c-47de-be6b-526e7bd52b9c",
         "key" : "Delta_test : 521460c5302a420db8d1f55ef5bec39b",
         "segregationKey" : "Meters",
         "componentType" : "Mediation",
@@ -403,9 +403,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "5579cb9b-9d6b-4300-815d-1817aedddd31"
+        "templateId" : "c3826d79-0fa4-4b03-99d0-8468122b1785"
       }, {
-        "id" : "a696c009-b635-4dcb-831b-076214dce2ea",
+        "id" : "800b5cf6-aff8-47c1-b717-d1895c52be64",
         "key" : "Direct_test : 86f3acd0919b43339b6a109f35870b08",
         "segregationKey" : "Meters",
         "componentType" : "Mediation",
@@ -513,9 +513,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "5579cb9b-9d6b-4300-815d-1817aedddd31"
+        "templateId" : "c3826d79-0fa4-4b03-99d0-8468122b1785"
       }, {
-        "id" : "bb8f101e-37a1-4442-b341-f9f9fef8fe19",
+        "id" : "1053d458-d065-4471-aab4-309c87962633",
         "key" : "Direct2 : 2c687c3510c9422f962677b78170c69d",
         "segregationKey" : "Meters",
         "componentType" : "Mediation",
@@ -625,9 +625,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "5579cb9b-9d6b-4300-815d-1817aedddd31"
+        "templateId" : "c3826d79-0fa4-4b03-99d0-8468122b1785"
       }, {
-        "id" : "b3ca2c4c-19c1-41fb-9adf-9d3b9318da56",
+        "id" : "1501e870-efcb-43a2-b65f-a743b93c3844",
         "key" : "Event_Automation_1721900613661_38",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -676,9 +676,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "5579cb9b-9d6b-4300-815d-1817aedddd31"
+        "templateId" : "c3826d79-0fa4-4b03-99d0-8468122b1785"
       }, {
-        "id" : "a21ff3f5-6e29-4d08-a5f4-2df3ba3f7921",
+        "id" : "31e5645d-eb1c-4365-b330-d85793d7f3fa",
         "key" : "Event_Automation_1721896224086_918",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -727,9 +727,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "5579cb9b-9d6b-4300-815d-1817aedddd31"
+        "templateId" : "c3826d79-0fa4-4b03-99d0-8468122b1785"
       }, {
-        "id" : "f899be73-09e3-4c51-91af-7e8d76a6bdf1",
+        "id" : "e1a379bf-4073-49c6-98f0-3aeb99656824",
         "key" : "Event_Automation_1721896032166_492",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -778,9 +778,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "5579cb9b-9d6b-4300-815d-1817aedddd31"
+        "templateId" : "c3826d79-0fa4-4b03-99d0-8468122b1785"
       }, {
-        "id" : "36e3caed-bf6a-4246-b9e6-983d65de392c",
+        "id" : "5480fa9a-fc5e-41f9-b83e-560556d0c8b3",
         "key" : "Event_Automation_1721895943217_9",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -829,9 +829,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "5579cb9b-9d6b-4300-815d-1817aedddd31"
+        "templateId" : "c3826d79-0fa4-4b03-99d0-8468122b1785"
       }, {
-        "id" : "bbaa8623-af9a-4c32-a8dd-a814e0c044eb",
+        "id" : "b4fa0fb3-fb62-4a87-809d-3cf0fc6df45b",
         "key" : "Event1",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -887,9 +887,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "5579cb9b-9d6b-4300-815d-1817aedddd31"
+        "templateId" : "c3826d79-0fa4-4b03-99d0-8468122b1785"
       }, {
-        "id" : "1cd4a15c-0c69-43f4-b978-c982c5311edb",
+        "id" : "6646342d-cd44-48e1-b283-622539cc8f22",
         "key" : "Test1",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -945,7 +945,7 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "5579cb9b-9d6b-4300-815d-1817aedddd31"
+        "templateId" : "c3826d79-0fa4-4b03-99d0-8468122b1785"
       } ],
       "errors" : [ ]
     } ],
