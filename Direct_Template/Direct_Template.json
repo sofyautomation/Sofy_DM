@@ -1,5 +1,5 @@
 {
-  "id" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3",
+  "id" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2",
   "name" : "Direct_Template",
   "description" : "Direct_Template",
   "status" : "DONE",
@@ -10,7 +10,7 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Automation source",
   "updatedBy" : "Automation source",
-  "createdOn" : "2024-07-30T09:56:39.895Z",
+  "createdOn" : "2024-07-31T11:15:24.901Z",
   "type" : "Others",
   "repo" : false,
   "connectorId" : null,
@@ -159,6 +159,46 @@
             "updatedAt" : "2024-07-25T08:30:34Z",
             "editable" : true,
             "eventStoreApplicable" : false
+          },
+          "Manualcheckevent" : {
+            "id" : "16",
+            "name" : "Manualcheckevent",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Manualcheckevent",
+              "required" : [ "timedate" ],
+              "properties" : {
+                "ID" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "text" : {
+                  "type" : "string",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "text"
+                },
+                "timedate" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "timedate"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-07-31T07:39:20Z",
+            "updatedAt" : "2024-07-31T07:39:20Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
           },
           "Event_Automation_1721896032166_492" : {
             "id" : "10",
@@ -416,15 +456,236 @@
           }
         },
         "Meters" : {
+          "45" : "{\n  \"name\" : \"TestingMeterDirectmanual\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DIRECT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Manualcheckevent\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"timedate\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Manualcheckevent\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Manualcheckevent\",\n      \"required\" : [ \"timedate\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"text\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"text\"\n        },\n        \"timedate\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"timedate\"\n        }\n      }\n    }\n  } ]\n}",
+          "44" : "{\n  \"name\" : \"Direct_Git\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DIRECT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Test1\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"datetimez\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-07-24 01:05:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Test1\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Test1\",\n      \"required\" : [ \"datetimez\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"Text\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        },\n        \"datetimez\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"datetimez\"\n        },\n        \"Bool\" : {\n          \"type\" : \"boolean\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Bool\"\n        }\n      }\n    }\n  } ]\n}",
           "43" : "{\n  \"name\" : \"Delta_configtemp\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DELTA\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_Deltaconfig\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"timedate\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Name\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_Deltaconfig\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"Number\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_Deltaconfig\",\n      \"required\" : [ \"timedate\" ],\n      \"properties\" : {\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Name\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Name\"\n        },\n        \"timedate\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"timedate\"\n        },\n        \"TF\" : {\n          \"type\" : \"boolean\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"TF\"\n        }\n      }\n    }\n  } ]\n}",
           "42" : "{\n  \"name\" : \"Direct_Configtemp\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DIRECT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_DirectConfig\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"timedate\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_DirectConfig\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_DirectConfig\",\n      \"required\" : [ \"timedate\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"text\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"text\"\n        },\n        \"timedate\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"timedate\"\n        }\n      }\n    }\n  } ]\n}",
           "41" : "{\n  \"name\" : \"Delta_test\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DELTA\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Test1\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"datetimez\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-07-24 01:05:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Test1\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Test1\",\n      \"required\" : [ \"datetimez\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"Text\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        },\n        \"datetimez\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"datetimez\"\n        },\n        \"Bool\" : {\n          \"type\" : \"boolean\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Bool\"\n        }\n      }\n    }\n  } ]\n}",
-          "39" : "{\n  \"name\" : \"Direct_test\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DIRECT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Test1\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"datetimez\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-07-24 01:05:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Test1\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Test1\",\n      \"required\" : [ \"datetimez\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"Text\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        },\n        \"datetimez\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"datetimez\"\n        },\n        \"Bool\" : {\n          \"type\" : \"boolean\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Bool\"\n        }\n      }\n    }\n  } ]\n}",
-          "31" : "{\n  \"name\" : \"Direct2\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DIRECT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event1\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"Date&Time\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Name\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"Name\",\n      \"name\" : \"UsageCfTestDateTime1__c\"\n    }, {\n      \"field\" : \"Name\",\n      \"name\" : \"UsageCfTestDateTime2__c\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"usage_cf1_pickup__c\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"usage_cf1_amount__c\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UsageCfTest__c\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UsageCfTestUrl__c\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UsageCfTestDateTime__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event1\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event1\",\n      \"required\" : [ \"Date&Time\", \"ID\", \"Name\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"Date&Time\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 1,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-06-18 14:44:03\",\n          \"description\" : \"Date&Time\"\n        },\n        \"Name\" : {\n          \"type\" : \"string\",\n          \"order\" : 2,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Name\"\n        },\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        }\n      }\n    }\n  } ]\n}"
+          "39" : "{\n  \"name\" : \"Direct_test\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DIRECT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Test1\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"datetimez\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-07-24 01:05:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Test1\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Test1\",\n      \"required\" : [ \"datetimez\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"Text\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        },\n        \"datetimez\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"datetimez\"\n        },\n        \"Bool\" : {\n          \"type\" : \"boolean\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Bool\"\n        }\n      }\n    }\n  } ]\n}"
         }
       },
       "response" : [ {
-        "id" : "922bb845-7301-4b27-a714-092ad82a8fae",
+        "id" : "0cde90ef-90d4-4740-b166-7affbec46c9b",
+        "key" : "TestingMeterDirectmanual : 7807bd59c9b74cfe8c54df2afe17ea91",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "45",
+          "name" : "TestingMeterDirectmanual",
+          "description" : "My meter description",
+          "type" : "DIRECT",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "16",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "timedate",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "ID",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-16-19 12:52:03",
+              "cumulativePeriod" : ""
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "7807bd59c9b74cfe8c54df2afe17ea91",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/7807bd59c9b74cfe8c54df2afe17ea91",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "45",
+            "meterId" : 45,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "16"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "26",
+              "sessionId" : "R-00000026",
+              "jobId" : "2ad3ca252b9e48b68a4148a22b4d089c",
+              "meterId" : 45,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-07-31T07:40:18Z",
+              "endTime" : "2024-07-31T07:40:32Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-07-31T07:39:41Z",
+            "updatedAt" : "2024-07-31T07:40:33Z"
+          },
+          "createdAt" : "2024-07-31T07:39:41Z",
+          "updatedAt" : "2024-07-31T07:40:33Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
+      }, {
+        "id" : "a53a88d0-aa44-4a88-9550-c6666952ac06",
+        "key" : "Direct_Git : d5711d2624c5408fab11429d9bce32b0",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "44",
+          "name" : "Direct_Git",
+          "description" : "My meter description",
+          "type" : "DIRECT",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "1",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "datetimez",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "Text",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-07-24 01:05:03",
+              "cumulativePeriod" : ""
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "d5711d2624c5408fab11429d9bce32b0",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/d5711d2624c5408fab11429d9bce32b0",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "44",
+            "meterId" : 44,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "1"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "25",
+              "sessionId" : "R-00000025",
+              "jobId" : "7f1cc33819c34eeca78f75ea3a255d96",
+              "meterId" : 44,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-07-30T11:20:49Z",
+              "endTime" : "2024-07-30T11:20:56Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-07-30T11:19:36Z",
+            "updatedAt" : "2024-07-30T11:20:57Z"
+          },
+          "createdAt" : "2024-07-30T11:19:36Z",
+          "updatedAt" : "2024-07-30T11:20:57Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
+      }, {
+        "id" : "0873acbd-dc29-497f-87b2-e761dcf10a94",
         "key" : "Delta_configtemp : 198df9eef10e472da1ae504c5d23c2ea",
         "segregationKey" : "Meters",
         "componentType" : "Mediation",
@@ -532,9 +793,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "288122a8-0bb3-46cd-8a9e-5cd9b3dafe5a",
+        "id" : "8265cca1-2e09-45a2-a50c-5b7950697dc9",
         "key" : "Direct_Configtemp : f8d678e92bae442387e69fcdc317e0ba",
         "segregationKey" : "Meters",
         "componentType" : "Mediation",
@@ -642,9 +903,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "5b055596-3541-41ea-b24f-43cb22ed845a",
+        "id" : "dcd4ecc1-47fa-4292-849a-e933f02ab221",
         "key" : "Delta_test : 521460c5302a420db8d1f55ef5bec39b",
         "segregationKey" : "Meters",
         "componentType" : "Mediation",
@@ -752,9 +1013,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "8ee11961-c6e5-4c94-909d-c5adee09ec23",
+        "id" : "b2eba003-f2ff-435a-b9c8-8ae464161d07",
         "key" : "Direct_test : 86f3acd0919b43339b6a109f35870b08",
         "segregationKey" : "Meters",
         "componentType" : "Mediation",
@@ -862,121 +1123,60 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "6cc44600-d15d-4bd4-beab-310d96df98c5",
-        "key" : "Direct2 : 2c687c3510c9422f962677b78170c69d",
-        "segregationKey" : "Meters",
+        "id" : "c66cbe84-0c0a-442d-a363-af780e01a660",
+        "key" : "Manualcheckevent",
+        "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
-        "url" : "meters",
+        "url" : "meters/schemas",
         "pathPattern" : null,
         "method" : "GET,PUT,POST,DELETE",
         "payload" : {
-          "id" : "31",
-          "name" : "Direct2",
-          "description" : "My meter description",
-          "type" : "DIRECT",
-          "typeDefinition" : {
-            "sourceType" : "ZUORA_BULK_API",
-            "schemaId" : "8",
-            "fileId" : null,
-            "fieldMappings" : [ {
-              "field" : "Date&Time",
-              "name" : "StartDateTime"
-            }, {
-              "field" : "ID",
-              "name" : "AccountNumber"
-            }, {
-              "field" : "ID",
-              "name" : "Quantity"
-            }, {
-              "field" : "Name",
-              "name" : "UOM"
-            }, {
-              "field" : "",
-              "name" : "UniqueKey"
-            }, {
-              "field" : "",
-              "name" : "SubscriptionNumber"
-            }, {
-              "field" : "",
-              "name" : "ChargeNumber"
-            }, {
-              "field" : "",
-              "name" : "EndDateTime"
-            }, {
-              "field" : "",
-              "name" : "Description"
-            }, {
-              "field" : "Name",
-              "name" : "UsageCfTestDateTime1__c"
-            }, {
-              "field" : "Name",
-              "name" : "UsageCfTestDateTime2__c"
-            }, {
-              "field" : "",
-              "name" : "usage_cf1_pickup__c"
-            }, {
-              "field" : "",
-              "name" : "usage_cf1_amount__c"
-            }, {
-              "field" : "",
-              "name" : "UsageCfTest__c"
-            }, {
-              "field" : "",
-              "name" : "UsageCfTestUrl__c"
-            }, {
-              "field" : "",
-              "name" : "UsageCfTestDateTime__c"
-            } ],
-            "configs" : {
-              "eventTimeFormat" : "2024-16-19 12:52:03",
-              "cumulativePeriod" : ""
+          "id" : "16",
+          "name" : "Manualcheckevent",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Manualcheckevent",
+            "required" : [ "timedate" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "text" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "text"
+              },
+              "timedate" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "timedate"
+              }
             }
           },
-          "latestVersion" : "0.0.1",
-          "globalId" : "2c687c3510c9422f962677b78170c69d",
-          "pinned" : false,
-          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/2c687c3510c9422f962677b78170c69d",
-          "latestVersionRunStatus" : 1,
-          "latestVersionRunStatusDescription" : "NEVER_RUN",
-          "latestMeterVersion" : {
-            "id" : "31",
-            "meterId" : 31,
-            "versionStatus" : 2,
-            "versionStatusDescription" : "INACTIVE",
-            "runStatus" : 1,
-            "runStatusDescription" : "NEVER_RUN",
-            "version" : "0.0.1",
-            "revision" : 1,
-            "versionDetail" : "My meter version details",
-            "metadata" : {
-              "flowDirection" : "vertical"
-            },
-            "sources" : [ {
-              "id" : null,
-              "name" : null,
-              "uniqueName" : null,
-              "internalName" : null,
-              "nodeType" : "SOURCE",
-              "operatorType" : "ZUORA_BULK_API",
-              "metadata" : {
-                "schemaId" : "8"
-              },
-              "predecessors" : null,
-              "extraConfig" : null
-            } ],
-            "createdAt" : "2024-07-25T08:23:15Z",
-            "updatedAt" : "2024-07-25T08:23:15Z"
-          },
-          "createdAt" : "2024-07-25T08:23:15Z",
-          "updatedAt" : "2024-07-25T08:23:15Z"
+          "fieldCount" : 3,
+          "createdAt" : "2024-07-31T07:39:20Z",
+          "updatedAt" : "2024-07-31T07:39:20Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "bc1245f4-427c-45ec-93f4-b9ef2f86780d",
+        "id" : "1168577b-5318-4322-b9ca-a18e856411b6",
         "key" : "Event_Deltaconfig",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -1032,9 +1232,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "06bebaea-e48e-4280-a3b9-82b97aa0a602",
+        "id" : "5970a080-4219-4fce-8ebb-2158b390915e",
         "key" : "Event_DirectConfig",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -1083,9 +1283,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "e2bfafe0-2c91-44dd-9abd-219df0a3a5c9",
+        "id" : "d383793a-34b6-463c-92e4-9caa2d11dee3",
         "key" : "Event_Automation_1722223878775_766",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -1134,9 +1334,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "95c9a47c-5fe9-4d6a-9487-8bc2bc93d3c6",
+        "id" : "83c4bc16-0399-4fa9-8440-d59bcdb39951",
         "key" : "Event_Automation_1721900613661_38",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -1185,9 +1385,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "77dce005-e12f-4cbd-8201-5df3d34f2feb",
+        "id" : "9b29fc5f-9b70-4645-b6e7-59b062d11f17",
         "key" : "Event_Automation_1721896224086_918",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -1236,9 +1436,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "36c9c193-f70a-4a25-8f20-5b81aaea4b0d",
+        "id" : "886a3a1b-c002-490d-994a-7dd5b1a4f207",
         "key" : "Event_Automation_1721896032166_492",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -1287,9 +1487,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "44721f61-de48-4d67-9514-565b03517bf2",
+        "id" : "5587d88b-f6e4-4543-b2dc-e2a07a4df26b",
         "key" : "Event_Automation_1721895943217_9",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -1338,9 +1538,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "b3d6bf63-5bdb-4aa5-b56e-2def9576f00b",
+        "id" : "e4cd7a33-9a3d-4fce-a851-414cade57a35",
         "key" : "Event1",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -1396,9 +1596,9 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       }, {
-        "id" : "eb844b64-0e6e-43d3-b2c0-a56060a9be81",
+        "id" : "d69fd197-f2cd-4270-a8b8-4a021a885456",
         "key" : "Test1",
         "segregationKey" : "EventsDefinition",
         "componentType" : "Mediation",
@@ -1454,7 +1654,7 @@
         },
         "result" : "DONE",
         "error" : null,
-        "templateId" : "0588cabb-54d0-48db-8b05-f25b9e2a57e3"
+        "templateId" : "5f7d878d-e794-4fcc-a9c1-fc2357cc17b2"
       } ],
       "errors" : [ ]
     } ],
