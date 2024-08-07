@@ -1,0 +1,3456 @@
+{
+  "id" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111",
+  "name" : "SumMeter_Test",
+  "description" : "SumMeter_Test",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox",
+  "createdBy" : "Automation source",
+  "updatedBy" : "Automation source",
+  "createdOn" : "2024-08-07T12:17:30.415Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ {
+      "segregationKeys" : [ "Meters", "EventsDefinition" ],
+      "originalPayload" : {
+        "schema" : {
+          "Combination_Event" : {
+            "id" : "28",
+            "name" : "Combination_Event",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "Number" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Combination_Event",
+              "required" : [ "timedate" ],
+              "properties" : {
+                "Number" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Number"
+                },
+                "Name" : {
+                  "type" : "string",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "timedate" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "timedate"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-08-06T13:13:18Z",
+            "updatedAt" : "2024-08-06T13:13:18Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
+          },
+          "Event_Automation_1722864199103_48" : {
+            "id" : "24",
+            "name" : "Event_Automation_1722864199103_48",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1722864199103_48",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-08-05T13:23:36Z",
+            "updatedAt" : "2024-08-05T13:23:36Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Event_Automation_1722848653788_192" : {
+            "id" : "23",
+            "name" : "Event_Automation_1722848653788_192",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1722848653788_192",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-08-05T09:04:33Z",
+            "updatedAt" : "2024-08-05T09:04:33Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Event_Automation_1722223878775_766" : {
+            "id" : "13",
+            "name" : "Event_Automation_1722223878775_766",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1722223878775_766",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-07-29T03:31:35Z",
+            "updatedAt" : "2024-07-29T03:31:35Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Event_Automation_1722841141874_109" : {
+            "id" : "20",
+            "name" : "Event_Automation_1722841141874_109",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1722841141874_109",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-08-05T06:59:18Z",
+            "updatedAt" : "2024-08-05T06:59:18Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Recheckrevert" : {
+            "id" : "17",
+            "name" : "Recheckrevert",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Recheckrevert",
+              "required" : [ "time" ],
+              "properties" : {
+                "ID" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "text" : {
+                  "type" : "string",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "text"
+                },
+                "time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-07-31T13:50:26Z",
+            "updatedAt" : "2024-07-31T13:50:26Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
+          },
+          "Event_Minconfig" : {
+            "id" : "25",
+            "name" : "Event_Minconfig",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "Number" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Minconfig",
+              "required" : [ "timedate" ],
+              "properties" : {
+                "Number" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Number"
+                },
+                "Name" : {
+                  "type" : "string",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "timedate" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "timedate"
+                },
+                "TF" : {
+                  "type" : "boolean",
+                  "order" : 3,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "TF"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 4,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Text" : {
+                  "type" : "number",
+                  "order" : 5,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Text"
+                }
+              }
+            },
+            "fieldCount" : 6,
+            "createdAt" : "2024-08-06T07:40:30Z",
+            "updatedAt" : "2024-08-07T08:48:44Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
+          },
+          "Event_Automation_1722845960345_803" : {
+            "id" : "22",
+            "name" : "Event_Automation_1722845960345_803",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1722845960345_803",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-08-05T08:19:38Z",
+            "updatedAt" : "2024-08-05T08:19:38Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Test1" : {
+            "id" : "1",
+            "name" : "Test1",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Test1",
+              "required" : [ "datetimez" ],
+              "properties" : {
+                "ID" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Text" : {
+                  "type" : "string",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Text"
+                },
+                "datetimez" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "datetimez"
+                },
+                "Bool" : {
+                  "type" : "boolean",
+                  "order" : 3,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Bool"
+                }
+              }
+            },
+            "fieldCount" : 4,
+            "createdAt" : "2024-07-23T13:13:28Z",
+            "updatedAt" : "2024-07-23T13:13:28Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
+          },
+          "Event_Automation_1721896224086_918" : {
+            "id" : "11",
+            "name" : "Event_Automation_1721896224086_918",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1721896224086_918",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-07-25T08:30:34Z",
+            "updatedAt" : "2024-07-25T08:30:34Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Manualcheckevent" : {
+            "id" : "16",
+            "name" : "Manualcheckevent",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Manualcheckevent",
+              "required" : [ "timedate" ],
+              "properties" : {
+                "ID" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "text" : {
+                  "type" : "string",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "text"
+                },
+                "timedate" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "timedate"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-07-31T07:39:20Z",
+            "updatedAt" : "2024-07-31T07:39:20Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
+          },
+          "Event_Automation_1721896032166_492" : {
+            "id" : "10",
+            "name" : "Event_Automation_1721896032166_492",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1721896032166_492",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-07-25T08:27:22Z",
+            "updatedAt" : "2024-07-25T08:27:22Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Event_Countconfig" : {
+            "id" : "27",
+            "name" : "Event_Countconfig",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "Number" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Countconfig",
+              "required" : [ "timedate" ],
+              "properties" : {
+                "Number" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Number"
+                },
+                "Name" : {
+                  "type" : "string",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "timedate" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "timedate"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-08-06T13:09:37Z",
+            "updatedAt" : "2024-08-06T13:09:37Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
+          },
+          "Event_Automation_1721895943217_9" : {
+            "id" : "9",
+            "name" : "Event_Automation_1721895943217_9",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1721895943217_9",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-07-25T08:25:53Z",
+            "updatedAt" : "2024-07-25T08:25:53Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Event_Automation_1722844892338_951" : {
+            "id" : "21",
+            "name" : "Event_Automation_1722844892338_951",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1722844892338_951",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-08-05T08:01:49Z",
+            "updatedAt" : "2024-08-05T08:01:49Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Event_Test" : {
+            "id" : "19",
+            "name" : "Event_Test",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Test",
+              "required" : [ "Time" ],
+              "properties" : {
+                "Time" : {
+                  "type" : "datetime",
+                  "order" : 0,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "Time"
+                },
+                "Number" : {
+                  "type" : "number",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Number"
+                },
+                "Text" : {
+                  "type" : "string",
+                  "order" : 3,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Text"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 4,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                }
+              }
+            },
+            "fieldCount" : 4,
+            "createdAt" : "2024-08-01T07:43:52Z",
+            "updatedAt" : "2024-08-06T12:11:59Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
+          },
+          "Event_Automation_1721900613661_38" : {
+            "id" : "12",
+            "name" : "Event_Automation_1721900613661_38",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1721900613661_38",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-07-25T09:43:44Z",
+            "updatedAt" : "2024-07-25T09:43:44Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Event1" : {
+            "id" : "8",
+            "name" : "Event1",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event1",
+              "required" : [ "Date&Time", "ID", "Name" ],
+              "properties" : {
+                "ID" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 1,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-06-18 14:44:03",
+                  "description" : "Date&Time"
+                },
+                "Name" : {
+                  "type" : "string",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "Number" : {
+                  "type" : "number",
+                  "order" : 3,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Number"
+                }
+              }
+            },
+            "fieldCount" : 4,
+            "createdAt" : "2024-07-25T08:23:15Z",
+            "updatedAt" : "2024-07-25T08:23:15Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Event_Automation_1722948005551_818" : {
+            "id" : "26",
+            "name" : "Event_Automation_1722948005551_818",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Automation_1722948005551_818",
+              "required" : [ ],
+              "properties" : {
+                "Name" : {
+                  "type" : "string",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "ID" : {
+                  "type" : "number",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "Date&Time" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : false,
+                  "timeFormat" : "2024-07-25 14:30:00",
+                  "description" : "Date&Time"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-08-06T12:40:21Z",
+            "updatedAt" : "2024-08-06T12:40:21Z",
+            "editable" : true,
+            "eventStoreApplicable" : false
+          },
+          "Event_DirectConfig" : {
+            "id" : "14",
+            "name" : "Event_DirectConfig",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "ID" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_DirectConfig",
+              "required" : [ "timedate" ],
+              "properties" : {
+                "ID" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "ID"
+                },
+                "text" : {
+                  "type" : "string",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "text"
+                },
+                "timedate" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "timedate"
+                }
+              }
+            },
+            "fieldCount" : 3,
+            "createdAt" : "2024-07-29T08:13:16Z",
+            "updatedAt" : "2024-07-29T08:13:16Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
+          },
+          "Event_Deltaconfig" : {
+            "id" : "15",
+            "name" : "Event_Deltaconfig",
+            "type" : 1,
+            "schema" : {
+              "eventIdFields" : [ "Number" ],
+              "description" : "A description",
+              "type" : "object",
+              "title" : "Event_Deltaconfig",
+              "required" : [ "timedate" ],
+              "properties" : {
+                "Number" : {
+                  "type" : "number",
+                  "order" : 0,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Number"
+                },
+                "Name" : {
+                  "type" : "string",
+                  "order" : 1,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "Name"
+                },
+                "timedate" : {
+                  "type" : "datetime",
+                  "order" : 2,
+                  "eventTime" : true,
+                  "timeFormat" : "2024-16-19 12:52:03",
+                  "description" : "timedate"
+                },
+                "TF" : {
+                  "type" : "boolean",
+                  "order" : 3,
+                  "eventTime" : false,
+                  "timeFormat" : "",
+                  "description" : "TF"
+                }
+              }
+            },
+            "fieldCount" : 4,
+            "createdAt" : "2024-07-29T08:14:38Z",
+            "updatedAt" : "2024-07-29T08:14:38Z",
+            "editable" : true,
+            "eventStoreApplicable" : true
+          }
+        },
+        "Meters" : {
+          "83" : "{\n  \"name\" : \"Min_Configtemp\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"MIN\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_Minconfig\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"timedate\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"timedate\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ProductRatePlanChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"day\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_Minconfig\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"Number\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_Minconfig\",\n      \"required\" : [ \"timedate\" ],\n      \"properties\" : {\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Name\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Name\"\n        },\n        \"timedate\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"timedate\"\n        },\n        \"TF\" : {\n          \"type\" : \"boolean\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"TF\"\n        },\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 4,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"Text\" : {\n          \"type\" : \"number\",\n          \"order\" : 5,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        }\n      }\n    }\n  } ]\n}",
+          "100" : "{\n  \"name\" : \"Custom_test\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"CUSTOM\",\n  \"typeDefinition\" : null,\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ ]\n}",
+          "97" : "{\n  \"name\" : \"CombinationTesting_Meter\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DELTA\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Combination_Event\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"timedate\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Name\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ProductRatePlanChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Combination_Event\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"Number\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Combination_Event\",\n      \"required\" : [ \"timedate\" ],\n      \"properties\" : {\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Name\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Name\"\n        },\n        \"timedate\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"timedate\"\n        }\n      }\n    }\n  } ]\n}",
+          "96" : "{\n  \"name\" : \"Count_Configtemp\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"COUNT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_Countconfig\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"timedate\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Name\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ProductRatePlanChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"day\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_Countconfig\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"Number\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_Countconfig\",\n      \"required\" : [ \"timedate\" ],\n      \"properties\" : {\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Name\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Name\"\n        },\n        \"timedate\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"timedate\"\n        }\n      }\n    }\n  } ]\n}",
+          "95" : "{\n  \"name\" : \"Min_test\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"MIN\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_Test\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"Time\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ProductRatePlanChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-07-24 01:05:03\",\n      \"cumulativePeriod\" : \"day\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_Test\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_Test\",\n      \"required\" : [ \"Time\" ],\n      \"properties\" : {\n        \"Time\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 0,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"Time\"\n        },\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 2,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Text\" : {\n          \"type\" : \"string\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        },\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 4,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        }\n      }\n    }\n  } ]\n}",
+          "93" : "{\n  \"name\" : \"Max_test\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"MAX\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_Test\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"Time\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ProductRatePlanChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-07-24 01:05:03\",\n      \"cumulativePeriod\" : \"day\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_Test\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_Test\",\n      \"required\" : [ \"Time\" ],\n      \"properties\" : {\n        \"Time\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 0,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"Time\"\n        },\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 2,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Text\" : {\n          \"type\" : \"string\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        },\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 4,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        }\n      }\n    }\n  } ]\n}",
+          "90" : "{\n  \"name\" : \"Sum_test\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"SUM\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_Test\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"Time\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ProductRatePlanChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-07-24 01:05:03\",\n      \"cumulativePeriod\" : \"day\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_Test\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_Test\",\n      \"required\" : [ \"Time\" ],\n      \"properties\" : {\n        \"Time\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 0,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"Time\"\n        },\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 2,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Text\" : {\n          \"type\" : \"string\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        },\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 4,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        }\n      }\n    }\n  } ]\n}",
+          "86" : "{\n  \"name\" : \"Direct_test\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DIRECT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_Test\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"Time\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ProductRatePlanChargeNumber\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-07-24 01:05:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_Test\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_Test\",\n      \"required\" : [ \"Time\" ],\n      \"properties\" : {\n        \"Time\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 0,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"Time\"\n        },\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 2,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Text\" : {\n          \"type\" : \"string\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        },\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 4,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        }\n      }\n    }\n  } ]\n}",
+          "45" : "{\n  \"name\" : \"TestingMeterDirectmanual\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DIRECT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Manualcheckevent\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"timedate\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ProductRatePlanChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-17-19 12::03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Manualcheckevent\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Manualcheckevent\",\n      \"required\" : [ \"timedate\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"text\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"text\"\n        },\n        \"timedate\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"timedate\"\n        }\n      }\n    }\n  } ]\n}",
+          "70" : "{\n  \"name\" : \"Count_test\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"COUNT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_Test\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"Time\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ProductRatePlanChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-07-24 01:05:03\",\n      \"cumulativePeriod\" : \"day\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_Test\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_Test\",\n      \"required\" : [ \"Time\" ],\n      \"properties\" : {\n        \"Time\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 0,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"Time\"\n        },\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 2,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Text\" : {\n          \"type\" : \"string\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Text\"\n        },\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 4,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        }\n      }\n    }\n  } ]\n}",
+          "46" : "{\n  \"name\" : \"Recheckrevert\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"SUM\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Recheckrevert\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"time\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"text\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"day\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Recheckrevert\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Recheckrevert\",\n      \"required\" : [ \"time\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"text\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"text\"\n        },\n        \"time\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"time\"\n        }\n      }\n    }\n  } ]\n}",
+          "43" : "{\n  \"name\" : \"Delta_configtemp\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DELTA\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_Deltaconfig\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"timedate\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"Number\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"Name\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_Deltaconfig\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"Number\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_Deltaconfig\",\n      \"required\" : [ \"timedate\" ],\n      \"properties\" : {\n        \"Number\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Number\"\n        },\n        \"Name\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"Name\"\n        },\n        \"timedate\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"timedate\"\n        },\n        \"TF\" : {\n          \"type\" : \"boolean\",\n          \"order\" : 3,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"TF\"\n        }\n      }\n    }\n  } ]\n}",
+          "42" : "{\n  \"name\" : \"Direct_Configtemp\",\n  \"description\" : \"My meter description\",\n  \"type\" : \"DIRECT\",\n  \"typeDefinition\" : {\n    \"sourceType\" : \"ZUORA_BULK_API\",\n    \"schemaId\" : \"Event_DirectConfig\",\n    \"fileId\" : null,\n    \"fieldMappings\" : [ {\n      \"field\" : \"timedate\",\n      \"name\" : \"StartDateTime\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"AccountNumber\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"Quantity\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"UOM\"\n    }, {\n      \"field\" : \"ID\",\n      \"name\" : \"UniqueKey\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"SubscriptionNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"ChargeNumber\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"EndDateTime\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"Description\"\n    }, {\n      \"field\" : \"\",\n      \"name\" : \"testdeletion__c\"\n    } ],\n    \"configs\" : {\n      \"eventTimeFormat\" : \"2024-16-19 12:52:03\",\n      \"cumulativePeriod\" : \"\"\n    }\n  },\n  \"latestVersion\" : \"0.0.1\",\n  \"versions\" : [ {\n    \"version\" : \"0.0.1\",\n    \"versionDetail\" : \"My meter version details\",\n    \"metadata\" : {\n      \"flowDirection\" : \"vertical\"\n    },\n    \"tasks\" : null\n  } ],\n  \"schemas\" : [ {\n    \"name\" : \"Event_DirectConfig\",\n    \"type\" : 1,\n    \"schema\" : {\n      \"eventIdFields\" : [ \"ID\" ],\n      \"description\" : \"A description\",\n      \"type\" : \"object\",\n      \"title\" : \"Event_DirectConfig\",\n      \"required\" : [ \"timedate\" ],\n      \"properties\" : {\n        \"ID\" : {\n          \"type\" : \"number\",\n          \"order\" : 0,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"ID\"\n        },\n        \"text\" : {\n          \"type\" : \"string\",\n          \"order\" : 1,\n          \"eventTime\" : false,\n          \"timeFormat\" : \"\",\n          \"description\" : \"text\"\n        },\n        \"timedate\" : {\n          \"type\" : \"datetime\",\n          \"order\" : 2,\n          \"eventTime\" : true,\n          \"timeFormat\" : \"2024-16-19 12:52:03\",\n          \"description\" : \"timedate\"\n        }\n      }\n    }\n  } ]\n}"
+        }
+      },
+      "response" : [ {
+        "id" : "b300ab48-231d-42e2-b074-1b5b97f973f7",
+        "key" : "Min_Configtemp : 4b790f57c75b46dba2a7f1872c5b56e0",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "83",
+          "name" : "Min_Configtemp",
+          "description" : "My meter description",
+          "type" : "MIN",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "25",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "timedate",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "Number",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "Number",
+              "name" : "Quantity"
+            }, {
+              "field" : "timedate",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "ProductRatePlanChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-16-19 12:52:03",
+              "cumulativePeriod" : "day"
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "4b790f57c75b46dba2a7f1872c5b56e0",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/4b790f57c75b46dba2a7f1872c5b56e0",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "83",
+            "meterId" : 83,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "25"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "57",
+              "sessionId" : "R-00000057",
+              "jobId" : "f4d2be312cdc43778b82c5ec2dca8775",
+              "meterId" : 83,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-08-07T08:53:16Z",
+              "endTime" : "2024-08-07T11:40:49Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-08-06T07:41:15Z",
+            "updatedAt" : "2024-08-07T11:40:50Z"
+          },
+          "createdAt" : "2024-08-06T07:41:15Z",
+          "updatedAt" : "2024-08-07T11:40:50Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "856d1b40-c40f-4a88-b2b0-800566e93949",
+        "key" : "Custom_test : 7a2e9a09450b47e7a3bb81d679eb8d6e",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "100",
+          "name" : "Custom_test",
+          "description" : "My meter description",
+          "type" : "CUSTOM",
+          "latestVersion" : "0.0.1",
+          "globalId" : "7a2e9a09450b47e7a3bb81d679eb8d6e",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/7a2e9a09450b47e7a3bb81d679eb8d6e",
+          "latestVersionRunStatus" : 1,
+          "latestVersionRunStatusDescription" : "NEVER_RUN",
+          "latestMeterVersion" : {
+            "id" : "100",
+            "meterId" : 100,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 1,
+            "runStatusDescription" : "NEVER_RUN",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ ],
+            "createdAt" : "2024-08-07T10:26:42Z",
+            "updatedAt" : "2024-08-07T10:26:42Z"
+          },
+          "createdAt" : "2024-08-07T10:26:42Z",
+          "updatedAt" : "2024-08-07T10:26:42Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "b602bf3f-7e64-4d97-b3c4-dee711fe7758",
+        "key" : "CombinationTesting_Meter : 3daa253b90a44388bb2dbfb5499cefa2",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "97",
+          "name" : "CombinationTesting_Meter",
+          "description" : "My meter description",
+          "type" : "DELTA",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "28",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "timedate",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "Number",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "Number",
+              "name" : "Quantity"
+            }, {
+              "field" : "Name",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "ProductRatePlanChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-16-19 12:52:03",
+              "cumulativePeriod" : ""
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "3daa253b90a44388bb2dbfb5499cefa2",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/3daa253b90a44388bb2dbfb5499cefa2",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "97",
+            "meterId" : 97,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "28"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "51",
+              "sessionId" : "R-00000051",
+              "jobId" : "e5435252bdec495280f97261ec90423f",
+              "meterId" : 97,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-08-06T13:14:31Z",
+              "endTime" : "2024-08-06T13:14:43Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-08-06T13:13:58Z",
+            "updatedAt" : "2024-08-06T13:14:44Z"
+          },
+          "createdAt" : "2024-08-06T13:13:58Z",
+          "updatedAt" : "2024-08-06T13:14:44Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "3a387db2-0be1-47ae-bca0-bda98d996bab",
+        "key" : "Count_Configtemp : ed8ec18a9f6841bb80927824f52745a7",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "96",
+          "name" : "Count_Configtemp",
+          "description" : "My meter description",
+          "type" : "COUNT",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "27",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "timedate",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "Number",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "Number",
+              "name" : "Quantity"
+            }, {
+              "field" : "Name",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "ProductRatePlanChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-16-19 12:52:03",
+              "cumulativePeriod" : "day"
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "ed8ec18a9f6841bb80927824f52745a7",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/ed8ec18a9f6841bb80927824f52745a7",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "96",
+            "meterId" : 96,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "27"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "50",
+              "sessionId" : "R-00000050",
+              "jobId" : "2233bd6f27f04785ba143a144ebfc72d",
+              "meterId" : 96,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-08-06T13:10:32Z",
+              "endTime" : "2024-08-06T13:10:42Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-08-06T13:09:57Z",
+            "updatedAt" : "2024-08-06T13:10:43Z"
+          },
+          "createdAt" : "2024-08-06T13:09:57Z",
+          "updatedAt" : "2024-08-06T13:10:43Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "41a38fc6-03fb-4f0a-bc99-daaecda103e3",
+        "key" : "Min_test : 5d61a5122558419f9159d4a97629914c",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "95",
+          "name" : "Min_test",
+          "description" : "My meter description",
+          "type" : "MIN",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "19",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "Time",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "Text",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "ProductRatePlanChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-07-24 01:05:03",
+              "cumulativePeriod" : "day"
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "5d61a5122558419f9159d4a97629914c",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/5d61a5122558419f9159d4a97629914c",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "95",
+            "meterId" : 95,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "19"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "49",
+              "sessionId" : "R-00000049",
+              "jobId" : "aa1ba6d1b19d44409d375f0cd49cb3a3",
+              "meterId" : 95,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-08-06T12:56:03Z",
+              "endTime" : "2024-08-06T12:56:14Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-08-06T12:55:47Z",
+            "updatedAt" : "2024-08-06T12:56:16Z"
+          },
+          "createdAt" : "2024-08-06T12:55:47Z",
+          "updatedAt" : "2024-08-06T12:56:16Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "731b1e9f-38a6-4c05-ad3e-dfcd70d654ca",
+        "key" : "Max_test : fa2fdb7934e94ff18b1339168a21901c",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "93",
+          "name" : "Max_test",
+          "description" : "My meter description",
+          "type" : "MAX",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "19",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "Time",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "Text",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "ProductRatePlanChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-07-24 01:05:03",
+              "cumulativePeriod" : "day"
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "fa2fdb7934e94ff18b1339168a21901c",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/fa2fdb7934e94ff18b1339168a21901c",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "93",
+            "meterId" : 93,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "19"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "48",
+              "sessionId" : "R-00000048",
+              "jobId" : "2f582347d742447388ebf67e1af91fd5",
+              "meterId" : 93,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-08-06T12:53:53Z",
+              "endTime" : "2024-08-06T12:54:05Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-08-06T12:53:37Z",
+            "updatedAt" : "2024-08-06T12:54:06Z"
+          },
+          "createdAt" : "2024-08-06T12:53:37Z",
+          "updatedAt" : "2024-08-06T12:54:06Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "13d1a3ff-060d-41ba-b885-72a5009c90af",
+        "key" : "Sum_test : 10061d7a0c624a6abad1a1289a9e8259",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "90",
+          "name" : "Sum_test",
+          "description" : "My meter description",
+          "type" : "SUM",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "19",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "Time",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "Text",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "ProductRatePlanChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-07-24 01:05:03",
+              "cumulativePeriod" : "day"
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "10061d7a0c624a6abad1a1289a9e8259",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/10061d7a0c624a6abad1a1289a9e8259",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "90",
+            "meterId" : 90,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "19"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "47",
+              "sessionId" : "R-00000047",
+              "jobId" : "30f231bceab440139e82b15eba967e7b",
+              "meterId" : 90,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-08-06T12:50:36Z",
+              "endTime" : "2024-08-06T12:50:47Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-08-06T12:50:20Z",
+            "updatedAt" : "2024-08-06T12:50:48Z"
+          },
+          "createdAt" : "2024-08-06T12:50:20Z",
+          "updatedAt" : "2024-08-06T12:50:48Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "95f2b138-09c5-4a1a-83de-4353ea9291ed",
+        "key" : "Direct_test : f15e0013f05b4210ad7e202386da2422",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "86",
+          "name" : "Direct_test",
+          "description" : "My meter description",
+          "type" : "DIRECT",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "19",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "Time",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "Text",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "ID",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "ProductRatePlanChargeNumber"
+            }, {
+              "field" : "Text",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "Text",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-07-24 01:05:03",
+              "cumulativePeriod" : ""
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "f15e0013f05b4210ad7e202386da2422",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/f15e0013f05b4210ad7e202386da2422",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "86",
+            "meterId" : 86,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "19"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "46",
+              "sessionId" : "R-00000046",
+              "jobId" : "c153ce15b79946409d6ad79a60d1ae3a",
+              "meterId" : 86,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-08-06T12:46:15Z",
+              "endTime" : "2024-08-06T12:46:26Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-08-06T12:45:59Z",
+            "updatedAt" : "2024-08-06T12:46:27Z"
+          },
+          "createdAt" : "2024-08-06T12:45:59Z",
+          "updatedAt" : "2024-08-06T12:46:27Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "432410d6-1f95-47fc-a5cc-72066698ba5e",
+        "key" : "TestingMeterDirectmanual : 7807bd59c9b74cfe8c54df2afe17ea91",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "45",
+          "name" : "TestingMeterDirectmanual",
+          "description" : "My meter description",
+          "type" : "DIRECT",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "16",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "timedate",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "text",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "ProductRatePlanChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-17-19 12::03",
+              "cumulativePeriod" : ""
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "7807bd59c9b74cfe8c54df2afe17ea91",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/7807bd59c9b74cfe8c54df2afe17ea91",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "45",
+            "meterId" : 45,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "16"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "26",
+              "sessionId" : "R-00000026",
+              "jobId" : "2ad3ca252b9e48b68a4148a22b4d089c",
+              "meterId" : 45,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-07-31T07:40:18Z",
+              "endTime" : "2024-07-31T07:40:32Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-07-31T07:39:41Z",
+            "updatedAt" : "2024-07-31T07:40:33Z"
+          },
+          "createdAt" : "2024-07-31T07:39:41Z",
+          "updatedAt" : "2024-08-06T08:31:59Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "23db6e7b-c6ac-48a5-83d0-36b5b43c0913",
+        "key" : "Count_test : 0d9e8871e9c546dd9752dabbe17aa30a",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "70",
+          "name" : "Count_test",
+          "description" : "My meter description",
+          "type" : "COUNT",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "19",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "Time",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "Text",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "ProductRatePlanChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-07-24 01:05:03",
+              "cumulativePeriod" : "day"
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "0d9e8871e9c546dd9752dabbe17aa30a",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/0d9e8871e9c546dd9752dabbe17aa30a",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "70",
+            "meterId" : 70,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "19"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "38",
+              "sessionId" : "R-00000038",
+              "jobId" : "c8a3e80944724540b5833fb81aa9d507",
+              "meterId" : 70,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-08-05T08:06:23Z",
+              "endTime" : "2024-08-05T08:06:35Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-08-05T08:06:05Z",
+            "updatedAt" : "2024-08-05T08:06:36Z"
+          },
+          "createdAt" : "2024-08-05T08:06:05Z",
+          "updatedAt" : "2024-08-05T08:06:36Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "01e1ee49-35d7-4a88-98a1-b8532473d836",
+        "key" : "Recheckrevert : 326daa01f946469f98c29d2f76f32876",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "46",
+          "name" : "Recheckrevert",
+          "description" : "My meter description",
+          "type" : "SUM",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "17",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "time",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "text",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-16-19 12:52:03",
+              "cumulativePeriod" : "day"
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "326daa01f946469f98c29d2f76f32876",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/326daa01f946469f98c29d2f76f32876",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "46",
+            "meterId" : 46,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "17"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "27",
+              "sessionId" : "R-00000027",
+              "jobId" : "9405cf9a13f0457989cfe267e6d574b7",
+              "meterId" : 46,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-07-31T13:51:15Z",
+              "endTime" : "2024-07-31T13:51:24Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-07-31T13:50:45Z",
+            "updatedAt" : "2024-07-31T13:51:25Z"
+          },
+          "createdAt" : "2024-07-31T13:50:45Z",
+          "updatedAt" : "2024-07-31T13:51:25Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "79340327-d84a-4c56-b309-771da5b9334d",
+        "key" : "Delta_configtemp : 198df9eef10e472da1ae504c5d23c2ea",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "43",
+          "name" : "Delta_configtemp",
+          "description" : "My meter description",
+          "type" : "DELTA",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "15",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "timedate",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "Number",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "Number",
+              "name" : "Quantity"
+            }, {
+              "field" : "Name",
+              "name" : "UOM"
+            }, {
+              "field" : "",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-16-19 12:52:03",
+              "cumulativePeriod" : ""
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "198df9eef10e472da1ae504c5d23c2ea",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/198df9eef10e472da1ae504c5d23c2ea",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "43",
+            "meterId" : 43,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "15"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "24",
+              "sessionId" : "R-00000024",
+              "jobId" : "61fa48f5c07a4a6196b2c9627d8dd656",
+              "meterId" : 43,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-07-29T08:16:47Z",
+              "endTime" : "2024-07-29T08:17:01Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-07-29T08:16:17Z",
+            "updatedAt" : "2024-07-29T08:17:02Z"
+          },
+          "createdAt" : "2024-07-29T08:16:17Z",
+          "updatedAt" : "2024-07-29T08:17:02Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "93275e59-1a7b-421f-a846-91f48a285e28",
+        "key" : "Direct_Configtemp : f8d678e92bae442387e69fcdc317e0ba",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "42",
+          "name" : "Direct_Configtemp",
+          "description" : "My meter description",
+          "type" : "DIRECT",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "14",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "timedate",
+              "name" : "StartDateTime"
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber"
+            }, {
+              "field" : "ID",
+              "name" : "Quantity"
+            }, {
+              "field" : "ID",
+              "name" : "UOM"
+            }, {
+              "field" : "ID",
+              "name" : "UniqueKey"
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber"
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber"
+            }, {
+              "field" : "",
+              "name" : "EndDateTime"
+            }, {
+              "field" : "",
+              "name" : "Description"
+            }, {
+              "field" : "",
+              "name" : "testdeletion__c"
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-16-19 12:52:03",
+              "cumulativePeriod" : ""
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "f8d678e92bae442387e69fcdc317e0ba",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest.apisandbox.zuora.com/usage/bulk/f8d678e92bae442387e69fcdc317e0ba",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "42",
+            "meterId" : 42,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "14"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "23",
+              "sessionId" : "R-00000023",
+              "jobId" : "75235d3b61134ed5b4b99f8aa8d6dbbb",
+              "meterId" : 42,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-07-29T08:15:39Z",
+              "endTime" : "2024-07-29T08:15:56Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-07-29T08:14:58Z",
+            "updatedAt" : "2024-07-29T08:15:57Z"
+          },
+          "createdAt" : "2024-07-29T08:14:58Z",
+          "updatedAt" : "2024-07-29T08:15:57Z"
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "ed560e74-9b63-4a3e-87a9-95d636f277eb",
+        "key" : "Combination_Event",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "28",
+          "name" : "Combination_Event",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "Number" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Combination_Event",
+            "required" : [ "timedate" ],
+            "properties" : {
+              "Number" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              },
+              "Name" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "timedate" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "timedate"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-06T13:13:18Z",
+          "updatedAt" : "2024-08-06T13:13:18Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "11dc339f-f6cf-4738-ba83-b8c2fc1d52c5",
+        "key" : "Event_Countconfig",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "27",
+          "name" : "Event_Countconfig",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "Number" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Countconfig",
+            "required" : [ "timedate" ],
+            "properties" : {
+              "Number" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              },
+              "Name" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "timedate" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "timedate"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-06T13:09:37Z",
+          "updatedAt" : "2024-08-06T13:09:37Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "83ad1d55-e90c-433d-af9f-eceba2e166a7",
+        "key" : "Event_Automation_1722948005551_818",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "26",
+          "name" : "Event_Automation_1722948005551_818",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1722948005551_818",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-06T12:40:21Z",
+          "updatedAt" : "2024-08-06T12:40:21Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "1071dfaf-e15d-4a4d-a0a6-e5eb664cfd1f",
+        "key" : "Event_Minconfig",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "25",
+          "name" : "Event_Minconfig",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "Number" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Minconfig",
+            "required" : [ "timedate" ],
+            "properties" : {
+              "Number" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              },
+              "Name" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "timedate" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "timedate"
+              },
+              "TF" : {
+                "type" : "boolean",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "TF"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 4,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Text" : {
+                "type" : "number",
+                "order" : 5,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Text"
+              }
+            }
+          },
+          "fieldCount" : 6,
+          "createdAt" : "2024-08-06T07:40:30Z",
+          "updatedAt" : "2024-08-07T08:48:44Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "b0aeed29-139c-4dd6-86d3-b49f946f4cb6",
+        "key" : "Event_Automation_1722864199103_48",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "24",
+          "name" : "Event_Automation_1722864199103_48",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1722864199103_48",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-05T13:23:36Z",
+          "updatedAt" : "2024-08-05T13:23:36Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "8bf8d92a-424a-4ff4-94de-c0ed2d79e498",
+        "key" : "Event_Automation_1722848653788_192",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "23",
+          "name" : "Event_Automation_1722848653788_192",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1722848653788_192",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-05T09:04:33Z",
+          "updatedAt" : "2024-08-05T09:04:33Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "a25f82ef-a597-4247-a820-029763461908",
+        "key" : "Event_Automation_1722845960345_803",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "22",
+          "name" : "Event_Automation_1722845960345_803",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1722845960345_803",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-05T08:19:38Z",
+          "updatedAt" : "2024-08-05T08:19:38Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "ae129526-1cf3-498b-8466-1d3f121b8500",
+        "key" : "Event_Automation_1722844892338_951",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "21",
+          "name" : "Event_Automation_1722844892338_951",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1722844892338_951",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-05T08:01:49Z",
+          "updatedAt" : "2024-08-05T08:01:49Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "7a9f4995-b564-4b4d-93c1-9c0b0324f91f",
+        "key" : "Event_Automation_1722841141874_109",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "20",
+          "name" : "Event_Automation_1722841141874_109",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1722841141874_109",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-05T06:59:18Z",
+          "updatedAt" : "2024-08-05T06:59:18Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "f0bd0c40-4f3a-4b82-a979-edaa6b4b0ccf",
+        "key" : "Event_Test",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "19",
+          "name" : "Event_Test",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Test",
+            "required" : [ "Time" ],
+            "properties" : {
+              "Time" : {
+                "type" : "datetime",
+                "order" : 0,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "Time"
+              },
+              "Number" : {
+                "type" : "number",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              },
+              "Text" : {
+                "type" : "string",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Text"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 4,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-08-01T07:43:52Z",
+          "updatedAt" : "2024-08-06T12:11:59Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "244a97e2-c001-495c-bd9f-a494d6dab5f2",
+        "key" : "Recheckrevert",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "17",
+          "name" : "Recheckrevert",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Recheckrevert",
+            "required" : [ "time" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "text" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "text"
+              },
+              "time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-07-31T13:50:26Z",
+          "updatedAt" : "2024-07-31T13:50:26Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "4d7deb8f-1efc-4ca4-a209-872ba1ea1eff",
+        "key" : "Manualcheckevent",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "16",
+          "name" : "Manualcheckevent",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Manualcheckevent",
+            "required" : [ "timedate" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "text" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "text"
+              },
+              "timedate" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "timedate"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-07-31T07:39:20Z",
+          "updatedAt" : "2024-07-31T07:39:20Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "18b06e4c-5b65-4185-aa06-8b9a1d22230d",
+        "key" : "Event_Deltaconfig",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "15",
+          "name" : "Event_Deltaconfig",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "Number" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Deltaconfig",
+            "required" : [ "timedate" ],
+            "properties" : {
+              "Number" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              },
+              "Name" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "timedate" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "timedate"
+              },
+              "TF" : {
+                "type" : "boolean",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "TF"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-07-29T08:14:38Z",
+          "updatedAt" : "2024-07-29T08:14:38Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "d2b37511-1e52-442d-b86b-c29f488e56d6",
+        "key" : "Event_DirectConfig",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "14",
+          "name" : "Event_DirectConfig",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_DirectConfig",
+            "required" : [ "timedate" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "text" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "text"
+              },
+              "timedate" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "timedate"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-07-29T08:13:16Z",
+          "updatedAt" : "2024-07-29T08:13:16Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "627b73c3-be59-4d95-86d3-b84bb5f174b1",
+        "key" : "Event_Automation_1722223878775_766",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "13",
+          "name" : "Event_Automation_1722223878775_766",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1722223878775_766",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-07-29T03:31:35Z",
+          "updatedAt" : "2024-07-29T03:31:35Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "ae67856f-161e-4dfa-a64b-ffe723f48ace",
+        "key" : "Event_Automation_1721900613661_38",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "12",
+          "name" : "Event_Automation_1721900613661_38",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1721900613661_38",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-07-25T09:43:44Z",
+          "updatedAt" : "2024-07-25T09:43:44Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "9cd1f52c-066d-4e56-80cd-636b5b78a64b",
+        "key" : "Event_Automation_1721896224086_918",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "11",
+          "name" : "Event_Automation_1721896224086_918",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1721896224086_918",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-07-25T08:30:34Z",
+          "updatedAt" : "2024-07-25T08:30:34Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "3221cacb-1f64-417b-920c-183008bcc52e",
+        "key" : "Event_Automation_1721896032166_492",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "10",
+          "name" : "Event_Automation_1721896032166_492",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1721896032166_492",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-07-25T08:27:22Z",
+          "updatedAt" : "2024-07-25T08:27:22Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "51bdc87e-e531-4420-94da-6cf04b08e8c7",
+        "key" : "Event_Automation_1721895943217_9",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "9",
+          "name" : "Event_Automation_1721895943217_9",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event_Automation_1721895943217_9",
+            "required" : [ ],
+            "properties" : {
+              "Name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "ID" : {
+                "type" : "number",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "2024-07-25 14:30:00",
+                "description" : "Date&Time"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-07-25T08:25:53Z",
+          "updatedAt" : "2024-07-25T08:25:53Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "bacb74ae-aefa-45d8-a86c-66ceec65d754",
+        "key" : "Event1",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "8",
+          "name" : "Event1",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event1",
+            "required" : [ "Date&Time", "ID", "Name" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 1,
+                "eventTime" : true,
+                "timeFormat" : "2024-06-18 14:44:03",
+                "description" : "Date&Time"
+              },
+              "Name" : {
+                "type" : "string",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "Number" : {
+                "type" : "number",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-07-25T08:23:15Z",
+          "updatedAt" : "2024-07-25T08:23:15Z",
+          "editable" : true,
+          "eventStoreApplicable" : false
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      }, {
+        "id" : "eb308333-ca99-4375-ba16-81db42523b37",
+        "key" : "Test1",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "1",
+          "name" : "Test1",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Test1",
+            "required" : [ "datetimez" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Text" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Text"
+              },
+              "datetimez" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "datetimez"
+              },
+              "Bool" : {
+                "type" : "boolean",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Bool"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-07-23T13:13:28Z",
+          "updatedAt" : "2024-07-23T13:13:28Z",
+          "editable" : true,
+          "eventStoreApplicable" : true
+        },
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "6a6c0429-abc1-4e95-b30b-1fd72fa7c111"
+      } ],
+      "errors" : [ ]
+    } ],
+    "awsInfo" : null
+  }
+}
