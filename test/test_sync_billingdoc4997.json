@@ -2,7 +2,7 @@
   "id" : "5c7c3b9f-eaa7-409f-8c81-4836f5563b5c",
   "name" : "test_sync_billingdoc4997",
   "description" : "",
-  "status" : "Synced",
+  "status" : "UPLOADED",
   "errors" : "",
   "active" : true,
   "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
@@ -10,7 +10,7 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Automation source",
   "updatedBy" : "Automation source",
-  "createdOn" : "2024-09-04T10:15:42.244Z",
+  "createdOn" : "2024-09-04T10:15:52.972Z",
   "type" : "Others",
   "repo" : true,
   "connectorId" : null,
@@ -22,10 +22,10 @@
     "repoName" : "Sofy_DM",
     "branchName" : "main",
     "path" : "test",
-    "commitMessage" : "test_beforesync",
+    "commitMessage" : "test_after_sync",
     "error" : null,
     "status" : "UPLOADED",
-    "commitId" : "f188f35a039d44df6381e8a5da8c423a814f87cf"
+    "commitId" : "b690bcdf0f991dd7c5828d632ea3ce77b52e6cc1"
   },
   "content" : {
     "settings" : [ ],
