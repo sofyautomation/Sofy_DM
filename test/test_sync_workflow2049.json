@@ -2,7 +2,7 @@
   "id" : "799fa468-8702-4801-ab26-bfd80a00d4ca",
   "name" : "test_sync_workflow2049",
   "description" : "",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Automation source",
   "updatedBy" : "Automation source",
-  "createdOn" : "2024-09-04T10:00:33.128Z",
+  "createdOn" : "2024-09-04T10:01:59.107Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "93c657a1-0577-4713-bc66-ab1ed08a93c9",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "test",
+    "commitMessage" : "test_before_sync",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "b4c8703023795543ac4fc49e82f997c14448e12b"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -25,7 +35,7 @@
     "productCatalog" : [ ],
     "notifications" : [ ],
     "workflows" : [ {
-      "segregationKeys" : [ "hiPages_WF_023_BulkLoad_PaymentMethod", "Print Invoices", "Chargebacks -> Write Off Invoice + Cancel Subscription", "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ", "Custom Invoice", "Invoice 30 Days Past Due, Account Summary", "Applyworkflowconfig template_2024-08-03", "Resume Subscriptions for Accounts with Zero Balance Limit 1", "Applyworkflowconfig template_2024-08-04", "Applyworkflowconfig template_2024-08-05", "Applyworkflowconfig template_2024-08-08", "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1" ],
+      "segregationKeys" : [ "hiPages_WF_023_BulkLoad_PaymentMethod", "Print Invoices", "Chargebacks -> Write Off Invoice + Cancel Subscription", "Custom Invoice", "Invoice 30 Days Past Due, Account Summary", "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ", "Applyworkflowconfig template_2024-08-03", "Resume Subscriptions for Accounts with Zero Balance Limit 1", "Applyworkflowconfig template_2024-08-04", "Applyworkflowconfig template_2024-08-05", "Applyworkflowconfig template_2024-08-08", "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1" ],
       "originalPayload" : {
         "export" : {
           "1" : {
@@ -4515,7 +4525,7 @@
         "featureDisabled" : false
       },
       "response" : [ {
-        "id" : "6846a38e-9f76-4919-a49c-964a30eca97b",
+        "id" : "d9bce27f-470a-4267-841b-ec296b0f9c52",
         "key" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1_0.0.1",
         "segregationKey" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
         "componentType" : "WorkFlows",
@@ -4596,7 +4606,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "c9b9946e-ee85-4ffd-93db-288c1b071277",
+        "id" : "48b1dff8-9fbe-4600-936e-5c882da1b48c",
         "key" : "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1",
         "segregationKey" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
         "componentType" : "WorkFlows",
@@ -4677,88 +4687,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "6f998cbb-204a-42bf-88c9-099827e4a509",
-        "key" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 _0.0.1",
-        "segregationKey" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
-        "componentType" : "WorkFlows",
-        "url" : "7",
-        "pathPattern" : null,
-        "method" : "GET",
-        "payload" : {
-          "id" : 7,
-          "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
-          "description" : "",
-          "status" : "Active",
-          "ondemandTrigger" : true,
-          "calloutTrigger" : true,
-          "scheduledTrigger" : false,
-          "interval" : null,
-          "timezone" : null,
-          "createdAt" : "2024-07-23T00:33:22.222-07:00",
-          "updatedAt" : "2024-07-23T00:33:22.222-07:00",
-          "priority" : "Medium",
-          "active_version" : {
-            "id" : 7,
-            "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
-            "definitionId" : 7,
-            "definitionName" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:22.222-07:00",
-            "updatedAt" : "2024-07-23T00:33:22.222-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          },
-          "latest_inactive_versions" : [ {
-            "id" : 7,
-            "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
-            "definitionId" : 7,
-            "definitionName" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:22.222-07:00",
-            "updatedAt" : "2024-07-23T00:33:22.222-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          } ]
-        },
-        "result" : "DONE",
-        "error" : "-",
-        "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
-      }, {
-        "id" : "005dff1d-8050-4dea-9bfc-fef51963083d",
+        "id" : "e62944e2-3bc5-4b0b-a573-6893d2f8f875",
         "key" : "Custom Invoice_0.0.1",
         "segregationKey" : "Custom Invoice",
         "componentType" : "WorkFlows",
@@ -4839,7 +4768,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "cf41bd1a-2afc-429f-bc1b-10f1501e4394",
+        "id" : "1a38856f-1100-472d-af9a-24625ce19972",
         "key" : "Invoice 30 Days Past Due, Account Summary_0.0.1",
         "segregationKey" : "Invoice 30 Days Past Due, Account Summary",
         "componentType" : "WorkFlows",
@@ -4920,7 +4849,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "1afb3a35-6058-48eb-ba26-265a34cce2b9",
+        "id" : "f8f801bf-6616-4464-bed5-f8ab06d03da3",
         "key" : "Print Invoices_0.0.1",
         "segregationKey" : "Print Invoices",
         "componentType" : "WorkFlows",
@@ -5019,7 +4948,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "0dae283a-ea23-443a-8849-824344202245",
+        "id" : "60041749-b8f5-44c9-99a0-fdad654be014",
         "key" : "Resume Subscriptions for Accounts with Zero Balance Limit 1_0.0.1",
         "segregationKey" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
         "componentType" : "WorkFlows",
@@ -5100,7 +5029,88 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "4af0ab06-c463-46e4-9f4c-280de574734e",
+        "id" : "6db11c7a-077a-462d-bf97-5857796aeaaf",
+        "key" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 _0.0.1",
+        "segregationKey" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+        "componentType" : "WorkFlows",
+        "url" : "7",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 7,
+          "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T00:33:22.222-07:00",
+          "updatedAt" : "2024-07-23T00:33:22.222-07:00",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 7,
+            "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+            "definitionId" : 7,
+            "definitionName" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:22.222-07:00",
+            "updatedAt" : "2024-07-23T00:33:22.222-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 7,
+            "name" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+            "definitionId" : 7,
+            "definitionName" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:22.222-07:00",
+            "updatedAt" : "2024-07-23T00:33:22.222-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
+      }, {
+        "id" : "344f47f9-42ab-47c3-9051-470d1a857ab6",
         "key" : "hiPages_WF_023_BulkLoad_PaymentMethod_0.0.2",
         "segregationKey" : "hiPages_WF_023_BulkLoad_PaymentMethod",
         "componentType" : "WorkFlows",
@@ -5197,7 +5207,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "2d43b0a2-b5ac-455d-9da0-5c510d23b3f6",
+        "id" : "cd8c40ec-27ad-4c90-b425-cb833622fb3f",
         "key" : "Applyworkflowconfig template_2024-08-03_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-03",
         "componentType" : "WorkFlows",
@@ -5296,7 +5306,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "8e60c56f-2624-4c87-ab2e-7115ef030a66",
+        "id" : "c2e9143d-6cc0-4068-bb5c-32befac855ad",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5395,7 +5405,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "b21f6120-c333-4486-bacb-5b70dff8542e",
+        "id" : "79bf30cf-03a0-4257-a355-921a42ee58ed",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5494,7 +5504,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "0c045a0c-bb0b-4406-bf96-da3716ac96b7",
+        "id" : "0eb6419b-9385-4971-96fe-9258c710d20b",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5593,7 +5603,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "bc8c7d94-4db5-4ba3-8664-e76f0b51c694",
+        "id" : "1af2aef8-5c1d-4241-a5c8-7e8cd73506f8",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5692,7 +5702,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "3fb9ab99-1002-4d3c-96b5-03e692c56373",
+        "id" : "38e1911b-8370-44ba-972e-725bdb3620be",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5791,7 +5801,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "68610024-6be7-4dfa-ab51-f09265fa03cb",
+        "id" : "4bc65b54-0ef7-4b16-bb4d-b846aefc05dc",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5890,7 +5900,7 @@
         "error" : "-",
         "templateId" : "799fa468-8702-4801-ab26-bfd80a00d4ca"
       }, {
-        "id" : "72327102-4c2a-402a-b5a9-3ca080bd21c9",
+        "id" : "31954da5-16b3-4b14-b1ea-71b89776658f",
         "key" : "Applyworkflowconfig template_2024-08-08_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-08",
         "componentType" : "WorkFlows",
