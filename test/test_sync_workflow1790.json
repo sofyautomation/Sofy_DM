@@ -2,7 +2,7 @@
   "id" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf",
   "name" : "test_sync_workflow1790",
   "description" : "",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Automation source",
   "updatedBy" : "Automation source",
-  "createdOn" : "2024-10-07T16:21:34.074Z",
+  "createdOn" : "2024-10-07T16:23:19.576Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "af8df4bb-1602-47e3-97bd-50f13b605164",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "test",
+    "commitMessage" : "test_before_sync",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "cc9d109342d599658a1239dc8452ba38abb80246"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -25,7 +35,7 @@
     "productCatalog" : [ ],
     "notifications" : [ ],
     "workflows" : [ {
-      "segregationKeys" : [ "hiPages_WF_023_BulkLoad_PaymentMethod", "Print Invoices", "Chargebacks -> Write Off Invoice + Cancel Subscription", "Custom Invoice", "Invoice 30 Days Past Due, Account Summary", "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ", "Applyworkflowconfig template_2024-08-03", "Resume Subscriptions for Accounts with Zero Balance Limit 1", "Applyworkflowconfig template_2024-08-04", "Applyworkflowconfig template_2024-08-05", "Applyworkflowconfig template_2024-08-08", "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1" ],
+      "segregationKeys" : [ "hiPages_WF_023_BulkLoad_PaymentMethod", "Print Invoices", "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ", "Applyworkflowconfig template_2024-08-03", "Chargebacks -> Write Off Invoice + Cancel Subscription", "Custom Invoice", "Invoice 30 Days Past Due, Account Summary", "Resume Subscriptions for Accounts with Zero Balance Limit 1", "Applyworkflowconfig template_2024-08-04", "Applyworkflowconfig template_2024-08-05", "Applyworkflowconfig template_2024-08-08", "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1" ],
       "originalPayload" : {
         "export" : {
           "1" : {
@@ -4515,445 +4525,7 @@
         "featureDisabled" : false
       },
       "response" : [ {
-        "id" : "b6d10a81-e62a-4dcd-bf97-9159a8e669eb",
-        "key" : "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1",
-        "segregationKey" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-        "componentType" : "WorkFlows",
-        "url" : "2",
-        "pathPattern" : null,
-        "method" : "GET",
-        "payload" : {
-          "id" : 2,
-          "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-          "description" : "",
-          "status" : "Active",
-          "ondemandTrigger" : true,
-          "calloutTrigger" : true,
-          "scheduledTrigger" : false,
-          "interval" : null,
-          "timezone" : null,
-          "createdAt" : "2024-07-23T00:33:17.230-07:00",
-          "updatedAt" : "2024-07-23T00:33:17.230-07:00",
-          "priority" : "Medium",
-          "active_version" : {
-            "id" : 2,
-            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-            "definitionId" : 2,
-            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:17.230-07:00",
-            "updatedAt" : "2024-07-23T00:33:17.230-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          },
-          "latest_inactive_versions" : [ {
-            "id" : 2,
-            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-            "definitionId" : 2,
-            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:17.230-07:00",
-            "updatedAt" : "2024-07-23T00:33:17.230-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          } ]
-        },
-        "child" : null,
-        "childUniqueField" : null,
-        "selectedChild" : [ ],
-        "result" : "DONE",
-        "error" : "-",
-        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
-      }, {
-        "id" : "c4ade2ec-962a-41c6-bae6-659af035c168",
-        "key" : "Custom Invoice_0.0.1",
-        "segregationKey" : "Custom Invoice",
-        "componentType" : "WorkFlows",
-        "url" : "3",
-        "pathPattern" : null,
-        "method" : "GET",
-        "payload" : {
-          "id" : 3,
-          "name" : "Custom Invoice",
-          "description" : "",
-          "status" : "Active",
-          "ondemandTrigger" : true,
-          "calloutTrigger" : true,
-          "scheduledTrigger" : false,
-          "interval" : null,
-          "timezone" : null,
-          "createdAt" : "2024-07-23T00:33:18.094-07:00",
-          "updatedAt" : "2024-07-23T00:33:18.094-07:00",
-          "priority" : "Medium",
-          "active_version" : {
-            "id" : 3,
-            "name" : "Custom Invoice",
-            "definitionId" : 3,
-            "definitionName" : "Custom Invoice",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:18.094-07:00",
-            "updatedAt" : "2024-07-23T00:33:18.094-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          },
-          "latest_inactive_versions" : [ {
-            "id" : 3,
-            "name" : "Custom Invoice",
-            "definitionId" : 3,
-            "definitionName" : "Custom Invoice",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:18.094-07:00",
-            "updatedAt" : "2024-07-23T00:33:18.094-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          } ]
-        },
-        "child" : null,
-        "childUniqueField" : null,
-        "selectedChild" : [ ],
-        "result" : "DONE",
-        "error" : "-",
-        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
-      }, {
-        "id" : "59c2aaff-fb7d-459c-a4aa-909ed9de5c55",
-        "key" : "Invoice 30 Days Past Due, Account Summary_0.0.1",
-        "segregationKey" : "Invoice 30 Days Past Due, Account Summary",
-        "componentType" : "WorkFlows",
-        "url" : "4",
-        "pathPattern" : null,
-        "method" : "GET",
-        "payload" : {
-          "id" : 4,
-          "name" : "Invoice 30 Days Past Due, Account Summary",
-          "description" : "",
-          "status" : "Active",
-          "ondemandTrigger" : true,
-          "calloutTrigger" : true,
-          "scheduledTrigger" : false,
-          "interval" : "0 0 3 /1 * *",
-          "timezone" : "Pacific Time (US & Canada)",
-          "createdAt" : "2024-07-23T00:33:19.002-07:00",
-          "updatedAt" : "2024-07-23T00:33:19.002-07:00",
-          "priority" : "Medium",
-          "active_version" : {
-            "id" : 4,
-            "name" : "Invoice 30 Days Past Due, Account Summary",
-            "definitionId" : 4,
-            "definitionName" : "Invoice 30 Days Past Due, Account Summary",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : "0 0 3 /1 * *",
-            "timezone" : "Pacific Time (US & Canada)",
-            "createdAt" : "2024-07-23T00:33:19.002-07:00",
-            "updatedAt" : "2024-07-23T00:33:19.002-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          },
-          "latest_inactive_versions" : [ {
-            "id" : 4,
-            "name" : "Invoice 30 Days Past Due, Account Summary",
-            "definitionId" : 4,
-            "definitionName" : "Invoice 30 Days Past Due, Account Summary",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : "0 0 3 /1 * *",
-            "timezone" : "Pacific Time (US & Canada)",
-            "createdAt" : "2024-07-23T00:33:19.002-07:00",
-            "updatedAt" : "2024-07-23T00:33:19.002-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          } ]
-        },
-        "child" : null,
-        "childUniqueField" : null,
-        "selectedChild" : [ ],
-        "result" : "DONE",
-        "error" : "-",
-        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
-      }, {
-        "id" : "95ff52ed-8051-49ef-952b-b6fe659dd185",
-        "key" : "Print Invoices_0.0.1",
-        "segregationKey" : "Print Invoices",
-        "componentType" : "WorkFlows",
-        "url" : "5",
-        "pathPattern" : null,
-        "method" : "GET",
-        "payload" : {
-          "id" : 5,
-          "name" : "Print Invoices",
-          "description" : "",
-          "status" : "Active",
-          "ondemandTrigger" : true,
-          "calloutTrigger" : true,
-          "scheduledTrigger" : false,
-          "interval" : null,
-          "timezone" : null,
-          "createdAt" : "2024-07-23T00:33:19.839-07:00",
-          "updatedAt" : "2024-07-23T00:33:19.839-07:00",
-          "priority" : "Medium",
-          "active_version" : {
-            "id" : 5,
-            "name" : "Print Invoices",
-            "definitionId" : 5,
-            "definitionName" : "Print Invoices",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:19.839-07:00",
-            "updatedAt" : "2024-07-23T00:33:19.839-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "inputFields" : [ {
-              "index" : "0",
-              "default" : "",
-              "datatype" : "Text",
-              "required" : true,
-              "callout_id" : "BillRunID",
-              "field_name" : "Id",
-              "object_name" : "BillingRun"
-            } ],
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          },
-          "latest_inactive_versions" : [ {
-            "id" : 5,
-            "name" : "Print Invoices",
-            "definitionId" : 5,
-            "definitionName" : "Print Invoices",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:19.839-07:00",
-            "updatedAt" : "2024-07-23T00:33:19.839-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "inputFields" : [ {
-              "index" : "0",
-              "default" : "",
-              "datatype" : "Text",
-              "required" : true,
-              "callout_id" : "BillRunID",
-              "field_name" : "Id",
-              "object_name" : "BillingRun"
-            } ],
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          } ]
-        },
-        "child" : null,
-        "childUniqueField" : null,
-        "selectedChild" : [ ],
-        "result" : "DONE",
-        "error" : "-",
-        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
-      }, {
-        "id" : "5cc0a092-a3a8-4861-8a51-d1f184f08bd7",
-        "key" : "Resume Subscriptions for Accounts with Zero Balance Limit 1_0.0.1",
-        "segregationKey" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
-        "componentType" : "WorkFlows",
-        "url" : "6",
-        "pathPattern" : null,
-        "method" : "GET",
-        "payload" : {
-          "id" : 6,
-          "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
-          "description" : "",
-          "status" : "Active",
-          "ondemandTrigger" : true,
-          "calloutTrigger" : true,
-          "scheduledTrigger" : false,
-          "interval" : null,
-          "timezone" : null,
-          "createdAt" : "2024-07-23T00:33:21.100-07:00",
-          "updatedAt" : "2024-07-23T00:33:21.100-07:00",
-          "priority" : "Medium",
-          "active_version" : {
-            "id" : 6,
-            "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
-            "definitionId" : 6,
-            "definitionName" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:21.100-07:00",
-            "updatedAt" : "2024-07-23T00:33:21.100-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          },
-          "latest_inactive_versions" : [ {
-            "id" : 6,
-            "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
-            "definitionId" : 6,
-            "definitionName" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:21.100-07:00",
-            "updatedAt" : "2024-07-23T00:33:21.100-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-08-23T06:36:26.001-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          } ]
-        },
-        "child" : null,
-        "childUniqueField" : null,
-        "selectedChild" : [ ],
-        "result" : "DONE",
-        "error" : "-",
-        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
-      }, {
-        "id" : "39e4ed07-bda2-4f5c-8eb4-46637f309cd3",
+        "id" : "017359a5-bb9d-40d8-b09d-1e40a667385a",
         "key" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1_0.0.1",
         "segregationKey" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
         "componentType" : "WorkFlows",
@@ -5037,7 +4609,7 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "5ec444e8-6e4a-477b-b230-1c771be97896",
+        "id" : "7c515902-df8b-4ab2-868e-bc7073424380",
         "key" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 _0.0.1",
         "segregationKey" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
         "componentType" : "WorkFlows",
@@ -5121,7 +4693,7 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "6afd8f82-1fac-4d5a-b9bd-bbb9887e49ba",
+        "id" : "c842c7cc-826c-492b-b34d-1e6c4f3c282a",
         "key" : "hiPages_WF_023_BulkLoad_PaymentMethod_0.0.2",
         "segregationKey" : "hiPages_WF_023_BulkLoad_PaymentMethod",
         "componentType" : "WorkFlows",
@@ -5221,7 +4793,7 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "6a5b16a2-183c-4f73-8d61-c4497c39564a",
+        "id" : "5975b542-0ae0-4bac-9f6f-29c13c42b835",
         "key" : "Applyworkflowconfig template_2024-08-03_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-03",
         "componentType" : "WorkFlows",
@@ -5323,7 +4895,445 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "f367e223-26b5-40ae-8641-5228b87e7e16",
+        "id" : "945d50f7-2d10-4769-8047-d264017b3774",
+        "key" : "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1",
+        "segregationKey" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+        "componentType" : "WorkFlows",
+        "url" : "2",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 2,
+          "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T00:33:17.230-07:00",
+          "updatedAt" : "2024-07-23T00:33:17.230-07:00",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 2,
+            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "definitionId" : 2,
+            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:17.230-07:00",
+            "updatedAt" : "2024-07-23T00:33:17.230-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 2,
+            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "definitionId" : 2,
+            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:17.230-07:00",
+            "updatedAt" : "2024-07-23T00:33:17.230-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
+      }, {
+        "id" : "c94b393b-d0a4-48cc-8c66-c02be1880e04",
+        "key" : "Custom Invoice_0.0.1",
+        "segregationKey" : "Custom Invoice",
+        "componentType" : "WorkFlows",
+        "url" : "3",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 3,
+          "name" : "Custom Invoice",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T00:33:18.094-07:00",
+          "updatedAt" : "2024-07-23T00:33:18.094-07:00",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 3,
+            "name" : "Custom Invoice",
+            "definitionId" : 3,
+            "definitionName" : "Custom Invoice",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:18.094-07:00",
+            "updatedAt" : "2024-07-23T00:33:18.094-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 3,
+            "name" : "Custom Invoice",
+            "definitionId" : 3,
+            "definitionName" : "Custom Invoice",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:18.094-07:00",
+            "updatedAt" : "2024-07-23T00:33:18.094-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
+      }, {
+        "id" : "b3125256-212f-4201-b955-9961d307f327",
+        "key" : "Invoice 30 Days Past Due, Account Summary_0.0.1",
+        "segregationKey" : "Invoice 30 Days Past Due, Account Summary",
+        "componentType" : "WorkFlows",
+        "url" : "4",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 4,
+          "name" : "Invoice 30 Days Past Due, Account Summary",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : "0 0 3 /1 * *",
+          "timezone" : "Pacific Time (US & Canada)",
+          "createdAt" : "2024-07-23T00:33:19.002-07:00",
+          "updatedAt" : "2024-07-23T00:33:19.002-07:00",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 4,
+            "name" : "Invoice 30 Days Past Due, Account Summary",
+            "definitionId" : 4,
+            "definitionName" : "Invoice 30 Days Past Due, Account Summary",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 3 /1 * *",
+            "timezone" : "Pacific Time (US & Canada)",
+            "createdAt" : "2024-07-23T00:33:19.002-07:00",
+            "updatedAt" : "2024-07-23T00:33:19.002-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 4,
+            "name" : "Invoice 30 Days Past Due, Account Summary",
+            "definitionId" : 4,
+            "definitionName" : "Invoice 30 Days Past Due, Account Summary",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 3 /1 * *",
+            "timezone" : "Pacific Time (US & Canada)",
+            "createdAt" : "2024-07-23T00:33:19.002-07:00",
+            "updatedAt" : "2024-07-23T00:33:19.002-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
+      }, {
+        "id" : "9b787389-f4d2-43b8-9576-37b16076efd7",
+        "key" : "Print Invoices_0.0.1",
+        "segregationKey" : "Print Invoices",
+        "componentType" : "WorkFlows",
+        "url" : "5",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 5,
+          "name" : "Print Invoices",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T00:33:19.839-07:00",
+          "updatedAt" : "2024-07-23T00:33:19.839-07:00",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 5,
+            "name" : "Print Invoices",
+            "definitionId" : 5,
+            "definitionName" : "Print Invoices",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:19.839-07:00",
+            "updatedAt" : "2024-07-23T00:33:19.839-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "callout_id" : "BillRunID",
+              "field_name" : "Id",
+              "object_name" : "BillingRun"
+            } ],
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 5,
+            "name" : "Print Invoices",
+            "definitionId" : 5,
+            "definitionName" : "Print Invoices",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:19.839-07:00",
+            "updatedAt" : "2024-07-23T00:33:19.839-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "callout_id" : "BillRunID",
+              "field_name" : "Id",
+              "object_name" : "BillingRun"
+            } ],
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
+      }, {
+        "id" : "04911fb2-e3ce-44c6-a8c0-21599e6e8331",
+        "key" : "Resume Subscriptions for Accounts with Zero Balance Limit 1_0.0.1",
+        "segregationKey" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+        "componentType" : "WorkFlows",
+        "url" : "6",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 6,
+          "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T00:33:21.100-07:00",
+          "updatedAt" : "2024-07-23T00:33:21.100-07:00",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 6,
+            "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+            "definitionId" : 6,
+            "definitionName" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:21.100-07:00",
+            "updatedAt" : "2024-07-23T00:33:21.100-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 6,
+            "name" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+            "definitionId" : 6,
+            "definitionName" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:21.100-07:00",
+            "updatedAt" : "2024-07-23T00:33:21.100-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-08-23T06:36:26.001-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
+      }, {
+        "id" : "e2f59377-918d-48f4-9549-ec2f9a3cff41",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5425,7 +5435,7 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "6e722a18-1cfa-4676-a2d4-66d3c4c47ce7",
+        "id" : "e687b53f-03d7-4f7d-93af-4701aee079d4",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5527,7 +5537,7 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "9b4779ae-98ac-4d11-856b-d91cd372e522",
+        "id" : "bfb82e66-855a-4237-97fc-59c942321c4b",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5629,7 +5639,7 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "4a089e82-2bbe-46ac-8502-eb483b39d1ae",
+        "id" : "6e991513-760f-403e-a7cc-cf3d4eb5be7d",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5731,7 +5741,7 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "de198f8c-f0ba-4254-a154-ae44c7821834",
+        "id" : "eab2fa6b-22eb-4968-89db-284b968cde58",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5833,7 +5843,7 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "66dc75b3-4a97-4c1c-b8b0-406239baa66a",
+        "id" : "a90a4587-7023-44d0-8616-bbeaa7ce953b",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5935,7 +5945,7 @@
         "error" : "-",
         "templateId" : "615b3b12-6e5f-4a69-94a2-60fc7be80ccf"
       }, {
-        "id" : "bfee0d14-f49d-4b0a-8202-ea211094f6c2",
+        "id" : "700725bd-fcc9-4af0-a7ef-b290911ff597",
         "key" : "Applyworkflowconfig template_2024-08-08_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-08",
         "componentType" : "WorkFlows",
