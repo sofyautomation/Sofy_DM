@@ -1,0 +1,4199 @@
+{
+  "id" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302",
+  "name" : "Test_GIT9498",
+  "description" : "Test_GIT1127",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox",
+  "createdBy" : "Automation source",
+  "updatedBy" : "Automation source",
+  "createdOn" : "2024-10-25T17:35:07.488Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ {
+      "segregationKeys" : [ "amendment", "product", "rateplancharge", "productrateplan", "productrateplancharge", "usage", "creditmemoitem", "subscription", "rateplan", "debitmemo", "contact", "payment", "orders", "invoice", "creditmemo", "paymentmethod", "account" ],
+      "originalPayload" : {
+        "definitions" : {
+          "amendment" : {
+            "type" : "amendment",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "standardreasons__c" : {
+                  "label" : "standardreasons__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "6", "1", "2", "3", "4", "5" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "usage" : {
+            "type" : "usage",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "testdeletion__c" : {
+                  "maxLength" : 255,
+                  "label" : "testdeletion__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "50",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "payment" : {
+            "type" : "payment",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "CCReferenceNumber1__c" : {
+                  "maxLength" : 255,
+                  "label" : "CCReferenceNumber1__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "productrateplancharge" : {
+            "type" : "productrateplancharge",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "PriceBookEntryId__c" : {
+                  "maxLength" : 255,
+                  "label" : "PriceBookEntryId__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ProductCode__c" : {
+                  "label" : "ProductCode__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "101",
+                  "enum" : [ "101", "102", "103", "104" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "sfdcDiscScheduleID__c" : {
+                  "maxLength" : 18,
+                  "label" : "sfdcDiscScheduleID__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "sfdcPricebookID__c" : {
+                  "maxLength" : 18,
+                  "label" : "sfdcPricebookID__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "sfdcPricingType__c" : {
+                  "maxLength" : 18,
+                  "label" : "sfdcPricingType__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "sfdcProductID__c" : {
+                  "maxLength" : 18,
+                  "label" : "sfdcProductID__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "TestRateplans__c" : {
+                  "label" : "TestRateplans",
+                  "origin" : "custom",
+                  "description" : "TestRateplans",
+                  "type" : "string",
+                  "default" : "10",
+                  "enum" : [ "10", "20", "30" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "TestRateplans_nonindexed__c" : {
+                  "label" : "TestRateplans_nonindexed",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "10",
+                  "enum" : [ "10", "20", "30" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "sfdcDiscScheduleID__c", "sfdcPricebookID__c", "sfdcPricingType__c", "sfdcProductID__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "ProductCode__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "rateplan" : {
+            "type" : "rateplan",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "ProductVersion__c" : {
+                  "maxLength" : 20,
+                  "label" : "Product Version",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "ProductVersion__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "orders" : {
+            "type" : "orders",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "SourceSystem__c" : {
+                  "label" : "Source System",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Zuora",
+                  "enum" : [ "Zuora", "Salesforce", "SelfServicePortal", "WF Dunning Cancelation", "WF OOT Cancelation" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "SourceSystem__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "subscription" : {
+            "type" : "subscription",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "RatePlanMigrationDate__c" : {
+                  "format" : "date",
+                  "label" : "Rate Plan Migration Date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RatePlanMigrationStatus__c" : {
+                  "maxLength" : 50,
+                  "label" : "Rate Plan Migration Status",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ResumeStartDate__c" : {
+                  "format" : "date",
+                  "label" : "Resume Start Date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "SuspendDuration__c" : {
+                  "maxLength" : 10,
+                  "label" : "Suspend Duration",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "SuspendStartDate__c" : {
+                  "format" : "date",
+                  "label" : "Suspend Start Date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "ResumeStartDate__c", "SuspendDuration__c", "SuspendStartDate__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "debitmemo" : {
+            "type" : "debitmemo",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "RetryStatus__c" : {
+                  "maxLength" : 255,
+                  "label" : "Retry Status",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "RetryStatus__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "product" : {
+            "type" : "product",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Data_Center__c" : {
+                  "label" : "Data_Center__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "US West (Oregon)", "US East (Northern Virginia)" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "ProductFamily__c" : {
+                  "label" : "Product Family",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Package",
+                  "enum" : [ "Package", "Partner", "Additional Postcode" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "sfdcId__c" : {
+                  "maxLength" : 18,
+                  "label" : "sfdcId__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "Data_Center__c", "ProductFamily__c", "sfdcId__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "contact" : {
+            "type" : "contact",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "test_custom__c" : {
+                  "maxLength" : 50,
+                  "label" : "test_custom__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "paymentmethod" : {
+            "type" : "paymentmethod",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "CardType__c" : {
+                  "label" : "Card Type",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "AMEX", "Visa", "Master Card" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "CCReferenceNumber__c" : {
+                  "maxLength" : 255,
+                  "label" : "CCReferenceNumber__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CreditCardMaskedNumber__c" : {
+                  "maxLength" : 19,
+                  "label" : "Credit Card Masked Number",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ExpirationMonth__c" : {
+                  "maxLength" : 2,
+                  "label" : "ExpirationMonth",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ExpirationYear__c" : {
+                  "maxLength" : 4,
+                  "label" : "ExpirationYear",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "FirstName__c" : {
+                  "maxLength" : 30,
+                  "label" : "FirstName",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "LastName__c" : {
+                  "maxLength" : 30,
+                  "label" : "LastName",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "CardType__c", "CreditCardMaskedNumber__c", "ExpirationMonth__c", "ExpirationYear__c", "FirstName__c", "LastName__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "rateplancharge" : {
+            "type" : "rateplancharge",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "BasePrice__c" : {
+                  "maxLength" : 10,
+                  "label" : "Base Price",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "DirectoryListing__c" : {
+                  "label" : "DirectoryListing__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "All", "Basic", "Starter", "Standard", "Advanced", "Premium", "Silver", "Gold", "Platinum", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "enabled__c" : {
+                  "label" : "enabled__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "yes",
+                  "enum" : [ "yes", "no" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "IncludedPostcodes__c" : {
+                  "label" : "Included Postcodes",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "50", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "LastUpdatedRatePlanChargeVersion__c" : {
+                  "maxLength" : 255,
+                  "label" : "LastUpdatedRatePlanChargeVersion__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "LeadCreditFactor__c" : {
+                  "label" : "Lead Credit Factor",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "1", "1.2", "1.25", "1.5", "1.75", "2", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "OpportunityLineItemId__c" : {
+                  "maxLength" : 255,
+                  "label" : "OpportunityLineItemId__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RenewalOpportunityLineItemStatus__c" : {
+                  "maxLength" : 255,
+                  "label" : "RenewalOpportunityLineItemStatus__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "sfdcSubscriptionId__c" : {
+                  "maxLength" : 18,
+                  "label" : "sfdcSubscriptionId__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "SubscriptionRatePlanCharge1__c" : {
+                  "maxLength" : 255,
+                  "label" : "SubscriptionRatePlanCharge1__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "SupportType__c" : {
+                  "label" : "Support Type",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "No Support", "Standard Support", "Advanced Support", "Premium Support", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "UpdatedByBillRun__c" : {
+                  "maxLength" : 20,
+                  "label" : "Updated By Bill Run",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "BasePrice__c", "enabled__c", "sfdcSubscriptionId__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "creditmemo" : {
+            "type" : "creditmemo",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "testcm__c" : {
+                  "maxLength" : 20,
+                  "label" : "testcm__c",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "yyyyy",
+                  "legacy" : true
+                },
+                "TestPicklist__c" : {
+                  "label" : "TestPicklist__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "1",
+                  "enum" : [ "1", "2", "3" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "productrateplan" : {
+            "type" : "productrateplan",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "GMIssue__c" : {
+                  "label" : "GMIssue__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Red",
+                  "enum" : [ "Red", "Blue ", "Green" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Region__c" : {
+                  "label" : "Region__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "North America", "LATAM", "EMEA North", "EMEA West", "EMEA East", "EMEA South", "APAC", "ANZ" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Segment__c" : {
+                  "label" : "Segment__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Academic", "Commercial", "Public" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Service_Type__c" : {
+                  "label" : "Service_Type__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "OnDemand", "OnDemand With Commit" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "sfdcDiscScheduleID__c" : {
+                  "maxLength" : 18,
+                  "label" : "sfdcDiscScheduleID__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "sfdcPricebookID__c" : {
+                  "maxLength" : 18,
+                  "label" : "sfdcPricebookID__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "sfdcPricingType__c" : {
+                  "label" : "sfdcPricingType__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "DISCOUNT_SCHEDULE", "BLOCK_PRICE", "PRICEBOOK_ENTRY" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "sfdcProductID__c" : {
+                  "maxLength" : 18,
+                  "label" : "sfdcProductID__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "GMIssue__c", "Region__c", "Segment__c", "Service_Type__c", "sfdcDiscScheduleID__c", "sfdcPricebookID__c", "sfdcPricingType__c", "sfdcProductID__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "creditmemoitem" : {
+            "type" : "creditmemoitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "test__c" : {
+                  "maxLength" : 20,
+                  "label" : "test__c",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "zzzz",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "invoice" : {
+            "type" : "invoice",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "ManualWriteOff__c" : {
+                  "label" : "Manual Write Off",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "ManualWriteOffReason__c" : {
+                  "label" : "Manual Write Off Reason",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Correcting invoice error", "Ascension", "Auto Renewal Cancellation", "Auto Renewal Objection", "Banned Account", "Cooling off period", "Customer Request", "Discount on VC", "Downgrading", "Incorrect Info by SR", "PPL Lead Dispute", "Setup Error", "Sign up Cancel-48Hrs", "Insolvent", "Injury/Illness", "Chargeback", "Pause of Membership", "Waive Lead Pack on VC", "Contract Termination Fee", "Internal Test Account", "Disc on Listing Renewal", "Bankrupt" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "RetryStatus__c" : {
+                  "maxLength" : 255,
+                  "label" : "Retry Status",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "ManualWriteOff__c", "ManualWriteOffReason__c", "RetryStatus__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "account" : {
+            "type" : "account",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "CollectionsAgent__c" : {
+                  "maxLength" : 255,
+                  "label" : "CollectionsAgent",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "CollectionsAgent__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          }
+        },
+        "count" : 17
+      },
+      "response" : [ {
+        "id" : "e9947a3b-ac51-477c-9a08-0d187f872cf9",
+        "key" : "usage -> testdeletion__c",
+        "segregationKey" : "usage",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "testdeletion__c",
+          "description" : "",
+          "maxLength" : 255,
+          "default" : "50",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "testdeletion__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "8d37108c-beff-4a3e-aa44-512543d2a2ad",
+        "key" : "payment -> CCReferenceNumber1__c",
+        "segregationKey" : "payment",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "CCReferenceNumber1__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "CCReferenceNumber1__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "0cbb5774-d5a5-4d53-89fe-4f9f2f5c59b4",
+        "key" : "productrateplancharge -> PriceBookEntryId__c",
+        "segregationKey" : "productrateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "PriceBookEntryId__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "PriceBookEntryId__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "8d199858-d535-4eb6-8cfd-3f4609e84264",
+        "key" : "productrateplancharge -> ProductCode__c",
+        "segregationKey" : "productrateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "ProductCode__c",
+          "description" : "",
+          "maxLength" : 255,
+          "default" : "101",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "ProductCode__c",
+          "pickListValue" : [ "101", "102", "103", "104" ],
+          "required" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "4167e6fb-58b3-4e15-8de5-0a3a189f3e8c",
+        "key" : "productrateplancharge -> sfdcDiscScheduleID__c",
+        "segregationKey" : "productrateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcDiscScheduleID__c",
+          "description" : "",
+          "maxLength" : 18,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcDiscScheduleID__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "00a266bd-3b8b-44a3-9da1-3df543773637",
+        "key" : "productrateplancharge -> sfdcPricebookID__c",
+        "segregationKey" : "productrateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcPricebookID__c",
+          "description" : "",
+          "maxLength" : 18,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcPricebookID__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "f634fc2b-041a-48d8-8cc9-5b67b0cc64a8",
+        "key" : "productrateplancharge -> sfdcPricingType__c",
+        "segregationKey" : "productrateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcPricingType__c",
+          "description" : "",
+          "maxLength" : 18,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcPricingType__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "f207b4b8-caa5-424d-aef1-1436a609e82f",
+        "key" : "productrateplancharge -> sfdcProductID__c",
+        "segregationKey" : "productrateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcProductID__c",
+          "description" : "",
+          "maxLength" : 18,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcProductID__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "c30a2fb2-90a4-47b7-8489-41c65732696f",
+        "key" : "productrateplancharge -> TestRateplans__c",
+        "segregationKey" : "productrateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "TestRateplans",
+          "description" : "TestRateplans",
+          "maxLength" : 255,
+          "default" : "10",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "TestRateplans__c",
+          "pickListValue" : [ "10", "20", "30" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "4cad84d1-07a0-40b7-8b85-66a6f12b42e2",
+        "key" : "productrateplancharge -> TestRateplans_nonindexed__c",
+        "segregationKey" : "productrateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "TestRateplans_nonindexed",
+          "description" : "",
+          "maxLength" : 255,
+          "default" : "10",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "TestRateplans_nonindexed__c",
+          "pickListValue" : [ "10", "20", "30" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "3cd9fbae-b7dc-4367-a08f-687f2fc621f7",
+        "key" : "rateplan -> ProductVersion__c",
+        "segregationKey" : "rateplan",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Product Version",
+          "description" : "",
+          "maxLength" : 20,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "ProductVersion__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "5f8ea02a-1a3c-40f9-9df1-a04e0e536b10",
+        "key" : "orders -> SourceSystem__c",
+        "segregationKey" : "orders",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Source System",
+          "description" : "",
+          "maxLength" : 255,
+          "default" : "Zuora",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "SourceSystem__c",
+          "pickListValue" : [ "Zuora", "Salesforce", "SelfServicePortal", "WF Dunning Cancelation", "WF OOT Cancelation" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "28ab2404-556f-4939-a0ea-e22e94d8f011",
+        "key" : "subscription -> RatePlanMigrationDate__c",
+        "segregationKey" : "subscription",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Rate Plan Migration Date",
+          "description" : "",
+          "format" : "date",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "RatePlanMigrationDate__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "bf036df4-1c6c-4038-bba7-ea576f3f58a1",
+        "key" : "subscription -> RatePlanMigrationStatus__c",
+        "segregationKey" : "subscription",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Rate Plan Migration Status",
+          "description" : "",
+          "maxLength" : 50,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "RatePlanMigrationStatus__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "398d91df-3768-40bc-a739-134fbeaa6b1c",
+        "key" : "subscription -> ResumeStartDate__c",
+        "segregationKey" : "subscription",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Resume Start Date",
+          "description" : "",
+          "format" : "date",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "ResumeStartDate__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "c899f7ca-fc91-4a2a-bf60-d1da781682e2",
+        "key" : "subscription -> SuspendDuration__c",
+        "segregationKey" : "subscription",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Suspend Duration",
+          "description" : "",
+          "maxLength" : 10,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "SuspendDuration__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "bb480d86-4c3f-4539-8c90-2c79754a8c7b",
+        "key" : "subscription -> SuspendStartDate__c",
+        "segregationKey" : "subscription",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Suspend Start Date",
+          "description" : "",
+          "format" : "date",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "SuspendStartDate__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "0b05f168-c988-453f-97df-b031ba961590",
+        "key" : "debitmemo -> RetryStatus__c",
+        "segregationKey" : "debitmemo",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Retry Status",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "RetryStatus__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "41e9f965-fcc3-4ec6-8a46-a831984e1d93",
+        "key" : "product -> Data_Center__c",
+        "segregationKey" : "product",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Data_Center__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "Data_Center__c",
+          "pickListValue" : [ "US West (Oregon)", "US East (Northern Virginia)" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "11bf823b-b691-4640-a21b-5f953c68bd45",
+        "key" : "product -> ProductFamily__c",
+        "segregationKey" : "product",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Product Family",
+          "description" : "",
+          "maxLength" : 255,
+          "default" : "Package",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "ProductFamily__c",
+          "pickListValue" : [ "Package", "Partner", "Additional Postcode" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "a99d604a-732c-4cff-b48f-1248a640880b",
+        "key" : "product -> sfdcId__c",
+        "segregationKey" : "product",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcId__c",
+          "description" : "",
+          "maxLength" : 18,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcId__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "6d0281be-499e-488c-857c-cf562028b451",
+        "key" : "contact -> test_custom__c",
+        "segregationKey" : "contact",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "test_custom__c",
+          "description" : "",
+          "maxLength" : 50,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "test_custom__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "cddc16e1-d9fd-46e1-a20c-9f516fcb5b90",
+        "key" : "paymentmethod -> CardType__c",
+        "segregationKey" : "paymentmethod",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Card Type",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "CardType__c",
+          "pickListValue" : [ "AMEX", "Visa", "Master Card" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "e401d136-10e2-45d0-844c-d2d1f9649ae8",
+        "key" : "paymentmethod -> CCReferenceNumber__c",
+        "segregationKey" : "paymentmethod",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "CCReferenceNumber__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "CCReferenceNumber__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "bba99643-6a06-41c3-a9e5-b007dd10e0a0",
+        "key" : "paymentmethod -> CreditCardMaskedNumber__c",
+        "segregationKey" : "paymentmethod",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Credit Card Masked Number",
+          "description" : "",
+          "maxLength" : 19,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "CreditCardMaskedNumber__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "fe813325-44be-43bb-9b01-8d923c48b66f",
+        "key" : "paymentmethod -> ExpirationMonth__c",
+        "segregationKey" : "paymentmethod",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "ExpirationMonth",
+          "description" : "",
+          "maxLength" : 2,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "ExpirationMonth__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "b4089dda-0038-422a-bb6c-147180366680",
+        "key" : "paymentmethod -> ExpirationYear__c",
+        "segregationKey" : "paymentmethod",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "ExpirationYear",
+          "description" : "",
+          "maxLength" : 4,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "ExpirationYear__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "b501d61d-2db2-4ee1-a944-28b17ef89d16",
+        "key" : "paymentmethod -> FirstName__c",
+        "segregationKey" : "paymentmethod",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "FirstName",
+          "description" : "",
+          "maxLength" : 30,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "FirstName__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "fbcd4ba9-9797-44ba-a713-bbdfc65d6d67",
+        "key" : "paymentmethod -> LastName__c",
+        "segregationKey" : "paymentmethod",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "LastName",
+          "description" : "",
+          "maxLength" : 30,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "LastName__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "4e7f1df6-96bb-4ab5-a4a4-60e37da5aad4",
+        "key" : "rateplancharge -> BasePrice__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Base Price",
+          "description" : "",
+          "maxLength" : 10,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "BasePrice__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "4863c6d8-2edb-4585-ae07-76bcd6bf04ea",
+        "key" : "rateplancharge -> DirectoryListing__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "DirectoryListing__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "DirectoryListing__c",
+          "pickListValue" : [ "All", "Basic", "Starter", "Standard", "Advanced", "Premium", "Silver", "Gold", "Platinum", "NA" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "7c145497-97ae-4bcb-b422-95932b1872fb",
+        "key" : "rateplancharge -> enabled__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "enabled__c",
+          "description" : "",
+          "maxLength" : 255,
+          "default" : "yes",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "enabled__c",
+          "pickListValue" : [ "yes", "no" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "05849965-fc79-4a91-90d4-fcdb3559facc",
+        "key" : "rateplancharge -> IncludedPostcodes__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Included Postcodes",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "IncludedPostcodes__c",
+          "pickListValue" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "50", "NA" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "a72a7f8f-0e77-452a-bc2d-c3cf30ed73ff",
+        "key" : "amendment -> standardreasons__c",
+        "segregationKey" : "amendment",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "standardreasons__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "standardreasons__c",
+          "pickListValue" : [ "6", "1", "2", "3", "4", "5" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "890d3033-11aa-4298-a305-e7b1c002aa47",
+        "key" : "invoice -> ManualWriteOffReason__c",
+        "segregationKey" : "invoice",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Manual Write Off Reason",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "ManualWriteOffReason__c",
+          "pickListValue" : [ "Correcting invoice error", "Ascension", "Auto Renewal Cancellation", "Auto Renewal Objection", "Banned Account", "Cooling off period", "Customer Request", "Discount on VC", "Downgrading", "Incorrect Info by SR", "PPL Lead Dispute", "Setup Error", "Sign up Cancel-48Hrs", "Insolvent", "Injury/Illness", "Chargeback", "Pause of Membership", "Waive Lead Pack on VC", "Contract Termination Fee", "Internal Test Account", "Disc on Listing Renewal", "Bankrupt" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "5e235757-312d-4d4a-8843-d0e97832e3e9",
+        "key" : "invoice -> RetryStatus__c",
+        "segregationKey" : "invoice",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Retry Status",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "RetryStatus__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "343541b7-107f-427d-bceb-425602082de9",
+        "key" : "account -> CollectionsAgent__c",
+        "segregationKey" : "account",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "CollectionsAgent",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "CollectionsAgent__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "d7e0ebe6-f494-462d-a7ea-da0550a5f2f0",
+        "key" : "rateplancharge -> LastUpdatedRatePlanChargeVersion__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "LastUpdatedRatePlanChargeVersion__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "LastUpdatedRatePlanChargeVersion__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "bf53893b-766d-402d-be54-5714d116f446",
+        "key" : "rateplancharge -> LeadCreditFactor__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Lead Credit Factor",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "LeadCreditFactor__c",
+          "pickListValue" : [ "1", "1.2", "1.25", "1.5", "1.75", "2", "NA" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "97c4bfa8-fd7e-4569-839d-d1ed8337311a",
+        "key" : "rateplancharge -> OpportunityLineItemId__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "OpportunityLineItemId__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "OpportunityLineItemId__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "02151892-aaa7-4c85-ab69-ce8503dabc80",
+        "key" : "rateplancharge -> RenewalOpportunityLineItemStatus__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "RenewalOpportunityLineItemStatus__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "RenewalOpportunityLineItemStatus__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "56e7c3cb-9160-4548-8790-fc0994e5c7f9",
+        "key" : "rateplancharge -> sfdcSubscriptionId__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcSubscriptionId__c",
+          "description" : "",
+          "maxLength" : 18,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcSubscriptionId__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "9f712328-fc74-4bbf-b220-bc7c9e8c210a",
+        "key" : "rateplancharge -> SubscriptionRatePlanCharge1__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "SubscriptionRatePlanCharge1__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "SubscriptionRatePlanCharge1__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "0b9233ce-0aa0-4622-b112-e2e4da1b0d72",
+        "key" : "rateplancharge -> SupportType__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Support Type",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "SupportType__c",
+          "pickListValue" : [ "No Support", "Standard Support", "Advanced Support", "Premium Support", "NA" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "a126954e-35c6-4b54-8777-2635a06516f4",
+        "key" : "rateplancharge -> UpdatedByBillRun__c",
+        "segregationKey" : "rateplancharge",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Updated By Bill Run",
+          "description" : "",
+          "maxLength" : 20,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "UpdatedByBillRun__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "7d7e8056-58aa-40e9-a55b-845b0538e3df",
+        "key" : "creditmemo -> testcm__c",
+        "segregationKey" : "creditmemo",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "testcm__c",
+          "maxLength" : 20,
+          "default" : "yyyyy",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "testcm__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "ed678849-840f-472e-becc-493bf32de158",
+        "key" : "creditmemo -> TestPicklist__c",
+        "segregationKey" : "creditmemo",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "TestPicklist__c",
+          "description" : "",
+          "maxLength" : 255,
+          "default" : "1",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "TestPicklist__c",
+          "pickListValue" : [ "1", "2", "3" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "0cd1cfae-19e0-441a-ac19-601a655b0df7",
+        "key" : "productrateplan -> GMIssue__c",
+        "segregationKey" : "productrateplan",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "GMIssue__c",
+          "description" : "",
+          "maxLength" : 255,
+          "default" : "Red",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "GMIssue__c",
+          "pickListValue" : [ "Red", "Blue ", "Green" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "9449d011-4079-43b3-b2f9-324d0375f628",
+        "key" : "productrateplan -> Region__c",
+        "segregationKey" : "productrateplan",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Region__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "Region__c",
+          "pickListValue" : [ "North America", "LATAM", "EMEA North", "EMEA West", "EMEA East", "EMEA South", "APAC", "ANZ" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "c6efa93f-073a-4ca3-8ca8-f6151e44f75f",
+        "key" : "productrateplan -> Segment__c",
+        "segregationKey" : "productrateplan",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Segment__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "Segment__c",
+          "pickListValue" : [ "Academic", "Commercial", "Public" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "8c943427-878c-415e-94d0-d488cbb7d35b",
+        "key" : "productrateplan -> Service_Type__c",
+        "segregationKey" : "productrateplan",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Service_Type__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "Service_Type__c",
+          "pickListValue" : [ "OnDemand", "OnDemand With Commit" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "7690ec07-c6f1-4af6-a473-491323485956",
+        "key" : "productrateplan -> sfdcDiscScheduleID__c",
+        "segregationKey" : "productrateplan",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcDiscScheduleID__c",
+          "description" : "",
+          "maxLength" : 18,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcDiscScheduleID__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "678d323b-e9a2-4c1e-8502-347ca07b70fb",
+        "key" : "productrateplan -> sfdcPricebookID__c",
+        "segregationKey" : "productrateplan",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcPricebookID__c",
+          "description" : "",
+          "maxLength" : 18,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcPricebookID__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "8638c246-88b1-4db8-ad25-7afc75eeec2a",
+        "key" : "productrateplan -> sfdcPricingType__c",
+        "segregationKey" : "productrateplan",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcPricingType__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcPricingType__c",
+          "pickListValue" : [ "DISCOUNT_SCHEDULE", "BLOCK_PRICE", "PRICEBOOK_ENTRY" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "4fb55a04-f557-4bff-883e-e735bc9da342",
+        "key" : "productrateplan -> sfdcProductID__c",
+        "segregationKey" : "productrateplan",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "sfdcProductID__c",
+          "description" : "",
+          "maxLength" : 18,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "sfdcProductID__c",
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "8acdd13f-c048-4f22-bc77-5edf177813fc",
+        "key" : "creditmemoitem -> test__c",
+        "segregationKey" : "creditmemoitem",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "test__c",
+          "maxLength" : 20,
+          "default" : "zzzz",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "test__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "a3ee8c9b-7a67-4436-8990-ef5318c7819e",
+        "key" : "invoice -> ManualWriteOff__c",
+        "segregationKey" : "invoice",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Manual Write Off",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "ManualWriteOff__c",
+          "pickListValue" : [ "Yes", "No" ],
+          "indexed" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      } ],
+      "errors" : [ ]
+    } ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ {
+      "segregationKeys" : [ "Available Custom Objects" ],
+      "originalPayload" : {
+        "definitions" : {
+          "Test1" : {
+            "Id" : "7728ad7c-f87e-4f68-8f5a-80b2c9878191",
+            "type" : "Test1",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:32.350Z",
+            "UpdatedDate" : "2024-07-23T07:35:32.350Z",
+            "schema" : {
+              "object" : "Test1",
+              "label" : "Test1",
+              "title" : "Test1",
+              "type" : "object",
+              "description" : "1234",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "Field1__c" : {
+                  "format" : "date",
+                  "label" : "Field1",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "Vehicle" : {
+            "Id" : "d0410cd6-14a5-47f7-94c9-6bb9cc5e3f6e",
+            "type" : "Vehicle",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:32.509Z",
+            "UpdatedDate" : "2024-07-23T07:35:32.509Z",
+            "schema" : {
+              "object" : "Vehicle",
+              "label" : "Vehicle",
+              "title" : "Vehicle",
+              "type" : "object",
+              "description" : "",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "Registration__c" : {
+                  "format" : "uuid",
+                  "label" : "Registration ",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Registration__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "account",
+                "fields" : {
+                  "Registration__c" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "accountemail" : {
+            "Id" : "3fe01409-6e2d-4418-b87c-b3be2b4a44a1",
+            "type" : "accountemail",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:32.790Z",
+            "UpdatedDate" : "2024-07-23T07:35:32.790Z",
+            "schema" : {
+              "object" : "accountemail",
+              "label" : "account email",
+              "type" : "object",
+              "description" : " ",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "accountemail__c" : {
+                  "maxLength" : 512,
+                  "format" : "long-text",
+                  "label" : "account email",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "DeviceType" : {
+            "Id" : "79638fc6-ab71-47aa-8b90-e9322565db07",
+            "type" : "DeviceType",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:32.920Z",
+            "UpdatedDate" : "2024-07-23T07:35:32.920Z",
+            "schema" : {
+              "object" : "DeviceType",
+              "label" : "Device Type",
+              "title" : "Device Type",
+              "type" : "object",
+              "description" : "",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "DeviceType__c" : {
+                  "maxLength" : 200,
+                  "label" : "Device Type",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "DeviceName__c" : {
+                  "maxLength" : 200,
+                  "label" : "Device Name",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "bigtest" : {
+            "Id" : "5c752e37-f901-451c-b1fa-7a2428917b18",
+            "type" : "bigtest",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:33.035Z",
+            "UpdatedDate" : "2024-07-23T07:35:33.035Z",
+            "schema" : {
+              "object" : "bigtest",
+              "label" : "bigtest",
+              "title" : "bigtest",
+              "type" : "object",
+              "description" : "",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "ff__c" : {
+                  "maxLength" : 2,
+                  "label" : "ff",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "tt__c" : {
+                  "maxLength" : 100,
+                  "label" : "tt",
+                  "origin" : "custom",
+                  "description" : "ttttt",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "ConnectTransactionData" : {
+            "Id" : "5ab6dc1d-afd6-48ce-855c-67116d13522e",
+            "type" : "ConnectTransactionData",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:33.161Z",
+            "UpdatedDate" : "2024-07-23T07:35:33.161Z",
+            "schema" : {
+              "object" : "ConnectTransactionData",
+              "label" : "Connect Transaction Data",
+              "type" : "object",
+              "description" : " ",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "value__c" : {
+                  "label" : "value",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "number"
+                },
+                "units__c" : {
+                  "label" : "units",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "number"
+                },
+                "timestamp__c" : {
+                  "format" : "date",
+                  "label" : "timestamp\t",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "connect_id__c" : {
+                  "maxLength" : 1,
+                  "label" : "connect_id",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "default" : "1"
+                },
+                "contractId__c" : {
+                  "maxLength" : 1,
+                  "label" : "contractId",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "OnPremBalance__c" : {
+                  "label" : "On Prem Balance",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "number"
+                },
+                "UniversalBalance__c" : {
+                  "label" : "Universal Balance",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "number"
+                },
+                "CloudBalance__c" : {
+                  "label" : "Cloud Balance",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "number"
+                },
+                "UploadTimestamp__c" : {
+                  "format" : "date",
+                  "label" : "Upload Timestamp",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Description__c" : {
+                  "maxLength" : 1,
+                  "label" : "Description",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "hostingType__c" : {
+                  "maxLength" : 1,
+                  "label" : "hostingType",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "productCode__c" : {
+                  "maxLength" : 512,
+                  "format" : "long-text",
+                  "label" : "productCode\t",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "timestamp__c", "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "timestamp__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "mau_test" : {
+            "Id" : "26174e22-4dfb-43fc-b1b8-1b1b36f03d2d",
+            "type" : "mau_test",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:33.267Z",
+            "UpdatedDate" : "2024-07-23T07:35:33.267Z",
+            "schema" : {
+              "object" : "mau_test",
+              "label" : "mau_test",
+              "type" : "object",
+              "description" : " ",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "FREC__c" : {
+                  "maxLength" : 100,
+                  "label" : "FREC",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "ExchangeRates__c" : {
+                  "label" : "ExchangeRates",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "integer"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "ProductRules" : {
+            "Id" : "4f7ef0ad-0fd3-4cf5-b107-374981fd51f7",
+            "type" : "ProductRules",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:33.414Z",
+            "UpdatedDate" : "2024-07-23T07:35:33.414Z",
+            "schema" : {
+              "object" : "ProductRules",
+              "label" : "Product Rules",
+              "title" : "Product Rules",
+              "type" : "object",
+              "description" : " ",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "IsBaseProduct__c" : {
+                  "maxLength" : 255,
+                  "label" : "Is Base Product",
+                  "origin" : "custom",
+                  "description" : "Refers to the main \"device\" e.g. Sonicare Handle, Lumea, etc",
+                  "type" : "string",
+                  "default" : "Yes",
+                  "enum" : [ "Yes", "No" ]
+                },
+                "RemorsePeriod__c" : {
+                  "maxLength" : 15,
+                  "label" : "Remorse Period",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "PostponeDelivery__c" : {
+                  "maxLength" : 255,
+                  "label" : "Postpone Delivery",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ]
+                },
+                "Return__c" : {
+                  "maxLength" : 254,
+                  "label" : "Return",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ]
+                },
+                "PaidByPartner__c" : {
+                  "maxLength" : 255,
+                  "label" : "Paid By Partner",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No", "BCBS" ]
+                },
+                "MaxAllowed__c" : {
+                  "maxLength" : 3,
+                  "label" : "Max Allowed",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "ChangeProduct__c" : {
+                  "maxLength" : 255,
+                  "label" : "Change Product",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ]
+                },
+                "IsCancellable__c" : {
+                  "maxLength" : 255,
+                  "label" : "Is Cancellable ",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ]
+                },
+                "BuyOption__c" : {
+                  "maxLength" : 253,
+                  "label" : "Buy Option",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ]
+                },
+                "AdvanceDelivery__c" : {
+                  "maxLength" : 255,
+                  "label" : "Advance Delivery",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ]
+                },
+                "ChangeFrequency__c" : {
+                  "maxLength" : 253,
+                  "label" : "Change Frequency",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ]
+                },
+                "DaysToHidePurchase__c" : {
+                  "maxLength" : 10,
+                  "label" : "Days To Hide Purchase",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "IsPausable__c" : {
+                  "maxLength" : 254,
+                  "label" : "Is Pausable",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ]
+                },
+                "BG__c" : {
+                  "maxLength" : 255,
+                  "label" : "BG",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Beauty", "OHC", "MCC", "Male Grooming" ]
+                },
+                "Market__c" : {
+                  "maxLength" : 255,
+                  "label" : "Market",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "NL", "GB SBE", "DE SBE", "NL SBE", "DE", "SE" ]
+                },
+                "Archetype__c" : {
+                  "maxLength" : 255,
+                  "label" : "Archetype",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "1A. Try & Buy Standard", "1B. Try Buy Deferred Revenue", "2A. Buy & Subscribe Standard", "2B. Buy & Subscribe Deferred Payment", "2C. Buy, Try with option to Return", "3A. Replenishments Standard" ]
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "BG__c", "Market__c", "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "BG__c", "Market__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "TestDL" : {
+            "Id" : "de7ab5b4-2d86-407b-9b43-7f8f208e58e7",
+            "type" : "TestDL",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:33.522Z",
+            "UpdatedDate" : "2024-07-23T07:35:33.522Z",
+            "schema" : {
+              "object" : "TestDL",
+              "label" : "TestDL",
+              "title" : "TestDL",
+              "type" : "object",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "name__c" : {
+                  "maxLength" : 50,
+                  "label" : "name",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "ProductPlanPriceSheet" : {
+            "Id" : "8236cb5b-3e0b-47e8-a21e-554a3bd26c23",
+            "type" : "ProductPlanPriceSheet",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:33.634Z",
+            "UpdatedDate" : "2024-07-23T07:35:33.634Z",
+            "schema" : {
+              "object" : "ProductPlanPriceSheet",
+              "label" : "Product Plan Price Sheet",
+              "title" : "Product Plan Price Sheet",
+              "type" : "object",
+              "description" : "",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "Product__c" : {
+                  "maxLength" : 30,
+                  "label" : "Product",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Plan__c" : {
+                  "maxLength" : 60,
+                  "label" : "Plan",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Amount__c" : {
+                  "label" : "Amount",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "number"
+                },
+                "CountryCode__c" : {
+                  "maxLength" : 60,
+                  "label" : "Country Code",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "CurrencyCode__c" : {
+                  "maxLength" : 57,
+                  "label" : "Currency Code",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "CurrencyCode__c", "CountryCode__c", "Amount__c", "Plan__c", "Product__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "TestObject123_c" : {
+            "Id" : "68b21b06-63e7-41a1-9e0c-19d25b7f91cb",
+            "type" : "TestObject123_c",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:33.769Z",
+            "UpdatedDate" : "2024-07-23T07:35:33.769Z",
+            "schema" : {
+              "object" : "TestObject123_c",
+              "label" : "Test Object123",
+              "title" : "Test Object123",
+              "type" : "object",
+              "description" : "",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "Fieldtest__c" : {
+                  "maxLength" : 255,
+                  "label" : "Field-test",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "default" : "1"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "ExchangeRates" : {
+            "Id" : "2f598c05-d3c2-429a-9692-3211c5e913c4",
+            "type" : "ExchangeRates",
+            "CreatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "UpdatedById" : "f6e65ce1023047dc8f631fa20011d7c9",
+            "CreatedDate" : "2024-07-23T07:35:33.885Z",
+            "UpdatedDate" : "2024-07-23T07:35:33.885Z",
+            "schema" : {
+              "object" : "ExchangeRates",
+              "label" : "Exchange Rates",
+              "title" : "Exchange Rates",
+              "type" : "object",
+              "description" : "",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "ExDate__c" : {
+                  "format" : "date",
+                  "label" : "ExDate",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "Rate__c" : {
+                  "label" : "Rate",
+                  "origin" : "custom",
+                  "type" : "number"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          }
+        },
+        "count" : 12,
+        "CustomObjectRecords" : { }
+      },
+      "response" : [ {
+        "id" : "de10a732-6722-4044-b891-fb34761569fb",
+        "key" : "DeviceType",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/DeviceType",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Device Type",
+          "api_name" : "DeviceType",
+          "description" : "",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "DeviceName__c",
+            "maxLength" : 200,
+            "field_name" : "Device Name",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "DeviceType__c",
+            "maxLength" : 200,
+            "field_name" : "Device Type",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "1f3b0873-1b45-4afd-aaa6-9329f714fb64",
+        "key" : "Test1",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/Test1",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Test1",
+          "api_name" : "Test1",
+          "description" : "1234",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "Field1__c",
+            "format" : "date",
+            "field_name" : "Field1",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "d823f77a-86d8-43a0-8405-14173e2fc1d0",
+        "key" : "Vehicle",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/Vehicle",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Vehicle",
+          "api_name" : "Vehicle",
+          "description" : "",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "Registration__c",
+            "format" : "uuid",
+            "field_name" : "Registration ",
+            "origin" : "custom",
+            "type" : "string",
+            "filterable" : true,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ {
+            "cardinality" : "manyToOne",
+            "namespace" : "com_zuora",
+            "object" : "account",
+            "fields" : {
+              "Registration__c" : "Id"
+            },
+            "recordConstraints" : {
+              "create" : {
+                "enforceValidMapping" : true
+              }
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "50a1e6fc-d5db-4ae4-bd80-23fc4b2c563a",
+        "key" : "accountemail",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/accountemail",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "account email",
+          "api_name" : "accountemail",
+          "description" : " ",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "accountemail__c",
+            "maxLength" : 512,
+            "format" : "long-text",
+            "field_name" : "account email",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "2cf00ce4-b446-4662-bc8f-6e043e4b7b95",
+        "key" : "bigtest",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/bigtest",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "bigtest",
+          "api_name" : "bigtest",
+          "description" : "",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "ff__c",
+            "maxLength" : 2,
+            "field_name" : "ff",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "tt__c",
+            "maxLength" : 100,
+            "field_name" : "tt",
+            "origin" : "custom",
+            "description" : "ttttt",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "a0339dcc-2419-4372-a3ee-8ede3b614d40",
+        "key" : "ConnectTransactionData",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/ConnectTransactionData",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Connect Transaction Data",
+          "api_name" : "ConnectTransactionData",
+          "description" : " ",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "CloudBalance__c",
+            "field_name" : "Cloud Balance",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "number",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Description__c",
+            "maxLength" : 1,
+            "field_name" : "Description",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "OnPremBalance__c",
+            "field_name" : "On Prem Balance",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "number",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "UniversalBalance__c",
+            "field_name" : "Universal Balance",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "number",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "UploadTimestamp__c",
+            "format" : "date",
+            "field_name" : "Upload Timestamp",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "connect_id__c",
+            "maxLength" : 1,
+            "field_name" : "connect_id",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "default" : "1",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "contractId__c",
+            "maxLength" : 1,
+            "field_name" : "contractId",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "hostingType__c",
+            "maxLength" : 1,
+            "field_name" : "hostingType",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "productCode__c",
+            "maxLength" : 512,
+            "format" : "long-text",
+            "field_name" : "productCode\t",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "timestamp__c",
+            "format" : "date",
+            "field_name" : "timestamp\t",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : true,
+            "required" : true,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "units__c",
+            "field_name" : "units",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "number",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "value__c",
+            "field_name" : "value",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "number",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "b7d0861c-fdec-453a-84e4-70fa72b5a7db",
+        "key" : "mau_test",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/mau_test",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "mau_test",
+          "api_name" : "mau_test",
+          "description" : " ",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "ExchangeRates__c",
+            "field_name" : "ExchangeRates",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "integer",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "FREC__c",
+            "maxLength" : 100,
+            "field_name" : "FREC",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "460d67bc-fd56-4a5d-9fd1-8211de861b82",
+        "key" : "ProductRules",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/ProductRules",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Product Rules",
+          "api_name" : "ProductRules",
+          "description" : " ",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "AdvanceDelivery__c",
+            "maxLength" : 255,
+            "field_name" : "Advance Delivery",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Yes", "No" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Archetype__c",
+            "maxLength" : 255,
+            "field_name" : "Archetype",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "1A. Try & Buy Standard", "1B. Try Buy Deferred Revenue", "2A. Buy & Subscribe Standard", "2B. Buy & Subscribe Deferred Payment", "2C. Buy, Try with option to Return", "3A. Replenishments Standard" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "BG__c",
+            "maxLength" : 255,
+            "field_name" : "BG",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Beauty", "OHC", "MCC", "Male Grooming" ],
+            "filterable" : true,
+            "required" : true,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "BuyOption__c",
+            "maxLength" : 253,
+            "field_name" : "Buy Option",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Yes", "No" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "ChangeFrequency__c",
+            "maxLength" : 253,
+            "field_name" : "Change Frequency",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Yes", "No" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "ChangeProduct__c",
+            "maxLength" : 255,
+            "field_name" : "Change Product",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Yes", "No" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "DaysToHidePurchase__c",
+            "maxLength" : 10,
+            "field_name" : "Days To Hide Purchase",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "IsBaseProduct__c",
+            "maxLength" : 255,
+            "field_name" : "Is Base Product",
+            "origin" : "custom",
+            "description" : "Refers to the main \"device\" e.g. Sonicare Handle, Lumea, etc",
+            "type" : "string",
+            "default" : "Yes",
+            "enum" : [ "Yes", "No" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "IsCancellable__c",
+            "maxLength" : 255,
+            "field_name" : "Is Cancellable ",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Yes", "No" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "IsPausable__c",
+            "maxLength" : 254,
+            "field_name" : "Is Pausable",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Yes", "No" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Market__c",
+            "maxLength" : 255,
+            "field_name" : "Market",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "NL", "GB SBE", "DE SBE", "NL SBE", "DE", "SE" ],
+            "filterable" : true,
+            "required" : true,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "MaxAllowed__c",
+            "maxLength" : 3,
+            "field_name" : "Max Allowed",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "PaidByPartner__c",
+            "maxLength" : 255,
+            "field_name" : "Paid By Partner",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Yes", "No", "BCBS" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "PostponeDelivery__c",
+            "maxLength" : 255,
+            "field_name" : "Postpone Delivery",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Yes", "No" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "RemorsePeriod__c",
+            "maxLength" : 15,
+            "field_name" : "Remorse Period",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Return__c",
+            "maxLength" : 254,
+            "field_name" : "Return",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "enum" : [ "Yes", "No" ],
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "731156f1-f5ff-4186-a736-1df2c9ed2c10",
+        "key" : "TestDL",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/TestDL",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "TestDL",
+          "api_name" : "TestDL",
+          "description" : null,
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "name__c",
+            "maxLength" : 50,
+            "field_name" : "name",
+            "origin" : "custom",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "eb7658ff-f74d-4d49-8281-ca1da4b31cf0",
+        "key" : "ProductPlanPriceSheet",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/ProductPlanPriceSheet",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Product Plan Price Sheet",
+          "api_name" : "ProductPlanPriceSheet",
+          "description" : "",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "Amount__c",
+            "field_name" : "Amount",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "number",
+            "filterable" : true,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "CountryCode__c",
+            "maxLength" : 60,
+            "field_name" : "Country Code",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : true,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "CurrencyCode__c",
+            "maxLength" : 57,
+            "field_name" : "Currency Code",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : true,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Plan__c",
+            "maxLength" : 60,
+            "field_name" : "Plan",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : true,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Product__c",
+            "maxLength" : 30,
+            "field_name" : "Product",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "filterable" : true,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "d1b692f6-fc32-4437-88c0-90b9058da74d",
+        "key" : "TestObject123_c",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/TestObject123_c",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Test Object123",
+          "api_name" : "TestObject123_c",
+          "description" : "",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "Fieldtest__c",
+            "maxLength" : 255,
+            "field_name" : "Field-test",
+            "origin" : "custom",
+            "description" : " ",
+            "type" : "string",
+            "default" : "1",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      }, {
+        "id" : "9365d7e0-97f5-4230-8aa7-f840e142f294",
+        "key" : "ExchangeRates",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/ExchangeRates",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Exchange Rates",
+          "api_name" : "ExchangeRates",
+          "description" : "",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "ExDate__c",
+            "format" : "date",
+            "field_name" : "ExDate",
+            "origin" : "custom",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Rate__c",
+            "field_name" : "Rate",
+            "origin" : "custom",
+            "type" : "number",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "b8d2c169-e3ed-46b8-aa20-5baf5a82f302"
+      } ],
+      "errors" : [ ]
+    } ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "awsInfo" : null
+  }
+}
