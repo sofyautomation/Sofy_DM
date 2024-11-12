@@ -2,7 +2,7 @@
   "id" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb",
   "name" : "test_sync_workflow8754",
   "description" : "",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Automation source",
   "updatedBy" : "Automation source",
-  "createdOn" : "2024-11-12T03:06:48.054Z",
+  "createdOn" : "2024-11-12T03:08:37.739Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "47d0971c-ffa3-4471-907c-59b27b1ec8d5",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "test",
+    "commitMessage" : "test_before_sync",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "ea899c394aa3b08edd68da41a5e9f7b2b3f575dd"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -4515,7 +4525,91 @@
         "featureDisabled" : false
       },
       "response" : [ {
-        "id" : "f5a687ee-635c-4cc6-b786-117692a85f70",
+        "id" : "62139aa9-735e-4dde-a330-2bc6f6243a96",
+        "key" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1_0.0.1",
+        "segregationKey" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+        "componentType" : "WorkFlows",
+        "url" : "1",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 1,
+          "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : "0 0 0 /1 * *",
+          "timezone" : "Eastern Time (US & Canada)",
+          "createdAt" : "2024-07-23T00:33:16.438-07:00",
+          "updatedAt" : "2024-07-23T00:33:16.438-07:00",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 1,
+            "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+            "definitionId" : 1,
+            "definitionName" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 0 /1 * *",
+            "timezone" : "Eastern Time (US & Canada)",
+            "createdAt" : "2024-07-23T00:33:16.438-07:00",
+            "updatedAt" : "2024-07-23T00:33:16.438-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-10-14T04:06:49.283-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 1,
+            "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+            "definitionId" : 1,
+            "definitionName" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 0 /1 * *",
+            "timezone" : "Eastern Time (US & Canada)",
+            "createdAt" : "2024-07-23T00:33:16.438-07:00",
+            "updatedAt" : "2024-07-23T00:33:16.438-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-10-14T04:06:49.283-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
+      }, {
+        "id" : "a4b2e566-2e4c-4a29-9e62-70525d047cc9",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -4617,7 +4711,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "f2583466-3c60-40c6-943e-4c37314c1a03",
+        "id" : "461173c7-8197-4472-824e-5f7f7d99122b",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -4719,7 +4813,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "f241dd26-4fdf-4fce-929a-e333d1167fa3",
+        "id" : "38271f31-bddf-4d66-bd0d-d2fefa4b2059",
         "key" : "Applyworkflowconfig template_2024-08-08_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-08",
         "componentType" : "WorkFlows",
@@ -4821,91 +4915,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "78bcf7bb-a482-4d83-8c2d-386b87db00dc",
-        "key" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1_0.0.1",
-        "segregationKey" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
-        "componentType" : "WorkFlows",
-        "url" : "1",
-        "pathPattern" : null,
-        "method" : "GET",
-        "payload" : {
-          "id" : 1,
-          "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
-          "description" : "",
-          "status" : "Active",
-          "ondemandTrigger" : true,
-          "calloutTrigger" : true,
-          "scheduledTrigger" : false,
-          "interval" : "0 0 0 /1 * *",
-          "timezone" : "Eastern Time (US & Canada)",
-          "createdAt" : "2024-07-23T00:33:16.438-07:00",
-          "updatedAt" : "2024-07-23T00:33:16.438-07:00",
-          "priority" : "Medium",
-          "active_version" : {
-            "id" : 1,
-            "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
-            "definitionId" : 1,
-            "definitionName" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : "0 0 0 /1 * *",
-            "timezone" : "Eastern Time (US & Canada)",
-            "createdAt" : "2024-07-23T00:33:16.438-07:00",
-            "updatedAt" : "2024-07-23T00:33:16.438-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-10-14T04:06:49.283-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          },
-          "latest_inactive_versions" : [ {
-            "id" : 1,
-            "name" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
-            "definitionId" : 1,
-            "definitionName" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
-            "description" : "",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : "0 0 0 /1 * *",
-            "timezone" : "Eastern Time (US & Canada)",
-            "createdAt" : "2024-07-23T00:33:16.438-07:00",
-            "updatedAt" : "2024-07-23T00:33:16.438-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-10-14T04:06:49.283-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          } ]
-        },
-        "child" : null,
-        "childUniqueField" : null,
-        "selectedChild" : [ ],
-        "result" : "DONE",
-        "error" : "-",
-        "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
-      }, {
-        "id" : "0bae9a21-0278-406b-992f-5b3584b182b9",
+        "id" : "f6b415f4-f19c-4d4e-87cf-3d02837d9602",
         "key" : "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1",
         "segregationKey" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
         "componentType" : "WorkFlows",
@@ -4989,7 +4999,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "33c13334-a73f-4273-8270-d3245245bf96",
+        "id" : "1201137d-9398-4181-b387-0e2ac9f65ff3",
         "key" : "Custom Invoice_0.0.1",
         "segregationKey" : "Custom Invoice",
         "componentType" : "WorkFlows",
@@ -5073,7 +5083,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "032aa854-085a-4e2d-9cbb-1407b64c8a75",
+        "id" : "3fc25edb-d408-4d01-9da6-6ae193724b6d",
         "key" : "Invoice 30 Days Past Due, Account Summary_0.0.1",
         "segregationKey" : "Invoice 30 Days Past Due, Account Summary",
         "componentType" : "WorkFlows",
@@ -5157,7 +5167,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "63f5272d-a729-4c4b-95b2-d2ed5482bcd2",
+        "id" : "3f51320e-25cc-4098-933b-aeea6cb95059",
         "key" : "Print Invoices_0.0.1",
         "segregationKey" : "Print Invoices",
         "componentType" : "WorkFlows",
@@ -5259,7 +5269,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "e9b3c6b6-61fa-47aa-8491-84edfd1ebde6",
+        "id" : "e9472630-5bf0-493a-a427-9bd138b6c0d5",
         "key" : "Resume Subscriptions for Accounts with Zero Balance Limit 1_0.0.1",
         "segregationKey" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
         "componentType" : "WorkFlows",
@@ -5343,7 +5353,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "479be5d7-fe9a-48d1-8211-eba76821ac72",
+        "id" : "49e274db-b253-4ecd-93a4-4f57fc6853c8",
         "key" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 _0.0.1",
         "segregationKey" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
         "componentType" : "WorkFlows",
@@ -5427,7 +5437,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "40450753-ea3a-459a-82b7-f6126b251821",
+        "id" : "9b8d40da-839d-43ba-8f1b-a9a5790a441c",
         "key" : "hiPages_WF_023_BulkLoad_PaymentMethod_0.0.2",
         "segregationKey" : "hiPages_WF_023_BulkLoad_PaymentMethod",
         "componentType" : "WorkFlows",
@@ -5527,7 +5537,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "132592c5-c2a6-444a-91bc-4012b00ff357",
+        "id" : "49b00b59-8cfa-4429-8a38-183e1011120d",
         "key" : "Applyworkflowconfig template_2024-08-03_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-03",
         "componentType" : "WorkFlows",
@@ -5629,7 +5639,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "7532622b-6c53-497e-90f8-8c859089e9ed",
+        "id" : "e130f806-f64c-4227-80e3-805a9f3ae3ed",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5731,7 +5741,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "aa9da47a-f5a0-404a-acc5-32c386f8b26e",
+        "id" : "562fc93c-bd28-4e75-95a0-92647066755a",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5833,7 +5843,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "adc4c474-d6c0-4d4d-aba6-0e1420f0f790",
+        "id" : "4425b6f5-8c64-4ed8-9110-0130a5b9b527",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5935,7 +5945,7 @@
         "error" : "-",
         "templateId" : "87f0d9e4-ba7f-4061-85eb-db5f3535d8cb"
       }, {
-        "id" : "007ac253-9018-4fbb-9dea-643a7199663b",
+        "id" : "e417653a-0634-4bdc-9b16-240314157eca",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
