@@ -2,7 +2,7 @@
   "id" : "74e0dd27-dce3-4428-8f90-a52845b72823",
   "name" : "test_sync_workflow4180",
   "description" : "",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Automation source",
   "updatedBy" : "Automation source",
-  "createdOn" : "2024-11-27T15:52:27.103Z",
+  "createdOn" : "2024-11-27T15:54:23.696Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "5a203e42-e249-4cd2-9159-bc0c6354368a",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "test",
+    "commitMessage" : "test_before_sync",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "5850d20c068cd6864b8799e27d74febcb65e4737"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -4515,7 +4525,91 @@
         "featureDisabled" : false
       },
       "response" : [ {
-        "id" : "97948392-851e-46ca-8de7-e714142bfa48",
+        "id" : "ee97861d-9a4a-4b36-912a-4b895ca709a4",
+        "key" : "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1",
+        "segregationKey" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+        "componentType" : "WorkFlows",
+        "url" : "2",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 2,
+          "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2024-07-23T00:33:17.230-07:00",
+          "updatedAt" : "2024-07-23T00:33:17.230-07:00",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 2,
+            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "definitionId" : 2,
+            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:17.230-07:00",
+            "updatedAt" : "2024-07-23T00:33:17.230-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-10-14T04:06:49.283-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 2,
+            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "definitionId" : 2,
+            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2024-07-23T00:33:17.230-07:00",
+            "updatedAt" : "2024-07-23T00:33:17.230-07:00",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "vbedresrinivasrao@zuora.com",
+              "created_at" : "2024-08-03T00:51:30.248-07:00",
+              "updated_at" : "2024-10-14T04:06:49.283-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
+      }, {
+        "id" : "1db99ba2-470e-42ae-b80b-f645734d7f51",
         "key" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1_0.0.1",
         "segregationKey" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
         "componentType" : "WorkFlows",
@@ -4599,7 +4693,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "e8d64843-5e3e-4266-afc5-52be89bcd3aa",
+        "id" : "c4840879-0d9d-45f2-87be-46975f0f9bb0",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -4701,7 +4795,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "bfd49251-6f42-470e-81ef-bfd4f82156b1",
+        "id" : "66487df5-8536-47f9-957f-4d736932a8a8",
         "key" : "Applyworkflowconfig template_2024-08-08_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-08",
         "componentType" : "WorkFlows",
@@ -4803,91 +4897,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "baab15d7-df38-4d0a-aeb6-6347741c9bf1",
-        "key" : "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1",
-        "segregationKey" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-        "componentType" : "WorkFlows",
-        "url" : "2",
-        "pathPattern" : null,
-        "method" : "GET",
-        "payload" : {
-          "id" : 2,
-          "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-          "description" : "",
-          "status" : "Active",
-          "ondemandTrigger" : true,
-          "calloutTrigger" : true,
-          "scheduledTrigger" : false,
-          "interval" : null,
-          "timezone" : null,
-          "createdAt" : "2024-07-23T00:33:17.230-07:00",
-          "updatedAt" : "2024-07-23T00:33:17.230-07:00",
-          "priority" : "Medium",
-          "active_version" : {
-            "id" : 2,
-            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-            "definitionId" : 2,
-            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:17.230-07:00",
-            "updatedAt" : "2024-07-23T00:33:17.230-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-10-14T04:06:49.283-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          },
-          "latest_inactive_versions" : [ {
-            "id" : 2,
-            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-            "definitionId" : 2,
-            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
-            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
-            "type" : "Workflow::Setup",
-            "version" : "0.0.1",
-            "ondemandTrigger" : true,
-            "calloutTrigger" : true,
-            "scheduledTrigger" : false,
-            "interval" : null,
-            "timezone" : null,
-            "createdAt" : "2024-07-23T00:33:17.230-07:00",
-            "updatedAt" : "2024-07-23T00:33:17.230-07:00",
-            "priority" : "Medium",
-            "status" : "Inactive",
-            "created_by" : {
-              "work_email" : "vbedresrinivasrao@zuora.com",
-              "created_at" : "2024-08-03T00:51:30.248-07:00",
-              "updated_at" : "2024-10-14T04:06:49.283-07:00"
-            },
-            "updated_by" : {
-              "work_email" : "N/A",
-              "created_at" : "N/A",
-              "updated_at" : "N/A"
-            }
-          } ]
-        },
-        "child" : null,
-        "childUniqueField" : null,
-        "selectedChild" : [ ],
-        "result" : "DONE",
-        "error" : "-",
-        "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
-      }, {
-        "id" : "af4c134f-5dc9-413f-88e6-d6acd63d2634",
+        "id" : "71c886bd-d555-4ad0-8afd-c5781b8a440d",
         "key" : "Custom Invoice_0.0.1",
         "segregationKey" : "Custom Invoice",
         "componentType" : "WorkFlows",
@@ -4971,7 +4981,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "01568966-2e39-4525-a927-eb96d0f1a1a7",
+        "id" : "03becad1-40da-468d-a366-433636b84803",
         "key" : "Invoice 30 Days Past Due, Account Summary_0.0.1",
         "segregationKey" : "Invoice 30 Days Past Due, Account Summary",
         "componentType" : "WorkFlows",
@@ -5055,7 +5065,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "10312039-4273-4ff5-80c5-ec04b9d13a66",
+        "id" : "085f8e74-de95-4534-9c3d-4e6d1f893941",
         "key" : "Print Invoices_0.0.1",
         "segregationKey" : "Print Invoices",
         "componentType" : "WorkFlows",
@@ -5157,7 +5167,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "37cd0686-243a-4ee1-8e5f-2e2b24b1b3d9",
+        "id" : "6bcad142-1453-4406-8e83-d8747dc34323",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5259,7 +5269,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "a50b1af8-7080-4618-8211-e3cfd60c94db",
+        "id" : "91814fc2-494a-4de0-bed5-49bb657f95b8",
         "key" : "Resume Subscriptions for Accounts with Zero Balance Limit 1_0.0.1",
         "segregationKey" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
         "componentType" : "WorkFlows",
@@ -5343,7 +5353,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "c8db0811-e96e-4846-bb7a-fc29f61ca6a5",
+        "id" : "6bb44285-cede-43fc-8dff-146a6f2b34fd",
         "key" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 _0.0.1",
         "segregationKey" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
         "componentType" : "WorkFlows",
@@ -5427,7 +5437,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "38e311e5-855e-48f0-b861-75185da296cb",
+        "id" : "87b32432-0441-4d66-a776-c9923dd20626",
         "key" : "hiPages_WF_023_BulkLoad_PaymentMethod_0.0.2",
         "segregationKey" : "hiPages_WF_023_BulkLoad_PaymentMethod",
         "componentType" : "WorkFlows",
@@ -5527,7 +5537,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "dc232537-0e9f-4701-8d19-23ceb062a318",
+        "id" : "0ee3cb36-6c6c-4571-a251-026dc8177cfe",
         "key" : "Applyworkflowconfig template_2024-08-03_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-03",
         "componentType" : "WorkFlows",
@@ -5629,7 +5639,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "e59e0b48-4249-4be3-8fd9-8b944ede2863",
+        "id" : "aaa8b6f6-2345-45a8-b1c4-56ee58d32ef1",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5731,7 +5741,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "0db9a012-1aa3-4e0a-a623-9256c6a24571",
+        "id" : "979e8f68-bae3-489d-a489-1f85bf84f929",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5833,7 +5843,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "c5960118-4df0-400a-880a-7ffadedbb24f",
+        "id" : "1b759cca-e512-4ad0-a1db-4aef0fed5736",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5935,7 +5945,7 @@
         "error" : "-",
         "templateId" : "74e0dd27-dce3-4428-8f90-a52845b72823"
       }, {
-        "id" : "7bee2149-2952-4753-aeed-720d2546400d",
+        "id" : "e57caae5-7afa-4bd3-b70d-92b6c9cc266c",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
