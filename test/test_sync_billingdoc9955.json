@@ -2,7 +2,7 @@
   "id" : "2fa59559-01ad-429c-a374-0c6dd7aa7605",
   "name" : "test_sync_billingdoc9955",
   "description" : "",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Automation source",
   "updatedBy" : "Automation source",
-  "createdOn" : "2024-11-28T03:21:34.885Z",
+  "createdOn" : "2024-11-28T03:27:07.979Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "f7ec652d-562c-4237-a429-d471114c7e68",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "test",
+    "commitMessage" : "test_beforesync",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "84bdf5b75644c24d4ff31138feb424d3bcfe69f0"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -71,7 +81,7 @@
         }
       },
       "response" : [ {
-        "id" : "a0259f1f-54fa-4059-ac51-56b1d5ad3db1",
+        "id" : "e6307552-c684-40ca-906b-4ad13426916a",
         "key" : "DocumentFilenamePatterns",
         "segregationKey" : "Available Billing Document Configurations",
         "componentType" : "BillingDocuments",
@@ -90,7 +100,7 @@
         "error" : null,
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "5e4bfa67-181c-4974-9308-ac1f7cb1b9a1",
+        "id" : "69e44654-e476-4039-9f0d-d376f46fd13c",
         "key" : "AllCreditMemoTemplates",
         "segregationKey" : "Available Billing Document Configurations",
         "componentType" : "BillingDocuments",
@@ -113,7 +123,7 @@
         "error" : null,
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "c9c17936-0bf0-463f-ad78-c072ad4a6f4d",
+        "id" : "6cefad91-a123-4030-9a5a-ec4568f86c0e",
         "key" : "AllDebitMemoTemplates",
         "segregationKey" : "Available Billing Document Configurations",
         "componentType" : "BillingDocuments",
@@ -144,7 +154,7 @@
         "error" : null,
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "80ffa3de-28bf-40e1-9041-bb48653816e4",
+        "id" : "a4757f33-0306-4458-b512-7975f1a81ab4",
         "key" : "AllInvoiceTemplates",
         "segregationKey" : "Available Billing Document Configurations",
         "componentType" : "BillingDocuments",
@@ -167,7 +177,7 @@
         "error" : null,
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "68c0a325-7374-4adb-8261-62377ffe05ae",
+        "id" : "d629de1a-ea2c-43b5-9f2e-2ec5bd1d980d",
         "key" : "DocumentGenerationSetting",
         "segregationKey" : "Available Billing Document Configurations",
         "componentType" : "BillingDocuments",
@@ -185,7 +195,7 @@
         "error" : null,
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "56e0492c-528f-4b5f-a63b-8aef588f2f04",
+        "id" : "645ce208-bd03-43c1-85fd-8acd94b38ca1",
         "key" : "TranslationProfile",
         "segregationKey" : "Available Billing Document Configurations",
         "componentType" : "BillingDocuments",
@@ -971,7 +981,7 @@
         "count" : 17
       },
       "response" : [ {
-        "id" : "97ecc425-993f-4f30-a519-521e5efdfd67",
+        "id" : "78032bfc-e284-410e-8e79-cd8f7dfc5f65",
         "key" : "invoice -> ManualWriteOffReason__c",
         "segregationKey" : "invoice",
         "componentType" : "CustomFields",
@@ -996,7 +1006,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "ab1bf82f-5c54-4f9f-967e-0ed93b9938a0",
+        "id" : "e695a556-30f9-4df5-8dde-75a8d823953e",
         "key" : "invoice -> RetryStatus__c",
         "segregationKey" : "invoice",
         "componentType" : "CustomFields",
@@ -1019,7 +1029,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "94db9d1d-7e7a-4c02-9524-020b1be41496",
+        "id" : "b1e66481-4c51-412e-8257-bce89a9f00b7",
         "key" : "account -> CollectionsAgent__c",
         "segregationKey" : "account",
         "componentType" : "CustomFields",
@@ -1043,31 +1053,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "cce0feb7-f157-4471-8d22-808ead583038",
-        "key" : "amendment -> standardreasons__c",
-        "segregationKey" : "amendment",
-        "componentType" : "CustomFields",
-        "url" : "-",
-        "pathPattern" : null,
-        "method" : "GET",
-        "payload" : {
-          "label" : "standardreasons__c",
-          "description" : "",
-          "maxLength" : 255,
-          "type" : "string",
-          "legacy" : true,
-          "origin" : "custom",
-          "API_name" : "standardreasons__c",
-          "pickListValue" : [ "6", "1", "2", "3", "4", "5" ]
-        },
-        "child" : null,
-        "childUniqueField" : null,
-        "selectedChild" : [ ],
-        "result" : "DONE",
-        "error" : "-",
-        "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
-      }, {
-        "id" : "2825ca23-a3b9-4f86-9937-38119495d087",
+        "id" : "91806fdf-0273-4e03-99f4-a52d97477552",
         "key" : "amendment -> TESTAutomation__c",
         "segregationKey" : "amendment",
         "componentType" : "CustomFields",
@@ -1090,7 +1076,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "556ee26f-14a8-43b0-9f44-561588440be4",
+        "id" : "c298a237-b170-4168-a0ae-0b8430e2ca86",
         "key" : "usage -> testdeletion__c",
         "segregationKey" : "usage",
         "componentType" : "CustomFields",
@@ -1114,7 +1100,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "f10eb8fd-47a2-44dc-b40b-4bb7e089871a",
+        "id" : "abff8af8-9d52-456a-967f-99531669656a",
         "key" : "payment -> CCReferenceNumber1__c",
         "segregationKey" : "payment",
         "componentType" : "CustomFields",
@@ -1137,7 +1123,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "6a3d0320-9aef-41ea-bf43-fac986012875",
+        "id" : "96f73f20-68b7-4bac-9313-71ec2517f164",
         "key" : "productrateplancharge -> PriceBookEntryId__c",
         "segregationKey" : "productrateplancharge",
         "componentType" : "CustomFields",
@@ -1160,7 +1146,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "d160b6bb-14cf-4cd3-b955-7b0102e8f70c",
+        "id" : "1ebc02eb-1a7f-4cd1-9d3a-b5674395802f",
         "key" : "productrateplancharge -> ProductCode__c",
         "segregationKey" : "productrateplancharge",
         "componentType" : "CustomFields",
@@ -1186,7 +1172,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "fcd864be-d5c4-43f4-b226-c7719b69c50e",
+        "id" : "11cc50b9-ad0a-4931-ad35-03257d09b81c",
         "key" : "productrateplancharge -> sfdcDiscScheduleID__c",
         "segregationKey" : "productrateplancharge",
         "componentType" : "CustomFields",
@@ -1210,7 +1196,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "3ff26cf6-765d-47d0-b364-ceb9ffac479a",
+        "id" : "fb795513-faf2-4c15-bc20-bded0cdd88c1",
         "key" : "productrateplancharge -> sfdcPricebookID__c",
         "segregationKey" : "productrateplancharge",
         "componentType" : "CustomFields",
@@ -1234,7 +1220,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "4919b96d-8937-4f84-8e23-a64b4b9b1774",
+        "id" : "b1ade935-3f56-4707-9ba5-4f9743741978",
         "key" : "productrateplancharge -> sfdcPricingType__c",
         "segregationKey" : "productrateplancharge",
         "componentType" : "CustomFields",
@@ -1258,7 +1244,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "35f93a2f-19ad-4f1c-8692-8d5e664a7d9c",
+        "id" : "9bb0a341-39d5-42e4-b400-8124224af849",
         "key" : "productrateplancharge -> sfdcProductID__c",
         "segregationKey" : "productrateplancharge",
         "componentType" : "CustomFields",
@@ -1282,7 +1268,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "43c7249e-180e-4b3a-a67e-8ba45ec3dfda",
+        "id" : "e31cdfb5-b3c0-46d2-90a3-bc0b1558e08c",
         "key" : "productrateplancharge -> TestRateplans__c",
         "segregationKey" : "productrateplancharge",
         "componentType" : "CustomFields",
@@ -1307,7 +1293,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "a476fefc-3710-414b-b60b-3c712cc380e2",
+        "id" : "3e700b86-73e4-4803-b353-24ed4c1fe091",
         "key" : "productrateplancharge -> TestRateplans_nonindexed__c",
         "segregationKey" : "productrateplancharge",
         "componentType" : "CustomFields",
@@ -1332,7 +1318,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "be08e59e-f722-47d3-b981-38eeefb31512",
+        "id" : "47b09d68-a605-4d3a-bee4-fe7e3185783f",
         "key" : "rateplan -> ProductVersion__c",
         "segregationKey" : "rateplan",
         "componentType" : "CustomFields",
@@ -1356,7 +1342,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "1ded5796-ea4c-47d7-a942-6c0536824d95",
+        "id" : "cdd3de8d-8ff7-4f42-999b-ec2a952c2b7b",
         "key" : "orders -> SourceSystem__c",
         "segregationKey" : "orders",
         "componentType" : "CustomFields",
@@ -1382,7 +1368,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "597146cd-9f22-452e-acdb-3940f16b910f",
+        "id" : "370dc499-9fe7-48fd-a7d3-f1f2661323e6",
         "key" : "orders -> TestOrdersCF__c",
         "segregationKey" : "orders",
         "componentType" : "CustomFields",
@@ -1405,7 +1391,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "8203f88e-5dc2-49da-9b75-877871c78a5c",
+        "id" : "9653f406-5850-4576-8853-14d0b96de5f4",
         "key" : "subscription -> RatePlanMigrationDate__c",
         "segregationKey" : "subscription",
         "componentType" : "CustomFields",
@@ -1428,7 +1414,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "bab48e98-85e1-4e14-ad5c-ade56269c3c1",
+        "id" : "5f6c73a5-1ad9-4582-8561-686cf2e2318b",
         "key" : "subscription -> RatePlanMigrationStatus__c",
         "segregationKey" : "subscription",
         "componentType" : "CustomFields",
@@ -1451,7 +1437,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "a6543a6e-a79e-42dd-8c44-8286903d6877",
+        "id" : "1cf58fb8-6717-4624-ab7c-e18a89c994a9",
         "key" : "subscription -> ResumeStartDate__c",
         "segregationKey" : "subscription",
         "componentType" : "CustomFields",
@@ -1475,7 +1461,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "456c880d-0de5-4d38-a3ec-394faad4f197",
+        "id" : "c162522f-cf48-4201-ab36-a7d7e86ae28d",
         "key" : "subscription -> SuspendDuration__c",
         "segregationKey" : "subscription",
         "componentType" : "CustomFields",
@@ -1499,7 +1485,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "bea46ae6-34ca-4511-8037-bbbff2f2babc",
+        "id" : "f278ec9e-117b-4ebf-bb6b-b5aa2b416a91",
         "key" : "subscription -> SuspendStartDate__c",
         "segregationKey" : "subscription",
         "componentType" : "CustomFields",
@@ -1523,7 +1509,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "f0e37cec-faa5-4ec7-9c59-bcca82cae7dd",
+        "id" : "dbd15a38-4c12-4e00-9a48-d5b71cdedcf8",
         "key" : "debitmemo -> RetryStatus__c",
         "segregationKey" : "debitmemo",
         "componentType" : "CustomFields",
@@ -1546,7 +1532,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "ba807cd9-16fa-4a62-afe4-bec1b3fe24d8",
+        "id" : "9ed491aa-0d14-432e-b7b1-a94c181e0bd1",
         "key" : "product -> Data_Center__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -1571,7 +1557,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "64566115-388e-404d-bed3-2da29a992d1a",
+        "id" : "147564c8-2eea-4ed6-9f7a-07b6b81a1ba6",
         "key" : "product -> ProductFamily__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -1597,7 +1583,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "b433b2da-3550-4a8b-bcfb-924eead81b34",
+        "id" : "dbb180b5-df66-4d93-b4bf-39f1690dc174",
         "key" : "product -> sfdcId__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -1621,7 +1607,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "c479ae48-9285-4097-8435-8b99046d0059",
+        "id" : "9a56abca-58a0-4e47-a43d-96e3c65c0e04",
         "key" : "contact -> AutomationTest__c",
         "segregationKey" : "contact",
         "componentType" : "CustomFields",
@@ -1644,7 +1630,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "25fc92de-0db9-4ca7-b0c6-84e414d6923f",
+        "id" : "f9982f9b-af9b-43e1-94f2-2ddebb1a9627",
         "key" : "contact -> Test_Automation_contact__c",
         "segregationKey" : "contact",
         "componentType" : "CustomFields",
@@ -1667,7 +1653,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "3a14059f-7fbc-4cd5-93a2-b9abb25f2034",
+        "id" : "0732f2f5-f7c2-427b-82ec-e1889a2e0311",
         "key" : "contact -> test_custom__c",
         "segregationKey" : "contact",
         "componentType" : "CustomFields",
@@ -1690,7 +1676,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "1a813863-ed57-4546-84c1-244f87a8d84e",
+        "id" : "78d5e2ed-38e7-4650-817c-721d721db9e4",
         "key" : "paymentmethod -> CardType__c",
         "segregationKey" : "paymentmethod",
         "componentType" : "CustomFields",
@@ -1715,7 +1701,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "8a0c1127-c094-4f97-a591-0365da2ff9fc",
+        "id" : "90356e47-8b04-465c-9183-6c7b8e61587e",
         "key" : "paymentmethod -> CCReferenceNumber__c",
         "segregationKey" : "paymentmethod",
         "componentType" : "CustomFields",
@@ -1738,7 +1724,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "383b90ce-544c-443d-b2c2-51de0fbdc4b8",
+        "id" : "8a9998b8-f44f-4a6e-ab4c-8e892911c442",
         "key" : "paymentmethod -> CreditCardMaskedNumber__c",
         "segregationKey" : "paymentmethod",
         "componentType" : "CustomFields",
@@ -1762,7 +1748,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "84443c93-ac8f-4e5e-a181-9324fc1284ce",
+        "id" : "5e703144-173b-462a-9612-99dfc090a0b6",
         "key" : "paymentmethod -> ExpirationMonth__c",
         "segregationKey" : "paymentmethod",
         "componentType" : "CustomFields",
@@ -1786,7 +1772,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "251ed283-6038-4cd2-97c0-d7c3f256b537",
+        "id" : "3f80065f-4ede-4852-8349-82ccbd83a348",
         "key" : "paymentmethod -> ExpirationYear__c",
         "segregationKey" : "paymentmethod",
         "componentType" : "CustomFields",
@@ -1810,7 +1796,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "6d2a4600-d2ed-462a-a88a-d13d30ca9017",
+        "id" : "6820b60c-6037-46f0-b67e-b37b6abec26f",
         "key" : "paymentmethod -> FirstName__c",
         "segregationKey" : "paymentmethod",
         "componentType" : "CustomFields",
@@ -1834,7 +1820,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "9873b394-6442-449a-a7a3-9240db9d3707",
+        "id" : "f356100b-54af-4cec-a291-64c1ccbf9b24",
         "key" : "paymentmethod -> LastName__c",
         "segregationKey" : "paymentmethod",
         "componentType" : "CustomFields",
@@ -1858,7 +1844,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "970e18d7-08f6-4711-913e-417469af1725",
+        "id" : "eae59a7f-5440-421b-9bfd-bb7b9d878e8b",
         "key" : "rateplancharge -> BasePrice__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -1882,7 +1868,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "5cc63ea0-68f3-436a-8b9a-144455c7fe2c",
+        "id" : "4b2fbdf4-1771-41ce-9af4-e54187a81ba7",
         "key" : "rateplancharge -> DirectoryListing__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -1906,7 +1892,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "345eea9d-44b1-4bff-a459-2f3d044d9408",
+        "id" : "36c49c55-463a-406d-b178-4ff0299ec81e",
         "key" : "rateplancharge -> enabled__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -1932,7 +1918,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "8060668d-2e82-415b-829c-4363b7b088cf",
+        "id" : "2544801f-0e76-49d7-a1e5-bc11db34b198",
         "key" : "rateplancharge -> IncludedPostcodes__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -1956,7 +1942,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "404be9b8-0caf-44e0-9ad8-1945d3d4606d",
+        "id" : "9f01f396-f8b1-4cbf-9130-63821b843e84",
         "key" : "rateplancharge -> LastUpdatedRatePlanChargeVersion__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -1979,7 +1965,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "e8052c45-32cf-4cfc-a89c-3166208de4a7",
+        "id" : "5535d6b2-7688-4836-b3bb-99db882da387",
         "key" : "rateplancharge -> LeadCreditFactor__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -2003,7 +1989,31 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "0fbd87ff-9c50-41c7-b7fc-534636a02ba7",
+        "id" : "74b1dbb3-b3fc-481a-b1be-2860d7491446",
+        "key" : "amendment -> standardreasons__c",
+        "segregationKey" : "amendment",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "standardreasons__c",
+          "description" : "",
+          "maxLength" : 255,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "standardreasons__c",
+          "pickListValue" : [ "6", "1", "2", "3", "4", "5" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
+      }, {
+        "id" : "3d02243c-7e9b-4580-b81e-16e9f0c38fe8",
         "key" : "rateplancharge -> OpportunityLineItemId__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -2026,7 +2036,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "d665105d-cccd-4962-96b5-b5bfb13341ab",
+        "id" : "6b9f6119-18f9-4cd6-9cc2-84e869bc01d3",
         "key" : "rateplancharge -> RenewalOpportunityLineItemStatus__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -2049,7 +2059,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "2f2d2460-7aec-495d-905a-4419d41ef8c9",
+        "id" : "efa0c26a-c9f9-484e-8d5e-d996ec802264",
         "key" : "rateplancharge -> sfdcSubscriptionId__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -2073,7 +2083,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "7d0d8c89-026f-4e94-8890-71db0b7d3732",
+        "id" : "b9775883-8dd6-4081-94cc-232108ff515e",
         "key" : "rateplancharge -> SubscriptionRatePlanCharge1__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -2096,7 +2106,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "178f8c42-12b8-48c2-a823-35c69e83c136",
+        "id" : "8ad8bbeb-c96c-4126-825f-3b7d1a854b72",
         "key" : "rateplancharge -> SupportType__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -2120,7 +2130,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "ed21b104-e291-4ac0-bd2c-0d961a4d7518",
+        "id" : "e3393d23-fa74-44a0-85bf-2ce03e0dc3ea",
         "key" : "rateplancharge -> UpdatedByBillRun__c",
         "segregationKey" : "rateplancharge",
         "componentType" : "CustomFields",
@@ -2143,7 +2153,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "1b023eb6-8783-4a81-be63-4470f62a4da9",
+        "id" : "d4dbabb1-c41f-44e3-bde1-3899a4eb89fd",
         "key" : "creditmemo -> testcm__c",
         "segregationKey" : "creditmemo",
         "componentType" : "CustomFields",
@@ -2166,7 +2176,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "8add1c35-dc5a-4d9a-9ffa-582339759cf1",
+        "id" : "82fb214d-f182-475f-9530-27131fd89013",
         "key" : "creditmemo -> TestPicklist__c",
         "segregationKey" : "creditmemo",
         "componentType" : "CustomFields",
@@ -2191,7 +2201,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "1110c943-05f3-4100-b79c-0817cbe52596",
+        "id" : "c9e5f094-9ec8-4346-9ac3-d8c980bf553f",
         "key" : "productrateplan -> GMIssue__c",
         "segregationKey" : "productrateplan",
         "componentType" : "CustomFields",
@@ -2217,7 +2227,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "4325e0b4-3533-4745-8019-7df6d8778c5c",
+        "id" : "eb60cc19-2567-44ca-adbb-36ef90c611b0",
         "key" : "productrateplan -> Region__c",
         "segregationKey" : "productrateplan",
         "componentType" : "CustomFields",
@@ -2242,7 +2252,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "7b64160b-c49c-45e1-b3f9-377ea48fe1ab",
+        "id" : "12553780-e982-4f70-a6ed-c24e920a1cbc",
         "key" : "productrateplan -> Segment__c",
         "segregationKey" : "productrateplan",
         "componentType" : "CustomFields",
@@ -2267,7 +2277,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "a28ed3a8-2402-4dcc-830a-5381248c8258",
+        "id" : "8c4ed091-4103-4e45-9897-17d88d7f5ff7",
         "key" : "productrateplan -> Service_Type__c",
         "segregationKey" : "productrateplan",
         "componentType" : "CustomFields",
@@ -2292,7 +2302,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "608c29d6-1d8d-49bd-9806-d365c898cff0",
+        "id" : "a735ff39-1fba-41c6-a300-a7fd570ef83c",
         "key" : "productrateplan -> sfdcDiscScheduleID__c",
         "segregationKey" : "productrateplan",
         "componentType" : "CustomFields",
@@ -2316,7 +2326,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "aafe510a-d76c-48fd-a8e3-3d8a6831f093",
+        "id" : "2e1c0899-2efb-4383-a567-f11e9a32ede5",
         "key" : "productrateplan -> sfdcPricebookID__c",
         "segregationKey" : "productrateplan",
         "componentType" : "CustomFields",
@@ -2340,7 +2350,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "981fc87e-3a2a-4782-aa6b-0593b7acca0a",
+        "id" : "a8788c3f-9b01-4a4f-a5f4-141b200f92cd",
         "key" : "productrateplan -> sfdcPricingType__c",
         "segregationKey" : "productrateplan",
         "componentType" : "CustomFields",
@@ -2365,7 +2375,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "850a1825-dab1-4a30-ae1a-503b4ac479bf",
+        "id" : "eb9c6ab4-d5fc-47f6-945a-32d748370552",
         "key" : "productrateplan -> sfdcProductID__c",
         "segregationKey" : "productrateplan",
         "componentType" : "CustomFields",
@@ -2389,7 +2399,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "0b38709a-03fb-4d49-b7ad-aca91f08eb73",
+        "id" : "6226c0d2-bf6f-4ff6-a68e-b3d214ec1f24",
         "key" : "creditmemoitem -> test__c",
         "segregationKey" : "creditmemoitem",
         "componentType" : "CustomFields",
@@ -2412,7 +2422,7 @@
         "error" : "-",
         "templateId" : "2fa59559-01ad-429c-a374-0c6dd7aa7605"
       }, {
-        "id" : "6c93935a-88eb-404a-9fd2-9fd149e36eb6",
+        "id" : "f51ed953-9bea-41d1-a2de-1e38fe920d66",
         "key" : "invoice -> ManualWriteOff__c",
         "segregationKey" : "invoice",
         "componentType" : "CustomFields",
