@@ -1,0 +1,760 @@
+{
+  "id" : "098831ef-ee46-4845-a192-35c080d348fb",
+  "name" : "SettingcomponentTemplate_5676",
+  "description" : null,
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox",
+  "createdBy" : "Automation source",
+  "updatedBy" : "Automation source",
+  "createdOn" : "2025-01-06T03:13:25.592Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ {
+      "segregationKeys" : [ "Billing" ],
+      "originalPayload" : null,
+      "response" : [ {
+        "id" : "cc1696e3-64a0-4ce2-b6e5-83589848073d",
+        "key" : "DocPrefix",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "v1/sequence-sets",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "sequenceSets" : [ {
+            "id" : "8ad097af90c4e5aa0190de5aea183a5f",
+            "name" : "DEFAULT",
+            "sequenceSetNumber" : null,
+            "invoice" : {
+              "prefix" : "INV",
+              "startNumber" : 12
+            },
+            "creditMemo" : {
+              "prefix" : "CM",
+              "startNumber" : 1
+            },
+            "debitMemo" : {
+              "prefix" : "DM",
+              "startNumber" : 1
+            }
+          } ],
+          "success" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "bae46d96-a145-45cc-bcd8-15578fe80a6b",
+        "key" : "BatchAliases",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/batch-aliases",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "aliases" : [ {
+            "batch" : "Batch1",
+            "displayName" : "Batch 1 - Direct"
+          }, {
+            "batch" : "Batch2",
+            "displayName" : "Batch 2 - Bunnings"
+          }, {
+            "batch" : "Batch3",
+            "displayName" : "Batch 3 - DoE IKEA"
+          }, {
+            "batch" : "Batch4",
+            "displayName" : "Batch 4 - UAT"
+          }, {
+            "batch" : "Batch5",
+            "displayName" : "Batch 5 - UAT"
+          }, {
+            "batch" : "Batch10",
+            "displayName" : "DR3 Load Only"
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "e4c7e838-f113-47de-b6db-9f5d50dc3311",
+        "key" : "BillingCycleType",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-cycle-types",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "billingCycleTypes" : [ "DefaultFromCustomer", "SpecificDayofMonth", "SubscriptionStartDay", "ChargeTriggerDay" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "18cf0575-6d8d-40d3-a9f9-84513e3a76b5",
+        "key" : "BillingListPriceBase",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-list-price-bases",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "listPriceBase" : [ "Per_Billing_Period", "Per_Month" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "fd52978e-f0e6-445d-9d40-137f24f0298b",
+        "key" : "BillingPeriodStart",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-period-starts",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "billingPeriodStartDays" : [ "AutoSet", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th", "13th", "14th", "15th", "16th", "17th", "18th", "19th", "20th", "21st", "22nd", "23rd", "24th", "25th", "26th", "27th", "28th", "29th", "30th", "EndOfMonth" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "2dbe6387-cd81-4835-bbe5-13b27bfd0e9b",
+        "key" : "BillingPeriod",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-periods",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "billingPeriods" : [ "Month", "Annual", "Semi_Annual" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "21b72414-a701-48d2-af7a-37a8364313a5",
+        "key" : "Currency",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/currencies",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "currencies" : [ {
+            "currencyCode" : "USD",
+            "roundingMode" : "HalfUp",
+            "rate" : 0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true,
+            "default" : true
+          }, {
+            "currencyCode" : "EUR",
+            "roundingMode" : "HalfUp",
+            "rate" : 0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true,
+            "default" : false
+          }, {
+            "currencyCode" : "GBP",
+            "roundingMode" : "HalfUp",
+            "rate" : 0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true,
+            "default" : false
+          }, {
+            "currencyCode" : "JPY",
+            "roundingMode" : "HalfUp",
+            "rate" : 0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true,
+            "default" : false
+          }, {
+            "currencyCode" : "CAD",
+            "roundingMode" : "HalfUp",
+            "rate" : 0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true
+          }, {
+            "currencyCode" : "AED",
+            "roundingMode" : "HalfUp",
+            "roundingIncrement" : 0.01,
+            "rate" : 0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true,
+            "default" : false
+          }, {
+            "currencyCode" : "AUD",
+            "roundingMode" : "HalfUp",
+            "roundingIncrement" : 0.01,
+            "rate" : 0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true,
+            "default" : false
+          }, {
+            "currencyCode" : "IRR",
+            "roundingMode" : "HalfUp",
+            "roundingIncrement" : 0.01,
+            "rate" : 0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true,
+            "default" : false
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "104135d8-f554-4c6f-be67-e93969a502e8",
+        "key" : "AllDiscountSettings",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/discount-settings",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "discounts" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "72cec542-04b6-4532-912b-6b1e72cea2a6",
+        "key" : "NumberAndSku",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/numbers-and-skus",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "billingAccountprefix" : "RC-",
+          "skuPrefix" : "SKU-",
+          "subscriptionNumberPrefix" : "A-S",
+          "chargeNumberPrefix" : "C-",
+          "amendmentNumberPrefix" : "A-AM",
+          "customerNumberPrefix" : "C",
+          "subscriptionRatePlanNumberPrefix" : "SRP-",
+          "productNumberPrefix" : "PC-",
+          "productRatePlanNumberPrefix" : "PRP-",
+          "productRatePlanChargeNumberPrefix" : "PRPC-",
+          "sequenceSetNumberPrefix" : "SEQSET-",
+          "invoiceTemplateNumberPrefix" : "INVTEMP-",
+          "creditMemoTemplateNumberPrefix" : "CMTEMP-",
+          "debitMemoTemplateNumberPrefix" : "DMTEMP-",
+          "eInvoiceServiceProviderNumberPrefix" : "EISP-",
+          "eInvoiceBusinessRegionNumberPrefix" : "EIBR-",
+          "eInvoiceTemplateNumberPrefix" : "EITEMP-"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "ec50b2ac-4b7b-4062-8da0-24c2a28715e7",
+        "key" : "ChargeModels",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/charge-models",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "chargeModels" : [ "DiscountPercentage", "DiscountFixedAmount", "FlatFee", "PerUnit", "Overage", "Volume", "Tiered", "TieredWithOverage", "HighWaterMarkTieredPricing", "HighWaterMarkVolumePricing", "MultiAttributePricing", "PreratedPerUnit", "PreratedPricing" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "8aab3ab3-b574-48cc-bd40-c342d4e95413",
+        "key" : "ChargeType",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/charge-types",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "chargeTypes" : [ "OneTime", "Recurring", "Usage" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "a7da7031-7cda-40d4-b195-b7cc58248928",
+        "key" : "AllPaymentTerms",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/payment-terms",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : [ {
+          "id" : "8ad097af90c4e5aa0190de5adcd132ea",
+          "name" : "Due Upon Receipt",
+          "isActive" : true,
+          "isDefault" : false,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 0
+        }, {
+          "id" : "8ad0848790c4bb2a0190de8260dc20b6",
+          "name" : "Net 15",
+          "isActive" : true,
+          "isDefault" : false,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 15
+        }, {
+          "id" : "8ad097af90c4e5aa0190de5adcd132eb",
+          "name" : "Net 30",
+          "isActive" : true,
+          "isDefault" : true,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 30
+        }, {
+          "id" : "8ad097af90c4e5aa0190de5adcd232ec",
+          "name" : "Net 45",
+          "isActive" : true,
+          "isDefault" : false,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 45
+        }, {
+          "id" : "8ad097af90c4e5aa0190de5adcd232ed",
+          "name" : "Net 60",
+          "isActive" : true,
+          "isDefault" : false,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 60
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "e01e2881-d857-4375-be50-791cd86f5574",
+        "key" : "SubscriptionSettings",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/subscription-settings",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "termType" : "TERMED",
+          "initialTerm" : 6,
+          "renewalTerm" : 12,
+          "invoicePastEndOfTerm" : false,
+          "contractRenewal" : true,
+          "acceptanceOfOrders" : false,
+          "implementationPeriod" : true,
+          "subscriptionsInvoicedSeparately" : true,
+          "increasePriceRenewSubscription" : true,
+          "productFeatureOfSubscription" : false,
+          "renewNoChargeSubscription" : false,
+          "priceChangeOption" : "NoChange",
+          "priceIncreasePercentage" : 0,
+          "autoRenewJobRunTimeType" : "TenantSpecified",
+          "autoRenewJobRunTime" : 0,
+          "autoRenewJobScheduleId" : "8ad0845b90c4bb2c0190de8260073826",
+          "updateChargeTriggerCondition" : true,
+          "orderMetricsTaxationOption" : "NO",
+          "updateSubscriptionActivationDate" : true,
+          "enableAccountLevelDiscount" : false,
+          "skipOwnerTransferValidationForDeletionAccount" : false,
+          "enableOrderUI" : false,
+          "autoRenewByOrder" : true,
+          "enableOrderCpq" : true,
+          "skipAmendmentGenerationBySubscribe" : false
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "6369f1c8-711f-49e7-8979-48edfe158604",
+        "key" : "AllUnitsOfMeasure",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/units-of-measure",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "unitsOfMeasure" : [ {
+            "name" : "Host Bandwidth OUT",
+            "displayAs" : "Host Bandwidth OUT",
+            "precision" : 9,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Host Bandwidth OUT",
+            "id" : "8ad0845b90c4bb2c0190de82652b382d"
+          }, {
+            "name" : "InvAgg",
+            "displayAs" : "InvAgg",
+            "precision" : 2,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "InvAgg",
+            "id" : "8ad0845b90c4bb2c0190de826634382e"
+          }, {
+            "name" : "Leads",
+            "displayAs" : "Leads",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "Leads",
+            "id" : "8ad0845b90c4bb2c0190de8266f6382f"
+          }, {
+            "name" : "Active Committer",
+            "displayAs" : "Active Committer",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Active Committer",
+            "id" : "8ad0848790c4bb2a0190de825fd02093"
+          }, {
+            "name" : "Australia Transactions",
+            "displayAs" : "Australia Transactions",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "Australia Transactions",
+            "id" : "8ad0848790c4bb2a0190de82609320b4"
+          }, {
+            "name" : "CU",
+            "displayAs" : "CU",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "CU",
+            "id" : "8ad0848790c4bb2a0190de8261c320b7"
+          }, {
+            "name" : "Custom Rule Creation Hours",
+            "displayAs" : "Custom Rule Creation Hours",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "Custom Rule Creation Hours",
+            "id" : "8ad0848790c4bb2a0190de82621920b8"
+          }, {
+            "name" : "Dollars",
+            "displayAs" : "Dollars",
+            "precision" : 2,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Dollars",
+            "id" : "8ad0848790c4bb2a0190de82632520bb"
+          }, {
+            "name" : "Gigabytes",
+            "displayAs" : "Gigabytes",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Gigabytes",
+            "id" : "8ad0848790c4bb2a0190de82649e20bd"
+          }, {
+            "name" : "Hours",
+            "displayAs" : "Hours",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Hours",
+            "id" : "8ad0848790c4bb2a0190de82657420be"
+          }, {
+            "name" : "Megabytes",
+            "displayAs" : "MB",
+            "precision" : 2,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "Megabytes",
+            "id" : "8ad0848790c4bb2a0190de8267bc20c4"
+          }, {
+            "name" : "Users",
+            "displayAs" : "Users",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Users",
+            "id" : "8ad0848790c4bb2a0190de826ab220c9"
+          }, {
+            "name" : "XML Direct Consulting Hours",
+            "displayAs" : "XML Direct Consulting Hours",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "XML Direct Consulting Hours",
+            "id" : "8ad0848790c4bb2a0190de826b0c20ca"
+          }, {
+            "name" : "Compute_Units",
+            "displayAs" : "Compute Units",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Compute_Units",
+            "id" : "8ad0864390c4d01a0190de8261772944"
+          }, {
+            "name" : "Host Bandwidth IN",
+            "displayAs" : "Host Bandwidth IN",
+            "precision" : 9,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Host Bandwidth IN",
+            "id" : "8ad0864390c4d01a0190de8264e42947"
+          }, {
+            "name" : "Postal Codes",
+            "displayAs" : "Postal Codes",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Postal Codes",
+            "id" : "8ad0864390c4d01a0190de8268c8294f"
+          }, {
+            "name" : "United States Transactions",
+            "displayAs" : "United States Transactions",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "United States Transactions",
+            "id" : "8ad0864390c4d01a0190de826a6d2951"
+          }, {
+            "name" : "Lead Credit",
+            "displayAs" : "Lead Credit",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Lead Credit",
+            "id" : "8ad0920590c4e5aa0190de8266a84680"
+          }, {
+            "name" : "United Kingdom Transactions",
+            "displayAs" : "United Kingdom Transactions",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "United Kingdom Transactions",
+            "id" : "8ad0920590c4e5aa0190de826a244684"
+          }, {
+            "name" : "Canada Transactions",
+            "displayAs" : "Canada Transactions",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "Canada Transactions",
+            "id" : "8ad095ba90c4e5a70190de8261150c7d"
+          }, {
+            "name" : "Germany Transactions",
+            "displayAs" : "Germany Transactions",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "Germany Transactions",
+            "id" : "8ad095ba90c4e5a70190de8264540c81"
+          }, {
+            "name" : "i3 Host",
+            "displayAs" : "i3 Host",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "i3 Host",
+            "id" : "8ad095ba90c4e5a70190de8265eb0c84"
+          }, {
+            "name" : "Storage",
+            "displayAs" : "GB",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Storage",
+            "id" : "8ad095ba90c4e5a70190de82693a0c89"
+          }, {
+            "name" : "Trial Transactions",
+            "displayAs" : "Trial Transactions",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "Trial Transactions",
+            "id" : "8ad095ba90c4e5a70190de8269af0c8c"
+          }, {
+            "name" : "Each",
+            "displayAs" : "Each",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "Each1",
+            "id" : "8ad097af90c4e5aa0190de5ad99132ad"
+          }, {
+            "name" : "License",
+            "displayAs" : "License",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "License",
+            "id" : "8ad097af90c4e5aa0190de5ad99a32ae"
+          }, {
+            "name" : "Minutes",
+            "displayAs" : "Minutes",
+            "precision" : 2,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Minutes",
+            "id" : "8ad097af90c4e5aa0190de5ad9a232af"
+          }, {
+            "name" : "Device",
+            "displayAs" : "Device",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Device",
+            "id" : "8ad097af90c4e5aa0190de8262a543c0"
+          }, {
+            "name" : "Month",
+            "displayAs" : "Month",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Month",
+            "id" : "8ad097af90c4e5aa0190de82687e43c8"
+          }, {
+            "name" : "XML Frame Consulting Hours",
+            "displayAs" : "XML Frame Consulting Hours",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : false,
+            "usageLogFileLabel" : "XML Frame Consulting Hours",
+            "id" : "8ad097af90c4e5aa0190de826b8243cc"
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      }, {
+        "id" : "89e6fed0-8629-4d6e-93a7-f9de700ca824",
+        "key" : "BillingRules",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-rules",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "oneTimeCreditBack" : false,
+          "prorateRecurringWeeklyCharges" : true,
+          "prorateRecurringMonthlyCharges" : true,
+          "prorateUsageMonthlyCharges" : false,
+          "prorateUsageWeeklyCharges" : false,
+          "daysInMonth" : "UseActualDays",
+          "prorationUnit" : "ProrateByDay",
+          "allowAutoPostBillRun" : true,
+          "autoPostBillRunDefaultValue" : true,
+          "includeNegativeInvoice" : false,
+          "includeChildUsage" : false,
+          "transactionOnSubscription" : false,
+          "taxAddressOwner" : "SubscriptionOwner",
+          "takeContactSnapshot" : true,
+          "taxInclusiveRoundingRule" : "RoundingNetAmount",
+          "legalDocumentGeneratingRule" : "GroupByOriginalSRPC",
+          "recurringChargeStyle" : "Advanced",
+          "preGenerateInvoicePdf" : false,
+          "timeOfDailyInvoice" : 0,
+          "taxRateChangeOption" : "OneTaxItem",
+          "numberAssignmentTiming" : "Generating",
+          "availableToCreditValidationLevel" : "HeaderLevel",
+          "creditMemoMirroringInvoiceItemsRule" : "Yes",
+          "invoicePastEndOfTerm" : false,
+          "billToTermEndWhenAutoRenew" : true,
+          "zuoraTaxRoundingDiffDispersion" : true,
+          "debookRebookSupportable" : true,
+          "allowIndistinctMapping" : false,
+          "invoiceSplit" : false,
+          "sequentialInvoiceNumber" : true,
+          "consolidateInvoices" : true,
+          "discountCreditProration" : false,
+          "useSystemDefaultSuffixForCreditItems" : true,
+          "customerHierarchy" : true,
+          "catchUpBillRun" : false,
+          "autoRenewalBillRun" : true,
+          "recurringCreditProrationOption" : "BasedOnCreditPeriod",
+          "taxPreview" : true,
+          "copyBillingAttributesFromAccount" : true,
+          "discountConsolidated" : false,
+          "copyBillingAttributesFromAccountForStandaloneInvoice" : false,
+          "availableToCreditIncludingRbeCreditMemo" : false,
+          "writeOffAllocationRule" : "PRORATION",
+          "stackedDiscountClassApplyRule" : "IgnoreDiscountClass",
+          "zuoraNumberFormatForMergeField" : false
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "098831ef-ee46-4845-a192-35c080d348fb"
+      } ],
+      "errors" : [ ]
+    } ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "uno" : [ ],
+    "awsInfo" : null
+  }
+}
