@@ -2,7 +2,7 @@
   "id" : "70ec2e48-2183-4fc8-b587-d526b1e0d325",
   "name" : "test_sync_workflow7179",
   "description" : "",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Automation_Source  (49056) (US-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Automation source",
   "updatedBy" : "Automation source",
-  "createdOn" : "2025-01-16T19:36:21.948Z",
+  "createdOn" : "2025-01-16T19:38:11.930Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "aca8bac1-94cd-4a8c-b9d6-36c4c6cec7fa",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "test",
+    "commitMessage" : "test_before_sync",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "4117eb85df1e31894dff537ef3e5e225c2616a4f"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -4515,7 +4525,7 @@
         "featureDisabled" : false
       },
       "response" : [ {
-        "id" : "3188c6ac-99c7-4603-8fd5-43fa88d8511f",
+        "id" : "8818f1b4-856f-4e40-b625-546d99d0f91f",
         "key" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1_0.0.1",
         "segregationKey" : "Apply Late Fee to all Subscriptions for Accounts > 10 Days Overdue Limit 1",
         "componentType" : "WorkFlows",
@@ -4599,7 +4609,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "dd48d526-e207-497b-8e73-b5b7e11ba123",
+        "id" : "ed5391c7-be2e-43c2-9ff2-ebced4974866",
         "key" : "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1",
         "segregationKey" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
         "componentType" : "WorkFlows",
@@ -4683,7 +4693,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "eb33919d-7efb-45aa-8928-a1240fddd0a7",
+        "id" : "b3f45c75-f52b-4e6e-bdda-c77e983aed5e",
         "key" : "Custom Invoice_0.0.1",
         "segregationKey" : "Custom Invoice",
         "componentType" : "WorkFlows",
@@ -4767,7 +4777,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "eb0ac995-f8e3-4993-a517-37dfac83c77f",
+        "id" : "f8a141a2-467e-4fbb-a7dc-dcc4a1cd3491",
         "key" : "Invoice 30 Days Past Due, Account Summary_0.0.1",
         "segregationKey" : "Invoice 30 Days Past Due, Account Summary",
         "componentType" : "WorkFlows",
@@ -4851,7 +4861,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "c9fdc281-914a-4f0b-8f37-5a8cf80b0526",
+        "id" : "2bc0a63f-c279-437f-9ac2-0fcb06211111",
         "key" : "Print Invoices_0.0.1",
         "segregationKey" : "Print Invoices",
         "componentType" : "WorkFlows",
@@ -4953,7 +4963,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "7cb4f49d-76d4-42fa-b44e-095e3addfb4d",
+        "id" : "5bcf6411-c69a-4109-a0fe-5a56aa00cb0c",
         "key" : "Resume Subscriptions for Accounts with Zero Balance Limit 1_0.0.1",
         "segregationKey" : "Resume Subscriptions for Accounts with Zero Balance Limit 1",
         "componentType" : "WorkFlows",
@@ -5037,7 +5047,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "68a522f2-6628-42fa-9ea2-dc891fea8b25",
+        "id" : "4724dfe7-012c-4218-b489-3ad1d040b044",
         "key" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 _0.0.1",
         "segregationKey" : "Suspend Subscriptions Tied to Unpaid Invoices > 10 Days Limit 1 ",
         "componentType" : "WorkFlows",
@@ -5121,7 +5131,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "7b21c129-7281-4872-88f2-c647b07ac68f",
+        "id" : "d6e369fa-5b53-49ff-bdcb-a05ffdaa3008",
         "key" : "hiPages_WF_023_BulkLoad_PaymentMethod_0.0.2",
         "segregationKey" : "hiPages_WF_023_BulkLoad_PaymentMethod",
         "componentType" : "WorkFlows",
@@ -5221,7 +5231,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "f793d6ed-1698-4b96-b810-e792dd4cfe52",
+        "id" : "b6c6b77d-dceb-4588-a4e5-916faf97de30",
         "key" : "Applyworkflowconfig template_2024-08-03_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-03",
         "componentType" : "WorkFlows",
@@ -5323,7 +5333,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "054fdd30-1dcc-4515-aa58-ad4e67caa57f",
+        "id" : "fcf62d90-9557-4c81-915b-e32bd0508b24",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5425,7 +5435,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "106db24d-8635-4088-a466-bbb237cc5b98",
+        "id" : "9ed3af34-0cb2-4b23-9b2e-136d97f0f61f",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5527,7 +5537,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "45189fc2-d359-47d5-943f-1d648e897752",
+        "id" : "6b3f341c-d672-4166-84ce-0bab6c5028c2",
         "key" : "Applyworkflowconfig template_2024-08-04_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-04",
         "componentType" : "WorkFlows",
@@ -5629,7 +5639,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "cb4a2446-4fdc-4862-bf9c-eee5c00afc6e",
+        "id" : "9d6c84e4-ec96-431a-9f83-ee959d9cf708",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5731,7 +5741,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "72c6b5a3-9445-4d5f-b9d1-b89a79d333b6",
+        "id" : "ef996c8b-fb34-42de-ba82-7893a9ddd7ef",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5833,7 +5843,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "2c2ee587-c434-4c52-9bc2-f30b9aef9e6e",
+        "id" : "2056be6e-bade-45cc-be87-2426ab56b6ad",
         "key" : "Applyworkflowconfig template_2024-08-05_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-05",
         "componentType" : "WorkFlows",
@@ -5935,7 +5945,7 @@
         "error" : "-",
         "templateId" : "70ec2e48-2183-4fc8-b587-d526b1e0d325"
       }, {
-        "id" : "07530625-65fd-4586-ad53-b3cf7adbe64a",
+        "id" : "89f7b680-faf1-4e64-93d0-ea1fe85e0310",
         "key" : "Applyworkflowconfig template_2024-08-08_0.0.1",
         "segregationKey" : "Applyworkflowconfig template_2024-08-08",
         "componentType" : "WorkFlows",
