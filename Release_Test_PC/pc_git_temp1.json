@@ -1,0 +1,51 @@
+{
+  "id" : "1b5d6220-f6c5-434d-bad0-d4e63532edd2",
+  "name" : "pc_git_temp1",
+  "description" : "",
+  "status" : "DONE",
+  "errors" : "-",
+  "active" : true,
+  "tenantName" : "k2e2e_order_noAR  (9430) (US-API-Sandbox-Staging)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox-Staging",
+  "createdBy" : "k2e2e_order_noAR k2e2e_order_noAR",
+  "updatedBy" : "k2e2e_order_noAR k2e2e_order_noAR",
+  "createdOn" : "2025-01-23T11:45:00.023Z",
+  "type" : "ProductCatalog",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : false,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ {
+      "segregationKeys" : [ ],
+      "originalPayload" : {
+        "Usage" : "",
+        "ProductRatePlan" : "",
+        "ProductRatePlanCharge" : "",
+        "Product" : ""
+      },
+      "response" : [ ],
+      "errors" : [ ]
+    } ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : {
+      "Bucket Name" : "dm-product-catalog-us-api-sandbox-staging",
+      "Path" : "US-API-Sandbox-Staging/9430/PC_Templates/pc_git_temp1",
+      "Page Count" : 0
+    }
+  }
+}
