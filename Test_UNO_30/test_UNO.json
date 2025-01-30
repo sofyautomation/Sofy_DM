@@ -1,0 +1,127 @@
+{
+  "id" : "26d98a47-87da-48fc-bf41-13bc10304ac3",
+  "name" : "test UNO",
+  "description" : "test UNO",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Kate NetSuite  (20000005) (EU-Central-Sandbox)",
+  "entityName" : "Global",
+  "environment" : "EU-Central-Sandbox",
+  "createdBy" : "Vidya BS",
+  "updatedBy" : "Vidya BS",
+  "createdOn" : "2025-01-30T12:30:29.859Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ {
+      "segregationKeys" : [ "RevenueOrganizationMapping(Multi Org)", "RevenueFieldsMapping(Billing)", "RevenueRecognitionPolicy(Revenue Recognition Timing)", "InterfaceSettings" ],
+      "originalPayload" : null,
+      "response" : [ {
+        "id" : "22a16bf3-31af-4409-80a6-885fa5e15869",
+        "key" : "RevenueOrganizationMapping(Multi Org)",
+        "segregationKey" : "RevenueOrganizationMapping(Multi Org)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/org-mapping?type=MULTI_ORG",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "success" : false,
+          "processId" : "23441A551FF7AD58",
+          "reasons" : [ {
+            "code" : 50000020,
+            "message" : "Only Multi-Org tenant can access Multi-Org revenue org mapping"
+          } ],
+          "requestId" : "a7376ab2-d332-4595-9459-e6d7f72d4e0b"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FAILED",
+        "error" : "Failed to fetch the SOURCE schema due to the reason --> [{\"code\":50000020,\"message\":\"Only Multi-Org tenant can access Multi-Org revenue org mapping\"}]",
+        "templateId" : "26d98a47-87da-48fc-bf41-13bc10304ac3"
+      }, {
+        "id" : "8a37aa76-d3e5-400a-93b7-2fcbaa4e3ae6",
+        "key" : "RevenueFieldsMapping(Billing)",
+        "segregationKey" : "RevenueFieldsMapping(Billing)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/custom-mappings?templateName=BILLING",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "26d98a47-87da-48fc-bf41-13bc10304ac3"
+      }, {
+        "id" : "df64a76e-3e66-4459-bbf4-754ddac83f9e",
+        "key" : "RevenueRecognitionPolicy(Revenue Recognition Timing)",
+        "segregationKey" : "RevenueRecognitionPolicy(Revenue Recognition Timing)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/pob-policies?category=revenue_recognition_timing",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "1",
+          "field" : "Upon Order Activation Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "2",
+          "field" : "Upon Billing Document Posting Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "26d98a47-87da-48fc-bf41-13bc10304ac3"
+      }, {
+        "id" : "d0dab0e5-7287-49c0-9c4c-4899b3508b66",
+        "key" : "InterfaceSettings",
+        "segregationKey" : "InterfaceSettings",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/pipeline",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "fadRevenueAccounting" : "GENERATE_IN_BILLING",
+          "dpDateDuration" : "ALIGN_WITH_APPLY_TO_CHARGE_DATE",
+          "useBillingExchangeRate" : true,
+          "dpAccountingCodes" : "ALIGN_WITH_APPLY_TO_CHARGE",
+          "pendingActivationBookingTnx" : "NO_GENERATE",
+          "oneTimeChargeForSubTermChange" : false
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "26d98a47-87da-48fc-bf41-13bc10304ac3"
+      } ],
+      "errors" : [ ]
+    } ],
+    "awsInfo" : null
+  }
+}
