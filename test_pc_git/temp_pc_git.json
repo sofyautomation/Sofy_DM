@@ -1,0 +1,51 @@
+{
+  "id" : "4a24f018-7819-49f9-9ce8-2440be9d6a5e",
+  "name" : "temp_pc_git",
+  "description" : "temp_pc_git",
+  "status" : "DONE",
+  "errors" : "-",
+  "active" : true,
+  "tenantName" : "Ava Guo Personal Test Tenant  (43437) (US-API-Sandbox)",
+  "entityName" : "Global",
+  "environment" : "US-API-Sandbox",
+  "createdBy" : "Rajeshwari Kapali",
+  "updatedBy" : "Rajeshwari Kapali",
+  "createdOn" : "2025-01-30T11:22:00.026Z",
+  "type" : "ProductCatalog",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : false,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ {
+      "segregationKeys" : [ ],
+      "originalPayload" : {
+        "Usage" : "",
+        "ProductRatePlan" : "",
+        "ProductRatePlanCharge" : "",
+        "Product" : ""
+      },
+      "response" : [ ],
+      "errors" : [ ]
+    } ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : {
+      "Bucket Name" : "dm-product-catalog-us-api-sandbox",
+      "Path" : "US-API-Sandbox/43437/Global/PC_Templates/temp_pc_git",
+      "Page Count" : 14
+    }
+  }
+}
