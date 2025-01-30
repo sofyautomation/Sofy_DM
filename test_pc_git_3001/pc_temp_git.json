@@ -1,0 +1,51 @@
+{
+  "id" : "b7670f1c-8cb6-4962-81f1-8e2295d0deff",
+  "name" : "pc_temp_git",
+  "description" : "pc_temp_git",
+  "status" : "DONE",
+  "errors" : "-",
+  "active" : true,
+  "tenantName" : "Ipaas4  (11519) (US-API-Sandbox-Staging)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox-Staging",
+  "createdBy" : "Aditya Ghosh",
+  "updatedBy" : "Aditya Ghosh",
+  "createdOn" : "2025-01-30T11:58:00.023Z",
+  "type" : "ProductCatalog",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : false,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ {
+      "segregationKeys" : [ ],
+      "originalPayload" : {
+        "Usage" : "",
+        "ProductRatePlan" : "",
+        "ProductRatePlanCharge" : "",
+        "Product" : ""
+      },
+      "response" : [ ],
+      "errors" : [ ]
+    } ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : {
+      "Bucket Name" : "dm-product-catalog-us-api-sandbox-staging",
+      "Path" : "US-API-Sandbox-Staging/11519/PC_Templates/pc_temp_git",
+      "Page Count" : 1
+    }
+  }
+}
