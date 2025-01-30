@@ -1,0 +1,1106 @@
+{
+  "id" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d",
+  "name" : "sanity_git",
+  "description" : "sanity_git",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Order QA  (2000097) (EU-API-Sandbox)",
+  "entityName" : null,
+  "environment" : "EU-API-Sandbox",
+  "createdBy" : "Raji K",
+  "updatedBy" : "Raji K",
+  "createdOn" : "2025-01-30T08:18:08.335Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ {
+      "segregationKeys" : [ "Administration", "ManageDataAccessControl", "Finance", "Billing", "ManageMultiEntity", "Payments" ],
+      "originalPayload" : null,
+      "response" : [ {
+        "id" : "56c83f11-9c39-4057-8329-c05e9851f498",
+        "key" : "AccountingPeriods",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "v1/accounting-periods",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "success" : false,
+          "processId" : "58F7E614233A8547",
+          "reasons" : [ {
+            "code" : 50000010,
+            "message" : "You do not have permission to perform this operation."
+          } ],
+          "requestId" : "72960c20-cea9-4201-ad1e-53d977091036"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "f6ccfb35-7bd9-4d72-8f7a-4a2d28e445b3",
+        "key" : "DocPrefix",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "v1/sequence-sets",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "sequenceSets" : [ {
+            "id" : "3aca1ee04b8111e9abb002a280e2dd93",
+            "name" : "DEFAULT",
+            "sequenceSetNumber" : "SEQSET-00000001",
+            "invoice" : {
+              "prefix" : "SB20INV-TEST",
+              "startNumber" : 6000
+            },
+            "creditMemo" : {
+              "prefix" : "SB20CM",
+              "startNumber" : 900
+            },
+            "debitMemo" : {
+              "prefix" : "SB20DM",
+              "startNumber" : 200
+            },
+            "payment" : {
+              "prefix" : "PAY",
+              "startNumber" : 1
+            }
+          } ],
+          "success" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "0998d5f5-118a-4644-9232-2b7eb422ccde",
+        "key" : "AccountingRules",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/accounting-rules",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "allowBlankAccountingCodes" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "45e0fcb0-f6ce-4607-a41a-1a8d3f49af94",
+        "key" : "AgingBuckets",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/aging-buckets",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FEATURE DISABLED",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "1ca824b2-3eb4-4d30-9429-501e79b6f8a5",
+        "key" : "BatchAliases",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/batch-aliases",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "aliases" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "885e11c7-c12b-42ed-95ec-f152c0ecef61",
+        "key" : "InsightsConnection",
+        "segregationKey" : "Administration",
+        "componentType" : "Settings",
+        "url" : "/insights-connections",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "domain" : "https://ec1-sbx.app.insights.zuora.com"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "761b55a6-7dfd-4b4f-b6a9-556568b59a27",
+        "key" : "BillingCycleType",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-cycle-types",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "billingCycleTypes" : [ "DefaultFromCustomer", "SpecificDayofMonth", "SubscriptionStartDay", "ChargeTriggerDay" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "4d625772-89e6-40a0-91ed-2e21f7565e9a",
+        "key" : "BillingListPriceBase",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-list-price-bases",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "listPriceBase" : [ "Per_Billing_Period" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "29aa416a-b463-4ed0-9e94-0fb0f9d85d6c",
+        "key" : "BillingPeriodStart",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-period-starts",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "billingPeriodStartDays" : [ "AutoSet", "1st", "2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th", "10th", "11th", "12th", "13th", "14th", "15th", "16th", "17th", "18th", "19th", "20th", "21st", "22nd", "23rd", "24th", "25th", "26th", "27th", "28th", "29th", "30th", "EndOfMonth" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "a4e2d98b-e326-42fc-913b-9f61d1c0ab3a",
+        "key" : "BillingPeriod",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-periods",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "billingPeriods" : [ "Month", "Quarter", "Annual", "Semi_Annual", "Specific_Weeks", "Week", "Eighteen_Months", "Three_Years", "Two_Years", "Specific_Months", "Five_Years", "Subscription_Term" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "bd82d055-a62d-4c3d-a8f1-96f56bd09c2b",
+        "key" : "ChartOfAccounts",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/chart-of-accounts",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : [ {
+          "id" : "8adc8f995e790616015e790dc16e0007",
+          "category" : "Assets",
+          "type" : "AccountsReceivable",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Accounts Receivable"
+        }, {
+          "id" : "8adc8f995e790616015e790dc18d0008",
+          "category" : "Assets",
+          "type" : "Cash",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Check"
+        }, {
+          "id" : "8adc8f995e790616015e790dc1aa0009",
+          "category" : "Assets",
+          "type" : "Cash",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Credit Card"
+        }, {
+          "id" : "8adc8f995e790616015e790dc1b6000a",
+          "category" : "Liabilities",
+          "type" : "CustomerCashOnAccount",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Customer Cash on Account"
+        }, {
+          "id" : "8adc8f995e790616015e790dc1c7000b",
+          "category" : "Liabilities",
+          "type" : "DeferredRevenue",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Deferred Revenue"
+        }, {
+          "id" : "8adc8f995e790616015e790dc23a0010",
+          "category" : "Revenue",
+          "type" : "SalesDiscounts",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Discounts"
+        }, {
+          "id" : "8adc8f995e790616015e790dc215000e",
+          "category" : "Revenue",
+          "type" : "SalesRevenue",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Professional Services Revenue"
+        }, {
+          "id" : "8adc8f995e790616015e790dc1e8000c",
+          "category" : "Liabilities",
+          "type" : "SalesTaxPayable",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Sales Tax Payable"
+        }, {
+          "id" : "8adc8f995e790616015e790dc206000d",
+          "category" : "Revenue",
+          "type" : "SalesRevenue",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Subscription Revenue"
+        }, {
+          "id" : "8adc8f995e790616015e790dc230000f",
+          "category" : "Revenue",
+          "type" : "SalesRevenue",
+          "status" : "Active",
+          "customFieldsValues" : { },
+          "name" : "Usage Revenue"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "c3d85f1f-71ec-406d-943a-6d82e9c438d2",
+        "key" : "Currency",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/currencies",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "currencies" : [ {
+            "currencyCode" : "USD",
+            "roundingMode" : "HalfUp",
+            "rate" : 0.0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true,
+            "default" : true
+          }, {
+            "currencyCode" : "EUR",
+            "roundingMode" : "HalfUp",
+            "rate" : 0.0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : true,
+            "default" : false
+          }, {
+            "currencyCode" : "GBP",
+            "roundingMode" : "HalfUp",
+            "rate" : 0.0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : false,
+            "default" : false
+          }, {
+            "currencyCode" : "JPY",
+            "roundingMode" : "HalfUp",
+            "rate" : 0.0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : false,
+            "default" : false
+          }, {
+            "currencyCode" : "CAD",
+            "roundingMode" : "HalfUp",
+            "rate" : 0.0,
+            "defaultIncrementForInclusiveTax" : false,
+            "incrementForInvoiceTotal" : false,
+            "active" : false,
+            "default" : false
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "600b53fc-9365-4a8d-9ffc-7c0bff9edef5",
+        "key" : "AllDiscountSettings",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/discount-settings",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "discounts" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "16da64f9-fab1-44e4-a9e2-5a9e26a71827",
+        "key" : "EntityProfileAttachment",
+        "segregationKey" : "Administration",
+        "componentType" : "Settings",
+        "url" : "/entity-profile-attachments",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "storageLimit" : "30.00 GB",
+          "availableStorage" : "30.00 GB",
+          "maxAttachments" : 200
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "7ad71f42-2419-4b99-8100-1bfe347de808",
+        "key" : "AllFinanceSegmentationRules",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/finance-segmentation-rules",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FEATURE DISABLED",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "64f4fd29-8792-4c3c-afab-40a5abcfa27d",
+        "key" : "GLSegments",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/gl-segments",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "segments" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "46769e00-8453-4b7a-b907-e18e4532d966",
+        "key" : "AllProductAttributes",
+        "segregationKey" : "ManageMultiEntity",
+        "componentType" : "Settings",
+        "url" : "/product-attributes",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FEATURE DISABLED",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "e14b3c75-fc6d-40b7-8d99-662eea595ebf",
+        "key" : "NumberAndSku",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/numbers-and-skus",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "billingAccountprefix" : "A",
+          "skuPrefix" : "SKU-",
+          "subscriptionNumberPrefix" : "A-S",
+          "chargeNumberPrefix" : "C-",
+          "amendmentNumberPrefix" : "A-AM",
+          "customerNumberPrefix" : "C",
+          "subscriptionRatePlanNumberPrefix" : "SRP-",
+          "productNumberPrefix" : "PC-",
+          "productRatePlanNumberPrefix" : "PRP-",
+          "productRatePlanChargeNumberPrefix" : "PRPC-",
+          "sequenceSetNumberPrefix" : "SEQSET-",
+          "invoiceTemplateNumberPrefix" : "INVTEMP-",
+          "creditMemoTemplateNumberPrefix" : "CMTEMP-",
+          "debitMemoTemplateNumberPrefix" : "DMTEMP-",
+          "eInvoiceServiceProviderNumberPrefix" : "EISP-",
+          "eInvoiceBusinessRegionNumberPrefix" : "EIBR-",
+          "eInvoiceTemplateNumberPrefix" : "EITEMP-"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "d73cdf80-a59b-458d-8180-d2d14a6d56cc",
+        "key" : "AllOutboundEntityConnections",
+        "segregationKey" : "ManageMultiEntity",
+        "componentType" : "Settings",
+        "url" : "/outbound-entity-connections",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "connections" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "9a9bdb1e-d343-4298-b2aa-c8c1fb665873",
+        "key" : "ChargeModels",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/charge-models",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "chargeModels" : [ "FlatFee", "PerUnit", "Overage", "Volume", "Tiered", "TieredWithOverage", "DiscountFixedAmount", "DiscountPercentage", "MultiAttributePricing" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "931c601d-9c28-426e-b990-0fd877ad5aae",
+        "key" : "ChargeType",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/charge-types",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "chargeTypes" : [ "OneTime", "Recurring", "Usage" ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "5afcbe75-eb8c-4273-820a-b3386799ab28",
+        "key" : "PaymentRetryRules",
+        "segregationKey" : "Payments",
+        "componentType" : "Settings",
+        "url" : "/payment-retry-rules",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FAILED",
+        "error" : "404 NOT_FOUND",
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "4ac57f15-ef9e-4b43-a0e7-a454ba1902d5",
+        "key" : "PaymentRules",
+        "segregationKey" : "Payments",
+        "componentType" : "Settings",
+        "url" : "/payment-rules",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "enableTransactionFutureDateFeature" : false,
+          "enableCreditCardDateValidation" : true,
+          "enableCBRefundInGR" : false,
+          "enableUnapplyWhenCancelPayment" : false,
+          "displayUnapplyWhenCancelPayment" : true,
+          "enableCustomPaymentNumber" : false
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "5ef54989-7209-424a-842f-1af83621912c",
+        "key" : "AllPaymentTerms",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/payment-terms",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : [ {
+          "id" : "8adc8482847af4ce01847eb435716739",
+          "name" : "Custom",
+          "isActive" : false,
+          "isDefault" : false,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 23
+        }, {
+          "id" : "8adc8f995e5f1556015e78e20e020f5e",
+          "name" : "Due Upon Receipt",
+          "isActive" : true,
+          "isDefault" : false,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 0
+        }, {
+          "id" : "8adc8f995e5f1556015e78e20e020f5f",
+          "name" : "Net 30",
+          "isActive" : true,
+          "isDefault" : true,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 30
+        }, {
+          "id" : "8adc8f995e5f1556015e78e20e020f60",
+          "name" : "Net 45",
+          "isActive" : false,
+          "isDefault" : false,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 45
+        }, {
+          "id" : "8adc8f995e5f1556015e78e20e020f61",
+          "name" : "Net 60",
+          "isActive" : false,
+          "isDefault" : false,
+          "type" : "NetPaymentTerm",
+          "intervalUnit" : "Day",
+          "intervalNumber" : 60
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "5dfdb345-0022-48af-b6d0-f581f9f7d0f9",
+        "key" : "AllReasonCodes",
+        "segregationKey" : "Payments",
+        "componentType" : "Settings",
+        "url" : "/reason-codes",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : [ {
+          "isActive" : true,
+          "reasonCodeName" : "Chargeback",
+          "reasonCodeTransactionType" : "RefundPayment",
+          "id" : "8adc8f995e5f1556015e78e20e3b0fc1",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Customer Satisfaction",
+          "reasonCodeTransactionType" : "RefundPayment",
+          "id" : "8adc8f995e5f1556015e78e20e3b0fc2",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Other",
+          "reasonCodeTransactionType" : "RefundPayment",
+          "id" : "8adc8f995e5f1556015e78e20e3c0fc3",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Payment Rejection",
+          "reasonCodeTransactionType" : "RefundPayment",
+          "id" : "8adc8f995e5f1556015e78e20e3c0fc4",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Payment Reversal",
+          "reasonCodeTransactionType" : "RefundPayment",
+          "id" : "8adc8f995e5f1556015e78e20e3c0fc5",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Standard Refund",
+          "reasonCodeTransactionType" : "RefundPayment",
+          "id" : "8adc8f995e5f1556015e78e20e3c0fc6",
+          "isDefault" : true
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Account Closure",
+          "reasonCodeTransactionType" : "RefundCreditBalance",
+          "id" : "8adc8f995e5f1556015e78e20e3c0fc7",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Customer Request",
+          "reasonCodeTransactionType" : "RefundCreditBalance",
+          "id" : "8adc8f995e5f1556015e78e20e3d0fc8",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Other",
+          "reasonCodeTransactionType" : "RefundCreditBalance",
+          "id" : "8adc8f995e5f1556015e78e20e3d0fc9",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Standard Refund",
+          "reasonCodeTransactionType" : "RefundCreditBalance",
+          "id" : "8adc8f995e5f1556015e78e20e3d0fca",
+          "isDefault" : true
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Ad hoc credit",
+          "reasonCodeTransactionType" : "CreditMemo",
+          "id" : "8adcdaf28795161c018798701951664b",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Charge Dispute",
+          "reasonCodeTransactionType" : "CreditMemo",
+          "id" : "8adcdaf28795161c0187987019446648",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Correcting invoice error",
+          "reasonCodeTransactionType" : "CreditMemo",
+          "id" : "8adcdaf28795161c01879870193e6647",
+          "isDefault" : true
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Invoice reversal",
+          "reasonCodeTransactionType" : "CreditMemo",
+          "id" : "8adcdaf28795161c01879870195d664e",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Negative periodic charges",
+          "reasonCodeTransactionType" : "CreditMemo",
+          "id" : "8adcdaf28795161c01879870194c664a",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Return Order",
+          "reasonCodeTransactionType" : "CreditMemo",
+          "id" : "8adcdaf28795161c018798701961664f",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Service unavailable",
+          "reasonCodeTransactionType" : "CreditMemo",
+          "id" : "8adcdaf28795161c018798701959664d",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Unsatisfactory service",
+          "reasonCodeTransactionType" : "CreditMemo",
+          "id" : "8adcdaf28795161c018798701955664c",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Write-off",
+          "reasonCodeTransactionType" : "CreditMemo",
+          "id" : "8adcdaf28795161c0187987019486649",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Ad hoc debit",
+          "reasonCodeTransactionType" : "DebitMemo",
+          "id" : "8adcc1d1879516080187987259c5421c",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Charge Dispute",
+          "reasonCodeTransactionType" : "DebitMemo",
+          "id" : "8adcc1d1879516080187987259c2421b",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Correcting invoice error",
+          "reasonCodeTransactionType" : "DebitMemo",
+          "id" : "8adcc1d1879516080187987259be421a",
+          "isDefault" : true
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Credit memo reversal",
+          "reasonCodeTransactionType" : "DebitMemo",
+          "id" : "8adcc1d1879516080187987259c8421d",
+          "isDefault" : false
+        }, {
+          "isActive" : true,
+          "reasonCodeName" : "Write-off",
+          "reasonCodeTransactionType" : "DebitMemo",
+          "id" : "8adcc1d1879516080187987259cb421e",
+          "isDefault" : false
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "d014912a-2c54-4a75-9a71-9673053d3b18",
+        "key" : "AllRevenueEventTypes",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/revenue-event-types",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FEATURE DISABLED",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "6932604c-6840-463f-a343-f008ff2ab809",
+        "key" : "RevenueRecognitionCodeStatus",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/revenue-recognition-code-status",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "enabled" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "d8c40c6b-160c-4c40-bce5-90cdba1f3777",
+        "key" : "AllRevenueRecognitionCodes",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/revenue-recognition-codes",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "enabled" : true,
+          "codes" : [ {
+            "active" : true,
+            "id" : "8adc8f996ec96caa016ecfbd799a060c",
+            "code" : "zcx"
+          }, {
+            "active" : true,
+            "id" : "8adcd9eb6ec97e1b016ecfbd60b105de",
+            "code" : "asd"
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "0081f639-afeb-4f21-a78e-d9c8dc53247b",
+        "key" : "AllRevenueRecognitionModels",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/revenue-recognition-models",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FEATURE DISABLED",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "21065d58-5370-4da9-9cd8-1c69d9b815f1",
+        "key" : "AllRevenueRecognitionRules",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/revenue-recognition-rules",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FEATURE DISABLED",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "e3a4fee2-4a3c-46d1-bca0-db2782373d7c",
+        "key" : "RevenueStartDate",
+        "segregationKey" : "Finance",
+        "componentType" : "Settings",
+        "url" : "/revenue-start-date",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FEATURE DISABLED",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "a378acef-2d3f-4352-b617-2461202af642",
+        "key" : "SubscriptionSettings",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/subscription-settings",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "termType" : "TERMED",
+          "initialTerm" : 50,
+          "renewalTerm" : 0,
+          "invoicePastEndOfTerm" : false,
+          "contractRenewal" : false,
+          "acceptanceOfOrders" : true,
+          "implementationPeriod" : true,
+          "subscriptionsInvoicedSeparately" : false,
+          "increasePriceRenewSubscription" : false,
+          "productFeatureOfSubscription" : false,
+          "renewNoChargeSubscription" : true,
+          "priceChangeOption" : "NoChange",
+          "priceIncreasePercentage" : 0.0,
+          "autoRenewJobRunTimeType" : "SystemDefault",
+          "updateChargeTriggerCondition" : false,
+          "orderMetricsTaxationOption" : "YES",
+          "updateSubscriptionActivationDate" : false,
+          "enableAccountLevelDiscount" : false,
+          "skipOwnerTransferValidationForDeletionAccount" : false,
+          "enableOrderUI" : false,
+          "autoRenewByOrder" : true,
+          "enableOrderCpq" : true,
+          "skipAmendmentGenerationBySubscribe" : false
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "18bd2dfa-fa7d-4873-a1ce-bfbebc1b514d",
+        "key" : "AllUnitsOfMeasure",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/units-of-measure",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "unitsOfMeasure" : [ {
+            "name" : "Each",
+            "displayAs" : "Each",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Each",
+            "id" : "8adc8f995e5f1556015e78e20d130f05"
+          }, {
+            "name" : "License",
+            "displayAs" : "License",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "License",
+            "id" : "8adc8f995e5f1556015e78e20d160f06"
+          }, {
+            "name" : "Seat",
+            "displayAs" : "Seat",
+            "precision" : 0,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "Seat",
+            "id" : "8adc8f995e5f1556015e78e20d190f07"
+          }, {
+            "name" : "uom",
+            "displayAs" : "uom111",
+            "precision" : 2,
+            "roundingMode" : "Up",
+            "active" : true,
+            "usageLogFileLabel" : "uom",
+            "id" : "8adce42164ea73730164f4624cc64886"
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "9ecd6291-579b-4201-96d6-0b3ba3931dfc",
+        "key" : "AuditTrailSettings",
+        "segregationKey" : "Administration",
+        "componentType" : "Settings",
+        "url" : "/audit-trail-settings",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FAILED",
+        "error" : "502 BAD_GATEWAY",
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "e12322cd-ccd9-4d36-8556-72b7fee83ced",
+        "key" : "ApplicationRules",
+        "segregationKey" : "Payments",
+        "componentType" : "Settings",
+        "url" : "/application-rules",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "applyItemAllocationRule" : "ApplyProrationRule",
+          "unapplyItemAllocationRule" : "UnapplyFirstInFirstOut"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "4daca262-3b86-47a1-a6a0-bd97ad37d2b5",
+        "key" : "BillingRules",
+        "segregationKey" : "Billing",
+        "componentType" : "Settings",
+        "url" : "/billing-rules",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "oneTimeCreditBack" : false,
+          "prorateRecurringWeeklyCharges" : true,
+          "prorateRecurringMonthlyCharges" : true,
+          "prorateUsageMonthlyCharges" : true,
+          "prorateUsageWeeklyCharges" : true,
+          "daysInMonth" : "UseActualDays",
+          "prorationUnit" : "ProrateByDay",
+          "allowAutoPostBillRun" : false,
+          "autoPostBillRunDefaultValue" : false,
+          "includeNegativeInvoice" : false,
+          "includeChildUsage" : false,
+          "transactionOnSubscription" : false,
+          "takeContactSnapshot" : false,
+          "legalDocumentGeneratingRule" : "GroupbyChargedAmountSign",
+          "recurringChargeStyle" : "Advanced",
+          "preGenerateInvoicePdf" : true,
+          "timeOfDailyInvoice" : 0,
+          "numberAssignmentTiming" : "Generating",
+          "availableToCreditValidationLevel" : "HeaderLevel",
+          "creditMemoMirroringInvoiceItemsRule" : "Yes",
+          "invoicePastEndOfTerm" : false,
+          "billToTermEndWhenAutoRenew" : false,
+          "invoicePastTermEndWhenChargeEndDateOnOrBeforeTermEndDate" : "BillFullWhenChargeEndDateOnOrBeforeTermEndDate",
+          "zuoraTaxRoundingDiffDispersion" : false,
+          "invoiceSplit" : false,
+          "sequentialInvoiceNumber" : false,
+          "consolidateInvoices" : true,
+          "discountCreditProration" : false,
+          "useSystemDefaultSuffixForCreditItems" : true,
+          "customerHierarchy" : false,
+          "catchUpBillRun" : false,
+          "autoRenewalBillRun" : true,
+          "recurringCreditProrationOption" : "BasedOnCreditPeriod",
+          "copyBillingAttributesFromAccount" : true,
+          "copyBillingAttributesFromAccountForStandaloneInvoice" : false,
+          "availableToCreditIncludingRbeCreditMemo" : true,
+          "writeOffAllocationRule" : "PRORATION",
+          "stackedDiscountClassApplyRule" : "IgnoreDiscountClass",
+          "zuoraNumberFormatForMergeField" : false
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "cbad1131-0b51-49ea-837d-c5ddb6cc24cb",
+        "key" : "DataAccessControl",
+        "segregationKey" : "ManageDataAccessControl",
+        "componentType" : "Settings",
+        "url" : "/data-access-controls",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : { },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FEATURE DISABLED",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      }, {
+        "id" : "7648c68e-1cd3-42a9-aad0-e8f1e13c8100",
+        "key" : "AllHostedPaymentMethodPages",
+        "segregationKey" : "Payments",
+        "componentType" : "Settings",
+        "url" : "/hosted-payment-method-pages",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : [ ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "3e2a0d61-02ef-48f1-a1c2-a2e4f445407d"
+      } ],
+      "errors" : [ ]
+    } ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : null
+  }
+}
