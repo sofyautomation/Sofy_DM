@@ -2,7 +2,7 @@
   "id" : "943c8c17-1f24-40f7-a15b-3fe8aae946b0",
   "name" : "CA 31 test",
   "description" : "",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Ava Guo Personal Test Tenant  (43437) (US-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Dhamodaran S",
   "updatedBy" : "Dhamodaran S",
-  "createdOn" : "2025-01-31T07:52:49.642Z",
+  "createdOn" : "2025-01-31T07:55:23.366Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "959384a1-fd01-4bb5-be25-cb6fa3d49d46",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "New_31_CA",
+    "commitMessage" : "New_31_CA",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "c91d0c1203a7dda30676b3a798899fb82c525681"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -119,7 +129,7 @@
             "CreatedById" : "2c92c0f9795f3990017968bf598d34db",
             "UpdatedById" : "ed3940040ec64fcb98b67508276d1763",
             "CreatedDate" : "2022-10-20T07:23:24.830Z",
-            "UpdatedDate" : "2025-01-31T07:29:54.260Z",
+            "UpdatedDate" : "2025-01-31T07:54:59.031Z",
             "schema" : {
               "object" : "Test1",
               "label" : "Test1",
@@ -149,6 +159,14 @@
                   "label" : "Field 3",
                   "origin" : "custom",
                   "type" : "string"
+                },
+                "Field24__c" : {
+                  "maxLength" : 40,
+                  "displayName" : false,
+                  "label" : "Field 24",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "31"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -1287,7 +1305,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "ad6886d7-563e-4996-84ff-0cc6171f2b59",
+        "id" : "a50bb450-7cf7-4558-83d2-96fea25678d9",
         "key" : "Test1",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -1306,6 +1324,18 @@
             "origin" : "custom",
             "description" : " ",
             "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Field24__c",
+            "maxLength" : 40,
+            "displayName" : false,
+            "field_name" : "Field 24",
+            "origin" : "custom",
+            "type" : "string",
+            "default" : "31",
             "filterable" : false,
             "required" : false,
             "auditable" : false,
