@@ -2,7 +2,7 @@
   "id" : "0e7ee043-20ad-4fe8-a9e4-3335d93384da",
   "name" : "CA bug fix 31",
   "description" : "CA bug fix",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Ava Guo Personal Test Tenant  (43437) (US-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox",
   "createdBy" : "Dhamodaran S",
   "updatedBy" : "Dhamodaran S",
-  "createdOn" : "2025-01-31T12:59:14.542Z",
+  "createdOn" : "2025-01-31T13:01:38.013Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "68dc1f1b-61eb-47d3-a026-99989a4a4f42",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "Bug_Fix",
+    "commitMessage" : "Bug_Fix",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "d976cc492e28f817151b4f718d92b2e2cf285573"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -221,9 +231,9 @@
             "Id" : "d64e9d07-f998-404c-9f70-4e672faabe17",
             "type" : "bigtest",
             "CreatedById" : "2c92c0f9795f3990017968bf598d34db",
-            "UpdatedById" : "2c92c0f9795f3990017968bf598d34db",
+            "UpdatedById" : "ed3940040ec64fcb98b67508276d1763",
             "CreatedDate" : "2022-12-07T08:25:39.770Z",
-            "UpdatedDate" : "2023-10-08T19:34:41.525Z",
+            "UpdatedDate" : "2025-01-31T13:01:23.670Z",
             "schema" : {
               "object" : "bigtest",
               "label" : "bigtest",
@@ -246,6 +256,14 @@
                   "origin" : "custom",
                   "description" : "ttttt",
                   "type" : "string"
+                },
+                "New__c" : {
+                  "maxLength" : 40,
+                  "displayName" : false,
+                  "label" : "New",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "25"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -1385,7 +1403,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "4bdb3e86-597d-4914-8835-71299c8f9aaa",
+        "id" : "5bd78b93-ebd7-449f-b914-d0b51ef0e33d",
         "key" : "bigtest",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -1398,6 +1416,18 @@
           "description" : "",
           "enableRecordMigration" : null,
           "customFields" : [ {
+            "api_name" : "New__c",
+            "maxLength" : 40,
+            "displayName" : false,
+            "field_name" : "New",
+            "origin" : "custom",
+            "type" : "string",
+            "default" : "25",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
             "api_name" : "ff__c",
             "maxLength" : 2,
             "field_name" : "ff",
