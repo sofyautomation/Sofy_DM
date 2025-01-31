@@ -1,0 +1,1110 @@
+{
+  "id" : "3db64696-28cd-4073-a8d3-8f0b6107afe9",
+  "name" : "test_na_sync_co",
+  "description" : "test_na_sync_co",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "ZSuite  (5000004) (NA-API-Sandbox)",
+  "entityName" : null,
+  "environment" : "NA-API-Sandbox",
+  "createdBy" : "Vidya BS",
+  "updatedBy" : "Vidya BS",
+  "createdOn" : "2025-01-31T07:15:55.516Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ {
+      "segregationKeys" : [ "Available Custom Objects" ],
+      "originalPayload" : {
+        "definitions" : {
+          "Beijing" : {
+            "Id" : "7a8f5478-81b6-4254-97cb-b8f6405ab1d0",
+            "type" : "Beijing",
+            "CreatedById" : "8ac698ea75e0306a0175e20b068315c6",
+            "UpdatedById" : "8ac698ea75e0306a0175e20b068315c6",
+            "CreatedDate" : "2023-09-28T08:58:52.687Z",
+            "UpdatedDate" : "2023-09-28T08:58:52.687Z",
+            "schema" : {
+              "object" : "Beijing",
+              "label" : "Beijing",
+              "title" : "Beijing",
+              "type" : "object",
+              "description" : "Beijing org",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "account__c" : {
+                  "format" : "uuid",
+                  "label" : "account",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Name__c" : {
+                  "maxLength" : 1024,
+                  "format" : "long-text",
+                  "label" : "Name",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "account__c", "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "account__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "Beijing2" : {
+            "Id" : "3c122bb2-2bfd-44c8-9755-1c87d311df4d",
+            "type" : "Beijing2",
+            "CreatedById" : "8ac698ea75e0306a0175e20b068315c6",
+            "UpdatedById" : "8ac698ea75e0306a0175e20b068315c6",
+            "CreatedDate" : "2023-09-28T08:58:52.675Z",
+            "UpdatedDate" : "2023-09-28T08:58:52.675Z",
+            "schema" : {
+              "object" : "Beijing2",
+              "label" : "Beijing 2",
+              "title" : "Beijing 2",
+              "type" : "object",
+              "description" : "BJ org 2",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "Name__c" : {
+                  "maxLength" : 1024,
+                  "format" : "long-text",
+                  "label" : "Name",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "servicerecord" : {
+            "Id" : "768bb09d-8a28-4d5f-9237-6ea453e37c2f",
+            "type" : "servicerecord",
+            "CreatedById" : "8ac68bab6952122b01695615271d70e1",
+            "UpdatedById" : "8ac68bab6952122b01695615271d70e1",
+            "CreatedDate" : "2023-09-08T08:58:38.635Z",
+            "UpdatedDate" : "2023-09-08T08:58:38.635Z",
+            "schema" : {
+              "object" : "servicerecord",
+              "label" : "Service Record",
+              "title" : "Service Record 2",
+              "type" : "object",
+              "description" : "",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "Vehicle__c" : {
+                  "format" : "uuid",
+                  "label" : "Vehicle",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "TrackingId__c" : {
+                  "maxLength" : 45,
+                  "label" : "Tracking Number",
+                  "origin" : "custom",
+                  "description" : "Tracking Number provided by shipping vendor",
+                  "type" : "string"
+                },
+                "Mileage__c" : {
+                  "label" : "Mileage",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "number"
+                },
+                "ServiceDate__c" : {
+                  "format" : "date",
+                  "label" : "Service Date",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "booleanWithDefault__c" : {
+                  "label" : "booleanWithDefault",
+                  "origin" : "custom",
+                  "type" : "boolean",
+                  "default" : true
+                },
+                "multi__c" : {
+                  "maxLength" : 32,
+                  "multiselect" : true,
+                  "label" : "multi",
+                  "origin" : "custom",
+                  "description" : "test",
+                  "type" : "string",
+                  "enum" : [ "aa", "bb", "cc" ]
+                },
+                "datatime__c" : {
+                  "format" : "date-time",
+                  "label" : "datatime",
+                  "origin" : "custom",
+                  "description" : "test",
+                  "type" : "string"
+                },
+                "rel__c" : {
+                  "format" : "uuid",
+                  "label" : "rel",
+                  "origin" : "custom",
+                  "description" : "testing",
+                  "type" : "string"
+                },
+                "Technician__c" : {
+                  "maxLength" : 512,
+                  "format" : "long-text",
+                  "label" : "Technician",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "ServiceType__c" : {
+                  "maxLength" : 255,
+                  "label" : "Service Type",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string",
+                  "enum" : [ "Oil Change", "Brakes", "Battery", "Tire Rotation", "Wheel Alignment" ]
+                },
+                "TrackingId12__c" : {
+                  "maxLength" : 4096,
+                  "format" : "long-text",
+                  "label" : "Tracking Number 1",
+                  "origin" : "custom",
+                  "description" : "Tracking Number provided by shipping vendor 1",
+                  "type" : "string"
+                },
+                "Location__c" : {
+                  "maxLength" : 512,
+                  "format" : "long-text",
+                  "label" : "Location",
+                  "origin" : "custom",
+                  "description" : " ",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "rel__c", "Vehicle__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : true
+            }
+          },
+          "QueryTest" : {
+            "Id" : "bfb5c0a8-aa2d-48b2-805e-ead859a05894",
+            "type" : "QueryTest",
+            "CreatedById" : "8ac68bab6952122b01695615271d70e1",
+            "UpdatedById" : "8ac68bab6952122b01695615271d70e1",
+            "CreatedDate" : "2023-09-08T08:58:38.634Z",
+            "UpdatedDate" : "2023-09-08T08:58:38.634Z",
+            "schema" : {
+              "object" : "QueryTest",
+              "label" : "QueryTest",
+              "title" : "QueryTest",
+              "type" : "object",
+              "description" : "test",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "field1__c" : {
+                  "maxLength" : 12,
+                  "label" : "field1",
+                  "origin" : "custom",
+                  "description" : "test",
+                  "type" : "string"
+                },
+                "field2__c" : {
+                  "maxLength" : 12,
+                  "label" : "field2",
+                  "origin" : "custom",
+                  "description" : "test",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "field1__c", "field2__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "Vehicle_Original" : {
+            "Id" : "7d5b68cd-c5a0-4600-a0e6-2129e9c139cb",
+            "type" : "Vehicle_Original",
+            "CreatedById" : "8ac68bab6952122b01695615271d70e1",
+            "UpdatedById" : "8ac68bab6952122b01695615271d70e1",
+            "CreatedDate" : "2023-09-08T08:58:38.634Z",
+            "UpdatedDate" : "2023-09-08T08:58:38.634Z",
+            "schema" : {
+              "object" : "Vehicle_Original",
+              "label" : "Vehicle",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "Make__c" : {
+                  "maxLength" : 255,
+                  "label" : "Make",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "Model__c" : {
+                  "maxLength" : 512,
+                  "format" : "long-text",
+                  "label" : "Model",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Make__c", "Model__c", "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Make__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "test_na" : {
+            "Id" : "9f160115-6d12-41a9-a47f-07f661025db4",
+            "type" : "test_na",
+            "CreatedById" : "0609d430bce84ec4a6622eed4c3259dd",
+            "UpdatedById" : "0609d430bce84ec4a6622eed4c3259dd",
+            "CreatedDate" : "2025-01-31T07:13:13.901Z",
+            "UpdatedDate" : "2025-01-31T07:13:13.901Z",
+            "schema" : {
+              "object" : "test_na",
+              "label" : "test_na",
+              "title" : "test_na",
+              "type" : "object",
+              "description" : "test_na",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "test__c" : {
+                  "maxLength" : 10,
+                  "label" : "test",
+                  "origin" : "custom",
+                  "description" : "test",
+                  "type" : "string",
+                  "default" : "15"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "Custom_Object_2" : {
+            "Id" : "7fe42126-ed0b-4f7d-84bf-729f25ee121e",
+            "type" : "Custom_Object_2",
+            "CreatedById" : "8ac68bab6952122b01695615271d70e1",
+            "UpdatedById" : "8ac68bab6952122b01695615271d70e1",
+            "CreatedDate" : "2023-09-08T08:58:38.642Z",
+            "UpdatedDate" : "2023-09-08T08:58:38.642Z",
+            "schema" : {
+              "object" : "Custom_Object_2",
+              "label" : "Custom_Object_2",
+              "title" : "Custom_Object_2",
+              "type" : "object",
+              "description" : "This is Custom_Object_1",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "RelatedCustom_Object_1__c" : {
+                  "format" : "uuid",
+                  "label" : "Related Custom_Object_1",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "RelatedSubscription__c" : {
+                  "format" : "uuid",
+                  "label" : "Related Subscription",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "RelatedSubscription__c", "RelatedCustom_Object_1__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "Custom_Object_1" : {
+            "Id" : "84e8af73-0625-4970-af33-8b058abd8fd8",
+            "type" : "Custom_Object_1",
+            "CreatedById" : "8ac68bab6952122b01695615271d70e1",
+            "UpdatedById" : "8ac68bab6952122b01695615271d70e1",
+            "CreatedDate" : "2023-09-08T08:58:38.642Z",
+            "UpdatedDate" : "2023-09-08T08:58:38.642Z",
+            "schema" : {
+              "object" : "Custom_Object_1",
+              "label" : "Custom_Object_1",
+              "title" : "Custom_Object_1",
+              "type" : "object",
+              "description" : "This is Custom_Object_1",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "RelatedCustomer__c" : {
+                  "format" : "uuid",
+                  "label" : "Related Customer",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "RelatedInvoice__c" : {
+                  "format" : "uuid",
+                  "label" : "Related Invoice",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "RelatedCustomer__c", "RelatedInvoice__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "JSObject" : {
+            "Id" : "aa7b8ae6-dbc0-4b30-8538-3f25dec91ec8",
+            "type" : "JSObject",
+            "CreatedById" : "8ac68bab6952122b01695615271d70e1",
+            "UpdatedById" : "8ac68bab6952122b01695615271d70e1",
+            "CreatedDate" : "2023-09-08T08:58:38.664Z",
+            "UpdatedDate" : "2023-09-08T08:58:38.664Z",
+            "schema" : {
+              "object" : "JSObject",
+              "label" : "JSObject",
+              "title" : "JSObject",
+              "type" : "object",
+              "description" : "",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "javascript__c" : {
+                  "maxLength" : 8192,
+                  "format" : "long-text",
+                  "label" : "javascript",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "testing123" : {
+            "Id" : "6d5d0922-5b4d-4346-b778-6148292beef2",
+            "type" : "testing123",
+            "CreatedById" : "8ac68bab6952122b01695615271d70e1",
+            "UpdatedById" : "0609d430bce84ec4a6622eed4c3259dd",
+            "CreatedDate" : "2023-09-08T08:58:38.640Z",
+            "UpdatedDate" : "2025-01-15T08:11:10.578Z",
+            "schema" : {
+              "object" : "testing123",
+              "label" : "testing123",
+              "type" : "object",
+              "description" : "testing123",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "testing123__c" : {
+                  "maxLength" : 512,
+                  "format" : "long-text",
+                  "label" : "testing123",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "test456__c" : {
+                  "maxLength" : 150,
+                  "displayName" : false,
+                  "label" : "test 456",
+                  "origin" : "custom",
+                  "description" : "test 456",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "TestToyota" : {
+            "Id" : "04d55c62-7fcf-4693-bfde-3b9256b7f6ec",
+            "type" : "TestToyota",
+            "CreatedById" : "8ac68bab6952122b01695615271d70e1",
+            "UpdatedById" : "8ac68bab6952122b01695615271d70e1",
+            "CreatedDate" : "2023-09-08T08:58:38.638Z",
+            "UpdatedDate" : "2023-09-08T08:58:38.638Z",
+            "schema" : {
+              "object" : "TestToyota",
+              "label" : "TestToyota",
+              "type" : "object",
+              "description" : " ",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "toyota__c" : {
+                  "maxLength" : 10,
+                  "label" : "toyota",
+                  "origin" : "custom",
+                  "description" : "test",
+                  "type" : "string",
+                  "default" : "test"
+                },
+                "toyotaRel__c" : {
+                  "format" : "uuid",
+                  "label" : "toyotaRel",
+                  "origin" : "custom",
+                  "description" : "test",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "toyotaRel__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          }
+        },
+        "count" : 11,
+        "CustomObjectRecords" : { }
+      },
+      "response" : [ {
+        "id" : "587cbc5e-27f0-4964-9b6f-f659bb0338c7",
+        "key" : "test_na",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/test_na",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "test_na",
+          "api_name" : "test_na",
+          "description" : "test_na",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "test__c",
+            "maxLength" : 10,
+            "field_name" : "test",
+            "origin" : "custom",
+            "description" : "test",
+            "type" : "string",
+            "default" : "15",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "3db64696-28cd-4073-a8d3-8f0b6107afe9"
+      } ],
+      "errors" : [ ]
+    } ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : null
+  }
+}
