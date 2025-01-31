@@ -1,0 +1,187 @@
+{
+  "id" : "153abbcd-de78-4ba6-96c2-4a72289014c3",
+  "name" : "Revenue Recognition git 2",
+  "description" : "",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Kate NetSuite  (20000005) (EU-Central-Sandbox)",
+  "entityName" : "Global",
+  "environment" : "EU-Central-Sandbox",
+  "createdBy" : "Vidya BS",
+  "updatedBy" : "Vidya BS",
+  "createdOn" : "2025-01-31T12:30:40.984Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ {
+      "segregationKeys" : [ "RevenueRecognitionPolicy(Revenue Recognition Timing)", "RevenueRecognitionPolicy(Revenue Amortization Method)" ],
+      "originalPayload" : null,
+      "response" : [ {
+        "id" : "33a604f9-d765-4aa4-bdce-83df71aea36d",
+        "key" : "RevenueRecognitionPolicy(Revenue Recognition Timing)",
+        "segregationKey" : "RevenueRecognitionPolicy(Revenue Recognition Timing)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/pob-policies?category=revenue_recognition_timing",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "8acce34894b68fc10194bc56705f1c39",
+          "field" : "Revenue_timing repo",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8acce17e94b67d620194bc558c8e4a52",
+          "field" : "Revenue_timing Git",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8acce13594b67d620194bc2b4b3817d6",
+          "field" : "Recognition Document ",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8acce17e94b67d620194bc2a73644701",
+          "field" : "Reconginition test",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8acce17e94b67d620194bc2a73644702",
+          "field" : "test_new_git",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8acce2ad94b68fc10194bc2a736b53d2",
+          "field" : "Reconginition_time",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8acce2f294b68fb70194bc2a733875b2",
+          "field" : "test_eu",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8acce2f294b68fb70194bc2a739c75b4",
+          "field" : "rec_gitnew",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8acce27194b68fbc0194bbc913ec0f9c",
+          "field" : "Test New Timing",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8acce2f294b68fb70194bbc616656ca4",
+          "field" : "TEST Rec Timing",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "1",
+          "field" : "Upon Order Activation Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "2",
+          "field" : "Upon Billing Document Posting Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "153abbcd-de78-4ba6-96c2-4a72289014c3"
+      }, {
+        "id" : "c31cfa74-609e-4839-aa38-45159bf3ee41",
+        "key" : "RevenueRecognitionPolicy(Revenue Amortization Method)",
+        "segregationKey" : "RevenueRecognitionPolicy(Revenue Amortization Method)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/pob-policies?category=revenue_amortization_method",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "8acce34894b68fc10194bc569aed1c3a",
+          "field" : "Amortization repo",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8acce2f294b68fb70194bc558c94787c",
+          "field" : "Amortization test Git",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8acce27194b68fbc0194bc2b87f71299",
+          "field" : "Amortization Document",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8acce1d594b67d5a0194bc2a73674df7",
+          "field" : "Amortization test",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8acce1d594b67d5a0194bc2a73674df8",
+          "field" : "test new git",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8acce2ad94b68fc10194bc2a736d53d3",
+          "field" : "Amortization_test",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8acce2ad94b68fc10194bc2a736e53d4",
+          "field" : "amor_gitnew",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8acce2f294b68fb70194bc2a733e75b3",
+          "field" : "test_eu",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8acce27194b68fbc0194bbd74f140fd5",
+          "field" : "TEST New Amortization",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "3",
+          "field" : "Ratable Using Start And End Dates",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "4",
+          "field" : "Immediate",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "153abbcd-de78-4ba6-96c2-4a72289014c3"
+      } ],
+      "errors" : [ ]
+    } ],
+    "awsInfo" : null
+  }
+}
