@@ -2,7 +2,7 @@
   "id" : "d6ab4922-11fb-48a1-829a-5114b7ed5394",
   "name" : "Test Custom objects 31",
   "description" : "test Custom objects 31",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Kate NetSuite  (20000005) (EU-Central-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "EU-Central-Sandbox",
   "createdBy" : "Vidya BS",
   "updatedBy" : "Vidya BS",
-  "createdOn" : "2025-01-31T08:05:27.158Z",
+  "createdOn" : "2025-01-31T08:08:48.377Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "43d1926b-2bdf-4612-9425-a06a7abb2605",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "Central_CO",
+    "commitMessage" : "Central_CO",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "2360e696a66a8d655c4ced45029f35bedf80c992"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -945,14 +955,14 @@
             "Id" : "59dcf6ce-4a90-4cde-9597-f2563a9656a4",
             "type" : "check",
             "CreatedById" : "8acce26f748a7ee2017493bea57d09a8",
-            "UpdatedById" : "8acce26f748a7ee2017493bea57d09a8",
+            "UpdatedById" : "cda931a0d1ec4ea0b5d06954f802e783",
             "CreatedDate" : "2022-07-13T12:03:01.324Z",
-            "UpdatedDate" : "2022-07-13T12:03:01.324Z",
+            "UpdatedDate" : "2025-01-31T08:08:34.871Z",
             "schema" : {
               "object" : "check",
               "label" : "check",
               "type" : "object",
-              "description" : " ",
+              "description" : "",
               "enableCreateRecordAuditing" : false,
               "enableDeleteRecordAuditing" : false,
               "properties" : {
@@ -963,6 +973,14 @@
                   "origin" : "custom",
                   "description" : " ",
                   "type" : "string"
+                },
+                "Checknew1__c" : {
+                  "maxLength" : 40,
+                  "displayName" : false,
+                  "label" : "Check new 1",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "30"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -1028,7 +1046,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "2ef1ba00-912b-4d20-96e7-33effb778779",
+        "id" : "99bc37a7-601a-47ce-861a-d97b1fdd0b2b",
         "key" : "check",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -1038,9 +1056,21 @@
         "payload" : {
           "label" : "check",
           "api_name" : "check",
-          "description" : " ",
+          "description" : "",
           "enableRecordMigration" : null,
           "customFields" : [ {
+            "api_name" : "Checknew1__c",
+            "maxLength" : 40,
+            "displayName" : false,
+            "field_name" : "Check new 1",
+            "origin" : "custom",
+            "type" : "string",
+            "default" : "30",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
             "api_name" : "check__c",
             "maxLength" : 512,
             "format" : "long-text",
