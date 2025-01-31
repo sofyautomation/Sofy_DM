@@ -2,7 +2,7 @@
   "id" : "23e87584-d93a-4c2b-8012-54d791348eac",
   "name" : "Fix test CA",
   "description" : "",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Kate NetSuite  (20000005) (EU-Central-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "EU-Central-Sandbox",
   "createdBy" : "Vidya BS",
   "updatedBy" : "Vidya BS",
-  "createdOn" : "2025-01-31T13:08:36.005Z",
+  "createdOn" : "2025-01-31T13:10:41.169Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "c732da08-598e-44f9-86ae-5853c01c4f06",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "Bug_Fix",
+    "commitMessage" : "Bug_Fix",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "cea728f524eedf46e462bab3947d1873e144a224"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -353,12 +363,13 @@
             "CreatedById" : "cda931a0d1ec4ea0b5d06954f802e783",
             "UpdatedById" : "cda931a0d1ec4ea0b5d06954f802e783",
             "CreatedDate" : "2025-01-31T13:07:19.844Z",
-            "UpdatedDate" : "2025-01-31T13:07:19.844Z",
+            "UpdatedDate" : "2025-01-31T13:10:25.943Z",
             "schema" : {
               "object" : "Fix_Test",
               "label" : "Fix_Test",
               "title" : "Fix_Test",
               "type" : "object",
+              "description" : "",
               "enableCreateRecordAuditing" : false,
               "enableDeleteRecordAuditing" : false,
               "properties" : {
@@ -368,6 +379,14 @@
                   "origin" : "custom",
                   "type" : "string",
                   "default" : "30"
+                },
+                "Second__c" : {
+                  "maxLength" : 41,
+                  "displayName" : false,
+                  "label" : "Second",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "31"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -1214,7 +1233,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "b5aba649-6281-487e-95c2-e2fef500ec27",
+        "id" : "8dc7ffff-97ef-4a19-bc9b-042f29901c8a",
         "key" : "Fix_Test",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -1224,7 +1243,7 @@
         "payload" : {
           "label" : "Fix_Test",
           "api_name" : "Fix_Test",
-          "description" : null,
+          "description" : "",
           "enableRecordMigration" : null,
           "customFields" : [ {
             "api_name" : "First__c",
@@ -1233,6 +1252,18 @@
             "origin" : "custom",
             "type" : "string",
             "default" : "30",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Second__c",
+            "maxLength" : 41,
+            "displayName" : false,
+            "field_name" : "Second",
+            "origin" : "custom",
+            "type" : "string",
+            "default" : "31",
             "filterable" : false,
             "required" : false,
             "auditable" : false,
