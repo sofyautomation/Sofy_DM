@@ -2,7 +2,7 @@
   "id" : "c48a997b-46a0-466a-8efd-a56503b7e35e",
   "name" : "test_co_eu_3101",
   "description" : "test_co_eu_3101",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Order QA  (2000097) (EU-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "EU-API-Sandbox",
   "createdBy" : "Raji K",
   "updatedBy" : "Raji K",
-  "createdOn" : "2025-01-31T06:58:58.243Z",
+  "createdOn" : "2025-01-31T07:01:56.920Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "7913760c-5098-48be-b4e5-ec8f998232d0",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "test_eu_co",
+    "commitMessage" : "test_eu_co",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "705876c24e324127aeccc8ceb241283310b33fce"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -184,7 +194,7 @@
             "CreatedById" : "7961c43a381f4238b032562bb0eb3f01",
             "UpdatedById" : "7961c43a381f4238b032562bb0eb3f01",
             "CreatedDate" : "2025-01-31T06:57:16.697Z",
-            "UpdatedDate" : "2025-01-31T06:57:16.697Z",
+            "UpdatedDate" : "2025-01-31T07:01:30.189Z",
             "schema" : {
               "object" : "Test_EU",
               "label" : "Test_EU",
@@ -201,6 +211,15 @@
                   "description" : "Test",
                   "type" : "string",
                   "default" : "15"
+                },
+                "test_1__c" : {
+                  "maxLength" : 5,
+                  "displayName" : false,
+                  "label" : "test_1",
+                  "origin" : "custom",
+                  "description" : "test_1",
+                  "type" : "string",
+                  "default" : "10"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -536,7 +555,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "229a660c-1dc9-49b4-ad77-3fdcdae42cc0",
+        "id" : "9f592b9e-190b-46f6-8ca3-de4dea668888",
         "key" : "Test_EU",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -556,6 +575,19 @@
             "description" : "Test",
             "type" : "string",
             "default" : "15",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "test_1__c",
+            "maxLength" : 5,
+            "displayName" : false,
+            "field_name" : "test_1",
+            "origin" : "custom",
+            "description" : "test_1",
+            "type" : "string",
+            "default" : "10",
             "filterable" : false,
             "required" : false,
             "auditable" : false,
