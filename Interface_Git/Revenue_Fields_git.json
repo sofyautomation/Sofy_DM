@@ -1,0 +1,150 @@
+{
+  "id" : "a40fc81f-2123-4f32-bb25-6364bc946c35",
+  "name" : "Revenue Fields git",
+  "description" : "",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Kate NetSuite  (20000005) (EU-Central-Sandbox)",
+  "entityName" : "Global",
+  "environment" : "EU-Central-Sandbox",
+  "createdBy" : "Vidya BS",
+  "updatedBy" : "Vidya BS",
+  "createdOn" : "2025-01-31T12:15:14.090Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ {
+      "segregationKeys" : [ "RevenueFieldsMapping(Billing)", "RevenueFieldsMapping(Booking)" ],
+      "originalPayload" : null,
+      "response" : [ {
+        "id" : "fa67e97c-0917-41e8-818f-842057d36968",
+        "key" : "RevenueFieldsMapping(Billing)",
+        "segregationKey" : "RevenueFieldsMapping(Billing)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/custom-mappings?templateName=BILLING",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "8acce0ed94b67d5a0194bc48873b1184",
+          "version" : 6,
+          "fieldsMapping" : [ {
+            "billingObject" : "Invoice",
+            "billingField" : "Address__c",
+            "revenueField" : "ATR9"
+          }, {
+            "billingObject" : "Account",
+            "billingField" : "AccountNumber",
+            "revenueField" : "ATR3"
+          }, {
+            "billingObject" : "ProductRatePlan",
+            "billingField" : "Description",
+            "revenueField" : "ATR1"
+          }, {
+            "billingObject" : "BillingTransaction",
+            "billingField" : "AdjustmentLiabilityAccountName",
+            "revenueField" : "ATR10"
+          }, {
+            "billingObject" : "Subscription",
+            "billingField" : "CancelledDate",
+            "revenueField" : "DATE2"
+          }, {
+            "billingObject" : "CreditMemoItem",
+            "billingField" : "TaxMode",
+            "revenueField" : "ATR2"
+          }, {
+            "billingObject" : "BillingTransaction",
+            "billingField" : "AdjustmentLiabilityAccountId",
+            "revenueField" : "ATR5"
+          } ],
+          "clientId" : null,
+          "orgId" : null,
+          "templateId" : null,
+          "templateVersion" : null,
+          "updatedBy" : "cda931a0d1ec4ea0b5d06954f802e783",
+          "updatedOn" : 1738325657000,
+          "useDiscountApplyTo" : true,
+          "lastVersion" : true,
+          "transactionSource" : "BILLING"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "a40fc81f-2123-4f32-bb25-6364bc946c35"
+      }, {
+        "id" : "6b4474b2-9fdd-4c99-b746-be201e80b106",
+        "key" : "RevenueFieldsMapping(Booking)",
+        "segregationKey" : "RevenueFieldsMapping(Booking)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/custom-mappings?templateName=BOOKING",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "8acce34894b68fc10194bc480c571c1c",
+          "version" : 7,
+          "fieldsMapping" : [ {
+            "billingObject" : "ProductRatePlan",
+            "billingField" : "Class__NS",
+            "revenueField" : "ATR7"
+          }, {
+            "billingObject" : "Subscription",
+            "billingField" : "CancelReason",
+            "revenueField" : "ATR3"
+          }, {
+            "billingObject" : "Amendment",
+            "billingField" : "AutoRenew",
+            "revenueField" : "ATR2"
+          }, {
+            "billingObject" : "Product",
+            "billingField" : "Category",
+            "revenueField" : "ATR6"
+          }, {
+            "billingObject" : "Account",
+            "billingField" : "AccountNumber",
+            "revenueField" : "ATR1"
+          }, {
+            "billingObject" : "RatePlan",
+            "billingField" : "CreatedDate",
+            "revenueField" : "DATE1"
+          } ],
+          "clientId" : null,
+          "orgId" : null,
+          "templateId" : null,
+          "templateVersion" : null,
+          "updatedBy" : "cda931a0d1ec4ea0b5d06954f802e783",
+          "updatedOn" : 1738325625000,
+          "useDiscountApplyTo" : true,
+          "lastVersion" : true,
+          "transactionSource" : "BOOKING"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "a40fc81f-2123-4f32-bb25-6364bc946c35"
+      } ],
+      "errors" : [ ]
+    } ],
+    "awsInfo" : null
+  }
+}
