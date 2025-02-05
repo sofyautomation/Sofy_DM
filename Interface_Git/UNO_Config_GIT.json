@@ -1,0 +1,449 @@
+{
+  "id" : "3ce31623-a663-4a29-96dc-f5dc6de9e64d",
+  "name" : "UNO Config GIT",
+  "description" : "",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "k2e2e_order_noAR  (9430) (US-API-Sandbox-Staging)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox-Staging",
+  "createdBy" : "k2e2e_order_noAR k2e2e_order_noAR",
+  "updatedBy" : "k2e2e_order_noAR k2e2e_order_noAR",
+  "createdOn" : "2025-02-05T10:44:17.155Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ {
+      "segregationKeys" : [ "RevenueOrganizationMapping(Multi Org)", "RevenueFieldsMapping(Billing)", "RevenueRecognitionPolicy(Revenue Recognition Timing)", "InterfaceSettings", "RevenueFieldsMapping(Booking)", "RevenueRecognitionPolicy(Revenue Amortization Method)", "RevenueOrganizationMapping(Multi Entity)" ],
+      "originalPayload" : null,
+      "response" : [ {
+        "id" : "971f37c5-abbb-4997-abfc-807e301248c9",
+        "key" : "InterfaceSettings",
+        "segregationKey" : "InterfaceSettings",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/pipeline",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "fadRevenueAccounting" : "GENERATE_ACTUAL_IN_BOOKING",
+          "dpDateDuration" : "ALIGN_WITH_APPLY_TO_CHARGE_DATE",
+          "useBillingExchangeRate" : true,
+          "dpAccountingCodes" : "ALIGN_WITH_APPLY_TO_CHARGE",
+          "pendingActivationBookingTnx" : "GENERATE_ALL",
+          "oneTimeChargeForSubTermChange" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "3ce31623-a663-4a29-96dc-f5dc6de9e64d"
+      }, {
+        "id" : "18502ae1-1ce1-4b15-aabc-3649ca73d60e",
+        "key" : "RevenueOrganizationMapping(Multi Entity)",
+        "segregationKey" : "RevenueOrganizationMapping(Multi Entity)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/org-mapping?type=MULTI_ENTITY",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "2c92c8fe6a24d8b0016a288ca1bc055d",
+          "name" : "k2e2e_order_noAR",
+          "parentId" : null,
+          "enabled" : true,
+          "revenueOrgNumber" : "0"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "3ce31623-a663-4a29-96dc-f5dc6de9e64d"
+      }, {
+        "id" : "5653978b-1b52-4ecd-8997-23e948ce1027",
+        "key" : "RevenueOrganizationMapping(Multi Org)",
+        "segregationKey" : "RevenueOrganizationMapping(Multi Org)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/org-mapping?type=MULTI_ORG",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "success" : false,
+          "processId" : "B17AFAA943D4D952",
+          "reasons" : [ {
+            "code" : 50000020,
+            "message" : "Only Multi-Org tenant can access Multi-Org revenue org mapping"
+          } ],
+          "requestId" : "e7183c5a-cc2d-44f0-a387-eadb16764aee"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "FAILED",
+        "error" : "Failed to fetch the SOURCE schema due to the reason --> [{\"code\":50000020,\"message\":\"Only Multi-Org tenant can access Multi-Org revenue org mapping\"}]",
+        "templateId" : "3ce31623-a663-4a29-96dc-f5dc6de9e64d"
+      }, {
+        "id" : "12b98cfd-0e0e-4456-8b91-c7416f70bf55",
+        "key" : "RevenueRecognitionPolicy(Revenue Amortization Method)",
+        "segregationKey" : "RevenueRecognitionPolicy(Revenue Amortization Method)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/pob-policies?category=revenue_amortization_method",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "8a908dd494d513350194d5b404854bd2",
+          "field" : "test_git",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90f1f494d5338a0194d5a55e7e36fb",
+          "field" : "test_adv",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a908dd494d513350194d5a08db93223",
+          "field" : "Test_0502",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90d7a89493369f0194936f2fb00006",
+          "field" : "Test_ST",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90d7a8943bba1201943c19eb8800da",
+          "field" : "Automation06-01",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90d7a893d931b90193e34e578117ba",
+          "field" : "Test-Automation",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90aac893d8e9210193de8d50341277",
+          "field" : "Automation_1",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90d7a8934850a0019348b4e2ab01ee",
+          "field" : "Testing_GIT",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90d7a8934850a0019348867f8d00d2",
+          "field" : "Testing_template",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90e4a793015ac5019305cefc243f12",
+          "field" : "DES-16",
+          "active" : false,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a9084f993014856019305ce08144e57",
+          "field" : "DES-15",
+          "active" : false,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90a19d93014846019305c053ae34d3",
+          "field" : "DES-14",
+          "active" : false,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a9084f993014856019305bee07b4e4d",
+          "field" : "DES-13",
+          "active" : false,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90f26f93015acf019305bcd9343de6",
+          "field" : "DES-12",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a9084f993014856019305bba1a14e4c",
+          "field" : "DES-1",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90a19d93014846019305b7398a34d2",
+          "field" : "DES",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a9084f993014856019301d766960d55",
+          "field" : "Texting-2",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90db2b926af91e01926b0c485c0727",
+          "field" : "Texting-1",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "8a90b4489111d3ce019121a606d41507",
+          "field" : "Texting",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "3",
+          "field" : "Ratable Using Start And End Dates",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        }, {
+          "id" : "4",
+          "field" : "Immediate",
+          "active" : true,
+          "category" : "revenue_amortization_method"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "3ce31623-a663-4a29-96dc-f5dc6de9e64d"
+      }, {
+        "id" : "724e2a7e-381a-4d4c-9775-905a7511f0e5",
+        "key" : "RevenueRecognitionPolicy(Revenue Recognition Timing)",
+        "segregationKey" : "RevenueRecognitionPolicy(Revenue Recognition Timing)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/pob-policies?category=revenue_recognition_timing",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "8a90f1f494d5338a0194d5b3dfe747d1",
+          "field" : "test_git",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90f1f494d5338a0194d5a5336a36da",
+          "field" : "test_adv",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90f1f494d5338a0194d5a09a4e2fb1",
+          "field" : "Test_0502",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90d7a89493369f0194936fb21c0007",
+          "field" : "Test_ST",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90aac893e9069d0193f25f55f50327",
+          "field" : "Config-creation",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90d7a893d931b90193e3f18ebf187f",
+          "field" : "Auto-fill",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90aac893d8e9210193de347b6e11e7",
+          "field" : "Automation_Testing",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90aac893d8e9210193ddc8f3c710b3",
+          "field" : "New_Testing1",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90d7a8934850a0019348b4c15f01ed",
+          "field" : "Testing_GIT",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90d7a8934850a0019348785483007e",
+          "field" : "Template_testing",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a9084f993014856019305cefd234e58",
+          "field" : "Test-1",
+          "active" : false,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a9084f993014856019305b73a974e45",
+          "field" : "Test",
+          "active" : false,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90b4489266cb7101926b1344ec19e5",
+          "field" : "hi",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90b4489266cb7101926b0fc00619da",
+          "field" : "hello",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90a04d926aeb5501926b01ceaf0df3",
+          "field" : "Upon Billing Document Posting Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90a04d926aeb5501926b00b4710b42",
+          "field" : "Upon Order Activation Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "1",
+          "field" : "Upon Order Activation Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "2",
+          "field" : "Upon Billing Document Posting Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "3ce31623-a663-4a29-96dc-f5dc6de9e64d"
+      }, {
+        "id" : "980a330a-f9ed-4d2a-a5d5-8a3fd320cddf",
+        "key" : "RevenueFieldsMapping(Booking)",
+        "segregationKey" : "RevenueFieldsMapping(Booking)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/custom-mappings?templateName=BOOKING",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "8a90f1f494d5338a0194d5b52ca047e4",
+          "version" : 31,
+          "fieldsMapping" : [ {
+            "billingObject" : "RatePlanCharge",
+            "billingField" : "AccountingCode",
+            "revenueField" : "ATR8"
+          }, {
+            "billingObject" : "RatePlan",
+            "billingField" : "Id",
+            "revenueField" : "ATR4"
+          }, {
+            "billingObject" : "Product",
+            "billingField" : "Category",
+            "revenueField" : "ATR1"
+          }, {
+            "billingObject" : "Amendment",
+            "billingField" : "AmendmendId__c",
+            "revenueField" : "ATR6"
+          }, {
+            "billingObject" : "Account",
+            "billingField" : "AccountNumber",
+            "revenueField" : "ATR3"
+          }, {
+            "billingObject" : "OrderLineItem",
+            "billingField" : "BillTo",
+            "revenueField" : "ATR2"
+          } ],
+          "clientId" : null,
+          "orgId" : null,
+          "templateId" : null,
+          "templateVersion" : null,
+          "updatedBy" : "2c92c8fe6a24d8b0016a288ca211055e",
+          "updatedOn" : 1738752208000,
+          "useDiscountApplyTo" : true,
+          "lastVersion" : true,
+          "transactionSource" : "BOOKING"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "3ce31623-a663-4a29-96dc-f5dc6de9e64d"
+      }, {
+        "id" : "64f3994a-1034-462c-be75-4123e122e35a",
+        "key" : "RevenueFieldsMapping(Billing)",
+        "segregationKey" : "RevenueFieldsMapping(Billing)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/custom-mappings?templateName=BILLING",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "8a908dd494d513350194d5b59e7b4bd9",
+          "version" : 24,
+          "fieldsMapping" : [ {
+            "billingObject" : "InvoiceItemAdjustment",
+            "billingField" : "Amount",
+            "revenueField" : "ATR12"
+          }, {
+            "billingObject" : "Subscription",
+            "billingField" : "CancelReason",
+            "revenueField" : "ATR8"
+          }, {
+            "billingObject" : "Product",
+            "billingField" : "Description",
+            "revenueField" : "ATR7"
+          }, {
+            "billingObject" : "Account",
+            "billingField" : "AccountType__c",
+            "revenueField" : "ATR6"
+          }, {
+            "billingObject" : "Product",
+            "billingField" : "Category",
+            "revenueField" : "ATR5"
+          }, {
+            "billingObject" : "Invoice",
+            "billingField" : "Amount",
+            "revenueField" : "ATR2"
+          }, {
+            "billingObject" : "Account",
+            "billingField" : "AccountNumber",
+            "revenueField" : "ATR1"
+          }, {
+            "billingObject" : "Subscription",
+            "billingField" : "Country_Subscrptn__c",
+            "revenueField" : "ATR4"
+          }, {
+            "billingObject" : "InvoiceItemAdjustment",
+            "billingField" : "CancelledById",
+            "revenueField" : "ATR3"
+          } ],
+          "clientId" : null,
+          "orgId" : null,
+          "templateId" : null,
+          "templateVersion" : null,
+          "updatedBy" : "2c92c8fe6a24d8b0016a288ca211055e",
+          "updatedOn" : 1738752237000,
+          "useDiscountApplyTo" : true,
+          "lastVersion" : true,
+          "transactionSource" : "BILLING"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "3ce31623-a663-4a29-96dc-f5dc6de9e64d"
+      } ],
+      "errors" : [ ]
+    } ],
+    "awsInfo" : null
+  }
+}
