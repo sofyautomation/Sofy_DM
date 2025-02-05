@@ -2,7 +2,7 @@
   "id" : "d4dacb85-0db0-493d-9e1d-ca0ecc483041",
   "name" : "test GIT CO",
   "description" : "test GIT CO",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "k2e2e_order_noAR  (9430) (US-API-Sandbox-Staging)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox-Staging",
   "createdBy" : "k2e2e_order_noAR k2e2e_order_noAR",
   "updatedBy" : "k2e2e_order_noAR k2e2e_order_noAR",
-  "createdOn" : "2025-02-05T09:54:29.819Z",
+  "createdOn" : "2025-02-05T10:01:01.422Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "88329a59-ae9e-4d79-a10f-af8217431efd",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "CO_GIT_Check",
+    "commitMessage" : "CO_GIT_Check",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "97be65a566ef3447089d6b96265ae934541f9a24"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -968,12 +978,13 @@
             "CreatedById" : "2c92c8fe6a24d8b0016a288ca211055e",
             "UpdatedById" : "2c92c8fe6a24d8b0016a288ca211055e",
             "CreatedDate" : "2025-02-05T09:13:21.838Z",
-            "UpdatedDate" : "2025-02-05T09:31:48.565Z",
+            "UpdatedDate" : "2025-02-05T10:00:27.642Z",
             "schema" : {
               "object" : "TestCustom",
               "label" : "Test Custom",
               "title" : "Test Custom",
               "type" : "object",
+              "description" : "",
               "enableCreateRecordAuditing" : false,
               "enableDeleteRecordAuditing" : false,
               "properties" : {
@@ -999,6 +1010,14 @@
                   "origin" : "custom",
                   "type" : "string",
                   "default" : "25"
+                },
+                "Test4field__c" : {
+                  "maxLength" : 45,
+                  "displayName" : false,
+                  "label" : "Test 4 field",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "30"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -1064,7 +1083,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "72077b23-7ed9-4d96-8d99-9512862ac40e",
+        "id" : "adb52e3e-91c6-4320-a7dc-955cfd2d5f66",
         "key" : "TestCustom",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -1074,7 +1093,7 @@
         "payload" : {
           "label" : "Test Custom",
           "api_name" : "TestCustom",
-          "description" : null,
+          "description" : "",
           "enableRecordMigration" : null,
           "customFields" : [ {
             "api_name" : "Field1__c",
@@ -1095,6 +1114,18 @@
             "origin" : "custom",
             "type" : "string",
             "default" : "25",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Test4field__c",
+            "maxLength" : 45,
+            "displayName" : false,
+            "field_name" : "Test 4 field",
+            "origin" : "custom",
+            "type" : "string",
+            "default" : "30",
             "filterable" : false,
             "required" : false,
             "auditable" : false,
