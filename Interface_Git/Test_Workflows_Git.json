@@ -1,0 +1,1038 @@
+{
+  "id" : "24266fe7-04e7-4e3b-9b25-1695e7594000",
+  "name" : "Test Workflows Git",
+  "description" : "Test Workflows Git",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Kate NetSuite  (20000005) (EU-Central-Sandbox)",
+  "entityName" : "Global",
+  "environment" : "EU-Central-Sandbox",
+  "createdBy" : "Dhamodaran S",
+  "updatedBy" : "Dhamodaran S",
+  "createdOn" : "2025-02-13T06:42:58.618Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ {
+      "segregationKeys" : [ "Communication Profile Update", "Chargebacks -> Write Off Invoice + Cancel Subscription", "Invoice 30 Days Past Due, Account Summary", "PRPC Create" ],
+      "originalPayload" : {
+        "export" : {
+          "6" : {
+            "Communication Profile Update_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Communication Profile Update",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 68,
+                "name" : "Communication Profile Update",
+                "description" : "",
+                "parameters" : { },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : null,
+                "timezone" : null,
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "35px"
+                },
+                "notifications" : { },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 1032,
+                "name" : "if",
+                "parameters" : {
+                  "if_clause" : "{% if 0 > 1 %}\r\nTrue\r\n{% else %}\r\nFalse\r\n{% endif %}",
+                  "strict_variables" : "true",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "If",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "110px",
+                  "left" : "350px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : 68,
+                "source_task_id" : null,
+                "target_task_id" : 1032,
+                "linkage_type" : "Start"
+              } ]
+            }
+          },
+          "103" : {
+            "PRPC Create_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "PRPC Create",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 1951,
+                "name" : "PRPC Create",
+                "description" : "",
+                "parameters" : {
+                  "event_triggers" : [ "ProductRatePlanChargeCreate" ],
+                  "event_parameters" : [ {
+                    "params" : [ {
+                      "key" : "Id",
+                      "value" : "<DataSource.ProductRatePlanCharge.Id>",
+                      "object" : "ProductRatePlanCharge"
+                    }, {
+                      "key" : "Name",
+                      "value" : "<DataSource.ProductRatePlanCharge.Name>",
+                      "object" : "ProductRatePlanCharge"
+                    }, {
+                      "key" : "ChargeType",
+                      "value" : "<DataSource.ProductRatePlanCharge.ChargeType>",
+                      "object" : "ProductRatePlanCharge"
+                    }, {
+                      "key" : "ChargeModel",
+                      "value" : "<DataSource.ProductRatePlanCharge.ChargeModel>",
+                      "object" : "ProductRatePlanCharge"
+                    } ],
+                    "eventName" : "ProductRatePlanChargeCreate"
+                  } ]
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : null,
+                "timezone" : null,
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "-120px",
+                  "left" : "-170px"
+                },
+                "notifications" : { },
+                "call_type" : "REALTIME",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : true,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 3065,
+                "name" : "Get data",
+                "parameters" : {
+                  "url" : "https://www.google.co.in",
+                  "method" : "GET",
+                  "headers" : [ {
+                    "key" : "Content-Type",
+                    "value" : "application/json"
+                  } ],
+                  "api_name" : "",
+                  "raw_body" : "",
+                  "body_type" : "raw",
+                  "form_datas" : [ {
+                    "key" : "",
+                    "value" : "",
+                    "upload" : "false"
+                  } ],
+                  "validation" : {
+                    "replace" : "false",
+                    "zuora_call" : "false",
+                    "status_codes" : [ "", "200", "" ],
+                    "payload_location" : "Callout"
+                  },
+                  "api_doc_url" : "",
+                  "retry_rules" : {
+                    "retry_count" : "0",
+                    "retry_window" : "30",
+                    "current_retry_count" : "0"
+                  },
+                  "authorization" : {
+                    "type" : "none"
+                  },
+                  "finish_status" : [ "" ],
+                  "response_path" : "",
+                  "polling_interval" : "30",
+                  "strict_variables" : "true",
+                  "validate_response" : "false",
+                  "validation_scheme" : "",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ],
+                  "include_response_code" : "true",
+                  "notification_history_enabled" : "false"
+                },
+                "action_type" : "Callout",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "30px",
+                  "left" : "20px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : 1951,
+                "source_task_id" : null,
+                "target_task_id" : 3065,
+                "linkage_type" : "ProductRatePlanChargeCreate"
+              } ]
+            }
+          },
+          "4" : {
+            "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+                "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 4,
+                "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+                "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+                "parameters" : {
+                  "fields" : [ ],
+                  "skipping_check" : "redis",
+                  "file_encryption" : "false",
+                  "show_run_prompt" : null,
+                  "callout_response" : "workflow instance",
+                  "secure_error_msgs" : "false",
+                  "disable_pending_status" : true
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : null,
+                "timezone" : null,
+                "status" : "Active",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "35px"
+                },
+                "notifications" : {
+                  "emails" : [ ],
+                  "failure" : false,
+                  "pending" : false,
+                  "success" : false
+                },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 13,
+                "name" : "Pull Refunds from Chargebacks where Invoice Balance > 0 ",
+                "parameters" : {
+                  "fields" : {
+                    "Refund" : {
+                      "Id" : "true",
+                      "ReasonCode" : "true",
+                      "RefundDate" : "true"
+                    },
+                    "Invoice" : {
+                      "Id" : "true",
+                      "Balance" : "true",
+                      "InvoiceDate" : "true",
+                      "InvoiceNumber" : "true"
+                    }
+                  },
+                  "where_clause" : "Refund.ReasonCode = 'Chargeback' and Invoice.Balance > 0"
+                },
+                "action_type" : "Export",
+                "object" : "RefundInvoicePayment",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "39.9844px",
+                  "left" : "339.984px"
+                },
+                "concurrent_limit" : 4,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 14,
+                "name" : "Cancel Subscription",
+                "parameters" : {
+                  "fields" : {
+                    "Amendment" : {
+                      "Name" : "Chargeback Cancellation",
+                      "Description" : "Chargeback Cancellation",
+                      "EffectiveDate" : "{% if Data.Workflow.ExecutionDate > Data.Subscription.SubscriptionEndDate %}{{ Data.Subscription.SubscriptionEndDate }}{% else %}{{ Data.Workflow.ExecutionDate }}{% endif %}",
+                      "ContractEffectiveDate" : "{{Data.Workflow.ExecutionDate}}"
+                    }
+                  },
+                  "options" : {
+                    "Amendment" : {
+                      "GenerateInvoice" : "false"
+                    }
+                  }
+                },
+                "action_type" : "Cancel",
+                "object" : "Amendment",
+                "object_id" : "{{Data.Subscription.Id}}",
+                "call_type" : "SOAP",
+                "task_id" : 15,
+                "css" : {
+                  "top" : "170px",
+                  "left" : "910px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 15,
+                "name" : "Iterate Subscriptions",
+                "parameters" : {
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "Id"
+                },
+                "action_type" : "Iterate",
+                "object" : "Subscription__13.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 18,
+                "css" : {
+                  "top" : "170px",
+                  "left" : "640px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 16,
+                "name" : "Iterate Unique Invoices",
+                "parameters" : {
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "Invoice.Id"
+                },
+                "action_type" : "Iterate",
+                "object" : "RefundInvoicePayment__13.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 13,
+                "css" : {
+                  "top" : "30px",
+                  "left" : "640px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 17,
+                "name" : "Write-off Invoice",
+                "parameters" : {
+                  "fields" : {
+                    "write_off" : {
+                      "ReasonCode" : "Chargeback",
+                      "ReferenceId" : "",
+                      "AdjustmentDate" : "{{Data.Refund.RefundDate}}",
+                      "DeferredRevenueAccount" : "",
+                      "RecognizedRevenueAccount" : "",
+                      "TaxationItemDeferredRevenueAccount" : "",
+                      "TaxationItemRecognizedRevenueAccount" : ""
+                    }
+                  }
+                },
+                "action_type" : "WriteOff",
+                "object" : null,
+                "object_id" : "{{Data.Invoice.Id}}",
+                "call_type" : "SOAP",
+                "task_id" : 16,
+                "css" : {
+                  "top" : "30px",
+                  "left" : "910px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 18,
+                "name" : "Get Active Subscriptions",
+                "parameters" : {
+                  "fields" : {
+                    "Subscription" : {
+                      "Id" : "true",
+                      "Status" : "true",
+                      "SubscriptionEndDate" : "true",
+                      "SubscriptionStartDate" : "true"
+                    }
+                  },
+                  "batch_size" : "2000",
+                  "where_clause" : "Id = '{{ Data.InvoiceItem | map: \"SubscriptionId\" | join: \"' OR Id = '\"}}' AND Status = 'Active'"
+                },
+                "action_type" : "Query",
+                "object" : "Subscription",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 17,
+                "css" : {
+                  "top" : "170px",
+                  "left" : "340px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : null,
+                "source_task_id" : 15,
+                "target_task_id" : 14,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 18,
+                "target_task_id" : 15,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 17,
+                "target_task_id" : 18,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 16,
+                "target_task_id" : 17,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 13,
+                "target_task_id" : 16,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : 4,
+                "source_task_id" : null,
+                "target_task_id" : 13,
+                "linkage_type" : "Start"
+              } ]
+            }
+          },
+          "3" : {
+            "Invoice 30 Days Past Due, Account Summary_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Invoice 30 Days Past Due, Account Summary",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 3,
+                "name" : "Invoice 30 Days Past Due, Account Summary",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ ],
+                  "skipping_check" : "redis",
+                  "file_encryption" : "false",
+                  "show_run_prompt" : null,
+                  "callout_response" : "workflow instance",
+                  "secure_error_msgs" : "false",
+                  "disable_pending_status" : true
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : "0 0 3 /1 * *",
+                "timezone" : "Pacific Time (US & Canada)",
+                "status" : "Active",
+                "css" : {
+                  "top" : "210px",
+                  "left" : "90px"
+                },
+                "notifications" : {
+                  "emails" : [ ],
+                  "failure" : false,
+                  "pending" : false,
+                  "success" : false
+                },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "extension_id" : null,
+                "zuora_org_ids" : [ ]
+              },
+              "tasks" : [ {
+                "id" : 9,
+                "name" : "Iterate Unique Accounts",
+                "parameters" : {
+                  "chunk_size" : "0",
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "Account.Id"
+                },
+                "action_type" : "Iterate",
+                "object" : "InvoiceItem__12.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 12,
+                "css" : {
+                  "top" : "210px",
+                  "left" : "720px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 10,
+                "name" : "30 Days Past Due Email",
+                "parameters" : {
+                  "email" : {
+                    "cc" : [ ],
+                    "to" : [ "{{Data.BillToContact.WorkEmail}}", "{{Data.BillToContact.PersonalEmail}}" ],
+                    "bcc" : [ ],
+                    "from" : "workflow@zuora.com",
+                    "name" : "Workflow Template",
+                    "subject" : "  Action Required {{Data.Account.Name}} Invoice 30 Days Past Due",
+                    "reply_to" : "",
+                    "template" : "{% assign total_balance = 0.0 %}\r\n\r\n<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\r\n<html xmlns=\"http://www.w3.org/1999/xhtml\" xmlns:v=\"urn:schemas-microsoft-com:vml\" xmlns:o=\"urn:schemas-microsoft-com:office:office\">\r\n<head>\r\n<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\r\n<meta name=\"viewport\" content=\"initial-scale=1.0\"/>\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/>\r\n<meta name=\"format-detection\" content=\"telephone=no\"/>\r\n<title>30 Days Overdue</title>\r\n<link href=\"http://fonts.googleapis.com/css?family=Roboto:400,300,700|Open+Sans:400,700,300&subset=latin,cyrillic,greek\" rel=\"stylesheet\" type=\"text/css\">\r\n<style type=\"text/css\">\r\n\r\n    /* Resets: see reset.css for details */\r\n    .ReadMsgBody { width: 100%; background-color: #ffffff;}\r\n    .ExternalClass {width: 100%; background-color: #ffffff;}\r\n    .ExternalClass, .ExternalClass p, .ExternalClass span,\r\n    .ExternalClass font, .ExternalClass td, .ExternalClass div {line-height:100%;}\r\n    #outlook a{ padding:0;}\r\n    body{width: 100%; height: 100%; background-color: #ffffff; margin:0; padding:0;}\r\n    body{ -webkit-text-size-adjust:none; -ms-text-size-adjust:none; }\r\n    html{width:100%;}\r\n    table {mso-table-lspace:0pt; mso-table-rspace:0pt; border-spacing:0;}\r\n    table td {border-collapse:collapse;}\r\n    table p{margin:0;}\r\n    br, strong br, b br, em br, i br { line-height:100%; }\r\n    div, p, a, li, td { -webkit-text-size-adjust:none; -ms-text-size-adjust:none;}\r\n    h1, h2, h3, h4, h5, h6 { line-height: 100% !important; -webkit-font-smoothing: antialiased; }\r\n    span a { text-decoration: none !important;}\r\n    a{ text-decoration: none !important; }\r\n    img{height: auto !important; line-height: 100%; outline: none; text-decoration: none;  -ms-interpolation-mode:bicubic;}\r\n    .yshortcuts, .yshortcuts a, .yshortcuts a:link,.yshortcuts a:visited,\r\n    .yshortcuts a:hover, .yshortcuts a span { text-decoration: none !important; border-bottom: none !important;}\r\n    /*mailChimp class*/\r\n    .default-edit-image{\r\n    height:20px;\r\n    }\r\n    ul{padding-left:10px; margin:0;}\r\n    .tpl-repeatblock {\r\n    padding: 0px !important;\r\n    border: 1px dotted rgba(0,0,0,0.2);\r\n    }\r\n    .tpl-content{\r\n    padding:0px !important;\r\n    }\r\n    @media only screen and (max-width:800px){\r\n    table[style*=\"max-width:800px\"]{width:100%!important; max-width:100%!important; min-width:100%!important; clear: both;}\r\n    table[style*=\"max-width:800px\"] img{width:100% !important; height:auto !important; max-width:100% !important;}\r\n    }\r\n    @media only screen and (max-width: 640px){\r\n    /* mobile setting */\r\n    table[class=\"container\"]{width:100%!important; max-width:100%!important; min-width:100%!important;\r\n    padding-left:20px!important; padding-right:20px!important; text-align: center!important; clear: both;}\r\n    td[class=\"container\"]{width:100%!important; padding-left:20px!important; padding-right:20px!important; clear: both;}\r\n    table[class=\"full-width\"]{width:100%!important; max-width:100%!important; min-width:100%!important; clear: both;}\r\n    table[class=\"full-width-center\"] {width: 100%!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    table[class=\"force-240-center\"]{width:240px !important; clear: both; margin:0 auto; float:none;}\r\n    table[class=\"auto-center\"] {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    *[class=\"auto-center-all\"]{width: auto!important; max-width:75%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    *[class=\"auto-center-all\"] * {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    table[class=\"col-3\"],table[class=\"col-3-not-full\"]{width:30.35%!important; max-width:100%!important;}\r\n    table[class=\"col-2\"]{width:47.3%!important; max-width:100%!important;}\r\n    *[class=\"full-block\"]{width:100% !important; display:block !important; clear: both; padding-top:10px; padding-bottom:10px;}\r\n    /* image */\r\n    td[class=\"image-full-width\"] img{width:100% !important; height:auto !important; max-width:100% !important;}\r\n    /* helper */\r\n    table[class=\"space-w-20\"]{width:3.57%!important; max-width:20px!important; min-width:3.5% !important;}\r\n    table[class=\"space-w-20\"] td:first-child{width:3.5%!important; max-width:20px!important; min-width:3.5% !important;}\r\n    table[class=\"space-w-25\"]{width:4.45%!important; max-width:25px!important; min-width:4.45% !important;}\r\n    table[class=\"space-w-25\"] td:first-child{width:4.45%!important; max-width:25px!important; min-width:4.45% !important;}\r\n    table[class=\"space-w-30\"] td:first-child{width:5.35%!important; max-width:30px!important; min-width:5.35% !important;}\r\n    table[class=\"fix-w-20\"]{width:20px!important; max-width:20px!important; min-width:20px!important;}\r\n    table[class=\"fix-w-20\"] td:first-child{width:20px!important; max-width:20px!important; min-width:20px !important;}\r\n    *[class=\"h-10\"]{display:block !important;  height:10px !important;}\r\n    *[class=\"h-20\"]{display:block !important;  height:20px !important;}\r\n    *[class=\"h-30\"]{display:block !important; height:30px !important;}\r\n    *[class=\"h-40\"]{display:block !important;  height:40px !important;}\r\n    *[class=\"remove-640\"]{display:none !important;}\r\n    *[class=\"text-left\"]{text-align:left !important;}\r\n    *[class=\"clear-pad\"]{padding:0 !important;}\r\n    }\r\n    @media only screen and (max-width: 479px){\r\n    /* mobile setting */\r\n    table[class=\"container\"]{width:100%!important; max-width:100%!important; min-width:124px!important;\r\n    padding-left:15px!important; padding-right:15px!important; text-align: center!important; clear: both;}\r\n    td[class=\"container\"]{width:100%!important; padding-left:15px!important; padding-right:15px!important; text-align: center!important; clear: both;}\r\n    table[class=\"full-width\"],table[class=\"full-width-479\"]{width:100%!important; max-width:100%!important; min-width:124px!important; clear: both;}\r\n    table[class=\"full-width-center\"] {width: 100%!important; max-width:100%!important; min-width:124px!important; text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    *[class=\"auto-center-all\"]{width: 100%!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    *[class=\"auto-center-all\"] * {width: auto!important; max-width:100%!important;  text-align: center!important; clear: both; margin:0 auto; float:none;}\r\n    table[class=\"col-3\"]{width:100%!important; max-width:100%!important; text-align: center!important; clear: both;}\r\n    table[class=\"col-3-not-full\"]{width:30.35%!important; max-width:100%!important; }\r\n    table[class=\"col-2\"]{width:100%!important; max-width:100%!important; text-align: center!important; clear: both;}\r\n    *[class=\"full-block-479\"]{display:block !important; width:100% !important; clear: both; padding-top:10px; padding-bottom:10px; }\r\n    /* image */\r\n    td[class=\"image-full-width\"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:124px !important;}\r\n    td[class=\"image-min-80\"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:80px !important;}\r\n    td[class=\"image-min-100\"] img{width:100% !important; height:auto !important; max-width:100% !important; min-width:100px !important;}\r\n    /* halper */\r\n    table[class=\"space-w-20\"]{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-20\"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-25\"]{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-25\"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-30\"]{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    table[class=\"space-w-30\"] td:first-child{width:100%!important; max-width:100%!important; min-width:100% !important;}\r\n    *[class=\"remove-479\"]{display:none !important;}\r\n    table[width=\"595\"]{width:100% !important;}\r\n    img{max-width:280px !important;}\r\n    .resize-font, .resize-font *{\r\n      font-size: 37px !important;\r\n      line-height: 48px !important;\r\n    }\r\n    }\r\n    table.stripped tr.stripe:nth-child(odd){\r\n    \tbackground:#f0f2f9;\r\n    }\r\n    \r\n    td ul{list-style: initial; margin:0; padding-left:20px;}\r\n\r\n\t@media only screen and (max-width: 640px){ .image-100-percent{ width:100%!important; height: auto !important; max-width: 100% !important; min-width: 124px !important;}}body{background-color:#efefef;} .default-edit-image{height:20px;} tr.tpl-repeatblock , tr.tpl-repeatblock > td{ display:block !important;} .tpl-repeatblock {padding: 0px !important;border: 1px dotted rgba(0,0,0,0.2);} table[width=\"595\"]{width:100% !important;}a img{ border: 0 !important;}\r\na:active{color:initial } a:visited{color:initial }\r\n.tpl-content{padding:0 !important;}\r\n.full-mb,*[fix=\"full-mb\"]{width:100%!important;} .auto-mb,*[fix=\"auto-mb\"]{width:auto!important;}\r\n</style>\r\n<!--[if gte mso 15]>\r\n<style type=\"text/css\">\r\na{text-decoration: none !important;}\r\nbody { font-size: 0; line-height: 0; }\r\ntr { font-size:1px; mso-line-height-alt:0; mso-margin-top-alt:1px; }\r\ntable { font-size:1px; line-height:0; mso-margin-top-alt:1px; }\r\nbody,table,td,span,a,font{font-family: Arial, Helvetica, sans-serif !important;}\r\na img{ border: 0 !important;}\r\n</style>\r\n<![endif]-->\r\n<!--[if gte mso 9]><xml><o:OfficeDocumentSettings><o:AllowPNG/><o:PixelsPerInch>96</o:PixelsPerInch></o:OfficeDocumentSettings></xml><![endif]-->\r\n</head>\r\n<body  style=\"font-size:12px; width:100%; height:100%;\">\r\n<table id=\"mainStructure\" width=\"800\" class=\"full-width\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"background-color: #efefef; width: 800px; max-width: 800px; outline: rgb(239, 239, 239) solid 1px; box-shadow: rgb(224, 224, 224) 0px 0px 5px; margin: 0px auto;\"><!--START LAYOUT-1 (LOGO AND MENU) --><tbody><tr><td align=\"center\" valign=\"top\" class=\"container\" style=\"background-color: #ffffff;\" bgcolor=\"#ffffff\">\r\n            <!-- start container -->\r\n            <table width=\"600\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"container\" style=\"min-width: 600px; background-color: #ffffff; padding-left: 20px; padding-right: 20px; width: 600px; margin: 0px auto;\"><tbody><tr><td valign=\"top\">\r\n                  <table width=\"560\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" class=\"full-width\" style=\"width: 560px; margin: 0px auto;\"><!-- start space --><tbody><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                      </td>\r\n                    </tr><!-- end space --><!-- start content container--><tr><td valign=\"top\">\r\n                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style=\"margin: 0px auto;\"><tbody><tr><td valign=\"middle\">\r\n                              \r\n                              <table align=\"left\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"full-width-center\" width=\"auto\" style=\"mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tbody><tr><td align=\"center\" valign=\"top\" width=\"136\" style=\"width: 136px;\">\r\n                                    <a href=\"#\" style=\"text-decoration: none !important; font-size: inherit; border-style: none;\" border=\"0\">\r\n                                      <img src=\"https://www.zuora.com/wp-content/uploads/2017/03/Zuora-Logo-Navy-small.jpg\" width=\"136\" style=\"max-width: 240px; display: block !important; width: 136px; height: auto;\" alt=\"set3-logo\" border=\"0\" hspace=\"0\" vspace=\"0\" height=\"auto\"></a>\r\n                                  </td>\r\n                                </tr></tbody></table><!--[if (gte mso 9)|(IE)]></td><td valign=\"top\" ><![endif]--><table width=\"20\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" align=\"left\" class=\"full-width\" style=\"height: 1px; border-spacing: 0px; width: 20px;mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tbody><tr><td height=\"1\" class=\"h-20\" style=\"height: 1px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                                  </td>\r\n                                </tr></tbody></table><!--[if (gte mso 9)|(IE)]></td><td valign=\"top\" ><![endif]--><table align=\"right\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"full-width-center\" width=\"auto\" style=\"mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tbody><tr><td valign=\"top\">\r\n                                    <table align=\"left\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" class=\"full-width-center\" width=\"auto\" style=\"mso-table-lspace:0pt; mso-table-rspace:0pt;\"><tbody><tr><td align=\"center\" style=\"font-size: 14px; color: #8c8c8c; font-weight: normal; text-align: center; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif; word-break: break-word; line-height: 22px;\"><br style=\"font-size: 14px; font-weight: 400; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif;\"></td>\r\n                                      </tr></tbody></table></td>\r\n                                </tr></tbody></table></td>\r\n                          </tr></tbody></table></td>\r\n                    </tr><!-- end content container--><!-- start space --><tr><td valign=\"top\" height=\"14\" style=\"height: 14px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                      </td>\r\n                    </tr><!-- end space --></tbody></table></td>\r\n              </tr></tbody></table><!-- end container --></td>\r\n        </tr><!--END LAYOUT-1 (LOGO AND MENU) --></tbody><!-- START ORDER-TABLE --><tbody><tr><td valign=\"top\" align=\"center\" class=\"container\" style=\"background-color: #fff;\" bgcolor=\"#ffffff\">\r\n            <table width=\"600\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"container\" style=\"background-color: #ffffff; min-width: 600px; width: 600px; margin: 0px auto;\"><tbody><tr><td valign=\"top\" align=\"center\">\r\n                  <table width=\"560\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"full-width\" style=\"width: 560px; margin: 0px auto;\"><!-- start title --><tbody><tr dup=\"0\"><td valign=\"top\">\r\n                        <table width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0px auto;\"><!-- start space --><tbody><tr><td valign=\"top\" height=\"11\" style=\"height: 11px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --><tr><td align=\"left\" style=\"font-size: 24px; color: #333333; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: left; word-break: break-word; line-height: 32px;\"><p style=\"text-align: left; line-height: 20px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><span style=\"color: #384b5d; line-height: 22px; font-size: 14px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Dear {{Data.BillToContact.FirstName}} {{Data.BillToContact.LastName}},</span></p></td>\r\n                          </tr><!-- start space --><tr><td valign=\"top\" height=\"10\" style=\"height: 10px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --></tbody></table></td>\r\n                    </tr><tr dup=\"0\"><td valign=\"top\">\r\n                        <table width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0px auto;\"><!-- start space --><tbody><tr><td valign=\"top\" height=\"1\" style=\"height: 1px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --><tr><td align=\"left\" style=\"font-size: 24px; color: #333333; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: left; word-break: break-word; line-height: 32px;\"><p style=\"text-align: left; line-height: 20px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><span style=\"color: #999999; line-height: 22px; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">We would like to inform you of the invoice past due situation on your account, {{Data.Account.Name}}. The following is an itemized listing of all past due invoice(s) on your account. </span> <br/> <br/></p></td>\r\n                          </tr><!-- start space --><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --></tbody></table></td>\r\n                    </tr><!-- end title --><tr dup=\"0\"><td valign=\"top\" align=\"center\">\r\n\r\n                    <!-- start of new table-->\r\n\r\n                    <table class=\"stripped\" width=\"100%\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n\t\t\t\t\t\t<tr style=\"background-color: #f0f2f9; margin: 0px auto;\">\r\n\t\t\t\t\t\t\t<th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Invoice Number</th>\r\n\t\t\t\t\t\t\t<th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Balance</th>\r\n\t\t\t\t\t\t\t<th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Invoice Date</th>\r\n\t\t\t\t\t\t\t<th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Due Date</th>\r\n              <th style=\"font-size: 14px; color: #333333; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; width: 100px; line-height: 22px;\" align=\"left\"><span style=\"color: #384b5d; line-height: 20px; font-size: 12px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Days Overdue</th>\r\n\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t{% for invoice in Data.Invoice %}\r\n                {% comment %} convert our dates to Number of seconds since 1970-01-01 00:00:00 UTC {% endcomment %}\r\n                {% assign dateStart = invoice.DueDate | date: '%s' %}\r\n                {% assign nowTimestamp = 'now' | date: '%s' %}\r\n\r\n                {% comment %} difference in seconds {% endcomment %}\r\n                {% assign diffSeconds = nowTimestamp | minus: dateStart %}\r\n\r\n                {% comment %} difference in days {% endcomment %}\r\n                {% assign diffDays = diffSeconds | divided_by: 3600 | divided_by: 24 %}\r\n\r\n\r\n                <tr class=\"stripe\">\r\n                  <td style=\"font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">{{ invoice.InvoiceNumber }}</td>\r\n                  <td style=\"font-size: 14px; color: #C05F68; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><strong>{{ invoice.Balance | money: Data.Account.Currency }}</strong></td>\r\n                  <td style=\"font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">{{ invoice.InvoiceDate | date: \"%b %e %Y\" }}</td>\r\n                  <td style=\"font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">{{ invoice.DueDate | date: \"%b %e %Y\" }}</td>\r\n                  <td style=\"font-size: 14px; color: #888888; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">{{ diffDays }}</td>\r\n                </tr>\r\n                {% assign total_balance = total_balance | plus: invoice.Balance %}\r\n\t\t\t\t\t\t\t{% endfor %}\r\n\t\t\t\t\t\t</table>\r\n\t\t\t\t\t\t<table width=\"100%\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">\r\n\t\t\t\t\t\t<tr style=\"background-color: #EFD1D1; margin: 0px auto;\">\r\n\r\n                                <td style=\"font-size: 14px; color: #C05F68; font-weight: normal; text-align: left; font-family: 'Open Sans', Arial, Helvetica, sans-serif; padding: 15px; word-break: break-word; line-height: 22px;\" align=\"left\"><span style=\"line-height: 22px; font-size: 12px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Outstanding Balance:  <strong>{{ total_balance | money: Data.Account.Currency}}</strong></td>\r\n\t\t\t\t\t\t\t</tr>\r\n\t\t\t\t\t\t</table>\r\n\r\n\r\n\r\n                    <!-- end of new table-->\r\n                      </td>\r\n                    </tr><tr dup=\"0\"><td valign=\"top\" align=\"center\" class=\"clear-pad\">\r\n                        <table width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0px auto;\"><tbody><tr dup=\"0\"><td valign=\"top\" align=\"center\">\r\n                              <table width=\"95%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 40px auto 0 auto;\"><tbody><tr><td align=\"left\" style=\"font-size: 14px; color: #999999; font-weight: normal; font-family: 'Open Sans', Arial, Helvetica, sans-serif; text-align: left; word-break: break-word; line-height: 22px;\"><div style=\"text-align: left; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><span style=\"line-height: 22px; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\">Please confirm the date payment will be remitted for the outstanding invoice(s).  If you have any questions regarding this payment or if we can help in any way please contact<span style=\"color: #384b5d; line-height: 22px; font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"><span style=\"line-height: 22px; font-size: 14px; font-weight: bold; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"> Your Rep at 000-000-000</span>.</span><br style=\"font-size: 14px; font-weight: 400; font-family: 'Open Sans', Arial, Helvetica, sans-serif;\"></span>\r\n                              <br/> Regards,\r\n                              <br/> Zuora Inc.\r\n                              </div></td>\r\n                                </tr><!-- start space --><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                                  </td>\r\n                                </tr><!-- end space --></tbody></table></td>\r\n                          </tr><tr><td valign=\"top\" align=\"center\" class=\"clear-pad\" style=\"padding-left:20px; padding-right:20px;\">\r\n                              <table width=\"100%\" align=\"center\" border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"margin: 0px auto;\"><!--start button--><tbody><tr><td valign=\"top\" align=\"center\">\r\n                                    <table width=\"auto\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" style=\"margin: 0px auto;\"><tbody><tr><!-- start duplicate button -->\r\n                                        <!-- end duplicate button -->\r\n                                      </tr></tbody></table></td>\r\n                                </tr><!--end button--></tbody></table></td>\r\n                          </tr><!-- start space --><tr><td valign=\"top\" height=\"5\" style=\"height: 5px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                            </td>\r\n                          </tr><!-- end space --></tbody></table></td>\r\n                    </tr></tbody></table></td>\r\n              </tr></tbody></table></td>\r\n        </tr><!-- END ORDER-TABLE --></tbody><!--START LAYOUT-16 ( UNSUBSCRIBE ) --><tbody><tr><td align=\"center\" valign=\"top\" class=\"container\" style=\"background-color: #ffffff;\" bgcolor=\"#ffffff\">\r\n            <!-- start container -->\r\n            <table width=\"600\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"container\" style=\"min-width: 600px; background-color: #ffffff; padding-left: 20px; padding-right: 20px; width: 600px; margin: 0px auto;\"><tbody><tr><td valign=\"top\">\r\n                  <table width=\"560\" align=\"center\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" class=\"full-width\" style=\"width: 560px; margin: 0px auto;\"><!-- start space --><tbody><tr><td valign=\"top\" height=\"14\" style=\"height: 14px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                      </td>\r\n                    </tr><!-- end space --><tr dup=\"0\"><td valign=\"top\">\r\n                        <table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style=\"margin: 0px auto;\"><!-- start rights reserved --><tbody><tr><td align=\"center\" style=\"font-size: 13px; color: #999999; font-weight: normal; text-align: center; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif; word-break: break-word; line-height: 21px;\"><span style=\"line-height: 21px; font-size: 13px; font-weight: 400; font-family: Roboto, 'Open Sans', Arail, Tahoma, Helvetica, Arial, sans-serif;\">Copyright © 2008-2016, Zuora Inc. All Rights Reserved.</span></td>\r\n                          </tr><!-- end rights reserved --><!-- start space --><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                              </td>\r\n                            </tr><!-- end space --></tbody></table></td>\r\n                    </tr><!-- start space --><tr><td valign=\"top\" height=\"15\" style=\"height: 15px; font-size: 0px; line-height: 0; border-collapse: collapse;\">\r\n                    </td>\r\n                  </tr><!-- end space --></tbody></table></td>\r\n            </tr></tbody></table><!-- end container --></td>\r\n      </tr><!--END LAYOUT-16 ( UNSUBSCRIBE ) --></tbody></table></body>\r\n</html>",
+                    "attachments" : {
+                      "invoices" : "true"
+                    },
+                    "preview_only" : "true",
+                    "disable_editor" : "true"
+                  },
+                  "files" : {
+                    "InvoiceItem__12.csv.zip" : {
+                      "name" : "",
+                      "attach" : "false"
+                    }
+                  }
+                },
+                "action_type" : "Email",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 11,
+                "css" : {
+                  "top" : "310px",
+                  "left" : "720px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 11,
+                "name" : "Refetch Matched Invoices Per Account",
+                "parameters" : {
+                  "fields" : {
+                    "Invoice" : {
+                      "Id" : "true",
+                      "Amount" : "true",
+                      "Status" : "true",
+                      "Balance" : "true",
+                      "DueDate" : "true",
+                      "AccountId" : "true",
+                      "InvoiceDate" : "true",
+                      "InvoiceNumber" : "true",
+                      "PaymentAmount" : "true"
+                    }
+                  },
+                  "batch_size" : "2000",
+                  "where_clause" : "DueDate <= '{{Data.Invoice.DueDate}}' AND Balance > 0 AND Status = 'Posted' AND AccountId = '{{Data.Account.Id}}' ",
+                  "zero_query_proceed" : "false"
+                },
+                "action_type" : "Query",
+                "object" : "Invoice",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 9,
+                "css" : {
+                  "top" : "310px",
+                  "left" : "400px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 12,
+                "name" : "Get Invoice >30 Days",
+                "parameters" : {
+                  "fields" : {
+                    "Account" : {
+                      "Id" : "true",
+                      "Name" : "true",
+                      "Batch" : "true",
+                      "CrmId" : "true",
+                      "Currency" : "true",
+                      "SalesRepName" : "true",
+                      "AccountNumber" : "true",
+                      "CommunicationProfileId" : "true",
+                      "AdditionalEmailAddresses" : "true"
+                    },
+                    "Invoice" : {
+                      "Id" : "true",
+                      "Amount" : "true",
+                      "Status" : "true",
+                      "Balance" : "true",
+                      "DueDate" : "true",
+                      "InvoiceDate" : "true",
+                      "InvoiceNumber" : "true"
+                    },
+                    "BillToContact" : {
+                      "State" : "true",
+                      "County" : "true",
+                      "Address1" : "true",
+                      "Address2" : "true",
+                      "LastName" : "true",
+                      "FirstName" : "true",
+                      "WorkEmail" : "true",
+                      "PersonalEmail" : "true"
+                    },
+                    "DefaultPaymentMethod" : {
+                      "Type" : "true"
+                    }
+                  },
+                  "where_clause" : " Invoice.DueDate <= 'today - 30 days' AND Invoice.Balance > 0 AND Invoice.Status = 'Posted' Order By Invoice.DueDate Desc"
+                },
+                "action_type" : "Export",
+                "object" : "InvoiceItem",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "210px",
+                  "left" : "400px"
+                },
+                "concurrent_limit" : 4,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : null,
+                "source_task_id" : 11,
+                "target_task_id" : 10,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 9,
+                "target_task_id" : 11,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 12,
+                "target_task_id" : 9,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : 3,
+                "source_task_id" : null,
+                "target_task_id" : 12,
+                "linkage_type" : "Start"
+              } ]
+            }
+          }
+        },
+        "featureDisabled" : false
+      },
+      "response" : [ {
+        "id" : "476b655b-cdf6-47b6-9789-9178db9f165c",
+        "key" : "Communication Profile Update_0.0.1",
+        "segregationKey" : "Communication Profile Update",
+        "componentType" : "WorkFlows",
+        "url" : "6",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 6,
+          "name" : "Communication Profile Update",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2022-08-17T09:41:53.319Z",
+          "updatedAt" : "2022-08-17T09:41:53.319Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 68,
+            "name" : "Communication Profile Update",
+            "definitionId" : 6,
+            "definitionName" : "Communication Profile Update",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2022-08-17T09:41:53.319Z",
+            "updatedAt" : "2022-08-17T09:41:53.319Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "cduflo@zuora.com",
+              "created_at" : "2020-09-22T19:37:49.392Z",
+              "updated_at" : "2025-01-23T05:16:40.793Z"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 68,
+            "name" : "Communication Profile Update",
+            "definitionId" : 6,
+            "definitionName" : "Communication Profile Update",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2022-08-17T09:41:53.319Z",
+            "updatedAt" : "2022-08-17T09:41:53.319Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "cduflo@zuora.com",
+              "created_at" : "2020-09-22T19:37:49.392Z",
+              "updated_at" : "2025-01-23T05:16:40.793Z"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "24266fe7-04e7-4e3b-9b25-1695e7594000"
+      }, {
+        "id" : "9ac8fc83-aec8-4f24-b213-480faa5c0620",
+        "key" : "PRPC Create_0.0.1",
+        "segregationKey" : "PRPC Create",
+        "componentType" : "WorkFlows",
+        "url" : "103",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 103,
+          "name" : "PRPC Create",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2025-01-23T05:19:05.512Z",
+          "updatedAt" : "2025-01-23T05:22:51.509Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 1951,
+            "name" : "PRPC Create",
+            "definitionId" : 103,
+            "definitionName" : "PRPC Create",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2025-01-23T05:19:05.512Z",
+            "updatedAt" : "2025-01-23T05:22:51.509Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "cduflo@zuora.com",
+              "created_at" : "2020-09-22T19:37:49.392Z",
+              "updated_at" : "2025-01-23T05:16:40.793Z"
+            },
+            "updated_by" : {
+              "work_email" : "cduflo@zuora.com",
+              "created_at" : "2020-09-22T19:37:49.392Z",
+              "updated_at" : "2025-01-23T05:16:40.793Z"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 1951,
+            "name" : "PRPC Create",
+            "definitionId" : 103,
+            "definitionName" : "PRPC Create",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2025-01-23T05:19:05.512Z",
+            "updatedAt" : "2025-01-23T05:22:51.509Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "cduflo@zuora.com",
+              "created_at" : "2020-09-22T19:37:49.392Z",
+              "updated_at" : "2025-01-23T05:16:40.793Z"
+            },
+            "updated_by" : {
+              "work_email" : "cduflo@zuora.com",
+              "created_at" : "2020-09-22T19:37:49.392Z",
+              "updated_at" : "2025-01-23T05:16:40.793Z"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "24266fe7-04e7-4e3b-9b25-1695e7594000"
+      }, {
+        "id" : "3eb8d7bd-0bd7-4770-a72d-d7c5dfe08e53",
+        "key" : "Chargebacks -> Write Off Invoice + Cancel Subscription_0.0.1",
+        "segregationKey" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+        "componentType" : "WorkFlows",
+        "url" : "4",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 4,
+          "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+          "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2020-08-11T09:04:47.708Z",
+          "updatedAt" : "2020-08-11T09:04:47.708Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 4,
+            "name" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "definitionId" : 4,
+            "definitionName" : "Chargebacks -> Write Off Invoice + Cancel Subscription",
+            "description" : "This workflow would run on a schedule and pick up invoices with a balance that have a tied chargeback refund. Those invoices are written off using InvoiceItemAdjustments and the linked Subscriptions are then cancelled. ",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2020-08-11T09:04:47.708Z",
+            "updatedAt" : "2020-08-11T09:04:47.708Z",
+            "priority" : "Medium",
+            "status" : "Active",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "24266fe7-04e7-4e3b-9b25-1695e7594000"
+      }, {
+        "id" : "3aea251b-0eda-4319-9789-23c28c586604",
+        "key" : "Invoice 30 Days Past Due, Account Summary_0.0.1",
+        "segregationKey" : "Invoice 30 Days Past Due, Account Summary",
+        "componentType" : "WorkFlows",
+        "url" : "3",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 3,
+          "name" : "Invoice 30 Days Past Due, Account Summary",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : "0 0 3 /1 * *",
+          "timezone" : "Pacific Time (US & Canada)",
+          "createdAt" : "2020-08-11T09:04:47.482Z",
+          "updatedAt" : "2020-08-11T09:04:47.482Z",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 3,
+            "name" : "Invoice 30 Days Past Due, Account Summary",
+            "definitionId" : 3,
+            "definitionName" : "Invoice 30 Days Past Due, Account Summary",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 3 /1 * *",
+            "timezone" : "Pacific Time (US & Canada)",
+            "createdAt" : "2020-08-11T09:04:47.482Z",
+            "updatedAt" : "2020-08-11T09:04:47.482Z",
+            "priority" : "Medium",
+            "status" : "Active",
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 67,
+            "name" : "Invoice 30 Days Past Due, Account Summary",
+            "definitionId" : 3,
+            "definitionName" : "Invoice 30 Days Past Due, Account Summary",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.2",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "0 0 3 /1 * *",
+            "timezone" : "Pacific Time (US & Canada)",
+            "createdAt" : "2022-07-07T10:49:03.861Z",
+            "updatedAt" : "2022-07-07T10:49:03.861Z",
+            "priority" : "Medium",
+            "status" : "Inactive",
+            "created_by" : {
+              "work_email" : "cduflo@zuora.com",
+              "created_at" : "2020-09-22T19:37:49.392Z",
+              "updated_at" : "2025-01-23T05:16:40.793Z"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "24266fe7-04e7-4e3b-9b25-1695e7594000"
+      } ],
+      "errors" : [ ]
+    } ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : null
+  }
+}
