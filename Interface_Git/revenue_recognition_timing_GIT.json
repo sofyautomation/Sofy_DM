@@ -1,0 +1,152 @@
+{
+  "id" : "17edac50-f231-4637-8df9-4a3384105693",
+  "name" : "revenue recognition timing GIT",
+  "description" : "",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Ipaas4  (11519) (US-API-Sandbox-Staging)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox-Staging",
+  "createdBy" : "Aditya Ghosh",
+  "updatedBy" : "Aditya Ghosh",
+  "createdOn" : "2025-02-13T13:32:37.760Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ {
+      "segregationKeys" : [ "RevenueRecognitionPolicy(Revenue Recognition Timing)" ],
+      "originalPayload" : null,
+      "response" : [ {
+        "id" : "59551ca3-d65e-4369-8a1a-86bba4d588b7",
+        "key" : "RevenueRecognitionPolicy(Revenue Recognition Timing)",
+        "segregationKey" : "RevenueRecognitionPolicy(Revenue Recognition Timing)",
+        "componentType" : "Revenue",
+        "url" : "v1/uno/internal/settings/pob-policies?category=revenue_recognition_timing",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : [ {
+          "id" : "8a90f1f494fa318b0194ff813fca7836",
+          "field" : "TEST_TIMING_GIT",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a908caf94d512cb0194d5bba7eb135a",
+          "field" : "Auto-fill",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90c9b294d533230194d5ba6ffa033a",
+          "field" : "test_git",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90c9b294d533230194d5b18a920258",
+          "field" : "test_adv",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a908caf94d512cb0194d5a3a2c21100",
+          "field" : "Config-creation",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90c9b294d533230194d5a3a2f3014c",
+          "field" : "hello",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a908caf94d512cb0194d5a3125310fd",
+          "field" : "Test_0502",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90d7a894a7f2250194b7211f4c1f75",
+          "field" : "Staging timing",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a908caf94931e9501949385a8060750",
+          "field" : "Test-1",
+          "active" : false,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a908caf94931e9501949380224b06d2",
+          "field" : "Test",
+          "active" : false,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90c9b2949336ad019493714f5a0403",
+          "field" : "Test_ST",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a908caf93d8e92a0193de9168290482",
+          "field" : "Automation_Testing",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a908caf93d8e92a0193dde1f81833e8",
+          "field" : "New_Testing1",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90aac893d8e9210193ddc3381c10a5",
+          "field" : "Revenue_timing Test",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90c9b2934850ba019348b882921aed",
+          "field" : "Testing_GIT",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a90c9b2934850ba0193487aaba80bd8",
+          "field" : "Template_testing",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "8a908caf933f15c401933f6e285c04f6",
+          "field" : "hi",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "1",
+          "field" : "Upon Order Activation Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        }, {
+          "id" : "2",
+          "field" : "Upon Billing Document Posting Date",
+          "active" : true,
+          "category" : "revenue_recognition_timing"
+        } ],
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "",
+        "templateId" : "17edac50-f231-4637-8df9-4a3384105693"
+      } ],
+      "errors" : [ ]
+    } ],
+    "awsInfo" : null
+  }
+}
