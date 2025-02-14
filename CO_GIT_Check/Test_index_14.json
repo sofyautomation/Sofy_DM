@@ -1,0 +1,2855 @@
+{
+  "id" : "134dfcb1-4ea7-420d-b8fa-3ca06753623f",
+  "name" : "Test index 14",
+  "description" : "",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Kate NetSuite  (20000005) (EU-Central-Sandbox)",
+  "entityName" : "Global",
+  "environment" : "EU-Central-Sandbox",
+  "createdBy" : "Dhamodaran S",
+  "updatedBy" : "Dhamodaran S",
+  "createdOn" : "2025-02-14T07:22:11.691Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ {
+      "segregationKeys" : [ "contact" ],
+      "originalPayload" : {
+        "definitions" : {
+          "amendment" : {
+            "type" : "amendment",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Test_sync__c" : {
+                  "maxLength" : 99,
+                  "label" : "Test_sync",
+                  "origin" : "custom",
+                  "description" : "Test_sync",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Mutation__c" : {
+                  "maxLength" : 20,
+                  "label" : "Mutation",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Eff__c" : {
+                  "maxLength" : 20,
+                  "label" : "Eff ",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "standardreasons__c" : {
+                  "label" : "5 standard reasons",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "1", "2", "3", "4", "5" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "standardreasons__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "usage" : {
+            "type" : "usage",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "RatioDate__c" : {
+                  "format" : "date",
+                  "label" : "RatioDate",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Destination__c" : {
+                  "maxLength" : 120,
+                  "label" : "Destination",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PerUnitRate__c" : {
+                  "maxLength" : 255,
+                  "label" : "PerUnitRate",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "UsageCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "UsageCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "car_model__c" : {
+                  "maxLength" : 255,
+                  "label" : "car_model",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "",
+                  "legacy" : true
+                },
+                "OriginLocation__c" : {
+                  "maxLength" : 255,
+                  "label" : "OriginLocation",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "255",
+                  "legacy" : true
+                },
+                "UsageTag__c" : {
+                  "maxLength" : 255,
+                  "label" : "UsageTag",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RPCID__c" : {
+                  "maxLength" : 255,
+                  "label" : "RPCID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "SnapshotForRPCID__c" : {
+                  "maxLength" : 50,
+                  "label" : "Snapshot For RPC ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "UsageCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "UsageCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "prerated_rate__c" : {
+                  "maxLength" : 100,
+                  "label" : "prerated_rate",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "",
+                  "legacy" : true
+                },
+                "PricePerUnit__c" : {
+                  "maxLength" : 255,
+                  "label" : "Price Per Unit",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "0",
+                  "legacy" : true
+                },
+                "testdeletion__c" : {
+                  "maxLength" : 255,
+                  "label" : "testdeletion__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "50",
+                  "legacy" : true
+                },
+                "UsageCustomPickList__c" : {
+                  "label" : "UsageCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "BillMinutes__c" : {
+                  "maxLength" : 15,
+                  "label" : "Bill Minutes",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ResellerTier__c" : {
+                  "maxLength" : 11,
+                  "label" : "Reseller Tier",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "1.5%",
+                  "legacy" : true
+                },
+                "AccountCode__c" : {
+                  "maxLength" : 40,
+                  "label" : "AccountCode",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "OverageRatio__c" : {
+                  "maxLength" : 255,
+                  "label" : "Overage Ratio",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "0",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "RatioDate__c", "PerUnitRate__c", "car_model__c", "OriginLocation__c", "RPCID__c", "SnapshotForRPCID__c", "prerated_rate__c", "PricePerUnit__c", "ResellerTier__c", "OverageRatio__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "payment" : {
+            "type" : "payment",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "detailsopenontoggleconfirmcookie__c" : {
+                  "label" : "<details/open/ontoggle=confirm(cookie)>",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "abcd",
+                  "enum" : [ "abcd" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "KatePayment__c" : {
+                  "label" : "KatePayment",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "123",
+                  "enum" : [ "123", "456", "789" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "SubscriptionPaymentRunId__c" : {
+                  "maxLength" : 255,
+                  "label" : "Subscription Payment Run Id",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PaymentSource__c" : {
+                  "maxLength" : 50,
+                  "label" : "PaymentSource",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "detailsopenontoggleconfirmcookie__c", "KatePayment__c", "SubscriptionPaymentRunId__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ "PaymentSource__c" ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "productrateplancharge" : {
+            "type" : "productrateplancharge",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "ProductRatePlanChargeCustomPickList__c" : {
+                  "label" : "ProductRatePlanChargeCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "SupportType__c" : {
+                  "label" : "Support Type",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "No Support", "Standard Support", "Advanced Support", "Premium Support", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "ProductRatePlanChargeCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "ProductRatePlanChargeCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "LeadCreditFactor__c" : {
+                  "label" : "Lead Credit Factor",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "1", "1.2", "1.25", "1.5", "1.75", "2", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "DirectoryListing__c" : {
+                  "label" : "Directory Listing",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Basic", "Starter", "Standard", "Advanced", "Premium", "Silver", "Gold", "Platinum", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "garytest__c" : {
+                  "maxLength" : 32,
+                  "label" : "garytest",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "IncludedPostcodes__c" : {
+                  "label" : "Included Postcodes",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "50", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "ProductRatePlanChargeCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "ProductRatePlanChargeCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "BasePrice__c" : {
+                  "maxLength" : 10,
+                  "label" : "Base Price",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Sort__c" : {
+                  "maxLength" : 255,
+                  "label" : "Sort#",
+                  "origin" : "custom",
+                  "description" : "This field is used to determine the display sequence of the charges on the quote",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "SupportType__c", "LeadCreditFactor__c", "DirectoryListing__c", "IncludedPostcodes__c", "BasePrice__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "SupportType__c", "LeadCreditFactor__c", "DirectoryListing__c", "IncludedPostcodes__c", "BasePrice__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "rateplan" : {
+            "type" : "rateplan",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "MinimumIdents__c" : {
+                  "label" : "MinimumIdents__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "1800", "1900", "2000" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "TrackingID__c" : {
+                  "maxLength" : 255,
+                  "label" : "TrackingID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "entitlementsetid__c" : {
+                  "maxLength" : 255,
+                  "label" : "entitlementsetid",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PartnerID__c" : {
+                  "maxLength" : 255,
+                  "label" : "Partner ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PaymentMethodId__c" : {
+                  "maxLength" : 40,
+                  "label" : "Payment Method Id",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "text__c" : {
+                  "maxLength" : 50,
+                  "label" : "test",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "SourceSystem__c" : {
+                  "maxLength" : 255,
+                  "label" : "SourceSystem",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PaymentGateway__c" : {
+                  "maxLength" : 40,
+                  "label" : "Payment Gateway",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ProvisioningLineStatus__c" : {
+                  "label" : "ProvisioningLineStatus",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Unstaged", "Staged" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "RatePlanCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "RatePlanCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Context__c" : {
+                  "maxLength" : 255,
+                  "label" : "Context",
+                  "origin" : "custom",
+                  "description" : "POPS-6057\r\nIt can be one of the values: CsAgent, InAppPopUp, CancellationFlow, CRM",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PartnerUserID__c" : {
+                  "maxLength" : 255,
+                  "label" : "Partner User ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "productType__c" : {
+                  "maxLength" : 40,
+                  "label" : "productType",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RatePlanCustomPickList__c" : {
+                  "label" : "RatePlanCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "SourceSystemUserID__c" : {
+                  "maxLength" : 255,
+                  "label" : "SourceSystemUserID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ProductVersion__c" : {
+                  "maxLength" : 20,
+                  "label" : "Product Version",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "NextInvoiceDate__c" : {
+                  "format" : "date",
+                  "label" : "Next Invoice Date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "billingType__c" : {
+                  "maxLength" : 40,
+                  "label" : "billingType",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RatePlanCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "RatePlanCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "MinimumIdents__c", "entitlementsetid__c", "text__c", "SourceSystem__c", "ProvisioningLineStatus__c", "PartnerUserID__c", "SourceSystemUserID__c", "ProductVersion__c", "NextInvoiceDate__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "revenueeventitem" : {
+            "type" : "revenueeventitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "RevenueEventItemCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "RevenueEventItemCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "RevenueEventItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "RevenueEventItemCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RevenueEventItemCustomPickList__c" : {
+                  "label" : "RevenueEventItemCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "refund" : {
+            "type" : "refund",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "detailsopenontoggleconfirmcookie__c" : {
+                  "label" : "<details/open/ontoggle=confirm(cookie)>",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "abcd",
+                  "enum" : [ "abcd" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "test10__c" : {
+                  "label" : "test10",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "qqqq",
+                  "enum" : [ "qqqq" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Sumit_Test__c" : {
+                  "maxLength" : 255,
+                  "label" : "Sumit_Test",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RefundSource__c" : {
+                  "maxLength" : 50,
+                  "label" : "RefundSource",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "KateRefund__c" : {
+                  "maxLength" : 12,
+                  "label" : "KateRefund",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "KateRef123",
+                  "legacy" : true
+                },
+                "RefundReferenceId__c" : {
+                  "maxLength" : 255,
+                  "label" : "RefundReferenceId",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RefundType__c" : {
+                  "maxLength" : 255,
+                  "label" : "RefundType",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "detailsopenontoggleconfirmcookie__c", "test10__c", "Sumit_Test__c", "KateRefund__c", "RefundType__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ "RefundSource__c", "RefundReferenceId__c" ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "subscription" : {
+            "type" : "subscription",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "GiftCodeGrantsContentPortability__c" : {
+                  "maxLength" : 20,
+                  "label" : "GiftCodeGrantsContentPortability",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "DCB_Carier_Name__c" : {
+                  "maxLength" : 40,
+                  "label" : "DCB_Carier_Name",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PartnerID__c" : {
+                  "maxLength" : 255,
+                  "label" : "PartnerID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PaymentGateway_MC__c" : {
+                  "maxLength" : 24,
+                  "label" : "Payment Gateway_MC",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RenewalConsentGivenDate__c" : {
+                  "format" : "date",
+                  "label" : "RenewalConsentGivenDate",
+                  "origin" : "custom",
+                  "description" : "The last date on which a user has given consent for his subscription to be renewed. Currently needed for a regulation in Quebec where a user has to give consent for his yearly subscription to renew.",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RatePlanMigrationStatus__c" : {
+                  "maxLength" : 50,
+                  "label" : "Rate Plan Migration Status",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RiskProfile__c" : {
+                  "label" : "Risk Profile",
+                  "origin" : "custom",
+                  "description" : "Field used to capture current risk of subscription churning. This can be used in conjunction when tracking non billable usage.",
+                  "type" : "string",
+                  "default" : "1 - Low",
+                  "enum" : [ "1 - Low", "2", "3", "4", "5 - High" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "NumGiftPeriods__c" : {
+                  "maxLength" : 2,
+                  "label" : "Num GiftCode Periods",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "AutoPay__c" : {
+                  "label" : "AutoPay",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "On",
+                  "enum" : [ "On", "Off" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "SubscriptionCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "SubscriptionCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "FreeTrialPeriodsType__c" : {
+                  "maxLength" : 255,
+                  "label" : "FreeTrialPeriodsType",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Pause_Scheduled_Time__c" : {
+                  "maxLength" : 30,
+                  "label" : "Pause_Scheduled_Time",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Unpause_Scheduled_Time__c" : {
+                  "maxLength" : 30,
+                  "label" : "Unpause_Scheduled_Time",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "NumFreeTrialPeriods__c" : {
+                  "maxLength" : 2,
+                  "label" : "Num Free Trial Periods",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "giftcodeismethod__c" : {
+                  "maxLength" : 10,
+                  "label" : "giftcodeismethod",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PayWallUpdatedAt__c" : {
+                  "maxLength" : 25,
+                  "label" : "PayWallUpdatedAt",
+                  "origin" : "custom",
+                  "description" : "Testing-subscription",
+                  "type" : "string",
+                  "default" : "test",
+                  "legacy" : true
+                },
+                "KateSubPicklist__c" : {
+                  "label" : "KateSubPicklist",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Sub123",
+                  "enum" : [ "Sub123", "Sub456", "Sub789" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "KateSub__c" : {
+                  "maxLength" : 15,
+                  "label" : "KateSub",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "KateSub123",
+                  "legacy" : true
+                },
+                "QuoteID__c" : {
+                  "maxLength" : 18,
+                  "label" : "Quote ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Testing_CF_SAMENAME__c" : {
+                  "maxLength" : 25,
+                  "label" : "Testing_CF_SAMENAME",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "test",
+                  "legacy" : true
+                },
+                "KateSubDate__c" : {
+                  "format" : "date",
+                  "label" : "KateSubDate",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Action_Perform__c" : {
+                  "maxLength" : 100,
+                  "label" : "Action_Perform",
+                  "origin" : "custom",
+                  "description" : "Custom field that synchronizes to Salesforce and helps in identification which email to customer should be triggered. Possible values: Set Pause, Edit Pause, Edit resume dates in pause, Cancel scheduled pause, Early resume, Cancel subscription, Cancel subscription in pause, Resume from pause.",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "DeviceInformation__c" : {
+                  "maxLength" : 255,
+                  "label" : "Device Information",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "TrackingID__c" : {
+                  "maxLength" : 255,
+                  "label" : "Tracking ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Giftcode_old__c" : {
+                  "maxLength" : 40,
+                  "label" : "Giftcode_old",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PaymentMethodId__c" : {
+                  "maxLength" : 32,
+                  "label" : "Payment Method Id",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "OpportunityID__c" : {
+                  "maxLength" : 18,
+                  "label" : "Opportunity ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "super__c" : {
+                  "maxLength" : 20,
+                  "label" : "gsg",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CountryOfSubscription__c" : {
+                  "maxLength" : 50,
+                  "label" : "CountryOfSubscription",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Manually_Cancelled__c" : {
+                  "label" : "Manually_Cancelled",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "PaymentGateway__c" : {
+                  "maxLength" : 255,
+                  "label" : "Payment Gateway",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RatePlanMigrationDate__c" : {
+                  "format" : "date",
+                  "label" : "Rate Plan Migration Date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CampaignID__c" : {
+                  "maxLength" : 255,
+                  "label" : "Campaign ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ValidPromo__c" : {
+                  "maxLength" : 20,
+                  "label" : "Valid Promo",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "UserAgent__c" : {
+                  "maxLength" : 255,
+                  "label" : "UserAgent",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "PartnerID__c", "PaymentGateway_MC__c", "RiskProfile__c", "AutoPay__c", "KateSubPicklist__c", "KateSub__c", "QuoteID__c", "KateSubDate__c", "PaymentMethodId__c", "OpportunityID__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ "DCB_Carier_Name__c" ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "debitmemo" : {
+            "type" : "debitmemo",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "CreatedByAutomatedProcess__c" : {
+                  "label" : "Created By Automated Process",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "No",
+                  "enum" : [ "No", "Yes" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "RetryStatus__c" : {
+                  "maxLength" : 255,
+                  "label" : "Retry Status",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "RetryStatus__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ "CreatedByAutomatedProcess__c", "RetryStatus__c" ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "journalentry" : {
+            "type" : "journalentry",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "JournalEntry__c" : {
+                  "maxLength" : 50,
+                  "label" : "Journal Entry ",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "JournalEntry__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "accountingperiod" : {
+            "type" : "accountingperiod",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Quarter__c" : {
+                  "label" : "Quarter",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Qtr1- Jan till march",
+                  "enum" : [ "Qtr1- Jan till march", "Qtr2- April till June", "Qtr3- July till Sept", "Qtr4-Oct-Dec" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "Quarter__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "Quarter__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "revenueschedule" : {
+            "type" : "revenueschedule",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "aascriptalert123script2__c" : {
+                  "label" : "aa&#034;&gt;alert(123)&lt;/script&gt;",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "hello",
+                  "enum" : [ "hello" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "aascriptalert123script__c" : {
+                  "label" : "aa\">alert(123)</script>",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "hello",
+                  "enum" : [ "hello" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "aascriptalert2811111111292Fscript__c" : {
+                  "maxLength" : 100,
+                  "label" : "aa\">alert%2811111111%29<%2Fscript>",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RevenueScheduleCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "RevenueScheduleCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "a__c" : {
+                  "maxLength" : 12,
+                  "label" : "a",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "aascriptalert123script2__c", "aascriptalert123script__c", "aascriptalert2811111111292Fscript__c", "a__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "product" : {
+            "type" : "product",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Inventory__c" : {
+                  "maxLength" : 255,
+                  "label" : "Inventory",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "SaaSProductFamily__c" : {
+                  "label" : "SaaS Product Family",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Software", "Storage", "Bundle" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "BUSINESS_UNIT__c" : {
+                  "label" : "BUSINESS_UNIT",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "UnitA",
+                  "enum" : [ "UnitA", "UnitB" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "PRODUCT_FAMILY__c" : {
+                  "maxLength" : 255,
+                  "label" : "PRODUCT_FAMILY",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ContextFilter__c" : {
+                  "label" : "Context Filter",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "ControlSystem_PowerSupply" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Prospect__c" : {
+                  "maxLength" : 255,
+                  "label" : "Prospect",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "DowngradePathSKU__c" : {
+                  "maxLength" : 255,
+                  "label" : "Downgrade Path (SKU)",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RoadmapPriority__c" : {
+                  "label" : "Roadmap Priority",
+                  "origin" : "custom",
+                  "description" : "Custom field used to support reporting and analysis.",
+                  "type" : "string",
+                  "enum" : [ "1 - High", "2", "3", "4", "5 - Low" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "ProductManager__c" : {
+                  "label" : "Product Manager",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Dan Swanson",
+                  "enum" : [ "Dan Swanson", "Sandy Taylor", "Bruce Wilson", "Deb Johnson", "Mary Swanson" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "PayWallUpdatedAt__c" : {
+                  "maxLength" : 25,
+                  "label" : "PayWallUpdatedAt",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "test",
+                  "legacy" : true
+                },
+                "HardwareProductFamily__c" : {
+                  "label" : "Hardware Product Family",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Device", "Accessory" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "PartnerCommission__c" : {
+                  "maxLength" : 3,
+                  "label" : "Partner Commission %",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PaaSProductFamily__c" : {
+                  "label" : "PaaS Product Family",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "General Purpose", "Compute Optimized", "Memory Optimized", "Storage Optimized" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "ProductCategory__c" : {
+                  "label" : "Product Category",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Base Product", "Add-On Product", "Professional Services", "Miscellaneous" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "AddOnGroup__c" : {
+                  "label" : "Add On Group",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "All", "SaaS", "Software" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "Inventory__c", "SaaSProductFamily__c", "BUSINESS_UNIT__c", "PRODUCT_FAMILY__c", "DowngradePathSKU__c", "RoadmapPriority__c", "ProductManager__c", "HardwareProductFamily__c", "PaaSProductFamily__c", "ProductCategory__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "invoiceitem" : {
+            "type" : "invoiceitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "InvoiceItemCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "InvoiceItemCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "AddonOneTimeSubscriptionId__c" : {
+                  "maxLength" : 255,
+                  "label" : "Addon One Time Subscription Id",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "AddonOneTimeSubscriptionRPC__c" : {
+                  "maxLength" : 255,
+                  "label" : "Addon One Time Subscription RPC",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "InvoiceItemCF__c" : {
+                  "maxLength" : 100,
+                  "label" : "Invoice Item CF",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Synergy__c" : {
+                  "maxLength" : 255,
+                  "label" : "Synergy",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "sizzle",
+                  "legacy" : true
+                },
+                "InvoiceItemCustomPickList__c" : {
+                  "label" : "InvoiceItemCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "InvoiceItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "InvoiceItemCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "AddonOneTimeSubscriptionId__c", "AddonOneTimeSubscriptionRPC__c", "InvoiceItemCF__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "invoiceitemadjustment" : {
+            "type" : "invoiceitemadjustment",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "InvoiceItemAdjustmentCustomPickList__c" : {
+                  "label" : "InvoiceItemAdjustmentCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "InvoiceItemAdjustmentCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "InvoiceItemAdjustmentCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "InvoiceItemAdjustmentCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "InvoiceItemAdjustmentCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "test__c" : {
+                  "maxLength" : 5,
+                  "label" : "test",
+                  "origin" : "custom",
+                  "description" : "test",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Ita1__c" : {
+                  "label" : "Ita-1",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "default",
+                  "enum" : [ "default", "1", "2" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "Ita1__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "test__c", "Ita1__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "journalentryitem" : {
+            "type" : "journalentryitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "JournalEntryItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "JournalEntryItemCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "JournalEntryItemCustomPickList__c" : {
+                  "label" : "JournalEntryItemCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "JournalEntryItemCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "JournalEntryItemCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "accountingcode" : {
+            "type" : "accountingcode",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "AccountingCodeCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "AccountingCodeCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "AccountingCodeCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "AccountingCodeCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "AccountingCodeCustomPickList__c" : {
+                  "label" : "AccountingCodeCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "contact" : {
+            "type" : "contact",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "imgsrcxonmouseoveralertdomain__c" : {
+                  "label" : "\"><img src=x onmouseover=alert(domain)>",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Hi",
+                  "enum" : [ "Hi" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "test_abc__c" : {
+                  "maxLength" : 32,
+                  "label" : "test_abc",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ac_custom__c" : {
+                  "label" : "ac_custom",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Custom1",
+                  "enum" : [ "Custom1", "Custom2", "Custom3" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "test_dq__c" : {
+                  "maxLength" : 32,
+                  "label" : "test_dq",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "testindex__c" : {
+                  "maxLength" : 45,
+                  "label" : "test index",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "30",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "imgsrcxonmouseoveralertdomain__c", "ac_custom__c", "testindex__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "testindex__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "taxationitem" : {
+            "type" : "taxationitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "tax_compliance_flag__c" : {
+                  "maxLength" : 5,
+                  "label" : "tax_compliance_flag",
+                  "origin" : "custom",
+                  "description" : "Avalara",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "tax_billable__c" : {
+                  "maxLength" : 5,
+                  "label" : "tax_billable",
+                  "origin" : "custom",
+                  "description" : "Avalara",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "tax_taxable_measure__c" : {
+                  "maxLength" : 30,
+                  "label" : "tax_taxable_measure",
+                  "origin" : "custom",
+                  "description" : "Avalara",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "tax_tid__c" : {
+                  "maxLength" : 5,
+                  "label" : "tax_tid",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "tax_taxable_base__c" : {
+                  "maxLength" : 255,
+                  "label" : "tax_taxable_base",
+                  "origin" : "custom",
+                  "description" : "Avalara",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "TaxationItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "TaxationItemCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "tax_taxed_lines__c" : {
+                  "maxLength" : 30,
+                  "label" : "tax_taxed_lines",
+                  "origin" : "custom",
+                  "description" : "Avalara",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "tax_surcharge_flag__c" : {
+                  "maxLength" : 5,
+                  "label" : "tax_surcharge_flag",
+                  "origin" : "custom",
+                  "description" : "Avalara",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "TaxationItemCustomPickList__c" : {
+                  "label" : "TaxationItemCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "TaxationItemCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "TaxationItemCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "revenuescheduleitem" : {
+            "type" : "revenuescheduleitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "RevenueScheduleItemCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "RevenueScheduleItemCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "RevenueScheduleItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "RevenueScheduleItemCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RevenueScheduleItemCustomPickList__c" : {
+                  "label" : "RevenueScheduleItemCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "revenueevent" : {
+            "type" : "revenueevent",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "RevenueEventCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "RevenueEventCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "RevenueEventCustomPickList__c" : {
+                  "label" : "RevenueEventCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "RevenueEventCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "RevenueEventCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "paymentmethod" : {
+            "type" : "paymentmethod",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "ActualPaymentMethod__c" : {
+                  "maxLength" : 255,
+                  "label" : "ActualPaymentMethod",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PaymentMethodCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "PaymentMethodCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CardType__c" : {
+                  "label" : "Card Type",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "AMEX", "Visa", "Master Card" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "PaymentMethodCustomPickList__c" : {
+                  "label" : "PaymentMethodCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "TMX_Id__c" : {
+                  "maxLength" : 255,
+                  "label" : "TMX_Id",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PaymentMethodCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "PaymentMethodCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "CardType__c", "TMX_Id__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "rateplancharge" : {
+            "type" : "rateplancharge",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "PostSignUpGiftcode__c" : {
+                  "maxLength" : 100,
+                  "label" : "PostSignUpGiftcode",
+                  "origin" : "custom",
+                  "description" : "Giftode number (Giftcode redeemed post sign up)",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PostSignUpGiftcodeCampaignName__c" : {
+                  "maxLength" : 100,
+                  "label" : "PostSignUpGiftcodeCampaignName",
+                  "origin" : "custom",
+                  "description" : "Campaign Name for a giftcode used post sign up & stored in the other field:\"PostSignUpGiftcode\"",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "SupportType__c" : {
+                  "label" : "Support Type",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "No Support", "Standard Support", "Advanced Support", "Premium Support", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "LeadCreditFactor__c" : {
+                  "label" : "Lead Credit Factor",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "1", "1.2", "1.25", "1.5", "1.75", "2", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "RollingTotal__c" : {
+                  "maxLength" : 255,
+                  "label" : "Rolling Total",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "255",
+                  "legacy" : true
+                },
+                "DeliveryDate__c" : {
+                  "format" : "date",
+                  "label" : "Delivery Date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "DirectoryListing__c" : {
+                  "label" : "Directory Listing",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Basic", "Starter", "Standard", "Advanced", "Premium", "Silver", "Gold", "Platinum", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "FutureDatedAmendmentGroup__c" : {
+                  "maxLength" : 64,
+                  "label" : "FutureDatedAmendmentGroup",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "IncludedPostcodes__c" : {
+                  "label" : "Included Postcodes",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "50", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "RatePlanChargeCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "RatePlanChargeCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "ThresholdPercentage__c" : {
+                  "maxLength" : 18,
+                  "label" : "Threshold Percentage",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "18",
+                  "legacy" : true
+                },
+                "BasePrice__c" : {
+                  "maxLength" : 10,
+                  "label" : "Base Price",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "PostSignUpGiftcode__c", "PostSignUpGiftcodeCampaignName__c", "FutureDatedAmendmentGroup__c", "BasePrice__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ "PostSignUpGiftcode__c", "PostSignUpGiftcodeCampaignName__c" ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "debitmemoitem" : {
+            "type" : "debitmemoitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "DebitMemoItemCustomPickList__c" : {
+                  "label" : "DebitMemoItemCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "DebitMemoItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "DebitMemoItemCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "DebitMemoItemCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "DebitMemoItemCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "creditmemo" : {
+            "type" : "creditmemo",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Cmc_1__c" : {
+                  "label" : "Cmc_1",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "1",
+                  "enum" : [ "1", "2" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "CreditMemoCustomPickList__c" : {
+                  "label" : "CreditMemoCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "CreditMemoCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "CreditMemoCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "PlatformTest__c" : {
+                  "maxLength" : 100,
+                  "label" : "PlatformTest",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Cmd_1__c" : {
+                  "format" : "date",
+                  "label" : "Cmd_1",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CreditMemoCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "CreditMemoCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "testcm__c" : {
+                  "maxLength" : 20,
+                  "label" : "testcm__c",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "yyyyy",
+                  "legacy" : true
+                },
+                "TestMemoDate__c" : {
+                  "format" : "date",
+                  "label" : "TestMemoDate",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "TestPicklist__c" : {
+                  "label" : "TestPicklist__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "1",
+                  "enum" : [ "1", "2", "3" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Cmt_1__c" : {
+                  "maxLength" : 20,
+                  "label" : "Cmt_1",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "Cmc_1__c", "PlatformTest__c", "Cmd_1__c", "TestMemoDate__c", "Cmt_1__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "Cmc_1__c", "Cmd_1__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "productrateplan" : {
+            "type" : "productrateplan",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "discountpercentage__c" : {
+                  "maxLength" : 100,
+                  "label" : "discountpercentage",
+                  "origin" : "custom",
+                  "description" : "discount percentage for PPV bundle rate plan",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "entitlementsetid__c" : {
+                  "maxLength" : 100,
+                  "label" : "entitlementsetid",
+                  "origin" : "custom",
+                  "description" : "The field to present an entitlement to the purchased fixture.",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "RatePlanType__c" : {
+                  "label" : "Rate Plan Type",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Base", "Add On", "Discount", "Onetime Pack", "Special Offers", "NA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "prp_customtext__c" : {
+                  "maxLength" : 50,
+                  "label" : "prp_customtext",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Region__c" : {
+                  "label" : "Region",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "US East", "US West", "EU" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "PPVtype__c" : {
+                  "label" : "PPVtype",
+                  "origin" : "custom",
+                  "description" : "The field needed to differentiate PPV rate plans used on sign up and post sign up.",
+                  "type" : "string",
+                  "enum" : [ "regular", "bundle" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "OfferType__c" : {
+                  "label" : "OfferType",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "FreeTrial", "HardOffer", "Credit", "Discount" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Type__c" : {
+                  "label" : "Type",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "N/A",
+                  "enum" : [ "N/A", "Monthly", "Instalment", "Annual" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "productType__c" : {
+                  "label" : "productType",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "none",
+                  "enum" : [ "none", "subscription", "addon", "ppv" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "PromotionCode__c" : {
+                  "maxLength" : 255,
+                  "label" : "Promotion Code",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "255",
+                  "legacy" : true
+                },
+                "RatePlanPriority__c" : {
+                  "label" : "Rate Plan Priority",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "NA", "50", "40", "30", "20", "10" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "eventStartDateTime__c" : {
+                  "maxLength" : 255,
+                  "label" : "eventStartDateTime",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "OperatingSystem__c" : {
+                  "label" : "Operating System",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Linux", "Windows", "RHEL" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "tierRank__c" : {
+                  "maxLength" : 255,
+                  "label" : "tierRank",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "billingType__c" : {
+                  "label" : "billingType",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "none",
+                  "enum" : [ "none", "Recurring", "OneOff", "RecurringExternal" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Frequency__c" : {
+                  "label" : "Frequency",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Perpetual", "Pay as you go", "Monthly", "Quarterly", "Annual" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "packagename__c" : {
+                  "label" : "package name",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "basic",
+                  "enum" : [ "basic", "gold", "super" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "discountpercentage__c", "entitlementsetid__c", "Region__c", "PPVtype__c", "OfferType__c", "Type__c", "PromotionCode__c", "eventStartDateTime__c", "OperatingSystem__c", "Frequency__c", "packagename__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "RatePlanType__c", "Type__c", "RatePlanPriority__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "creditmemoitem" : {
+            "type" : "creditmemoitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "test__c" : {
+                  "maxLength" : 20,
+                  "label" : "test",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "zzzz",
+                  "legacy" : true
+                },
+                "CreditMemoItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "CreditMemoItemCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "debittaxationitem" : {
+            "type" : "debittaxationitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Debit_memo_cf__c" : {
+                  "label" : "Debit_memo_cf",
+                  "origin" : "custom",
+                  "description" : "test ",
+                  "type" : "string",
+                  "default" : "a",
+                  "enum" : [ "a", "b", "c", "d", "122312", "223", "22" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "DebitTaxationItemCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "DebitTaxationItemCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "DebitTaxationItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "DebitTaxationItemCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "DebitTaxationItemCustomPickList__c" : {
+                  "label" : "DebitTaxationItemCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "debit_memo_NI_cf__c" : {
+                  "label" : "debit_memo_NI_cf",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "1",
+                  "enum" : [ "1", "2", "3", "4", "5", "aaaa" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "Debit_memo_cf__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "Debit_memo_cf__c", "debit_memo_NI_cf__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "invoice" : {
+            "type" : "invoice",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "chin__c" : {
+                  "label" : "chin",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "12345",
+                  "enum" : [ "12345" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "NonCPRNextRetryDate__c" : {
+                  "format" : "date",
+                  "label" : "Non-CPR Next Retry Date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "APOFDrawdownComplete__c" : {
+                  "label" : "APOF Drawdown Complete",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "No",
+                  "enum" : [ "No", "Yes" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "testdescription__c" : {
+                  "maxLength" : 255,
+                  "label" : "testdescription",
+                  "origin" : "custom",
+                  "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec ipsum finibus, fermentum enim vel, rhoncus sapien. Vestibulum iaculis dapibus venenatis. Nulla eu nisi ac felis auctor interdum. Quisque eu mauris sit amet tellus euismod fringilla eget eget lorem. Quisque consequat ante in convallis tempor. Cras dignissim eget massa nec suscipit. Praesent porta libero vel sem hendrerit, a tempus elit vehicula. Suspendisse et elit vulputate, accumsan lacus vel, posuere ante. Ut pulvinar mattis eros non scelerisque. Mauris cursus mollis blandit. Duis metus dolor, bibendum ut semper ac, porta dapibus neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc rutrum vehicula sem, nec consectetur eros elementum venenatis.\r\n\r\nMaecenas efficitur enim eu odio dapibus, mattis venenatis tortor gravida. Suspendisse ac justo non dolor dignissim pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultrices nulla eu justo sollicitudin, ac varius metus porttitor. Nunc id ornare nunc, et porttitor orci. Aenean in imperdiet ex. Sed a elementum metus, vel molestie velit. Quisque porttitor sem non euismod sodales. Cras eget hendrerit ante. Duis lobortis, turpis nec vehicula volutpat, nunc urna mattis orci, id congue risus nibh vel dui. Nullam id consectetur est. Morbi ex magna, dictum eget facilisis sed, finibus quis lorem. Curabitur ut aliquam tellus. Nulla auctor, ligula eu interdum consectetur, ex mi rutrum lacus, ac molestie mauris ante hendrerit elit.\r\n\r\nDonec rutrum orci in dolor vulputate tempus. Integer non lorem vitae dui euismod fringilla. Nullam porttitor, metus vitae mattis volutpat, turpis nunc fermentum magna, sed ultricies ligula tellus eu dolor. Etiam pretium maximus ipsum sit amet eleifend. Sed a dignissim tortor. Morbi venenatis venenatis nisl, vitae iaculis metus tincidunt ac. Etiam nisi metus, venenatis in gravida eu, mollis et urna. Curabitur nec erat libero.\r\n\r\nPraesent tristique lorem ac molestie lacinia. Curabitur ut pretium quam. Praesent scelerisque augue nec dui hendrerit semper. Donec eu laoreet augue. Nulla ut enim vitae neque venenatis hendrerit. Ut arcu erat, commodo eget nisi et, consectetur mollis turpis. Nulla nec porttitor velit, a efficitur massa. Nunc condimentum metus sed odio maximus faucibus. Ut porta nunc et orci tincidunt, at imperdiet augue malesuada. Donec maximus odio eget leo pretium, sed aliquet urna interdum. Vivamus eu efficitur diam, eget dictum purus. In volutpat odio ac nunc bibendum, nec placerat massa laoreet. Fusce sed ultricies purus, ut iaculis neque. Pellentesque lorem sem, hendrerit porttitor elit eu, volutpat dictum arcu.",
+                  "type" : "string",
+                  "default" : "test",
+                  "legacy" : true
+                },
+                "test__c" : {
+                  "maxLength" : 255,
+                  "label" : "test",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "testStr",
+                  "legacy" : true
+                },
+                "testAuditTrail3__c" : {
+                  "maxLength" : 14,
+                  "label" : "testAuditTrail3",
+                  "origin" : "custom",
+                  "description" : "test14",
+                  "type" : "string",
+                  "default" : "test14",
+                  "legacy" : true
+                },
+                "ManualWriteOffReason__c" : {
+                  "label" : "Manual Write Off Reason",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Correcting invoice error", "Ascension", "Auto Renewal Cancellation", "Auto Renewal Objection", "Banned Account", "Cooling off period", "Customer Request", "Discount on VC", "Downgrading", "Incorrect Info by SR", "PPL Lead Dispute", "Setup Error", "Sign up Cancel-48Hrs", "Insolvent", "Injury/Illness", "Chargeback", "Pause of Membership", "Waive Lead Pack on VC", "Contract Termination Fee", "Internal Test Account", "Disc on Listing Renewal", "Bankrupt" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "ProductType__c" : {
+                  "label" : "Product Type",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Product", "Services" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Localtax__c" : {
+                  "maxLength" : 10,
+                  "label" : "Localtax",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "NonCPRRetryAttemptCounter__c" : {
+                  "maxLength" : 3,
+                  "label" : "Non-CPR Retry Attempt Counter",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "0",
+                  "legacy" : true
+                },
+                "Address__c" : {
+                  "maxLength" : 255,
+                  "label" : "Address",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Blasphemy__c" : {
+                  "maxLength" : 255,
+                  "label" : "Blasphemy",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "APoFCommitOutstandingBalance__c" : {
+                  "maxLength" : 255,
+                  "label" : "APoF Commit Outstanding Balance",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "MyInteger__c" : {
+                  "label" : "MyInteger",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "integer",
+                  "legacy" : true
+                },
+                "Synergy__c" : {
+                  "maxLength" : 255,
+                  "label" : "Synergy",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "ManualWriteOff__c" : {
+                  "label" : "Manual Write Off",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "sdasassa__c" : {
+                  "label" : "sdasassa",
+                  "origin" : "custom",
+                  "description" : "asdsas",
+                  "type" : "string",
+                  "default" : "asdsda",
+                  "enum" : [ "asdsda" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "RetryStatus__c" : {
+                  "maxLength" : 255,
+                  "label" : "Retry Status",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "chin__c", "NonCPRNextRetryDate__c", "APOFDrawdownComplete__c", "test__c", "ManualWriteOffReason__c", "ProductType__c", "Localtax__c", "ManualWriteOff__c", "sdasassa__c", "RetryStatus__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ "RetryStatus__c" ],
+              "required" : [ "test__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "account" : {
+            "type" : "account",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Token_AutoPay__c" : {
+                  "label" : "Token_AutoPay",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Yes",
+                  "enum" : [ "Yes", "No" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "CRMSoldToContactID__c" : {
+                  "maxLength" : 255,
+                  "label" : "CRM SoldTo Contact ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Token__c" : {
+                  "maxLength" : 255,
+                  "label" : "Token",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "test__c" : {
+                  "label" : "test",
+                  "origin" : "custom",
+                  "description" : "abcd",
+                  "type" : "string",
+                  "default" : "abc",
+                  "enum" : [ "abc" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "APoFCommitOutstandingPreviousBalance__c" : {
+                  "maxLength" : 255,
+                  "label" : "Previous APoF Commit Outstanding Balance",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CRMBillToContactID__c" : {
+                  "maxLength" : 255,
+                  "label" : "CRM BillTo Contact ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "APoFPrepaidRemainingPreviousBalance__c" : {
+                  "maxLength" : 255,
+                  "label" : "Previous APoF Prepaid Remaining Balance",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "GenerateStatement__c" : {
+                  "maxLength" : 255,
+                  "label" : "GenerateStatement",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "integer_custom__c" : {
+                  "label" : "integer_custom",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "integer",
+                  "legacy" : true
+                },
+                "CollectionsAgent__c" : {
+                  "maxLength" : 32,
+                  "label" : "CollectionsAgent",
+                  "origin" : "custom",
+                  "description" : "abc",
+                  "type" : "string",
+                  "default" : "abc",
+                  "legacy" : true
+                },
+                "AccountClosing_test_2__c" : {
+                  "maxLength" : 255,
+                  "label" : "AccountClosing_test_2",
+                  "origin" : "custom",
+                  "description" : "I make it non-required. because we have many automation cases based on this tenant. If you need required CF, could you change to another tenant? or contact jiankun.zhang",
+                  "type" : "string",
+                  "default" : "yashi",
+                  "legacy" : true
+                },
+                "AccountClosing_test_4__c" : {
+                  "maxLength" : 255,
+                  "label" : "AccountClosing_test_4",
+                  "origin" : "custom",
+                  "description" : "I make it non-required. because we have many automation cases based on this tenant. If you need required CF, could you change to another tenant? or contact jiankun.zhang",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "auditVladNew__c" : {
+                  "maxLength" : 64,
+                  "label" : "auditVladNew",
+                  "origin" : "custom",
+                  "description" : "auditVladNew",
+                  "type" : "string",
+                  "default" : "auditVladNew",
+                  "legacy" : true
+                },
+                "InCollections__c" : {
+                  "label" : "InCollections",
+                  "origin" : "custom",
+                  "description" : "Used for Collections Window module.",
+                  "type" : "string",
+                  "default" : "False",
+                  "enum" : [ "False", "True" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "CollectionStatus__c" : {
+                  "maxLength" : 200,
+                  "label" : "Collection Status",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PortalNameURL__c" : {
+                  "maxLength" : 255,
+                  "label" : "Portal Name (URL)",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PORequired__c" : {
+                  "label" : "PO Required",
+                  "origin" : "custom",
+                  "description" : "Customer Requires a PO to process payment",
+                  "type" : "string",
+                  "default" : "YES",
+                  "enum" : [ "YES", "NO" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "datetest3__c" : {
+                  "format" : "date",
+                  "label" : "datetest3",
+                  "origin" : "custom",
+                  "description" : "des",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Number_of_Failed_Attempts__c" : {
+                  "maxLength" : 255,
+                  "label" : "Number_of_Failed_Attempts",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "0",
+                  "legacy" : true
+                },
+                "LeadCreditStatus__c" : {
+                  "label" : "Lead Credit Status",
+                  "origin" : "custom",
+                  "description" : "This field indicates if lead credits are active for the customer i.e. if customer doesn't pay his invoice then as 1st step of collection his lead credits will be paused and tradie will not be able accept jobs",
+                  "type" : "string",
+                  "default" : "Active",
+                  "enum" : [ "Active", "Paused", "Cancelled" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Parent__c" : {
+                  "maxLength" : 110,
+                  "label" : "Parent Company",
+                  "origin" : "custom",
+                  "description" : "Zuora updated description",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Last_Token_Transaction_Date__c" : {
+                  "maxLength" : 255,
+                  "label" : "Last_Token_Transaction_Date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "LikesDogs__c" : {
+                  "label" : "LikesDogs",
+                  "origin" : "custom",
+                  "description" : "Testing description",
+                  "type" : "string",
+                  "default" : "Yes",
+                  "enum" : [ "Yes", "No" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "auditVlad__c" : {
+                  "maxLength" : 64,
+                  "label" : "auditVlad",
+                  "origin" : "custom",
+                  "description" : "auditVlad",
+                  "type" : "string",
+                  "default" : "auditVlad",
+                  "legacy" : true
+                },
+                "PaymentCommitmentDate__c" : {
+                  "format" : "date",
+                  "label" : "Payment Commitment Date",
+                  "origin" : "custom",
+                  "description" : "Date that customer has committed to paying their account. Collections Agents should not have to reach out until then if payment still hasn't been made after this date.",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Supporthold__c" : {
+                  "format" : "date",
+                  "label" : "Support hold",
+                  "origin" : "custom",
+                  "description" : "DES",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "APoFPrepaidBalance__c" : {
+                  "maxLength" : 255,
+                  "label" : "APoF Prepaid Remaining Balance",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CompanyName__c" : {
+                  "maxLength" : 255,
+                  "label" : "Company Name",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "APoFRRCreditStatus__c" : {
+                  "maxLength" : 255,
+                  "label" : "APoF R&R Credit Status",
+                  "origin" : "custom",
+                  "description" : "APoF Rip&Replace Credit Status",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "AutomatedDowngradeDate__c" : {
+                  "format" : "date",
+                  "label" : "Automated Downgrade Date",
+                  "origin" : "custom",
+                  "description" : "Used as part of automated downgraded processes",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "StatementTemplate__c" : {
+                  "maxLength" : 255,
+                  "label" : "StatementTemplate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "MyUrl__c" : {
+                  "maxLength" : 200,
+                  "label" : "MyUrl",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "www.zuora.com",
+                  "legacy" : true
+                },
+                "APoFCommitOutstandingBalance__c" : {
+                  "maxLength" : 255,
+                  "label" : "APoF Commit Outstanding Balance",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "MyInteger__c" : {
+                  "label" : "MyInteger",
+                  "origin" : "custom",
+                  "description" : "test",
+                  "type" : "integer",
+                  "default" : 2,
+                  "legacy" : true
+                },
+                "Last_Token_Transaction_Status__c" : {
+                  "maxLength" : 255,
+                  "label" : "Last_Token_Transaction_Status",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "number_custom__c" : {
+                  "label" : "number_custom",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "number",
+                  "legacy" : true
+                },
+                "PortalRequired__c" : {
+                  "label" : "Portal Required",
+                  "origin" : "custom",
+                  "description" : "wfwrf",
+                  "type" : "string",
+                  "default" : "YES",
+                  "enum" : [ "YES", "NO" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "datetest2__c" : {
+                  "format" : "date",
+                  "label" : "datetest2",
+                  "origin" : "custom",
+                  "description" : "des",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "datetest__c" : {
+                  "format" : "date",
+                  "label" : "datetest",
+                  "origin" : "custom",
+                  "description" : "qwerty",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CreditHold__c" : {
+                  "format" : "date",
+                  "label" : "Credit Hold",
+                  "origin" : "custom",
+                  "description" : "Date the Customer was last placed on Credit Hold",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "test_adv_cache__c" : {
+                  "maxLength" : 32,
+                  "displayName" : false,
+                  "label" : "test_adv_cache",
+                  "origin" : "custom",
+                  "type" : "string"
+                }
+              },
+              "indexed" : [ "Token_AutoPay__c", "Token__c", "test__c", "AccountClosing_test_2__c", "AccountClosing_test_4__c", "datetest3__c", "Number_of_Failed_Attempts__c", "Last_Token_Transaction_Date__c", "Last_Token_Transaction_Status__c", "datetest2__c", "datetest__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ "CollectionStatus__c", "MyUrl__c" ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "credittaxationitem" : {
+            "type" : "credittaxationitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "CreditTaxationItemCustomText__c" : {
+                  "maxLength" : 64,
+                  "label" : "CreditTaxationItemCustomText",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "custom text",
+                  "legacy" : true
+                },
+                "CreditTaxationItemCustomPickList__c" : {
+                  "label" : "CreditTaxationItemCustomPickList",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Alpha",
+                  "enum" : [ "Alpha", "Beta", "Omega" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "CreditTaxationItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "CreditTaxationItemCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          }
+        },
+        "count" : 31
+      },
+      "response" : [ {
+        "id" : "aa81b2d7-086f-456b-8627-22204accd7b6",
+        "key" : "contact -> testindex__c",
+        "segregationKey" : "contact",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "test index",
+          "maxLength" : 45,
+          "default" : "30",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "testindex__c",
+          "required" : true,
+          "filterable" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "134dfcb1-4ea7-420d-b8fa-3ca06753623f"
+      } ],
+      "errors" : [ ]
+    } ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : null
+  }
+}
