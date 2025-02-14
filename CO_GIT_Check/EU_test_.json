@@ -2,7 +2,7 @@
   "id" : "05528060-48e2-487d-a55c-395f01ba2684",
   "name" : "EU test ",
   "description" : "EU test ",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Kate NetSuite  (20000005) (EU-Central-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "EU-Central-Sandbox",
   "createdBy" : "Dhamodaran S",
   "updatedBy" : "Dhamodaran S",
-  "createdOn" : "2025-02-14T09:27:06.843Z",
+  "createdOn" : "2025-02-14T09:28:47.589Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "11de895d-3162-4db8-9fe0-ab087c5d80ef",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "CO_GIT_Check",
+    "commitMessage" : "CO_GIT_Check",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "48103abd9ad7c6bb11c492e837d4c1a9766f5e32"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -37,7 +47,7 @@
             "CreatedById" : "e081d2f0851a4692bce57267d43a1adc",
             "UpdatedById" : "e081d2f0851a4692bce57267d43a1adc",
             "CreatedDate" : "2025-02-14T09:25:53.681Z",
-            "UpdatedDate" : "2025-02-14T09:25:53.681Z",
+            "UpdatedDate" : "2025-02-14T09:28:36.344Z",
             "schema" : {
               "object" : "EUtest",
               "label" : "EU test",
@@ -53,6 +63,14 @@
                   "origin" : "custom",
                   "type" : "string",
                   "default" : "20"
+                },
+                "field2__c" : {
+                  "maxLength" : 54,
+                  "displayName" : false,
+                  "label" : "field 2",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "34"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -84,7 +102,7 @@
                 }
               },
               "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
-              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "field2__c", "Id", "CreatedDate", "UpdatedDate" ],
               "relationships" : [ {
                 "cardinality" : "manyToOne",
                 "namespace" : "com_zuora",
@@ -989,7 +1007,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "23749139-fb17-464b-a24d-6d1eb0c92d61",
+        "id" : "58a5da76-a996-4e3d-bc32-ea76abb123f2",
         "key" : "EUtest",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -1009,6 +1027,18 @@
             "type" : "string",
             "default" : "20",
             "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "field2__c",
+            "maxLength" : 54,
+            "displayName" : false,
+            "field_name" : "field 2",
+            "origin" : "custom",
+            "type" : "string",
+            "default" : "34",
+            "filterable" : true,
             "required" : false,
             "auditable" : false,
             "unique" : false
