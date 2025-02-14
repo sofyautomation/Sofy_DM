@@ -2,7 +2,7 @@
   "id" : "a7b108c5-1f28-4023-9700-5ed0db2445dc",
   "name" : "1017-Customobject",
   "description" : "1017-Customobject",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Ipaas4  (11519) (US-API-Sandbox-Staging)",
@@ -10,13 +10,23 @@
   "environment" : "US-API-Sandbox-Staging",
   "createdBy" : "Aditya Ghosh",
   "updatedBy" : "Aditya Ghosh",
-  "createdOn" : "2025-02-14T10:03:53.792Z",
+  "createdOn" : "2025-02-14T10:09:02.024Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "849da4ad-e9d9-4a2c-b6cd-630e204c17a8",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "Feb1402",
+    "commitMessage" : "Feb1402",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "65e8a6e6ff8428e75e27e2c055c7eb5dca87776f"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -908,7 +918,7 @@
         "count" : 14
       },
       "response" : [ {
-        "id" : "478e760e-103f-41f9-b9fb-bf35c08e1b41",
+        "id" : "de026a9a-b9b6-4f98-9e80-f4a589cec909",
         "key" : "amendment -> Mutation__c",
         "segregationKey" : "amendment",
         "componentType" : "CustomFields",
@@ -931,7 +941,7 @@
         "error" : "-",
         "templateId" : "a7b108c5-1f28-4023-9700-5ed0db2445dc"
       }, {
-        "id" : "5d89f413-d00c-4dc6-91ee-9dc0dcc32bbc",
+        "id" : "d4913788-5c6a-4f67-bc91-ead3cecd8429",
         "key" : "amendment -> Eff__c",
         "segregationKey" : "amendment",
         "componentType" : "CustomFields",
@@ -954,7 +964,7 @@
         "error" : "-",
         "templateId" : "a7b108c5-1f28-4023-9700-5ed0db2445dc"
       }, {
-        "id" : "fe6e1abf-6e7c-4aa8-b307-3f4aa089879f",
+        "id" : "15be6afc-3cf0-4da8-843d-3bc760ae1270",
         "key" : "amendment -> standardreasons__c",
         "segregationKey" : "amendment",
         "componentType" : "CustomFields",
@@ -978,7 +988,7 @@
         "error" : "-",
         "templateId" : "a7b108c5-1f28-4023-9700-5ed0db2445dc"
       }, {
-        "id" : "cc858c33-c816-4f0b-9d3a-e8b6a1ecc5e8",
+        "id" : "f115465a-aaff-423c-828c-4bb280967383",
         "key" : "amendment -> AutomationTestCF__c",
         "segregationKey" : "amendment",
         "componentType" : "CustomFields",
@@ -1001,7 +1011,7 @@
         "error" : "-",
         "templateId" : "a7b108c5-1f28-4023-9700-5ed0db2445dc"
       }, {
-        "id" : "738b1061-5e99-4118-952a-f32b56b16ac6",
+        "id" : "062bb6d2-e08a-47ae-9b50-a5eb0dce741c",
         "key" : "amendment -> AmendmendId__c",
         "segregationKey" : "amendment",
         "componentType" : "CustomFields",
@@ -1025,7 +1035,7 @@
         "error" : "-",
         "templateId" : "a7b108c5-1f28-4023-9700-5ed0db2445dc"
       }, {
-        "id" : "baeb4352-86fd-457a-b348-725f93a34e19",
+        "id" : "3953fe5e-8bf9-47d8-9266-7687d26a8fd4",
         "key" : "amendment -> MultiselectCF34__c",
         "segregationKey" : "amendment",
         "componentType" : "CustomFields",
@@ -1153,7 +1163,7 @@
             "CreatedById" : "bdb95461deb24cc2acef435223491cbe",
             "UpdatedById" : "bdb95461deb24cc2acef435223491cbe",
             "CreatedDate" : "2025-02-14T10:02:06.807Z",
-            "UpdatedDate" : "2025-02-14T10:02:06.807Z",
+            "UpdatedDate" : "2025-02-14T10:08:27.616Z",
             "schema" : {
               "object" : "test_sandbox",
               "label" : "test_sandbox",
@@ -1169,6 +1179,15 @@
                   "origin" : "custom",
                   "type" : "string",
                   "default" : "20"
+                },
+                "Field_2__c" : {
+                  "maxLength" : 20,
+                  "displayName" : false,
+                  "label" : "Field_2",
+                  "origin" : "custom",
+                  "description" : "Field_2",
+                  "type" : "string",
+                  "default" : "25"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -2011,7 +2030,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "50089cbd-ea36-49a6-a57c-5b18ef8a6e2a",
+        "id" : "e7c79f6b-9830-40f4-b98c-b13d7df20375",
         "key" : "test_sandbox",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -2030,6 +2049,19 @@
             "origin" : "custom",
             "type" : "string",
             "default" : "20",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Field_2__c",
+            "maxLength" : 20,
+            "displayName" : false,
+            "field_name" : "Field_2",
+            "origin" : "custom",
+            "description" : "Field_2",
+            "type" : "string",
+            "default" : "25",
             "filterable" : false,
             "required" : false,
             "auditable" : false,
