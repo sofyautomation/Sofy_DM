@@ -2,7 +2,7 @@
   "id" : "7df32b32-c80f-4870-8582-1c688fbbd4ec",
   "name" : "test 1017 template",
   "description" : "test 1017 template",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Order QA  (2000097) (EU-API-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "EU-API-Sandbox",
   "createdBy" : "Vidya BS",
   "updatedBy" : "Vidya BS",
-  "createdOn" : "2025-02-14T09:20:16.655Z",
+  "createdOn" : "2025-02-14T09:22:43.688Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "10030c15-4082-462c-a72b-b887624cb591",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "CO_GIT_Check",
+    "commitMessage" : "CO_GIT_Check",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "2e5957a964c558bd5061ac0e9c3a65a74af7a299"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -464,7 +474,7 @@
             "CreatedById" : "638c2a70deda4c4387727a4b97369009",
             "UpdatedById" : "638c2a70deda4c4387727a4b97369009",
             "CreatedDate" : "2025-02-13T11:14:08.531Z",
-            "UpdatedDate" : "2025-02-13T11:16:47.930Z",
+            "UpdatedDate" : "2025-02-14T09:22:19.737Z",
             "schema" : {
               "object" : "TestFix",
               "label" : "Test Fix",
@@ -488,6 +498,14 @@
                   "origin" : "custom",
                   "type" : "string",
                   "default" : "23"
+                },
+                "field3__c" : {
+                  "maxLength" : 49,
+                  "displayName" : false,
+                  "label" : "field 3",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "30"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -518,8 +536,8 @@
                   "type" : "string"
                 }
               },
-              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
-              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "required" : [ "field3__c", "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "field3__c", "Id", "CreatedDate", "UpdatedDate" ],
               "relationships" : [ {
                 "cardinality" : "manyToOne",
                 "namespace" : "com_zuora",
@@ -641,7 +659,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "da70c28e-2dba-4e7a-97f4-c34e39ceae2f",
+        "id" : "2b151b8a-27e2-418b-971c-df81b49dd785",
         "key" : "TestFix",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -674,6 +692,18 @@
             "default" : "20",
             "filterable" : false,
             "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "field3__c",
+            "maxLength" : 49,
+            "displayName" : false,
+            "field_name" : "field 3",
+            "origin" : "custom",
+            "type" : "string",
+            "default" : "30",
+            "filterable" : true,
+            "required" : true,
             "auditable" : false,
             "unique" : false
           } ],
