@@ -1,0 +1,979 @@
+{
+  "id" : "a4853ec8-1762-4c12-b007-e17d222b27f5",
+  "name" : "test_948",
+  "description" : "test_948",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Ipaas4  (11519) (US-API-Sandbox-Staging)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox-Staging",
+  "createdBy" : "Aditya Ghosh",
+  "updatedBy" : "Aditya Ghosh",
+  "createdOn" : "2025-02-14T10:21:41.152Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ {
+      "segregationKeys" : [ "amendment" ],
+      "originalPayload" : {
+        "definitions" : {
+          "amendment" : {
+            "type" : "amendment",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Mutation__c" : {
+                  "maxLength" : 20,
+                  "label" : "Mutation__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Eff__c" : {
+                  "maxLength" : 20,
+                  "label" : "Eff ",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "standardreasons__c" : {
+                  "label" : "standardreasons__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "\"4\"", "\"3\"", "\"2\"", "\"1\"", "\"6\"", "\"5\"" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "AutomationTestCF__c" : {
+                  "maxLength" : 250,
+                  "label" : "Automation Test CF",
+                  "origin" : "custom",
+                  "description" : "For automation test",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Test_sandbox__c" : {
+                  "maxLength" : 25,
+                  "label" : "Test_sandbox",
+                  "origin" : "custom",
+                  "description" : "Test_sandbox",
+                  "type" : "string",
+                  "default" : "20",
+                  "legacy" : true
+                },
+                "AmendmendId__c" : {
+                  "maxLength" : 255,
+                  "label" : "AmendmendId",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "MultiselectCF34__c" : {
+                  "maxLength" : 23,
+                  "multiselect" : true,
+                  "label" : "MultiselectCF3",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "2;3",
+                  "enum" : [ "1", "2", "3" ]
+                }
+              },
+              "indexed" : [ "Test_sandbox__c", "AmendmendId__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "Test_sandbox__c", "MultiselectCF34__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "usage" : {
+            "type" : "usage",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "UsageCfTestDateTime1__c" : {
+                  "format" : "date-time",
+                  "label" : "UsageCfTestDateTime",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "2023-09-28T08:06:00.000Z"
+                },
+                "UsageCfTestDateTime__c" : {
+                  "format" : "date-time",
+                  "label" : "UsageCfTestDateTime",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "2023-09-28T08:06:00.000Z"
+                },
+                "UsageCfTestDateTime2__c" : {
+                  "format" : "date-time",
+                  "label" : "UsageCfTestDateTime",
+                  "origin" : "custom",
+                  "type" : "string"
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "UsageCfTestDateTime1__c", "UsageCfTestDateTime2__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "orderaction" : {
+            "type" : "orderaction",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "oa_cf_text__c" : {
+                  "maxLength" : 30,
+                  "label" : "oa CF Text",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Source__c" : {
+                  "label" : "Source__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "\"Mulesoft\"", "\"Web\"", "\"SFDC\"", "\"OP\"" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "oa_cf_text__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "productrateplancharge" : {
+            "type" : "productrateplancharge",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "NAV_Resource_Number__c" : {
+                  "maxLength" : 20,
+                  "label" : "NAV Resource Number",
+                  "origin" : "custom",
+                  "description" : "The NAV Resource Number needs to be provided for discounts only.",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "App_Builder_Share__c" : {
+                  "label" : "App Builder Share (in Percent)",
+                  "origin" : "custom",
+                  "description" : "App Builder Share used on the Customer product of the App Builder product",
+                  "type" : "number",
+                  "legacy" : true
+                },
+                "NAV_Article_Number__c" : {
+                  "maxLength" : 20,
+                  "label" : "NAV Article Number",
+                  "origin" : "custom",
+                  "description" : "Holds the article number from Navision",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "AllocationEligible__c" : {
+                  "label" : "AllocationEligible",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Y",
+                  "enum" : [ "Y", "N" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "App_Builder_ID__c" : {
+                  "maxLength" : 50,
+                  "label" : "App Builder ID",
+                  "origin" : "custom",
+                  "description" : "The ID of the App Builder from SFDC / Navision. ",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "App_Builder_Min_Price__c" : {
+                  "label" : "App Builder Min Purchase Price",
+                  "origin" : "custom",
+                  "description" : "Minimum purchase price according to the price scale of the App Builder product",
+                  "type" : "number",
+                  "legacy" : true
+                },
+                "App_Builder_Share_Direct__c" : {
+                  "label" : "App Builder Share (Direct Customers)",
+                  "origin" : "custom",
+                  "type" : "number"
+                },
+                "App_Builder_Share_Partner__c" : {
+                  "label" : "App Builder Share (Partner Customers Reseller/Referral)",
+                  "origin" : "custom",
+                  "type" : "number"
+                },
+                "Reseller_Discount__c" : {
+                  "label" : "Is a Reseller Discount?",
+                  "origin" : "custom",
+                  "description" : "Needs to be set to True if the discount is a Reseller Discount. This flag is used for the App Builder Commission Fee calculation.",
+                  "type" : "boolean",
+                  "default" : false
+                }
+              },
+              "indexed" : [ "AllocationEligible__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "NAV_Article_Number__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "refund" : {
+            "type" : "refund",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Indextest__c" : {
+                  "maxLength" : 40,
+                  "displayName" : false,
+                  "label" : "Index test",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "30"
+                }
+              },
+              "indexed" : [ "Indextest__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "Indextest__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "subscription" : {
+            "type" : "subscription",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "PaymentGateway__c" : {
+                  "maxLength" : 255,
+                  "label" : "Payment Gateway",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "SubscriptionProject_Name__c" : {
+                  "maxLength" : 255,
+                  "label" : "Subscription.Project_Name",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "PaymentMethodId__c" : {
+                  "maxLength" : 32,
+                  "label" : "Payment Method Id",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Country_Subscrptn__c" : {
+                  "maxLength" : 30,
+                  "label" : "Country_Subscrptn",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "USA_IN",
+                  "legacy" : true
+                },
+                "thirdpartyfield__c" : {
+                  "maxLength" : 1,
+                  "label" : "thirdpartyfield",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "SubscriptionProject_Name__c", "PaymentMethodId__c", "Country_Subscrptn__c", "thirdpartyfield__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "Country_Subscrptn__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "product" : {
+            "type" : "product",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "Country__c" : {
+                  "maxLength" : 30,
+                  "label" : "Country",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "USA",
+                  "legacy" : true
+                },
+                "GuidedSellingSteps__c" : {
+                  "maxLength" : 60,
+                  "label" : "GuidedSellingSteps",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "TestingMV__c" : {
+                  "maxLength" : 10,
+                  "multiselect" : true,
+                  "label" : "TestingMV",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "1;2",
+                  "enum" : [ "1", "2", "3" ]
+                },
+                "MultiSelect__c" : {
+                  "maxLength" : 10,
+                  "multiselect" : true,
+                  "label" : "MultiSelect",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "1;3",
+                  "enum" : [ "1", "2", "3" ]
+                }
+              },
+              "indexed" : [ "Country__c", "GuidedSellingSteps__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "Country__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "invoiceitem" : {
+            "type" : "invoiceitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "BelongsTo__c" : {
+                  "maxLength" : 255,
+                  "label" : "BelongsTo",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "BelongsTo__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "journalentryitem" : {
+            "type" : "journalentryitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "JournalEntryItemCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "JournalEntryItemCustomDate",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "orderlineitem" : {
+            "type" : "orderlineitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "OrderLineDM__c" : {
+                  "label" : "OrderLine DM",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Yes",
+                  "enum" : [ "Yes", "No" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "OrderLineDM__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "OrderLineDM__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "rateplancharge" : {
+            "type" : "rateplancharge",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "srpc_cf_picklist__c" : {
+                  "label" : "srpc CF Picklist",
+                  "origin" : "custom",
+                  "description" : "added",
+                  "type" : "string",
+                  "default" : "srpc456",
+                  "enum" : [ "srpc123", "srpc456", "srpc789" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "App_Builder_Share__c" : {
+                  "label" : "App Builder Share (in Percent)",
+                  "origin" : "custom",
+                  "description" : "App Builder Share used on the Customer product of the App Builder product. Copied from PRPC and can be overridden in the Quote.",
+                  "type" : "number",
+                  "legacy" : true
+                },
+                "ARAccount__c" : {
+                  "label" : "AR Account",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Type A",
+                  "enum" : [ "Type A", "Type B", "Type CA" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "App_Builder_ID__c" : {
+                  "maxLength" : 50,
+                  "label" : "App Builder ID",
+                  "origin" : "custom",
+                  "description" : "The ID of the App Builder from SFDC / Navision.",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "App_Builder_Min_Price__c" : {
+                  "label" : "App Builder Min Purchase Price",
+                  "origin" : "custom",
+                  "description" : "Minimum purchase price according to the price scale of the App Builder product. Copied from PRPC and can be overridden in the Quote.",
+                  "type" : "number",
+                  "legacy" : true
+                },
+                "testing_siva__c" : {
+                  "maxLength" : 255,
+                  "displayName" : false,
+                  "label" : "testing_siva",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "scrubber" : {
+                    "name" : "none"
+                  }
+                },
+                "App_Builder_Share_Direct__c" : {
+                  "label" : "App Builder Share (Direct Customers)",
+                  "origin" : "custom",
+                  "type" : "number"
+                },
+                "App_Builder_Share_Partner__c" : {
+                  "label" : "App Builder Share (Partner Customers Reseller/Referral)",
+                  "origin" : "custom",
+                  "type" : "number"
+                }
+              },
+              "indexed" : [ "srpc_cf_picklist__c", "ARAccount__c", "testing_siva__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "productrateplan" : {
+            "type" : "productrateplan",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "AddedUnits__c" : {
+                  "maxLength" : 10,
+                  "label" : "AddedUnits__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "AddedUnits__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "invoice" : {
+            "type" : "invoice",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "ManualWriteOffReason__c" : {
+                  "label" : "Manual Write Off Reason",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Correcting invoice error", "Ascension", "Auto Renewal Cancellation", "Auto Renewal Objection", "Banned Account", "Cooling off period", "Customer Request", "Discount on VC", "Downgrading", "Incorrect Info by SR", "PPL Lead Dispute", "Setup Error", "Sign up Cancel-48Hrs", "Insolvent", "Injury/Illness", "Chargeback", "Pause of Membership", "Waive Lead Pack on VC", "Contract Termination Fee", "Internal Test Account", "Disc on Listing Renewal", "Bankrupt" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "ManualWriteOff__c" : {
+                  "label" : "Manual Write Off",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "Yes", "No" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "RetryStatus__c" : {
+                  "maxLength" : 255,
+                  "label" : "Retry Status",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "ManualWriteOffReason__c", "ManualWriteOff__c", "RetryStatus__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "account" : {
+            "type" : "account",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "StoreId__c" : {
+                  "maxLength" : 255,
+                  "label" : "StoreId__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "abcd",
+                  "legacy" : true
+                },
+                "AccountTenure__c" : {
+                  "maxLength" : 4,
+                  "label" : "Account Tenure (Months)",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "0",
+                  "legacy" : true
+                },
+                "DunningHold__c" : {
+                  "label" : "Dunning Hold",
+                  "origin" : "custom",
+                  "description" : "Used to identify account exempt from Dunning",
+                  "type" : "string",
+                  "default" : "No",
+                  "enum" : [ "No", "Yes" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "AccountType__c" : {
+                  "maxLength" : 50,
+                  "label" : "Account Type",
+                  "origin" : "custom",
+                  "description" : "Custom field to test account",
+                  "type" : "string",
+                  "default" : "test",
+                  "legacy" : true
+                },
+                "EstimatedCancellationCharge__c" : {
+                  "maxLength" : 10,
+                  "label" : "Estimated Cancellation Charge",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "GenerateStatement__c" : {
+                  "maxLength" : 255,
+                  "label" : "GenerateStatement",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CollectionsAgent__c" : {
+                  "maxLength" : 255,
+                  "label" : "CollectionsAgent",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "AccountClosing_test_4__c" : {
+                  "maxLength" : 255,
+                  "label" : "AccountClosing_test_4",
+                  "origin" : "custom",
+                  "description" : "I make it non-required. because we have many automation cases based on this tenant. If you need required CF, could you change to another tenant? or contact jiankun.zhang",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "InCollections__c" : {
+                  "label" : "InCollections",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "True", "False" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "account1__c" : {
+                  "maxLength" : 255,
+                  "label" : "account1",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "AccountNonIdx__c" : {
+                  "maxLength" : 50,
+                  "label" : "Account Non Idx",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "testdev",
+                  "legacy" : true
+                },
+                "HasOverdueBalance__c" : {
+                  "label" : "Has Overdue Balance",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "False",
+                  "enum" : [ "False", "True" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "Region__c" : {
+                  "label" : "Region__c",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "OCE",
+                  "enum" : [ "EU", "NA", "OCE" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "StatementTemplate__c" : {
+                  "maxLength" : 255,
+                  "label" : "StatementTemplate",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CollectionStatus__c" : {
+                  "maxLength" : 200,
+                  "label" : "Collection Status",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "CVeligibleflag__c" : {
+                  "maxLength" : 255,
+                  "label" : "CVeligibleflag",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "MyUrl__c" : {
+                  "maxLength" : 200,
+                  "label" : "MyUrl",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "www.zuora.com",
+                  "legacy" : true
+                },
+                "SSPAttributeValue__c" : {
+                  "maxLength" : 255,
+                  "label" : "SSP Attribute Value",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "APM__c" : {
+                  "label" : "APM",
+                  "origin" : "custom",
+                  "description" : "Used for Advanced Payment Manager module.",
+                  "type" : "string",
+                  "default" : "True",
+                  "enum" : [ "True", "False" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "CustomerType__c" : {
+                  "label" : "Customer Type",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "End Customer",
+                  "enum" : [ "End Customer", "DoE", "Bunnings", "IKEA", "Partner" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "EwayTokenID__c" : {
+                  "maxLength" : 100,
+                  "label" : "Eway Token ID",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "APoFCommitOutstandingBalance__c" : {
+                  "maxLength" : 255,
+                  "label" : "APoF Commit Outstanding Balance",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "GitMIgration__c" : {
+                  "maxLength" : 100,
+                  "label" : "GitMIgration",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "test",
+                  "legacy" : true
+                },
+                "GitMIgration1__c" : {
+                  "maxLength" : 200,
+                  "label" : "GitMIgration1",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "test 2",
+                  "legacy" : true
+                },
+                "APiVersion__c" : {
+                  "maxLength" : 10,
+                  "displayName" : true,
+                  "label" : "APiVersion",
+                  "origin" : "custom",
+                  "description" : "API version",
+                  "type" : "string",
+                  "default" : "v1"
+                },
+                "URL__c" : {
+                  "maxLength" : 6789,
+                  "format" : "url",
+                  "label" : "URL",
+                  "origin" : "custom",
+                  "description" : "URL Custom Field",
+                  "type" : "string",
+                  "default" : "https://zuora.com"
+                },
+                "NDateTime__c" : {
+                  "format" : "date-time",
+                  "label" : "NDateTime",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "ExtensionMultiSelect__c" : {
+                  "maxLength" : 32,
+                  "multiselect" : true,
+                  "label" : "ExtensionMultiSelect",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "enum" : [ "option1", "option2", "option3" ]
+                },
+                "PicklistCFNew__c" : {
+                  "maxLength" : 2,
+                  "label" : "PicklistCFNew",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "2",
+                  "enum" : [ "1", "2", "3" ],
+                  "scrubber" : {
+                    "name" : "none"
+                  }
+                },
+                "DateTime__c" : {
+                  "format" : "date-time",
+                  "label" : "DateTime",
+                  "origin" : "custom",
+                  "description" : "DateTime Custom Field",
+                  "type" : "string",
+                  "default" : "2023-09-17T09:14:00.000Z",
+                  "scrubber" : {
+                    "name" : "none"
+                  }
+                },
+                "BoolCF__c" : {
+                  "label" : "BoolCF",
+                  "origin" : "custom",
+                  "type" : "boolean",
+                  "default" : true,
+                  "scrubber" : {
+                    "name" : "none"
+                  }
+                },
+                "LongTextCF__c" : {
+                  "maxLength" : 456,
+                  "format" : "long-text",
+                  "displayName" : false,
+                  "label" : "LongTextCF",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Lte.",
+                  "scrubber" : {
+                    "name" : "none"
+                  }
+                },
+                "ExtensionInteger__c" : {
+                  "minimum" : 12,
+                  "exclusiveMinimum" : true,
+                  "label" : "ExtensionInteger",
+                  "origin" : "custom",
+                  "type" : "integer"
+                },
+                "NMultiselect__c" : {
+                  "maxLength" : 255,
+                  "multiselect" : true,
+                  "label" : "NMultiselect",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "enum" : [ "Hello" ]
+                },
+                "NURL__c" : {
+                  "maxLength" : 50,
+                  "format" : "url",
+                  "displayName" : false,
+                  "label" : "NURL",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "http://google.com"
+                },
+                "SitemateEntity__c" : {
+                  "maxLength" : 20,
+                  "label" : "Sitemate Entity",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "enum" : [ "Sitemate AU", "Sitemate UK" ]
+                },
+                "test_adv_ms__c" : {
+                  "maxLength" : 255,
+                  "multiselect" : true,
+                  "label" : "test_adv_ms",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "enum" : [ "hxf", "lxl" ]
+                }
+              },
+              "indexed" : [ "AccountType__c", "AccountClosing_test_4__c", "account1__c", "Region__c", "APM__c", "APiVersion__c", "PicklistCFNew__c", "DateTime__c", "BoolCF__c", "LongTextCF__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ "GitMIgration__c" ],
+              "required" : [ "AccountTenure__c", "DunningHold__c", "CustomerType__c", "GitMIgration__c", "GitMIgration1__c", "APiVersion__c", "LongTextCF__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          }
+        },
+        "count" : 14
+      },
+      "response" : [ {
+        "id" : "87f8230b-d23d-405f-a09d-0bbdfa67ba1a",
+        "key" : "amendment -> Test_sandbox__c",
+        "segregationKey" : "amendment",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Test_sandbox",
+          "description" : "Test_sandbox",
+          "maxLength" : 25,
+          "default" : "20",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "Test_sandbox__c",
+          "required" : true,
+          "filterable" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "a4853ec8-1762-4c12-b007-e17d222b27f5"
+      }, {
+        "id" : "6b248693-285b-496b-9a3a-deba5663048f",
+        "key" : "amendment -> Eff__c",
+        "segregationKey" : "amendment",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Eff ",
+          "description" : "",
+          "maxLength" : 20,
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "Eff__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "a4853ec8-1762-4c12-b007-e17d222b27f5"
+      } ],
+      "errors" : [ ]
+    } ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : null
+  }
+}
