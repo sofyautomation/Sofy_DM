@@ -1,0 +1,362 @@
+{
+  "id" : "ea88e248-7e88-43e0-aa26-58351f19108e",
+  "name" : "test CO sync",
+  "description" : "test CO sync",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Sales Engg Testing DSBX 2  (30000020) (AP-Central-Sandbox)",
+  "entityName" : null,
+  "environment" : "AP-Central-Sandbox",
+  "createdBy" : "Dhamodaran S",
+  "updatedBy" : "Dhamodaran S",
+  "createdOn" : "2025-02-14T10:48:23.012Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ {
+      "segregationKeys" : [ "Available Custom Objects" ],
+      "originalPayload" : {
+        "definitions" : {
+          "shipmentorders" : {
+            "Id" : "f2ab9e13-e716-4102-9727-7761c2775c00",
+            "type" : "shipmentorders",
+            "CreatedById" : "c073d6df7c4441f9889123c8fdf1817d",
+            "UpdatedById" : "c073d6df7c4441f9889123c8fdf1817d",
+            "CreatedDate" : "2025-01-29T04:14:22.913Z",
+            "UpdatedDate" : "2025-01-29T04:14:22.913Z",
+            "schema" : {
+              "object" : "shipmentorders",
+              "label" : "shipmentorders",
+              "title" : "shipmentorders",
+              "type" : "object",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "c1__c" : {
+                  "maxLength" : 20,
+                  "label" : "c1",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "inumRel__c" : {
+                  "maxLength" : 128,
+                  "label" : "inumRel",
+                  "origin" : "custom",
+                  "type" : "string"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "inumRel__c", "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "invoice",
+                "fields" : {
+                  "inumRel__c" : "InvoiceNumber"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          },
+          "Test" : {
+            "Id" : "c35e34c3-cb39-4475-a77d-62c9a20dd136",
+            "type" : "Test",
+            "CreatedById" : "338d9fc43a4c461f9c0150fb65b7b48f",
+            "UpdatedById" : "f028a4b6b2db4995855a4ae1c6bc8bbd",
+            "CreatedDate" : "2024-08-06T07:10:54.783Z",
+            "UpdatedDate" : "2025-02-14T10:35:05.848Z",
+            "schema" : {
+              "object" : "Test",
+              "label" : "Test",
+              "title" : "Test",
+              "type" : "object",
+              "description" : "Test Object",
+              "enableCreateRecordAuditing" : false,
+              "enableDeleteRecordAuditing" : false,
+              "properties" : {
+                "Title__c" : {
+                  "maxLength" : 255,
+                  "label" : "Title",
+                  "origin" : "custom",
+                  "description" : "title",
+                  "type" : "string"
+                },
+                "CF_test2__c" : {
+                  "maxLength" : 10,
+                  "displayName" : false,
+                  "label" : "CF_test2",
+                  "origin" : "custom",
+                  "description" : "CF_test2",
+                  "type" : "string",
+                  "default" : "15"
+                },
+                "CF1017__c" : {
+                  "maxLength" : 20,
+                  "displayName" : false,
+                  "label" : "CF 1017 ",
+                  "origin" : "custom",
+                  "description" : "CF 1017",
+                  "type" : "string",
+                  "default" : "15"
+                },
+                "Id" : {
+                  "format" : "uuid",
+                  "label" : "Id",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedById" : {
+                  "label" : "CreatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedById" : {
+                  "label" : "UpdatedById",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "CreatedDate" : {
+                  "format" : "date-time",
+                  "label" : "CreatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                },
+                "UpdatedDate" : {
+                  "format" : "date-time",
+                  "label" : "UpdatedDate",
+                  "origin" : "system",
+                  "type" : "string"
+                }
+              },
+              "required" : [ "Id", "CreatedById", "UpdatedById", "CreatedDate", "UpdatedDate" ],
+              "filterable" : [ "Id", "CreatedDate", "UpdatedDate" ],
+              "relationships" : [ {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "CreatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              }, {
+                "cardinality" : "manyToOne",
+                "namespace" : "com_zuora",
+                "object" : "User",
+                "fields" : {
+                  "UpdatedById" : "Id"
+                },
+                "recordConstraints" : {
+                  "create" : {
+                    "enforceValidMapping" : true
+                  }
+                }
+              } ],
+              "enableRecordMigration" : false
+            }
+          }
+        },
+        "count" : 2,
+        "CustomObjectRecords" : { }
+      },
+      "response" : [ {
+        "id" : "16f95a21-bb7e-4613-98b2-c3d41b01986c",
+        "key" : "shipmentorders",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/shipmentorders",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "shipmentorders",
+          "api_name" : "shipmentorders",
+          "description" : null,
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "c1__c",
+            "maxLength" : 20,
+            "field_name" : "c1",
+            "origin" : "custom",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "inumRel__c",
+            "maxLength" : 128,
+            "field_name" : "inumRel",
+            "origin" : "custom",
+            "type" : "string",
+            "filterable" : true,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ {
+            "cardinality" : "manyToOne",
+            "namespace" : "com_zuora",
+            "object" : "invoice",
+            "fields" : {
+              "inumRel__c" : "InvoiceNumber"
+            },
+            "recordConstraints" : {
+              "create" : {
+                "enforceValidMapping" : true
+              }
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "ea88e248-7e88-43e0-aa26-58351f19108e"
+      }, {
+        "id" : "39457973-a70a-4678-bea1-1b69acdf4d58",
+        "key" : "Test",
+        "segregationKey" : "Available Custom Objects",
+        "componentType" : "CustomObjects",
+        "url" : "/Test",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "Test",
+          "api_name" : "Test",
+          "description" : "Test Object",
+          "enableRecordMigration" : null,
+          "customFields" : [ {
+            "api_name" : "CF1017__c",
+            "maxLength" : 20,
+            "displayName" : false,
+            "field_name" : "CF 1017 ",
+            "origin" : "custom",
+            "description" : "CF 1017",
+            "type" : "string",
+            "default" : "15",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "CF_test2__c",
+            "maxLength" : 10,
+            "displayName" : false,
+            "field_name" : "CF_test2",
+            "origin" : "custom",
+            "description" : "CF_test2",
+            "type" : "string",
+            "default" : "15",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Title__c",
+            "maxLength" : 255,
+            "field_name" : "Title",
+            "origin" : "custom",
+            "description" : "title",
+            "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          } ],
+          "enableCreateRecordAuditing" : "false",
+          "enableDeleteRecordAuditing" : "false",
+          "relationships" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "ea88e248-7e88-43e0-aa26-58351f19108e"
+      } ],
+      "errors" : [ ]
+    } ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : null
+  }
+}
