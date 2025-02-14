@@ -1,0 +1,459 @@
+{
+  "id" : "bd13ad23-b939-47e3-b82e-df827b116924",
+  "name" : "Test 948 EU sandbox",
+  "description" : "Test 948 EU sandbox",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "Order QA  (2000097) (EU-API-Sandbox)",
+  "entityName" : null,
+  "environment" : "EU-API-Sandbox",
+  "createdBy" : "Vidya BS",
+  "updatedBy" : "Vidya BS",
+  "createdOn" : "2025-02-14T08:05:26.511Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ {
+      "segregationKeys" : [ "creditmemoitem" ],
+      "originalPayload" : {
+        "definitions" : {
+          "amendment" : {
+            "type" : "amendment",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "TESTAutomation__c" : {
+                  "maxLength" : 100,
+                  "label" : "TEST Automation",
+                  "origin" : "custom",
+                  "description" : "Amendment",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "Eff__c" : {
+                  "maxLength" : 20,
+                  "label" : "Eff ",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "usage" : {
+            "type" : "usage",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "UsageCustomDate__c" : {
+                  "format" : "date",
+                  "label" : "UsageCustomDate",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "orderaction" : {
+            "type" : "orderaction",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "cd_orderaction__c" : {
+                  "label" : "cd_orderaction",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "enum" : [ "123", "456", "789" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "cd_orderaction__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "productrateplancharge" : {
+            "type" : "productrateplancharge",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "test__c" : {
+                  "label" : "test",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "123",
+                  "enum" : [ "123", "456" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                }
+              },
+              "indexed" : [ "test__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "test__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "orders" : {
+            "type" : "orders",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "SuperAmendmentTagging__c" : {
+                  "maxLength" : 255,
+                  "label" : "Super Amendment Tagging",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "",
+                  "legacy" : true
+                },
+                "cf_order__c" : {
+                  "maxLength" : 20,
+                  "label" : "cf_order",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "SuperAmendmentTagging__c", "cf_order__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "subscription" : {
+            "type" : "subscription",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "SSP_CF1__c" : {
+                  "maxLength" : 50,
+                  "label" : "SSP_CF1",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "",
+                  "legacy" : true
+                },
+                "is_home__c" : {
+                  "label" : "is_home",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "boolean",
+                  "default" : false,
+                  "legacy" : true
+                },
+                "externalId__c" : {
+                  "maxLength" : 255,
+                  "label" : "externalId",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "Checking",
+                  "legacy" : true
+                },
+                "deliverydate__c" : {
+                  "format" : "date",
+                  "label" : "delivery date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "DeliveryTime__c" : {
+                  "format" : "date-time",
+                  "label" : "DeliveryTime",
+                  "origin" : "custom",
+                  "type" : "string"
+                }
+              },
+              "indexed" : [ "SSP_CF1__c", "is_home__c", "externalId__c", "deliverydate__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ "externalId__c" ],
+              "required" : [ "is_home__c", "deliverydate__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "contact" : {
+            "type" : "contact",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "testindex__c" : {
+                  "maxLength" : 45,
+                  "label" : "test index",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "30",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "testindex__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "testindex__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "rateplancharge" : {
+            "type" : "rateplancharge",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "CHARGE_CF1__c" : {
+                  "maxLength" : 30,
+                  "label" : "CHARGE_CF1",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "CHARGE_CF1__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "creditmemoitem" : {
+            "type" : "creditmemoitem",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "test2__c" : {
+                  "maxLength" : 60,
+                  "label" : "test 2",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "45",
+                  "legacy" : true
+                },
+                "testindex__c" : {
+                  "maxLength" : 40,
+                  "label" : "test index",
+                  "origin" : "custom",
+                  "description" : "test index",
+                  "type" : "string",
+                  "default" : "30",
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "testindex__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "testindex__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "invoice" : {
+            "type" : "invoice",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "date__c" : {
+                  "format" : "date",
+                  "label" : "date",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "legacy" : true
+                },
+                "testN__c" : {
+                  "label" : "testN",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "number",
+                  "default" : 3.141592653589793,
+                  "legacy" : true
+                },
+                "test__c" : {
+                  "maxLength" : 22,
+                  "label" : "test",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "trued",
+                  "legacy" : true
+                },
+                "test333__c" : {
+                  "label" : "test333",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "integer",
+                  "default" : 3,
+                  "legacy" : true
+                },
+                "testB__c" : {
+                  "label" : "testB",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "boolean",
+                  "default" : true,
+                  "legacy" : true
+                }
+              },
+              "indexed" : [ "date__c", "test__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          },
+          "account" : {
+            "type" : "account",
+            "schema" : {
+              "type" : "object",
+              "properties" : {
+                "test__c" : {
+                  "label" : "test",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "a",
+                  "enum" : [ "a", "b", "c" ],
+                  "legacy" : true,
+                  "maxLength" : 255
+                },
+                "test_custom__c" : {
+                  "maxLength" : 50,
+                  "label" : "test_custom",
+                  "origin" : "custom",
+                  "description" : "",
+                  "type" : "string",
+                  "default" : "",
+                  "legacy" : true
+                },
+                "rrr__c" : {
+                  "maxLength" : 2222,
+                  "format" : "long-text",
+                  "displayName" : false,
+                  "label" : "rrr",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "eee"
+                },
+                "testindex__c" : {
+                  "maxLength" : 45,
+                  "displayName" : false,
+                  "label" : "test index",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "30"
+                }
+              },
+              "indexed" : [ "test_custom__c", "testindex__c" ],
+              "unique" : [ ],
+              "readonlyOnUI" : [ ],
+              "required" : [ "testindex__c" ],
+              "isReportEnabled" : [ ],
+              "additionalProperties" : false
+            }
+          }
+        },
+        "count" : 11
+      },
+      "response" : [ {
+        "id" : "810e00b6-01db-4e65-85a6-7e5838de301f",
+        "key" : "creditmemoitem -> test2__c",
+        "segregationKey" : "creditmemoitem",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "test 2",
+          "maxLength" : 60,
+          "default" : "45",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "test2__c"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "bd13ad23-b939-47e3-b82e-df827b116924"
+      }, {
+        "id" : "b22e2b9f-4357-4218-a030-097ea6dfc340",
+        "key" : "creditmemoitem -> testindex__c",
+        "segregationKey" : "creditmemoitem",
+        "componentType" : "CustomFields",
+        "url" : "-",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "label" : "test index",
+          "description" : "test index",
+          "maxLength" : 40,
+          "default" : "30",
+          "type" : "string",
+          "legacy" : true,
+          "origin" : "custom",
+          "API_name" : "testindex__c",
+          "required" : true,
+          "filterable" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "bd13ad23-b939-47e3-b82e-df827b116924"
+      } ],
+      "errors" : [ ]
+    } ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : null
+  }
+}
