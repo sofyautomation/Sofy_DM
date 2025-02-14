@@ -2,7 +2,7 @@
   "id" : "ea88e248-7e88-43e0-aa26-58351f19108e",
   "name" : "test CO sync",
   "description" : "test CO sync",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "Sales Engg Testing DSBX 2  (30000020) (AP-Central-Sandbox)",
@@ -10,13 +10,23 @@
   "environment" : "AP-Central-Sandbox",
   "createdBy" : "Dhamodaran S",
   "updatedBy" : "Dhamodaran S",
-  "createdOn" : "2025-02-14T10:48:23.012Z",
+  "createdOn" : "2025-02-14T10:50:15.095Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "7e8952ff-1f97-49e6-ae6a-9c177e9b9f6a",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "CO_GIT_Check",
+    "commitMessage" : "CO_GIT_Check",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "d26ab1025e31c7bd167a59d7587a4b87838ff1b1"
+  },
   "content" : {
     "settings" : [ ],
     "taxation" : [ ],
@@ -133,9 +143,9 @@
             "Id" : "c35e34c3-cb39-4475-a77d-62c9a20dd136",
             "type" : "Test",
             "CreatedById" : "338d9fc43a4c461f9c0150fb65b7b48f",
-            "UpdatedById" : "f028a4b6b2db4995855a4ae1c6bc8bbd",
+            "UpdatedById" : "3589e622da7943a3b4be120d78efd2d4",
             "CreatedDate" : "2024-08-06T07:10:54.783Z",
-            "UpdatedDate" : "2025-02-14T10:35:05.848Z",
+            "UpdatedDate" : "2025-02-14T10:49:55.913Z",
             "schema" : {
               "object" : "Test",
               "label" : "Test",
@@ -169,6 +179,14 @@
                   "description" : "CF 1017",
                   "type" : "string",
                   "default" : "15"
+                },
+                "newfield__c" : {
+                  "maxLength" : 37,
+                  "displayName" : false,
+                  "label" : "new field",
+                  "origin" : "custom",
+                  "type" : "string",
+                  "default" : "30"
                 },
                 "Id" : {
                   "format" : "uuid",
@@ -234,7 +252,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "16f95a21-bb7e-4613-98b2-c3d41b01986c",
+        "id" : "12e5fabe-c5c5-4ba9-b830-9345e1aed93a",
         "key" : "shipmentorders",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -290,7 +308,7 @@
         "error" : "-",
         "templateId" : "ea88e248-7e88-43e0-aa26-58351f19108e"
       }, {
-        "id" : "39457973-a70a-4678-bea1-1b69acdf4d58",
+        "id" : "1b836b76-2b6c-4a2b-a5b8-b9607e9627b0",
         "key" : "Test",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -335,6 +353,18 @@
             "origin" : "custom",
             "description" : "title",
             "type" : "string",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "newfield__c",
+            "maxLength" : 37,
+            "displayName" : false,
+            "field_name" : "new field",
+            "origin" : "custom",
+            "type" : "string",
+            "default" : "30",
             "filterable" : false,
             "required" : false,
             "auditable" : false,
