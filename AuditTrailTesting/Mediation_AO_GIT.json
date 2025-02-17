@@ -1,0 +1,1923 @@
+{
+  "id" : "093671cd-6580-4a29-9ad7-a008b78ee8a9",
+  "name" : "Mediation_AO_GIT",
+  "description" : "Mediation_AO_GIT",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "k2e2e_order_noAR  (9430) (US-API-Sandbox-Staging)",
+  "entityName" : null,
+  "environment" : "US-API-Sandbox-Staging",
+  "createdBy" : "k2e2e_order_noAR k2e2e_order_noAR",
+  "updatedBy" : "k2e2e_order_noAR k2e2e_order_noAR",
+  "createdOn" : "2025-02-17T13:02:04.464Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ {
+      "segregationKeys" : [ "Meters", "EventsDefinition" ],
+      "originalPayload" : {
+        "schema" : [ {
+          "id" : "26",
+          "name" : "AT_Event",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "name" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "AT_Event",
+            "required" : [ "startdate" ],
+            "properties" : {
+              "name" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "name"
+              },
+              "startdate" : {
+                "type" : "datetime",
+                "order" : 1,
+                "eventTime" : true,
+                "timeFormat" : "2024-06-19 12:52:03",
+                "description" : "startdate"
+              },
+              "number" : {
+                "type" : "number",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "number"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-11-12T08:03:45Z",
+          "updatedAt" : "2024-11-12T08:03:45Z",
+          "eventStoreApplicable" : true,
+          "editable" : true
+        }, {
+          "id" : "18",
+          "name" : "aravind-test",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "id" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "aravind-test",
+            "required" : [ "api_calls", "id", "time" ],
+            "properties" : {
+              "api_calls" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "api_calls"
+              },
+              "id" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "id"
+              },
+              "time" : {
+                "type" : "datetime",
+                "order" : 2,
+                "eventTime" : true,
+                "timeFormat" : "",
+                "description" : "time"
+              },
+              "account_id" : {
+                "type" : "string",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "account_id"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-10-15T05:00:21Z",
+          "updatedAt" : "2024-10-15T05:00:21Z",
+          "eventStoreApplicable" : true,
+          "editable" : true
+        }, {
+          "id" : "17",
+          "name" : "A2A Event",
+          "type" : 1,
+          "schema" : {
+            "description" : "A description",
+            "type" : "object",
+            "title" : "A2A Event",
+            "required" : [ "Account Number", "Contract Number", "Direttrice", "GB", "Timestamp" ],
+            "properties" : {
+              "GB" : {
+                "type" : "number",
+                "order" : 0,
+                "description" : "GB"
+              },
+              "Direttrice" : {
+                "type" : "string",
+                "order" : 1,
+                "description" : "Direttrice"
+              },
+              "Account Number" : {
+                "type" : "string",
+                "order" : 2,
+                "description" : "Account Number"
+              },
+              "Contract Number" : {
+                "type" : "string",
+                "order" : 3,
+                "description" : "Contract Number"
+              },
+              "Timestamp" : {
+                "type" : "datetime",
+                "order" : 4,
+                "eventTime" : true,
+                "description" : "Timestamp"
+              }
+            }
+          },
+          "fieldCount" : 5,
+          "createdAt" : "2024-10-08T04:15:11Z",
+          "updatedAt" : "2024-10-08T04:15:11Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "event id field is missing",
+          "editable" : true
+        }, {
+          "id" : "16",
+          "name" : "StreamApiToFixLag",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "CustomerId" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "StreamApiToFixLag",
+            "required" : [ ],
+            "properties" : {
+              "CustomerId" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "CustomerId"
+              },
+              "UsageIdentifier" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "UsageIdentifier"
+              },
+              "UsageDate" : {
+                "type" : "string",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "UsageDate"
+              },
+              "Quantity" : {
+                "type" : "number",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Quantity"
+              },
+              "Amount" : {
+                "type" : "number",
+                "order" : 4,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Amount"
+              }
+            }
+          },
+          "fieldCount" : 5,
+          "createdAt" : "2024-09-30T15:22:56Z",
+          "updatedAt" : "2024-09-30T15:22:56Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "event time field is missing",
+          "editable" : true
+        }, {
+          "id" : "14",
+          "name" : "New_Event2",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "Number" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "New_Event2",
+            "required" : [ "datetime" ],
+            "properties" : {
+              "Number" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              },
+              "datetime" : {
+                "type" : "datetime",
+                "order" : 1,
+                "eventTime" : true,
+                "timeFormat" : "2024-06-20 18:01:00",
+                "description" : "datetime"
+              },
+              "Text" : {
+                "type" : "string",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Text"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-22T13:07:11Z",
+          "updatedAt" : "2024-08-22T13:07:11Z",
+          "eventStoreApplicable" : true,
+          "editable" : true
+        }, {
+          "id" : "13",
+          "name" : "New_Event",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "Number" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "New_Event",
+            "required" : [ "datetime" ],
+            "properties" : {
+              "Number" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              },
+              "datetime" : {
+                "type" : "datetime",
+                "order" : 1,
+                "eventTime" : true,
+                "timeFormat" : "2024-06-20 18:01:00",
+                "description" : "datetime"
+              },
+              "Text" : {
+                "type" : "string",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Text"
+              }
+            }
+          },
+          "fieldCount" : 3,
+          "createdAt" : "2024-08-19T05:27:46Z",
+          "updatedAt" : "2024-08-19T05:27:46Z",
+          "eventStoreApplicable" : true,
+          "editable" : true
+        }, {
+          "id" : "11",
+          "name" : "BookReadingWithBookCount",
+          "type" : 1,
+          "schema" : {
+            "description" : "A description",
+            "type" : "object",
+            "title" : "BookReadingWithBookCount",
+            "required" : [ "StartDateTime" ],
+            "properties" : {
+              "AccountNumber" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "AccountNumber"
+              },
+              "SubscriptionNumber" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "SubscriptionNumber"
+              },
+              "Count" : {
+                "type" : "number",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Count"
+              },
+              "StartDateTime" : {
+                "type" : "datetime",
+                "order" : 3,
+                "eventTime" : true,
+                "timeFormat" : "",
+                "description" : "StartDateTime"
+              },
+              "BookName" : {
+                "type" : "string",
+                "order" : 4,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "BookName"
+              },
+              "UOM" : {
+                "type" : "string",
+                "order" : 5,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "UOM"
+              },
+              "Discount" : {
+                "type" : "number",
+                "order" : 6,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Discount"
+              }
+            }
+          },
+          "fieldCount" : 7,
+          "createdAt" : "2024-07-25T09:32:45Z",
+          "updatedAt" : "2024-07-25T09:32:45Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "event id field is missing",
+          "editable" : true
+        }, {
+          "id" : "10",
+          "name" : "Custom Meter Definition",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "currency" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Custom Meter Definition",
+            "required" : [ ],
+            "properties" : {
+              "AccountNumber" : {
+                "type" : "string",
+                "order" : 0,
+                "description" : "AccountNumber"
+              },
+              "name" : {
+                "type" : "string",
+                "order" : 1,
+                "description" : "name"
+              },
+              "crmId" : {
+                "type" : "string",
+                "order" : 2,
+                "description" : "crmId"
+              },
+              "paymentTerm" : {
+                "type" : "string",
+                "order" : 3,
+                "description" : "paymentTerm"
+              },
+              "Batch" : {
+                "type" : "string",
+                "order" : 4,
+                "description" : "Batch"
+              },
+              "billCycleDay" : {
+                "type" : "number",
+                "order" : 5,
+                "description" : "billCycleDay"
+              },
+              "invoiceDeliveryPrefsEmail" : {
+                "type" : "boolean",
+                "order" : 6,
+                "description" : "invoiceDeliveryPrefsEmail"
+              },
+              "invoiceDeliveryPrefsPrint" : {
+                "type" : "boolean",
+                "order" : 7,
+                "description" : "invoiceDeliveryPrefsPrint"
+              },
+              "invoiceTemplateId" : {
+                "type" : "string",
+                "order" : 8,
+                "description" : "invoiceTemplateId"
+              },
+              "additionalEmailAddresses" : {
+                "type" : "string",
+                "order" : 9,
+                "description" : "additionalEmailAddresses"
+              },
+              "communicationProfileName" : {
+                "type" : "string",
+                "order" : 10,
+                "description" : "communicationProfileName"
+              },
+              "communicationProfileId" : {
+                "type" : "string",
+                "order" : 11,
+                "description" : "communicationProfileId"
+              },
+              "currency" : {
+                "type" : "string",
+                "order" : 12,
+                "description" : "currency"
+              },
+              "salesRep" : {
+                "type" : "string",
+                "order" : 13,
+                "description" : "salesRep"
+              },
+              "sequenceSetId" : {
+                "type" : "string",
+                "order" : 14,
+                "description" : "sequenceSetId"
+              },
+              "notes" : {
+                "type" : "string",
+                "order" : 15,
+                "description" : "notes"
+              },
+              "creditMemoTemplateId" : {
+                "type" : "string",
+                "order" : 16,
+                "description" : "creditMemoTemplateId"
+              },
+              "debitMemoTemplateId" : {
+                "type" : "string",
+                "order" : 17,
+                "description" : "debitMemoTemplateId"
+              },
+              "defaultPaymentMethod" : {
+                "type" : "string",
+                "order" : 18,
+                "description" : "defaultPaymentMethod"
+              },
+              "paymentGateway" : {
+                "type" : "string",
+                "order" : 19,
+                "description" : "paymentGateway"
+              },
+              "TaxInfo_exemptStatus" : {
+                "type" : "string",
+                "order" : 20,
+                "description" : "TaxInfo_exemptStatus"
+              },
+              "TaxInfo_companyCode" : {
+                "type" : "string",
+                "order" : 21,
+                "description" : "TaxInfo_companyCode"
+              },
+              "TaxInfo_exemptEffectiveDate" : {
+                "type" : "string",
+                "order" : 22,
+                "description" : "TaxInfo_exemptEffectiveDate"
+              },
+              "TaxInfo_exemptExpirationDate" : {
+                "type" : "string",
+                "order" : 23,
+                "description" : "TaxInfo_exemptExpirationDate"
+              },
+              "TaxInfo_VATId" : {
+                "type" : "string",
+                "order" : 24,
+                "description" : "TaxInfo_VATId"
+              },
+              "billToContact_firstName" : {
+                "type" : "string",
+                "order" : 25,
+                "description" : "billToContact_firstName"
+              },
+              "billToContact_lastName" : {
+                "type" : "string",
+                "order" : 26,
+                "description" : "billToContact_lastName"
+              },
+              "billToContact_workEmail" : {
+                "type" : "string",
+                "order" : 27,
+                "description" : "billToContact_workEmail"
+              },
+              "billToContact_personalEmail" : {
+                "type" : "string",
+                "order" : 28,
+                "description" : "billToContact_personalEmail"
+              },
+              "billToContact_country" : {
+                "type" : "string",
+                "order" : 29,
+                "description" : "billToContact_country"
+              },
+              "billToContact_address1" : {
+                "type" : "string",
+                "order" : 30,
+                "description" : "billToContact_address1"
+              },
+              "billToContact_address2" : {
+                "type" : "string",
+                "order" : 31,
+                "description" : "billToContact_address2"
+              },
+              "billToContact_city" : {
+                "type" : "string",
+                "order" : 32,
+                "description" : "billToContact_city"
+              },
+              "billToContact_stateProvince" : {
+                "type" : "string",
+                "order" : 33,
+                "description" : "billToContact_stateProvince"
+              },
+              "billToContact_zipCode" : {
+                "type" : "number",
+                "order" : 34,
+                "description" : "billToContact_zipCode"
+              },
+              "billToContact_county" : {
+                "type" : "string",
+                "order" : 35,
+                "description" : "billToContact_county"
+              },
+              "billToContact_fax" : {
+                "type" : "string",
+                "order" : 36,
+                "description" : "billToContact_fax"
+              },
+              "billToContact_homePhone" : {
+                "type" : "string",
+                "order" : 37,
+                "description" : "billToContact_homePhone"
+              },
+              "billToContact_mobilePhone" : {
+                "type" : "string",
+                "order" : 38,
+                "description" : "billToContact_mobilePhone"
+              },
+              "billToContact_nickname" : {
+                "type" : "string",
+                "order" : 39,
+                "description" : "billToContact_nickname"
+              },
+              "billToContact_otherPhone" : {
+                "type" : "string",
+                "order" : 40,
+                "description" : "billToContact_otherPhone"
+              },
+              "billToContact_otherPhoneType" : {
+                "type" : "string",
+                "order" : 41,
+                "description" : "billToContact_otherPhoneType"
+              },
+              "billToContact_taxRegion" : {
+                "type" : "string",
+                "order" : 42,
+                "description" : "billToContact_taxRegion"
+              },
+              "billToContact_description" : {
+                "type" : "string",
+                "order" : 43,
+                "description" : "billToContact_description"
+              },
+              "soldToSameAsBillTo" : {
+                "type" : "boolean",
+                "order" : 44,
+                "description" : "soldToSameAsBillTo"
+              },
+              "soldToContact_firstName" : {
+                "type" : "string",
+                "order" : 45,
+                "description" : "soldToContact_firstName"
+              },
+              "soldToContact_lastName" : {
+                "type" : "string",
+                "order" : 46,
+                "description" : "soldToContact_lastName"
+              },
+              "soldToContact_workEmail" : {
+                "type" : "string",
+                "order" : 47,
+                "description" : "soldToContact_workEmail"
+              },
+              "soldToContact_personalEmail" : {
+                "type" : "string",
+                "order" : 48,
+                "description" : "soldToContact_personalEmail"
+              },
+              "soldToContact_country" : {
+                "type" : "string",
+                "order" : 49,
+                "description" : "soldToContact_country"
+              },
+              "soldToContact_address1" : {
+                "type" : "string",
+                "order" : 50,
+                "description" : "soldToContact_address1"
+              },
+              "soldToContact_address2" : {
+                "type" : "string",
+                "order" : 51,
+                "description" : "soldToContact_address2"
+              },
+              "soldToContact_city" : {
+                "type" : "string",
+                "order" : 52,
+                "description" : "soldToContact_city"
+              },
+              "soldToContact_stateProvince" : {
+                "type" : "string",
+                "order" : 53,
+                "description" : "soldToContact_stateProvince"
+              },
+              "soldToContact_zipCode" : {
+                "type" : "number",
+                "order" : 54,
+                "description" : "soldToContact_zipCode"
+              },
+              "soldToContact_county" : {
+                "type" : "string",
+                "order" : 55,
+                "description" : "soldToContact_county"
+              },
+              "soldToContact_fax" : {
+                "type" : "string",
+                "order" : 56,
+                "description" : "soldToContact_fax"
+              },
+              "soldToContact_homePhone" : {
+                "type" : "string",
+                "order" : 57,
+                "description" : "soldToContact_homePhone"
+              },
+              "soldToContact_mobilePhone" : {
+                "type" : "string",
+                "order" : 58,
+                "description" : "soldToContact_mobilePhone"
+              },
+              "soldToContact_nickname" : {
+                "type" : "string",
+                "order" : 59,
+                "description" : "soldToContact_nickname"
+              },
+              "soldToContact_otherPhone" : {
+                "type" : "string",
+                "order" : 60,
+                "description" : "soldToContact_otherPhone"
+              },
+              "soldToContact_otherPhoneType" : {
+                "type" : "string",
+                "order" : 61,
+                "description" : "soldToContact_otherPhoneType"
+              },
+              "soldToContact_taxRegion" : {
+                "type" : "string",
+                "order" : 62,
+                "description" : "soldToContact_taxRegion"
+              },
+              "soldToContact_description" : {
+                "type" : "string",
+                "order" : 63,
+                "description" : "soldToContact_description"
+              },
+              "Account.OrderingId" : {
+                "type" : "number",
+                "order" : 64,
+                "description" : "Account.OrderingId"
+              }
+            }
+          },
+          "fieldCount" : 65,
+          "createdAt" : "2024-07-04T12:12:58Z",
+          "updatedAt" : "2024-07-04T12:12:58Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "event time field is missing",
+          "editable" : true
+        }, {
+          "id" : "9",
+          "name" : "RetestEvent",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "Texttext" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "RetestEvent",
+            "required" : [ ],
+            "properties" : {
+              "Texttext" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Texttext"
+              },
+              "truefalse" : {
+                "type" : "boolean",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "truefalse"
+              }
+            }
+          },
+          "fieldCount" : 2,
+          "createdAt" : "2024-07-03T06:22:33Z",
+          "updatedAt" : "2024-07-03T06:22:33Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "event time field is missing",
+          "editable" : true
+        }, {
+          "id" : "7",
+          "name" : "JulyEvent",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "JulyEvent",
+            "required" : [ "Dateformat" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Dateformat" : {
+                "type" : "datetime",
+                "order" : 1,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "Dateformat"
+              },
+              "Text" : {
+                "type" : "string",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Text"
+              },
+              "TF" : {
+                "type" : "boolean",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "TF"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-07-01T11:38:24Z",
+          "updatedAt" : "2024-07-01T11:38:24Z",
+          "eventStoreApplicable" : true,
+          "editable" : true
+        }, {
+          "id" : "5",
+          "name" : "test2",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "test" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "test2",
+            "required" : [ ],
+            "properties" : {
+              "test" : {
+                "type" : "string",
+                "order" : 0,
+                "description" : "test"
+              }
+            }
+          },
+          "useSampleFileForTesting" : false,
+          "fieldCount" : 1,
+          "createdAt" : "2024-06-19T10:54:05Z",
+          "updatedAt" : "2024-07-04T12:23:57Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "event time field is missing",
+          "editable" : true
+        }, {
+          "id" : "4",
+          "name" : "Test1",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "Name" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Test1",
+            "required" : [ "DateTime", "ID", "Name" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Name" : {
+                "type" : "string",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "Age" : {
+                "type" : "number",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Age"
+              },
+              "DateTime" : {
+                "type" : "datetime",
+                "order" : 3,
+                "eventTime" : true,
+                "timeFormat" : "2024-06-19 11:46:03",
+                "description" : "DateTime"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-06-19T07:37:55Z",
+          "updatedAt" : "2024-06-19T10:54:05Z",
+          "eventStoreApplicable" : true,
+          "editable" : true
+        }, {
+          "id" : "3",
+          "name" : "Event2",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event2",
+            "required" : [ "ID", "Date&Time", "Name" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 1,
+                "eventTime" : true,
+                "timeFormat" : "2024-06-18 14:44:03",
+                "description" : "Date&Time"
+              },
+              "Name" : {
+                "type" : "string",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "Number" : {
+                "type" : "number",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-06-18T09:29:44Z",
+          "updatedAt" : "2024-06-19T07:32:58Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "field name(s) 'Date&Time' are invalid",
+          "editable" : true
+        }, {
+          "id" : "1",
+          "name" : "Event1",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Event1",
+            "required" : [ "Date&Time", "ID", "Name" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Date&Time" : {
+                "type" : "datetime",
+                "order" : 1,
+                "eventTime" : true,
+                "timeFormat" : "2024-06-18 14:44:03",
+                "description" : "Date&Time"
+              },
+              "Name" : {
+                "type" : "string",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Name"
+              },
+              "Number" : {
+                "type" : "number",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Number"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-06-18T09:15:48Z",
+          "updatedAt" : "2024-07-10T07:43:38Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "field name(s) 'Date&Time' are invalid",
+          "editable" : true
+        } ]
+      },
+      "response" : [ {
+        "id" : "5eaebb95-2401-4c7a-a18e-ba80ad990545",
+        "key" : "test1 : 015b3aced21c47f6ade9c25630f00298",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "39",
+          "name" : "test1",
+          "description" : "My meter description",
+          "type" : "SUM",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "16",
+            "fileId" : null,
+            "fieldMappings" : [ ],
+            "configs" : {
+              "cumulativePeriod" : ""
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "015b3aced21c47f6ade9c25630f00298",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest-staging2.zuora.com/usage/bulk/015b3aced21c47f6ade9c25630f00298",
+          "latestVersionRunStatus" : 1,
+          "latestVersionRunStatusDescription" : "NEVER_RUN",
+          "latestMeterVersion" : {
+            "id" : "39",
+            "meterId" : 39,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 1,
+            "runStatusDescription" : "NEVER_RUN",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "16"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "createdAt" : "2024-09-30T15:22:56Z",
+            "updatedAt" : "2024-09-30T15:22:56Z"
+          },
+          "createdAt" : "2024-09-30T15:22:56Z",
+          "updatedAt" : "2024-10-15T06:23:18Z"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "093671cd-6580-4a29-9ad7-a008b78ee8a9"
+      }, {
+        "id" : "229a76ff-67e2-4a81-9d4c-fb69ba25e2dd",
+        "key" : "Aravind-test-custom : 0252e7a6d6cf4d459d43f3a90d1452af",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "41",
+          "name" : "Aravind-test-custom",
+          "description" : "My meter description",
+          "type" : "CUSTOM",
+          "latestVersion" : "0.0.1",
+          "globalId" : "0252e7a6d6cf4d459d43f3a90d1452af",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest-staging2.zuora.com/usage/bulk/0252e7a6d6cf4d459d43f3a90d1452af",
+          "latestVersionRunStatus" : 1,
+          "latestVersionRunStatusDescription" : "NEVER_RUN",
+          "latestMeterVersion" : {
+            "id" : "41",
+            "meterId" : 41,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 1,
+            "runStatusDescription" : "NEVER_RUN",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "otherTasks" : [ {
+                "id" : "start",
+                "nodeType" : null,
+                "extraConfig" : {
+                  "position" : {
+                    "x" : 0,
+                    "y" : 0
+                  }
+                }
+              } ],
+              "flowDirection" : "vertical",
+              "viewport" : {
+                "x" : 385.52655433977736,
+                "y" : 80.43970204757068,
+                "zoom" : 1
+              },
+              "autoCenter" : false
+            },
+            "tasks" : [ {
+              "id" : "d272eb30-132b-4383-bd70-eabb44511aab",
+              "name" : "Aggregator",
+              "uniqueName" : "d",
+              "internalName" : null,
+              "nodeType" : "PROCESSOR",
+              "operatorType" : "ACCUMULATOR",
+              "metadata" : {
+                "groupFields" : [ "account_id" ],
+                "aggregationFields" : [ {
+                  "field" : "api_calls",
+                  "aggregation" : "SUM",
+                  "targetField" : "api_calls"
+                } ]
+              },
+              "predecessors" : [ {
+                "id" : "8d0484c4-0222-4ded-b256-d15d7a035a5b"
+              } ],
+              "extraConfig" : {
+                "position" : {
+                  "x" : 48,
+                  "y" : 336
+                }
+              }
+            }, {
+              "id" : "396ae3ae-67b9-4877-837d-a47d72ca95b9",
+              "name" : "Event Store-Target",
+              "uniqueName" : "a",
+              "internalName" : null,
+              "nodeType" : "SINK",
+              "operatorType" : "EVENT_STORE",
+              "metadata" : {
+                "storeId" : "1",
+                "schemaId" : 18,
+                "fieldMappings" : [ {
+                  "name" : "api_calls",
+                  "type" : "number",
+                  "field" : "api_calls",
+                  "required" : true
+                }, {
+                  "name" : "id",
+                  "type" : "string",
+                  "field" : "id",
+                  "required" : true
+                }, {
+                  "name" : "time",
+                  "type" : "datetime",
+                  "field" : "time",
+                  "required" : true,
+                  "dateFormat" : ""
+                }, {
+                  "name" : "account_id",
+                  "type" : "string",
+                  "field" : "account_id",
+                  "required" : false
+                } ]
+              },
+              "predecessors" : [ {
+                "id" : "d272eb30-132b-4383-bd70-eabb44511aab"
+              } ],
+              "extraConfig" : {
+                "position" : {
+                  "x" : -16,
+                  "y" : 560
+                }
+              }
+            }, {
+              "id" : "8d0484c4-0222-4ded-b256-d15d7a035a5b",
+              "name" : "Filter",
+              "uniqueName" : "b",
+              "internalName" : null,
+              "nodeType" : "PROCESSOR",
+              "operatorType" : "FILTER",
+              "metadata" : {
+                "rules" : [ {
+                  "value" : "100",
+                  "operator" : "gt",
+                  "sourceField" : "api_calls"
+                } ],
+                "ruleCombiner" : "and"
+              },
+              "predecessors" : [ {
+                "id" : "a0ff6795-d081-4d7d-a3d7-5d644152bd81"
+              } ],
+              "extraConfig" : {
+                "position" : {
+                  "x" : 0,
+                  "y" : 240
+                }
+              }
+            }, {
+              "id" : "a0ff6795-d081-4d7d-a3d7-5d644152bd81",
+              "name" : "Deduplicator",
+              "uniqueName" : "c",
+              "internalName" : null,
+              "nodeType" : "PROCESSOR",
+              "operatorType" : "DEDUPLICATE",
+              "metadata" : {
+                "checkType" : "SpecificFields",
+                "specificFields" : [ "id" ]
+              },
+              "predecessors" : [ {
+                "id" : "ff53415d-d7bc-4a95-a567-3a7ba6bb9201"
+              } ],
+              "extraConfig" : {
+                "position" : {
+                  "x" : 0,
+                  "y" : 144
+                }
+              }
+            }, {
+              "id" : "ff53415d-d7bc-4a95-a567-3a7ba6bb9201",
+              "name" : "Streaming API",
+              "uniqueName" : "e",
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "18",
+                "schemaName" : "aravind-test",
+                "outputSchema" : {
+                  "eventIdFields" : [ "id" ],
+                  "description" : "A description",
+                  "type" : "object",
+                  "title" : "aravind-test",
+                  "required" : [ "api_calls", "id", "time" ],
+                  "properties" : {
+                    "api_calls" : {
+                      "type" : "number",
+                      "order" : 0,
+                      "eventTime" : false,
+                      "timeFormat" : "",
+                      "description" : "api_calls"
+                    },
+                    "id" : {
+                      "type" : "string",
+                      "order" : 1,
+                      "eventTime" : false,
+                      "timeFormat" : "",
+                      "description" : "id"
+                    },
+                    "time" : {
+                      "type" : "datetime",
+                      "order" : 2,
+                      "eventTime" : true,
+                      "timeFormat" : "",
+                      "description" : "time"
+                    },
+                    "account_id" : {
+                      "type" : "string",
+                      "order" : 3,
+                      "eventTime" : false,
+                      "timeFormat" : "",
+                      "description" : "account_id"
+                    }
+                  }
+                }
+              },
+              "predecessors" : [ ],
+              "extraConfig" : {
+                "position" : {
+                  "x" : 0,
+                  "y" : 48
+                }
+              }
+            } ],
+            "sources" : [ {
+              "id" : "ff53415d-d7bc-4a95-a567-3a7ba6bb9201",
+              "name" : "Streaming API",
+              "uniqueName" : "e",
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "18",
+                "schemaName" : "aravind-test",
+                "outputSchema" : {
+                  "eventIdFields" : [ "id" ],
+                  "description" : "A description",
+                  "type" : "object",
+                  "title" : "aravind-test",
+                  "required" : [ "api_calls", "id", "time" ],
+                  "properties" : {
+                    "api_calls" : {
+                      "type" : "number",
+                      "order" : 0,
+                      "eventTime" : false,
+                      "timeFormat" : "",
+                      "description" : "api_calls"
+                    },
+                    "id" : {
+                      "type" : "string",
+                      "order" : 1,
+                      "eventTime" : false,
+                      "timeFormat" : "",
+                      "description" : "id"
+                    },
+                    "time" : {
+                      "type" : "datetime",
+                      "order" : 2,
+                      "eventTime" : true,
+                      "timeFormat" : "",
+                      "description" : "time"
+                    },
+                    "account_id" : {
+                      "type" : "string",
+                      "order" : 3,
+                      "eventTime" : false,
+                      "timeFormat" : "",
+                      "description" : "account_id"
+                    }
+                  }
+                }
+              },
+              "predecessors" : [ ],
+              "extraConfig" : {
+                "position" : {
+                  "x" : 0,
+                  "y" : 48
+                }
+              }
+            } ],
+            "createdAt" : "2024-10-15T05:00:21Z",
+            "updatedAt" : "2024-10-15T05:00:21Z"
+          },
+          "createdAt" : "2024-10-15T05:00:21Z",
+          "updatedAt" : "2024-10-15T05:00:21Z"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "093671cd-6580-4a29-9ad7-a008b78ee8a9"
+      }, {
+        "id" : "1e7c0ba0-0fcc-4058-82c5-33e5ab6704fa",
+        "key" : "DirectMeter : 381d60bb28fa4666afced201354dac6d",
+        "segregationKey" : "Meters",
+        "componentType" : "Mediation",
+        "url" : "meters",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "4",
+          "name" : "DirectMeter",
+          "description" : "My meter description",
+          "type" : "DIRECT",
+          "typeDefinition" : {
+            "sourceType" : "ZUORA_BULK_API",
+            "schemaId" : "4",
+            "fileId" : null,
+            "fieldMappings" : [ {
+              "field" : "DateTime",
+              "name" : "StartDateTime",
+              "customField" : false
+            }, {
+              "field" : "ID",
+              "name" : "AccountNumber",
+              "customField" : false
+            }, {
+              "field" : "ID",
+              "name" : "Quantity",
+              "customField" : false
+            }, {
+              "field" : "Age",
+              "name" : "UOM",
+              "customField" : false
+            }, {
+              "field" : "",
+              "name" : "UniqueKey",
+              "customField" : false
+            }, {
+              "field" : "",
+              "name" : "SubscriptionNumber",
+              "customField" : false
+            }, {
+              "field" : "",
+              "name" : "ChargeNumber",
+              "customField" : false
+            }, {
+              "field" : "",
+              "name" : "EndDateTime",
+              "customField" : false
+            }, {
+              "field" : "",
+              "name" : "Description",
+              "customField" : false
+            }, {
+              "field" : "ID",
+              "name" : "UsageCfTestDateTime1__c",
+              "customField" : true
+            }, {
+              "field" : "Age",
+              "name" : "UsageCfTestDateTime2__c",
+              "customField" : true
+            }, {
+              "field" : "",
+              "name" : "UsageCfTest__c",
+              "customField" : true
+            }, {
+              "field" : "",
+              "name" : "usage_cf1_pickup__c",
+              "customField" : true
+            }, {
+              "field" : "",
+              "name" : "usage_cf1_amount__c",
+              "customField" : true
+            }, {
+              "field" : "",
+              "name" : "UsageCfTestUrl__c",
+              "customField" : true
+            }, {
+              "field" : "",
+              "name" : "UsageCfTestDateTime__c",
+              "customField" : true
+            } ],
+            "configs" : {
+              "eventTimeFormat" : "2024-16-19 12:52:03",
+              "cumulativePeriod" : ""
+            }
+          },
+          "latestVersion" : "0.0.1",
+          "globalId" : "381d60bb28fa4666afced201354dac6d",
+          "pinned" : false,
+          "uniqueUploadUrl" : "https://rest-staging2.zuora.com/usage/bulk/381d60bb28fa4666afced201354dac6d",
+          "latestVersionRunStatus" : 6,
+          "latestVersionRunStatusDescription" : "PAUSED",
+          "latestMeterVersion" : {
+            "id" : "4",
+            "meterId" : 4,
+            "versionStatus" : 2,
+            "versionStatusDescription" : "INACTIVE",
+            "runStatus" : 6,
+            "runStatusDescription" : "PAUSED",
+            "version" : "0.0.1",
+            "revision" : 1,
+            "versionDetail" : "My meter version details",
+            "metadata" : {
+              "flowDirection" : "vertical"
+            },
+            "sources" : [ {
+              "id" : null,
+              "name" : null,
+              "uniqueName" : null,
+              "internalName" : null,
+              "nodeType" : "SOURCE",
+              "operatorType" : "ZUORA_BULK_API",
+              "metadata" : {
+                "schemaId" : "4"
+              },
+              "predecessors" : null,
+              "extraConfig" : null
+            } ],
+            "latestRunHistory" : {
+              "id" : "9",
+              "sessionId" : "R-00000009",
+              "jobId" : "6c1e3ac8e845459eb14c0b157a5f6850",
+              "meterId" : 4,
+              "version" : "0.0.1",
+              "revision" : 1,
+              "runType" : 1,
+              "runTypeDescription" : "NORMAL",
+              "startTime" : "2024-06-20T12:13:58Z",
+              "endTime" : "2024-06-20T12:14:23Z",
+              "status" : 9,
+              "statusDescription" : "CANCELED",
+              "canExportSummary" : false,
+              "hasLineageEnabled" : false
+            },
+            "createdAt" : "2024-06-19T07:33:15Z",
+            "updatedAt" : "2024-06-20T12:14:24Z"
+          },
+          "createdAt" : "2024-06-19T07:33:15Z",
+          "updatedAt" : "2024-06-20T12:14:24Z"
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "093671cd-6580-4a29-9ad7-a008b78ee8a9"
+      }, {
+        "id" : "e1da5241-5b63-49de-b18a-c88edc5bd756",
+        "key" : "Custom Meter Definition",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "10",
+          "name" : "Custom Meter Definition",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "currency" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "Custom Meter Definition",
+            "required" : [ ],
+            "properties" : {
+              "AccountNumber" : {
+                "type" : "string",
+                "order" : 0,
+                "description" : "AccountNumber"
+              },
+              "name" : {
+                "type" : "string",
+                "order" : 1,
+                "description" : "name"
+              },
+              "crmId" : {
+                "type" : "string",
+                "order" : 2,
+                "description" : "crmId"
+              },
+              "paymentTerm" : {
+                "type" : "string",
+                "order" : 3,
+                "description" : "paymentTerm"
+              },
+              "Batch" : {
+                "type" : "string",
+                "order" : 4,
+                "description" : "Batch"
+              },
+              "billCycleDay" : {
+                "type" : "number",
+                "order" : 5,
+                "description" : "billCycleDay"
+              },
+              "invoiceDeliveryPrefsEmail" : {
+                "type" : "boolean",
+                "order" : 6,
+                "description" : "invoiceDeliveryPrefsEmail"
+              },
+              "invoiceDeliveryPrefsPrint" : {
+                "type" : "boolean",
+                "order" : 7,
+                "description" : "invoiceDeliveryPrefsPrint"
+              },
+              "invoiceTemplateId" : {
+                "type" : "string",
+                "order" : 8,
+                "description" : "invoiceTemplateId"
+              },
+              "additionalEmailAddresses" : {
+                "type" : "string",
+                "order" : 9,
+                "description" : "additionalEmailAddresses"
+              },
+              "communicationProfileName" : {
+                "type" : "string",
+                "order" : 10,
+                "description" : "communicationProfileName"
+              },
+              "communicationProfileId" : {
+                "type" : "string",
+                "order" : 11,
+                "description" : "communicationProfileId"
+              },
+              "currency" : {
+                "type" : "string",
+                "order" : 12,
+                "description" : "currency"
+              },
+              "salesRep" : {
+                "type" : "string",
+                "order" : 13,
+                "description" : "salesRep"
+              },
+              "sequenceSetId" : {
+                "type" : "string",
+                "order" : 14,
+                "description" : "sequenceSetId"
+              },
+              "notes" : {
+                "type" : "string",
+                "order" : 15,
+                "description" : "notes"
+              },
+              "creditMemoTemplateId" : {
+                "type" : "string",
+                "order" : 16,
+                "description" : "creditMemoTemplateId"
+              },
+              "debitMemoTemplateId" : {
+                "type" : "string",
+                "order" : 17,
+                "description" : "debitMemoTemplateId"
+              },
+              "defaultPaymentMethod" : {
+                "type" : "string",
+                "order" : 18,
+                "description" : "defaultPaymentMethod"
+              },
+              "paymentGateway" : {
+                "type" : "string",
+                "order" : 19,
+                "description" : "paymentGateway"
+              },
+              "TaxInfo_exemptStatus" : {
+                "type" : "string",
+                "order" : 20,
+                "description" : "TaxInfo_exemptStatus"
+              },
+              "TaxInfo_companyCode" : {
+                "type" : "string",
+                "order" : 21,
+                "description" : "TaxInfo_companyCode"
+              },
+              "TaxInfo_exemptEffectiveDate" : {
+                "type" : "string",
+                "order" : 22,
+                "description" : "TaxInfo_exemptEffectiveDate"
+              },
+              "TaxInfo_exemptExpirationDate" : {
+                "type" : "string",
+                "order" : 23,
+                "description" : "TaxInfo_exemptExpirationDate"
+              },
+              "TaxInfo_VATId" : {
+                "type" : "string",
+                "order" : 24,
+                "description" : "TaxInfo_VATId"
+              },
+              "billToContact_firstName" : {
+                "type" : "string",
+                "order" : 25,
+                "description" : "billToContact_firstName"
+              },
+              "billToContact_lastName" : {
+                "type" : "string",
+                "order" : 26,
+                "description" : "billToContact_lastName"
+              },
+              "billToContact_workEmail" : {
+                "type" : "string",
+                "order" : 27,
+                "description" : "billToContact_workEmail"
+              },
+              "billToContact_personalEmail" : {
+                "type" : "string",
+                "order" : 28,
+                "description" : "billToContact_personalEmail"
+              },
+              "billToContact_country" : {
+                "type" : "string",
+                "order" : 29,
+                "description" : "billToContact_country"
+              },
+              "billToContact_address1" : {
+                "type" : "string",
+                "order" : 30,
+                "description" : "billToContact_address1"
+              },
+              "billToContact_address2" : {
+                "type" : "string",
+                "order" : 31,
+                "description" : "billToContact_address2"
+              },
+              "billToContact_city" : {
+                "type" : "string",
+                "order" : 32,
+                "description" : "billToContact_city"
+              },
+              "billToContact_stateProvince" : {
+                "type" : "string",
+                "order" : 33,
+                "description" : "billToContact_stateProvince"
+              },
+              "billToContact_zipCode" : {
+                "type" : "number",
+                "order" : 34,
+                "description" : "billToContact_zipCode"
+              },
+              "billToContact_county" : {
+                "type" : "string",
+                "order" : 35,
+                "description" : "billToContact_county"
+              },
+              "billToContact_fax" : {
+                "type" : "string",
+                "order" : 36,
+                "description" : "billToContact_fax"
+              },
+              "billToContact_homePhone" : {
+                "type" : "string",
+                "order" : 37,
+                "description" : "billToContact_homePhone"
+              },
+              "billToContact_mobilePhone" : {
+                "type" : "string",
+                "order" : 38,
+                "description" : "billToContact_mobilePhone"
+              },
+              "billToContact_nickname" : {
+                "type" : "string",
+                "order" : 39,
+                "description" : "billToContact_nickname"
+              },
+              "billToContact_otherPhone" : {
+                "type" : "string",
+                "order" : 40,
+                "description" : "billToContact_otherPhone"
+              },
+              "billToContact_otherPhoneType" : {
+                "type" : "string",
+                "order" : 41,
+                "description" : "billToContact_otherPhoneType"
+              },
+              "billToContact_taxRegion" : {
+                "type" : "string",
+                "order" : 42,
+                "description" : "billToContact_taxRegion"
+              },
+              "billToContact_description" : {
+                "type" : "string",
+                "order" : 43,
+                "description" : "billToContact_description"
+              },
+              "soldToSameAsBillTo" : {
+                "type" : "boolean",
+                "order" : 44,
+                "description" : "soldToSameAsBillTo"
+              },
+              "soldToContact_firstName" : {
+                "type" : "string",
+                "order" : 45,
+                "description" : "soldToContact_firstName"
+              },
+              "soldToContact_lastName" : {
+                "type" : "string",
+                "order" : 46,
+                "description" : "soldToContact_lastName"
+              },
+              "soldToContact_workEmail" : {
+                "type" : "string",
+                "order" : 47,
+                "description" : "soldToContact_workEmail"
+              },
+              "soldToContact_personalEmail" : {
+                "type" : "string",
+                "order" : 48,
+                "description" : "soldToContact_personalEmail"
+              },
+              "soldToContact_country" : {
+                "type" : "string",
+                "order" : 49,
+                "description" : "soldToContact_country"
+              },
+              "soldToContact_address1" : {
+                "type" : "string",
+                "order" : 50,
+                "description" : "soldToContact_address1"
+              },
+              "soldToContact_address2" : {
+                "type" : "string",
+                "order" : 51,
+                "description" : "soldToContact_address2"
+              },
+              "soldToContact_city" : {
+                "type" : "string",
+                "order" : 52,
+                "description" : "soldToContact_city"
+              },
+              "soldToContact_stateProvince" : {
+                "type" : "string",
+                "order" : 53,
+                "description" : "soldToContact_stateProvince"
+              },
+              "soldToContact_zipCode" : {
+                "type" : "number",
+                "order" : 54,
+                "description" : "soldToContact_zipCode"
+              },
+              "soldToContact_county" : {
+                "type" : "string",
+                "order" : 55,
+                "description" : "soldToContact_county"
+              },
+              "soldToContact_fax" : {
+                "type" : "string",
+                "order" : 56,
+                "description" : "soldToContact_fax"
+              },
+              "soldToContact_homePhone" : {
+                "type" : "string",
+                "order" : 57,
+                "description" : "soldToContact_homePhone"
+              },
+              "soldToContact_mobilePhone" : {
+                "type" : "string",
+                "order" : 58,
+                "description" : "soldToContact_mobilePhone"
+              },
+              "soldToContact_nickname" : {
+                "type" : "string",
+                "order" : 59,
+                "description" : "soldToContact_nickname"
+              },
+              "soldToContact_otherPhone" : {
+                "type" : "string",
+                "order" : 60,
+                "description" : "soldToContact_otherPhone"
+              },
+              "soldToContact_otherPhoneType" : {
+                "type" : "string",
+                "order" : 61,
+                "description" : "soldToContact_otherPhoneType"
+              },
+              "soldToContact_taxRegion" : {
+                "type" : "string",
+                "order" : 62,
+                "description" : "soldToContact_taxRegion"
+              },
+              "soldToContact_description" : {
+                "type" : "string",
+                "order" : 63,
+                "description" : "soldToContact_description"
+              },
+              "Account.OrderingId" : {
+                "type" : "number",
+                "order" : 64,
+                "description" : "Account.OrderingId"
+              }
+            }
+          },
+          "fieldCount" : 65,
+          "createdAt" : "2024-07-04T12:12:58Z",
+          "updatedAt" : "2024-07-04T12:12:58Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "event time field is missing",
+          "editable" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "093671cd-6580-4a29-9ad7-a008b78ee8a9"
+      }, {
+        "id" : "14d68184-135a-4785-bac0-bc8bf5af036a",
+        "key" : "RetestEvent",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "9",
+          "name" : "RetestEvent",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "Texttext" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "RetestEvent",
+            "required" : [ ],
+            "properties" : {
+              "Texttext" : {
+                "type" : "string",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Texttext"
+              },
+              "truefalse" : {
+                "type" : "boolean",
+                "order" : 1,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "truefalse"
+              }
+            }
+          },
+          "fieldCount" : 2,
+          "createdAt" : "2024-07-03T06:22:33Z",
+          "updatedAt" : "2024-07-03T06:22:33Z",
+          "eventStoreApplicable" : false,
+          "eventStoreMessage" : "event time field is missing",
+          "editable" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "093671cd-6580-4a29-9ad7-a008b78ee8a9"
+      }, {
+        "id" : "bc5f37bd-7f20-46e1-9542-4b3c7480a211",
+        "key" : "JulyEvent",
+        "segregationKey" : "EventsDefinition",
+        "componentType" : "Mediation",
+        "url" : "meters/schemas",
+        "pathPattern" : null,
+        "method" : "GET,PUT,POST,DELETE",
+        "payload" : {
+          "id" : "7",
+          "name" : "JulyEvent",
+          "type" : 1,
+          "schema" : {
+            "eventIdFields" : [ "ID" ],
+            "description" : "A description",
+            "type" : "object",
+            "title" : "JulyEvent",
+            "required" : [ "Dateformat" ],
+            "properties" : {
+              "ID" : {
+                "type" : "number",
+                "order" : 0,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "ID"
+              },
+              "Dateformat" : {
+                "type" : "datetime",
+                "order" : 1,
+                "eventTime" : true,
+                "timeFormat" : "2024-16-19 12:52:03",
+                "description" : "Dateformat"
+              },
+              "Text" : {
+                "type" : "string",
+                "order" : 2,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "Text"
+              },
+              "TF" : {
+                "type" : "boolean",
+                "order" : 3,
+                "eventTime" : false,
+                "timeFormat" : "",
+                "description" : "TF"
+              }
+            }
+          },
+          "fieldCount" : 4,
+          "createdAt" : "2024-07-01T11:38:24Z",
+          "updatedAt" : "2024-07-01T11:38:24Z",
+          "eventStoreApplicable" : true,
+          "editable" : true
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : null,
+        "templateId" : "093671cd-6580-4a29-9ad7-a008b78ee8a9"
+      } ],
+      "errors" : [ ]
+    } ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : null
+  }
+}
