@@ -10,7 +10,7 @@
   "environment" : "US-API-Sandbox-Staging",
   "createdBy" : "k2e2e_order_noAR k2e2e_order_noAR",
   "updatedBy" : "k2e2e_order_noAR k2e2e_order_noAR",
-  "createdOn" : "2025-02-19T09:58:23.669Z",
+  "createdOn" : "2025-02-19T10:00:52.022Z",
   "type" : "Others",
   "repo" : true,
   "connectorId" : null,
@@ -22,10 +22,10 @@
     "repoName" : "Sofy_DM",
     "branchName" : "main",
     "path" : "testprod_1902",
-    "commitMessage" : "testprod_1902",
+    "commitMessage" : "testprod_1902\n",
     "error" : null,
     "status" : "UPLOADED",
-    "commitId" : "564460313a597474cfd7e8835775f9f5187dec1d"
+    "commitId" : "4d3bf9878c91792576abb6c30e4a98aabd99208b"
   },
   "content" : {
     "settings" : [ ],
@@ -2194,7 +2194,7 @@
         "count" : 24
       },
       "response" : [ {
-        "id" : "05d08857-f756-40cd-a073-ab23f1c9b954",
+        "id" : "01f466f4-2bd8-4571-a360-3be356f5cf74",
         "key" : "product -> Country__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2220,7 +2220,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "67307648-6ad4-431e-b7b4-166de8331760",
+        "id" : "5d8d07a2-6f13-430e-8ea9-d99caeb4b25e",
         "key" : "product -> ProductFamily__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2246,7 +2246,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "dcdf9ff3-2930-414c-ad29-030f588b569c",
+        "id" : "6630ccd8-8905-48fb-94c5-444034bc696e",
         "key" : "product -> Inventory__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2270,7 +2270,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "d31fdd65-34a3-41b7-88c8-c1f5872b97c7",
+        "id" : "044940f1-50b9-4796-b02d-440cb2872724",
         "key" : "product -> SubPortfolio__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2294,7 +2294,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "c6e71b66-d9e8-4e04-b5b1-fdbc2c5bc64c",
+        "id" : "382a20ef-1665-4f53-bf4b-741bf99b686e",
         "key" : "product -> CustomFields__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2322,7 +2322,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "b977c542-ed97-4cf4-8c7d-7e6f8264d3c4",
+        "id" : "9295d2db-2b82-4c46-a9c8-f11b9cce157c",
         "key" : "product -> ContextFilter__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2346,7 +2346,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "5523cc23-5eca-44c3-be34-f055b2be6dd5",
+        "id" : "3eeafdba-41f6-459a-94fa-468105b36143",
         "key" : "product -> GuidedSellingSteps__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2371,7 +2371,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "43e7350c-3daf-45b9-b298-ffbe945f2061",
+        "id" : "c1d7f9f6-7c95-4089-82cd-d94b13f305ff",
         "key" : "product -> Prospect__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2394,7 +2394,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "9f2bf123-b64a-46cc-9304-de737c4295b1",
+        "id" : "9b21d524-64ae-4fe2-a6ad-06bb41d8c5eb",
         "key" : "product -> productField1__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2421,7 +2421,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "b117a3bb-8b52-4118-a7a8-4f5edc10c645",
+        "id" : "d0b120e6-fed7-4769-b39b-23fa467d2809",
         "key" : "product -> CustomFields_2__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2447,7 +2447,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "6fa54912-bfa7-48e3-9e7d-00a557f70eb2",
+        "id" : "de8ef126-d586-4d83-a9e1-4b880083578a",
         "key" : "product -> DowngradePathSKU__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2471,7 +2471,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "155afec5-891b-44fa-9441-550e14b228e0",
+        "id" : "21c50429-e8de-4b4a-93ed-e3594e248230",
         "key" : "product -> HardwareProductFamily__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2496,7 +2496,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "936c5a29-ff3d-40d6-bbcb-8a0d7d9e6f5e",
+        "id" : "5bb10a98-5704-4d05-81ce-df8d2f129839",
         "key" : "product -> ProductVersion__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2520,7 +2520,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "b253ec79-3679-4e0c-b9b3-f219b52b2a12",
+        "id" : "d188be9a-4f52-4d54-ae59-da33e9bbb202",
         "key" : "product -> PartnerCommission__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2543,7 +2543,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "b371a395-97df-4872-8173-9b19b248b5a5",
+        "id" : "ca537ac0-05b4-4181-8876-6e4725891517",
         "key" : "product -> ProductStatus__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2567,7 +2567,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "f31a19da-3fbb-492e-a076-7d34b70bcbc5",
+        "id" : "c959c611-8968-45b4-9451-9bc941356834",
         "key" : "product -> PaaSProductFamily__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2592,7 +2592,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "e13d1bde-4ae1-4911-ba11-77e4b288279e",
+        "id" : "ece7bbe3-c5b5-463e-8894-af50547afddf",
         "key" : "product -> ProductCategory__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2617,7 +2617,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "bce251a3-5e16-4b83-ad41-735f12755c9a",
+        "id" : "9623bf48-6b55-439b-9cb5-7ef63798a81e",
         "key" : "product -> AddOnGroup__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2641,7 +2641,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "1a639fd8-3e07-43bb-b0b6-70cecc4b85ab",
+        "id" : "68661f4b-6908-4d80-b825-6efdc5f29749",
         "key" : "product -> product_cf_date__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2665,7 +2665,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "1dfc0354-04cb-4e31-9b4c-d17661c02bdc",
+        "id" : "a25695db-dd32-4010-b65c-178fe25bf54f",
         "key" : "product -> MultiSelect__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -2689,7 +2689,7 @@
         "error" : "-",
         "templateId" : "2963b702-b1c1-4660-9386-fee2e311ebe1"
       }, {
-        "id" : "da33c568-b9bb-421e-9812-afa618b0a288",
+        "id" : "e803449f-0a9a-4af7-a6f3-b7b88b49ebeb",
         "key" : "product -> TestingMV__c",
         "segregationKey" : "product",
         "componentType" : "CustomFields",
@@ -3558,7 +3558,7 @@
             "CreatedById" : "2c92c8fe6a24d8b0016a288ca211055e",
             "UpdatedById" : "2c92c8fe6a24d8b0016a288ca211055e",
             "CreatedDate" : "2025-02-19T09:54:20.816Z",
-            "UpdatedDate" : "2025-02-19T09:54:20.816Z",
+            "UpdatedDate" : "2025-02-19T10:00:22.596Z",
             "schema" : {
               "object" : "test_1017",
               "label" : "test_1017",
@@ -3573,6 +3573,15 @@
                   "label" : "Field1",
                   "origin" : "custom",
                   "description" : "Field1",
+                  "type" : "string",
+                  "default" : "20"
+                },
+                "Field2__c" : {
+                  "maxLength" : 21,
+                  "displayName" : false,
+                  "label" : "Field2",
+                  "origin" : "custom",
+                  "description" : "Field2",
                   "type" : "string",
                   "default" : "20"
                 },
@@ -3640,7 +3649,7 @@
         "CustomObjectRecords" : { }
       },
       "response" : [ {
-        "id" : "6bcedf9f-3500-4c23-8db2-3bc87f4bd8dd",
+        "id" : "e8e94f42-cb93-4516-bd72-0b77ec70b7c9",
         "key" : "test_1017",
         "segregationKey" : "Available Custom Objects",
         "componentType" : "CustomObjects",
@@ -3658,6 +3667,19 @@
             "field_name" : "Field1",
             "origin" : "custom",
             "description" : "Field1",
+            "type" : "string",
+            "default" : "20",
+            "filterable" : false,
+            "required" : false,
+            "auditable" : false,
+            "unique" : false
+          }, {
+            "api_name" : "Field2__c",
+            "maxLength" : 21,
+            "displayName" : false,
+            "field_name" : "Field2",
+            "origin" : "custom",
+            "description" : "Field2",
             "type" : "string",
             "default" : "20",
             "filterable" : false,
