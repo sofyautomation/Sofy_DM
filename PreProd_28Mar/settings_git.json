@@ -2,7 +2,7 @@
   "id" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a",
   "name" : "settings_git",
   "description" : "settings_git",
-  "status" : "DONE",
+  "status" : "Synced",
   "errors" : "",
   "active" : true,
   "tenantName" : "ssridhar_preprod_26_mar_v1  (1000026) (null)",
@@ -10,19 +10,29 @@
   "environment" : null,
   "createdBy" : "rkapali ",
   "updatedBy" : "rkapali ",
-  "createdOn" : "2025-03-28T11:04:14.669Z",
+  "createdOn" : "2025-03-28T11:07:03.263Z",
   "type" : "Others",
-  "repo" : false,
+  "repo" : true,
   "connectorId" : null,
   "lessThanMaxPC" : false,
   "structurePresent" : true,
-  "repoDetails" : null,
+  "repoDetails" : {
+    "id" : "8cccdb5b-6889-49da-a5f9-8aaa1a0cfbdb",
+    "orgName" : "sofyautomation",
+    "repoName" : "Sofy_DM",
+    "branchName" : "main",
+    "path" : "PreProd_28Mar",
+    "commitMessage" : "PreProd_28Mar",
+    "error" : null,
+    "status" : "UPLOADED",
+    "commitId" : "4c359174baa9b85b2b71c57f4bd1035d35e834a2"
+  },
   "content" : {
     "settings" : [ {
       "segregationKeys" : [ "Administration", "ManageDataAccessControl", "Finance", "Billing", "ManageMultiEntity", "Payments" ],
       "originalPayload" : null,
       "response" : [ {
-        "id" : "2c0fe373-9e1b-401c-bb8e-97c685e2e741",
+        "id" : "f81f41cc-7dba-4433-9e55-1e68c9e1bfb7",
         "key" : "AccountingPeriods",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -37,7 +47,7 @@
         "error" : "unable to create AccountingPeriods client due to reason :- Error in GetAccessTokenOfIntegrationClient --> AWS value is empty",
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "a118eb8a-2545-489e-852a-6c18146e03f4",
+        "id" : "a29151cd-8394-42e8-89ff-2590df9718b6",
         "key" : "DocPrefix",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -52,7 +62,7 @@
         "error" : "unable to create Sequence Set client due to the reason :- Error in GetAccessTokenOfIntegrationClient --> AWS value is empty",
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "a40241a8-6dcf-4e5c-ab4b-804e5df26f4e",
+        "id" : "8f27c333-a61b-4c39-995f-59d9437c5d05",
         "key" : "AccountingRules",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -69,7 +79,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "0398a8b7-0547-4a80-95bd-a69ba16416d8",
+        "id" : "14a86ed4-02ac-41ce-b8cf-4d5cca556fc2",
         "key" : "AgingBuckets",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -84,7 +94,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "2b5eb74b-6e21-446b-b263-5cd4cd52b6ad",
+        "id" : "5d097e27-f55c-4f7b-aea4-a13efe84298a",
         "key" : "BatchAliases",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -101,7 +111,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "529cb130-1011-41f3-b94d-99580e8850b8",
+        "id" : "0c41e202-772b-4951-ab68-c4196f49856a",
         "key" : "InsightsConnection",
         "segregationKey" : "Administration",
         "componentType" : "Settings",
@@ -116,7 +126,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "6ef4dab0-734a-47d8-8f38-502e75918c8a",
+        "id" : "46109a72-df83-48b4-aac7-026dba1630d3",
         "key" : "BillingCycleType",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -133,7 +143,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "843e89c5-caca-4491-a657-ae3ea47904c8",
+        "id" : "f99fdb2b-4313-4644-bdf6-6628fcaf490e",
         "key" : "BillingListPriceBase",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -150,7 +160,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "98d32c65-7d33-470c-9e7d-a89ee8ab8d46",
+        "id" : "0ebe95ca-3c8a-42d6-b96d-15994740cd18",
         "key" : "BillingPeriodStart",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -167,7 +177,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "42e8ce6c-b8ac-484b-ae05-02a21af56e7c",
+        "id" : "935bbd0b-5bf7-4848-a4aa-c27396d54e21",
         "key" : "BillingPeriod",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -184,7 +194,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "6a923953-186f-40ed-b552-64b931bffd57",
+        "id" : "01c452e9-7761-4f79-af80-36751b5f60c0",
         "key" : "ChartOfAccounts",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -199,7 +209,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "8bc8391c-41e6-46ad-ba11-709bcf81aa96",
+        "id" : "441a0a1d-00a2-4342-82ca-5184cf632394",
         "key" : "Currency",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -256,7 +266,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "dfa7df8c-62ec-4844-a74f-f0f2a8738491",
+        "id" : "726fd397-158b-48d0-b06d-f59a4786e495",
         "key" : "AllDiscountSettings",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -273,7 +283,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "1c34442c-f28a-41a5-b17c-44af4530a384",
+        "id" : "15c523b7-686e-48e2-bab6-8e8b889b2042",
         "key" : "EntityProfileAttachment",
         "segregationKey" : "Administration",
         "componentType" : "Settings",
@@ -292,7 +302,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "80cb3a8f-dd49-41e4-9967-f7aa61704968",
+        "id" : "9b9247d5-9e67-4bea-9c67-7a3d4c170691",
         "key" : "AllFinanceSegmentationRules",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -307,7 +317,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "6628913e-8c54-4df3-a203-7f9cc2036b10",
+        "id" : "bf41acee-7632-4a72-b875-3c7fa3d61ae7",
         "key" : "GLSegments",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -324,7 +334,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "c9b4e4de-7891-44fe-8ccd-8b6e5c91ebed",
+        "id" : "9c1d9436-491f-461d-b193-00f97de86941",
         "key" : "AllProductAttributes",
         "segregationKey" : "ManageMultiEntity",
         "componentType" : "Settings",
@@ -339,7 +349,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "2ee0cf5e-9e0b-497c-80b7-2f19a4c2f3b2",
+        "id" : "407c35bf-633b-44f4-8937-878ddc4db659",
         "key" : "NumberAndSku",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -372,7 +382,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "7fb5b9a8-9cd2-4a19-9d13-93af1f60f46f",
+        "id" : "1387b137-a548-4c0a-8ed9-4f497286879f",
         "key" : "AllOutboundEntityConnections",
         "segregationKey" : "ManageMultiEntity",
         "componentType" : "Settings",
@@ -389,7 +399,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "0125b87d-b879-4d98-af2c-44c2da6edcb5",
+        "id" : "abba29d9-9708-43fa-bb80-b30e99ad79fd",
         "key" : "ChargeModels",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -406,7 +416,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "a9e50126-0497-4120-9988-1c6d0d19d2b9",
+        "id" : "58eaec8e-2143-4bf4-a2fd-31a4c2af1889",
         "key" : "ChargeType",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -423,7 +433,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "4d250cb3-690c-4a04-bf2c-44b8dd3bf2ef",
+        "id" : "385e3ef7-71ab-4928-8316-5ffe8d8fae57",
         "key" : "PaymentRetryRules",
         "segregationKey" : "Payments",
         "componentType" : "Settings",
@@ -438,7 +448,7 @@
         "error" : "404 NOT_FOUND",
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "86a8c12d-c3cc-4922-86a7-9e4deff48530",
+        "id" : "78be160d-4ab1-4d4a-9dc3-782ae9b64a94",
         "key" : "PaymentRules",
         "segregationKey" : "Payments",
         "componentType" : "Settings",
@@ -460,7 +470,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "8f924d65-60ff-4d01-8564-9218a3e4271b",
+        "id" : "e3d48f62-082c-42e9-b6f4-36659929cbd8",
         "key" : "AllPaymentTerms",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -507,7 +517,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "f46ebc6b-eda6-4c4e-9499-abb5e184bf73",
+        "id" : "b785fad0-88b0-4427-8fe8-153ecc9b8330",
         "key" : "AllReasonCodes",
         "segregationKey" : "Payments",
         "componentType" : "Settings",
@@ -594,7 +604,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "4f70d616-834e-4c4b-ae91-39b4a7484b63",
+        "id" : "3c2d2ab3-b8f5-4afc-af41-4b5071baedd4",
         "key" : "AllRevenueEventTypes",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -609,7 +619,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "a2f6c928-1be5-4d06-8380-55efd4ecbea0",
+        "id" : "d03fcbf0-f099-403f-9a7d-a82d9fbbc57f",
         "key" : "RevenueRecognitionCodeStatus",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -626,7 +636,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "3fdadab1-2b5e-40c7-8c1d-3e69bd9ac183",
+        "id" : "30c80041-96e2-4be9-af54-e2e30b94e781",
         "key" : "AllRevenueRecognitionCodes",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -644,7 +654,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "75586df9-feca-4e9f-a493-335b76f394b6",
+        "id" : "92b044a9-cc51-4e86-b525-11ee6b5b7e1e",
         "key" : "AllRevenueRecognitionModels",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -659,7 +669,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "cd08e0a6-af61-4495-aacd-7c8bffde3bde",
+        "id" : "a3a1eefe-63b4-4277-bfeb-d61e669e039b",
         "key" : "AllRevenueRecognitionRules",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -674,7 +684,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "18a71d85-2684-4101-96a0-ab15d961a5d2",
+        "id" : "fbe0e99f-3fd8-40d6-b2e9-ecb6e219b3be",
         "key" : "RevenueStartDate",
         "segregationKey" : "Finance",
         "componentType" : "Settings",
@@ -689,7 +699,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "67a8cfe2-1828-4039-ae2b-6d60e27141f7",
+        "id" : "52d96a76-aa60-429a-9f30-7c949d31b889",
         "key" : "SubscriptionSettings",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -728,7 +738,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "197190dc-0a93-4790-b6fe-36e7ac76713c",
+        "id" : "783be0fd-a574-42dd-8b73-b4393d87d4b5",
         "key" : "AllUnitsOfMeasure",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -769,7 +779,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "55f0f460-c38f-407f-8ee8-df7c30ccf69a",
+        "id" : "fa9c0453-ac42-45c6-b135-e7ca407cea0e",
         "key" : "AuditTrailSettings",
         "segregationKey" : "Administration",
         "componentType" : "Settings",
@@ -806,7 +816,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "b5d697c1-752a-4d4f-9d90-ad5bdd402459",
+        "id" : "230431d0-ecd0-40e5-beb7-36cc5cb7350c",
         "key" : "ApplicationRules",
         "segregationKey" : "Payments",
         "componentType" : "Settings",
@@ -824,7 +834,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "d9d23954-337c-4fa2-8677-80a4f394b236",
+        "id" : "0cf3dcdf-c72e-4dfa-acb2-4e410997feb6",
         "key" : "BillingRules",
         "segregationKey" : "Billing",
         "componentType" : "Settings",
@@ -887,7 +897,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "30b4eabf-7ea4-4bfd-ae41-caacbf02eec9",
+        "id" : "7af38243-2ae1-4730-ae4b-0760f1490dbb",
         "key" : "DataAccessControl",
         "segregationKey" : "ManageDataAccessControl",
         "componentType" : "Settings",
@@ -902,7 +912,7 @@
         "error" : null,
         "templateId" : "ca285f7d-9192-4a4f-8d32-5048bd0b946a"
       }, {
-        "id" : "53c8193f-65c1-4b59-a07c-da7f0e5a45d3",
+        "id" : "4b14ed9f-4cf6-4abc-8407-615e751124bf",
         "key" : "AllHostedPaymentMethodPages",
         "segregationKey" : "Payments",
         "componentType" : "Settings",
