@@ -1,0 +1,1533 @@
+{
+  "id" : "26e54895-c2c9-46ca-8e7d-8016978d1634",
+  "name" : "sanity_git",
+  "description" : "sanity_git",
+  "status" : "DONE",
+  "errors" : "",
+  "active" : true,
+  "tenantName" : "csun's sanity  (7100003) (AP-Production)",
+  "entityName" : "Global",
+  "environment" : "AP-Production",
+  "createdBy" : "Vidya BS",
+  "updatedBy" : "Vidya BS",
+  "createdOn" : "2025-05-14T09:41:22.820Z",
+  "type" : "Others",
+  "repo" : false,
+  "connectorId" : null,
+  "lessThanMaxPC" : false,
+  "structurePresent" : true,
+  "repoDetails" : null,
+  "content" : {
+    "settings" : [ ],
+    "taxation" : [ ],
+    "billingDocuments" : [ ],
+    "userRoles" : [ ],
+    "productCatalog" : [ ],
+    "notifications" : [ ],
+    "workflows" : [ {
+      "segregationKeys" : [ "Credit Card Fee", "workflow created for config template_2024-07-05", "Payment to Provision" ],
+      "originalPayload" : {
+        "export" : {
+          "3" : {
+            "Credit Card Fee_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Credit Card Fee",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 3,
+                "name" : "Credit Card Fee",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ {
+                    "index" : "0",
+                    "default" : "",
+                    "datatype" : "Text",
+                    "required" : true,
+                    "field_name" : "BillRunStatus",
+                    "object_name" : "Workflow"
+                  }, {
+                    "index" : "1",
+                    "default" : "",
+                    "datatype" : "Text",
+                    "required" : true,
+                    "field_name" : "BillingRunId",
+                    "object_name" : "Workflow"
+                  }, {
+                    "index" : "2",
+                    "default" : "{{ENTER_CHARGE_ID_HERE}}",
+                    "datatype" : "Text",
+                    "required" : true,
+                    "field_name" : "ChargeID",
+                    "object_name" : "Workflow"
+                  }, {
+                    "index" : "3",
+                    "default" : "0.03",
+                    "datatype" : "Text",
+                    "required" : true,
+                    "field_name" : "percentFee",
+                    "object_name" : "Workflow"
+                  }, {
+                    "index" : "4",
+                    "default" : "{{ENTER_PLAN_ID_HERE}}",
+                    "datatype" : "Text",
+                    "required" : true,
+                    "field_name" : "PlanID",
+                    "object_name" : "Workflow"
+                  }, {
+                    "index" : "5",
+                    "default" : "",
+                    "datatype" : "Text",
+                    "required" : true,
+                    "field_name" : "TargetDate",
+                    "object_name" : "Workflow"
+                  } ],
+                  "event_triggers" : [ "BillingRunCompletion" ],
+                  "skipping_check" : "",
+                  "file_encryption" : "",
+                  "show_run_prompt" : "true",
+                  "callout_response" : "workflow instance",
+                  "event_parameters" : [ {
+                    "params" : [ {
+                      "key" : "BillRunStatus",
+                      "value" : "<BillRun.BillRunStatus>",
+                      "object" : "BillingRun"
+                    }, {
+                      "key" : "Id",
+                      "value" : "<BillRun.ID>",
+                      "object" : "BillingRun"
+                    }, {
+                      "key" : "TargetDate",
+                      "value" : "<BillRun.TargetDate>",
+                      "object" : "BillingRun"
+                    } ],
+                    "eventName" : "BillingRunCompletion"
+                  } ],
+                  "secure_error_msgs" : "",
+                  "disable_pending_status" : false
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : false,
+                "scheduled_trigger" : false,
+                "interval" : "",
+                "timezone" : "",
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "30px"
+                },
+                "notifications" : {
+                  "failure" : false,
+                  "pending" : false,
+                  "success" : false
+                },
+                "call_type" : "BATCH",
+                "priority" : "High",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : true,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "zuora_org_ids" : [ ],
+                "extension_id" : null
+              },
+              "tasks" : [ {
+                "id" : 1,
+                "name" : "Bill Run Status",
+                "parameters" : {
+                  "if_clause" : "{% if Data.BillingRun.BillRunStatus -%}\r\n\t{% assign BillRunStatus = Data.BillingRun.BillRunStatus -%}\r\n  {% assign BillingRunId = Data.BillingRun.Id -%}\r\n\t{% assign TargetDate = Data.BillingRun.TargetDate -%}\r\n{% elsif Data.Workflow.BillRunStatus != '' -%}\r\n\t{% assign BillRunStatus = Data.Workflow.BillRunStatus -%}\r\n  {% assign BillingRunId = Data.Workflow.BillingRunId -%}\r\n\t{% assign TargetDate = Data.Workflow.TargetDate -%}\r\n{% endif -%}\r\n\r\n{% if BillRunStatus == 'Completed' -%}\r\nTrue\r\n{% else -%}\r\nFalse\r\n{% endif -%}",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "false",
+                  "disable_validation" : "true",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "If",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "10px",
+                  "left" : "610px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 2,
+                "name" : "0",
+                "parameters" : {
+                  "blocking" : "false",
+                  "delay_time" : "0",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Delay",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 1,
+                "css" : {
+                  "top" : "320px",
+                  "left" : "2140px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 3,
+                "name" : "Add Fee RP",
+                "parameters" : {
+                  "url" : "{{ Credentials.zuora.rest_endpoint | replace: \"/v1/\", \"\" }}/v1/orders",
+                  "files" : [ {
+                    "key" : "LinkRun__10.csv.zip",
+                    "name" : "",
+                    "upload" : "false",
+                    "filename" : ""
+                  } ],
+                  "method" : "POST",
+                  "headers" : [ {
+                    "key" : "Content-Type",
+                    "value" : "application/json"
+                  } ],
+                  "api_name" : "",
+                  "raw_body" : "{% assign total_balance = Data.Liquid.InvoiceAmount -%}\r\n{% assign totalBeforeRounding = total_balance | times: Data.Workflow.percentFee -%}\r\n{% assign totalCost = totalBeforeRounding | round: 2 -%}\r\n{\r\n  \"existingAccountNumber\": \"{{Data.Liquid.AccountNumber}}\",\r\n  \"orderDate\": \"{{Data.Workflow.ExecutionDate}}\",\r\n  \"subscriptions\": [\r\n    {\r\n      \"orderActions\": [\r\n        {\r\n          \"createSubscription\": {\r\n            \"subscribeToRatePlans\": [\r\n              {\r\n                \"chargeOverrides\": [\r\n                  {\r\n                    \"productRatePlanChargeId\": \"{{Data.Workflow.ChargeID}}\",\r\n                    \"pricing\": {\r\n                      \"oneTimeFlatFee\": {\r\n                        \"listPrice\": \"{{totalCost}}\"\r\n                      }\r\n                    }\r\n                  }\r\n                ],\r\n                \"productRatePlanId\": \"{{Data.Workflow.PlanID}}\"\r\n              }\r\n            ],\r\n            \"terms\": {\r\n              \"initialTerm\": {\r\n                \"startDate\": \"{{Data.Workflow.ExecutionDate}}\",\r\n                \"termType\": \"EVERGREEN\"\r\n              }\r\n            }\r\n          },\r\n          \"triggerDates\": [\r\n            {\r\n              \"name\": \"ServiceActivation\",\r\n              \"triggerDate\": \"{{Data.Workflow.ExecutionDate}}\"\r\n            },\r\n            {\r\n              \"name\": \"CustomerAcceptance\",\r\n              \"triggerDate\": \"{{Data.Workflow.ExecutionDate}}\"\r\n            }\r\n          ],\r\n          \"type\": \"CreateSubscription\"\r\n        }\r\n      ]\r\n    }\r\n  ]\r\n}",
+                  "body_type" : "raw",
+                  "form_datas" : [ {
+                    "key" : "",
+                    "value" : "",
+                    "upload" : "false"
+                  } ],
+                  "validation" : {
+                    "replace" : "false",
+                    "zuora_call" : "true",
+                    "status_codes" : [ "", "200", "" ],
+                    "payload_location" : "Callout"
+                  },
+                  "api_doc_url" : "https://www.zuora.com/developer/api-reference/#operation/POST_Subscription",
+                  "retry_rules" : {
+                    "retry_count" : "0",
+                    "retry_window" : "30",
+                    "current_retry_count" : "0"
+                  },
+                  "authorization" : {
+                    "type" : "zuora"
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "validate_response" : "false",
+                  "validation_scheme" : "",
+                  "disable_validation" : "true",
+                  "delete_payload_paths" : [ ],
+                  "include_response_code" : "true",
+                  "notification_history_enabled" : "false"
+                },
+                "action_type" : "Callout",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 169,
+                "css" : {
+                  "top" : "320px",
+                  "left" : "1170px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 4,
+                "name" : "Delete Invoice",
+                "parameters" : {
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Delete",
+                "object" : "Invoice",
+                "object_id" : "{{Data.Liquid.InvoiceId}}",
+                "call_type" : "SOAP",
+                "task_id" : 777,
+                "css" : {
+                  "top" : "320px",
+                  "left" : "700px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 5,
+                "name" : "Cancel Invoice",
+                "parameters" : {
+                  "url" : "{{ Credentials.zuora.rest_endpoint | replace: \"/v1/\", \"\" }}/v1/action/update",
+                  "files" : [ ],
+                  "method" : "POST",
+                  "headers" : [ {
+                    "key" : "Content-Type",
+                    "value" : "application/json"
+                  } ],
+                  "api_name" : "",
+                  "raw_body" : "{\r\n    \"objects\": [\r\n        {\r\n            \"Status\": \"Canceled\",\r\n            \"Id\": \"{{Data.Liquid.InvoiceId}}\"\r\n        }\r\n    ],\r\n    \"type\": \"Invoice\"\r\n}",
+                  "body_type" : "raw",
+                  "form_datas" : [ {
+                    "key" : "",
+                    "value" : "",
+                    "upload" : "false"
+                  } ],
+                  "validation" : {
+                    "replace" : "false",
+                    "zuora_call" : "true",
+                    "status_codes" : [ "", "200", "" ],
+                    "payload_location" : "Callout"
+                  },
+                  "api_doc_url" : "https://www.zuora.com/developer/api-reference/#operation/Action_POSTupdate",
+                  "retry_rules" : {
+                    "retry_count" : "0",
+                    "retry_window" : "30",
+                    "current_retry_count" : "0"
+                  },
+                  "authorization" : {
+                    "type" : "zuora"
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "validate_response" : "false",
+                  "validation_scheme" : "",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ],
+                  "include_response_code" : "true",
+                  "notification_history_enabled" : "false"
+                },
+                "action_type" : "Callout",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 777,
+                "css" : {
+                  "top" : "10px",
+                  "left" : "2260px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 6,
+                "name" : "Liquid",
+                "parameters" : {
+                  "code" : "{%- assign InvoiceId = Data.LinkData.invoiceid -%}\r\n{%- assign InvoiceAmount = Data.LinkData.invoiceamount -%}\r\n{%- assign InvoiceStatus = Data.LinkData.invoicestatus -%}\r\n{%- assign InvoiceBalance = Data.LinkData.invoicebalance -%}\r\n{%- assign InvoiceSourceId = Data.LinkData.invoicesourceid -%}\r\n{%- assign InvoiceInvoiceDate = Data.LinkData.invoicedate -%}\r\n{%- assign InvoiceInvoiceNumber = Data.LinkData.invoicenumber -%}\r\n{%- assign AccountId = Data.LinkData.accountid -%}\r\n{%- assign AccountName = Data.LinkData.accountname -%}\r\n{%- assign AccountNumber = Data.LinkData.accountnumber -%}\r\n{%- assign AccountThreepercentFee = Data.LinkData.accountthreepercentfee__c -%}",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Logic::Liquid",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 777,
+                "css" : {
+                  "top" : "10px",
+                  "left" : "1870px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 7,
+                "name" : "Generate New Invoice",
+                "parameters" : {
+                  "fields" : {
+                    "Invoice" : {
+                      "AutoPost" : "true",
+                      "AutoRenew" : "true",
+                      "TargetDate" : "{{Data.Liquid.InvoiceInvoiceDate}}",
+                      "EffectiveDate" : "{{Data.Liquid.InvoiceInvoiceDate}}",
+                      "IncludesUsage" : "true",
+                      "IncludesOneTime" : "true",
+                      "SubscriptionIds" : "",
+                      "IncludesRecurring" : "true",
+                      "IgnoreBlankInvoices" : "true"
+                    }
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "InvoiceGenerate",
+                "object" : "Invoice",
+                "object_id" : "{{Data.Liquid.AccountId}}",
+                "call_type" : "REST",
+                "task_id" : 3,
+                "css" : {
+                  "top" : "320px",
+                  "left" : "1640px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 8,
+                "name" : "Post Bill Run",
+                "parameters" : {
+                  "url" : "{{ Credentials.zuora.rest_endpoint | replace: \"/v1/\", \"\" }}/v1/action/update",
+                  "files" : [ {
+                    "key" : "Invoice__.csv.zip",
+                    "name" : "",
+                    "upload" : "false",
+                    "filename" : ""
+                  } ],
+                  "method" : "POST",
+                  "headers" : [ {
+                    "key" : "Content-Type",
+                    "value" : "application/json"
+                  } ],
+                  "api_name" : "",
+                  "raw_body" : "{\r\n    \"objects\": [\r\n        {\r\n            \"Status\": \"Posted\",\r\n            \"Id\": \"{{Data.Event.ObjectId}}\"\r\n        }\r\n    ],\r\n    \"type\": \"BillRun\"\r\n}",
+                  "body_type" : "raw",
+                  "form_datas" : [ {
+                    "key" : "",
+                    "value" : "",
+                    "upload" : "false"
+                  } ],
+                  "validation" : {
+                    "replace" : "false",
+                    "zuora_call" : "true",
+                    "status_codes" : [ "", "200", "" ],
+                    "payload_location" : "Callout"
+                  },
+                  "api_doc_url" : "https://www.zuora.com/developer/api-reference/#operation/Action_POSTupdate",
+                  "retry_rules" : {
+                    "retry_count" : "0",
+                    "retry_window" : "30",
+                    "current_retry_count" : "0"
+                  },
+                  "authorization" : {
+                    "type" : "zuora"
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "validate_response" : "false",
+                  "validation_scheme" : "",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ],
+                  "include_response_code" : "true",
+                  "notification_history_enabled" : "false"
+                },
+                "action_type" : "Callout",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 777,
+                "css" : {
+                  "top" : "-220px",
+                  "left" : "1750px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 9,
+                "name" : "Manual Trigger",
+                "parameters" : {
+                  "blocking" : "false",
+                  "delay_time" : "0",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Delay",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "-240px",
+                  "left" : "240px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 10,
+                "name" : "Retrieve Invoices",
+                "parameters" : {
+                  "mode" : "live",
+                  "query" : "select\r\n   account.id as accountid,\r\n   account.name as accountname,\r\n   account.accountnumber as accountnumber,\r\n   account.threepercentfee__c as accountthreepercentfee__c,\r\n   invoice.id as invoiceid,\r\n   invoice.amount as invoiceamount,\r\n   invoice.status as invoicestatus,\r\n   invoice.balance as invoicebalance,\r\n   invoice.sourceid as invoicesourceid,\r\n   invoice.invoicedate as invoicedate,\r\n   invoice.invoicenumber as invoicenumber\r\nfrom invoice \r\n   INNER JOIN\r\n      account \r\n      on account.id = invoice.accountId \r\n      AND account.threepercentfee__c = 'Yes'\r\nwhere\r\n   invoice.sourceid = '{{Data.Liquid.BillingRunId}}' \r\n   AND invoice.status = 'Draft'\r\n   AND not exists \r\n   (\r\n      select\r\n         1 \r\n      from\r\n         invoiceitem ii \r\n      where\r\n         ii.ProductRatePlanChargeId = '{{Data.Workflow.ChargeID}}' \r\n         AND ii.invoiceId = invoice.id \r\n   )",
+                  "fields" : [ "accountid", "accountname", "accountnumber", "accountthreepercentfee__c", "invoiceid", "invoiceamount", "invoicestatus", "invoicebalance", "invoicesourceid", "invoicedate", "invoicenumber" ],
+                  "compressed" : "true",
+                  "index_join" : "false",
+                  "file_format" : "csv",
+                  "read_deleted" : "false",
+                  "obtain_fields" : "false",
+                  "workflow_tags" : [ ],
+                  "polling_interval" : "30",
+                  "strict_variables" : "true",
+                  "zero_result_stop" : "false",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Data::Link",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 1,
+                "css" : {
+                  "top" : "10px",
+                  "left" : "1020px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 11,
+                "name" : "itr",
+                "parameters" : {
+                  "file_type" : "CSV",
+                  "chunk_size" : "0",
+                  "skip_headers" : "0",
+                  "skip_trailer" : "false",
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "LinkData.invoiceid",
+                  "strict_variables" : "true",
+                  "csv_header_filter" : "",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ],
+                  "generate_auto_headers" : "false"
+                },
+                "action_type" : "Iterate",
+                "object" : "LinkRun__10.csv.zip",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 10,
+                "css" : {
+                  "top" : "10px",
+                  "left" : "1410px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : 3,
+                "source_task_id" : null,
+                "target_task_id" : 1,
+                "linkage_type" : "BillingRunCompletion"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 4,
+                "target_task_id" : 3,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 5,
+                "target_task_id" : 4,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 3,
+                "target_task_id" : 7,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 7,
+                "target_task_id" : 2,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : 3,
+                "source_task_id" : null,
+                "target_task_id" : 9,
+                "linkage_type" : "Start"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 9,
+                "target_task_id" : 1,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 1,
+                "target_task_id" : 10,
+                "linkage_type" : "True"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 10,
+                "target_task_id" : 11,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 11,
+                "target_task_id" : 8,
+                "linkage_type" : "Complete"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 11,
+                "target_task_id" : 6,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 6,
+                "target_task_id" : 5,
+                "linkage_type" : "Success"
+              } ]
+            }
+          },
+          "5" : {
+            "workflow created for config template_2024-07-05_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "workflow created for config template_2024-07-05",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 5,
+                "name" : "workflow created for config template_2024-07-05",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ {
+                    "index" : "0",
+                    "default" : "A-S00000043",
+                    "datatype" : "Text",
+                    "required" : false,
+                    "callout_id" : "SubscriptionName",
+                    "field_name" : "SubscriptionName",
+                    "object_name" : "Workflow"
+                  } ],
+                  "skipping_check" : "",
+                  "file_encryption" : "",
+                  "show_run_prompt" : "",
+                  "callout_response" : "workflow instance",
+                  "secure_error_msgs" : "",
+                  "disable_pending_status" : false
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : "",
+                "timezone" : "",
+                "status" : "Inactive",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "30px"
+                },
+                "notifications" : { },
+                "call_type" : "REALTIME",
+                "priority" : "High",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "zuora_org_ids" : [ ],
+                "extension_id" : null
+              },
+              "tasks" : [ {
+                "id" : 16,
+                "name" : "Get Account Id",
+                "parameters" : {
+                  "fields" : {
+                    "Subscription" : {
+                      "AccountId" : "true"
+                    }
+                  },
+                  "placement" : "",
+                  "batch_size" : "2000",
+                  "where_clause" : "Name = '{{Data.Workflow.SubscriptionName}}' limit 1",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "false",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Query",
+                "object" : "Subscription",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "10px",
+                  "left" : "280px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 17,
+                "name" : "Get Notification Email",
+                "parameters" : {
+                  "fields" : {
+                    "EmailHistory" : {
+                      "ContentFileId" : "true"
+                    }
+                  },
+                  "placement" : "",
+                  "batch_size" : "2000",
+                  "where_clause" : "BillingAccount = '{{Data.Subscription[0].AccountId}}' ",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "false",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Query",
+                "object" : "EmailHistory",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 16,
+                "css" : {
+                  "top" : "10px",
+                  "left" : "640px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 18,
+                "name" : "Dowload File",
+                "parameters" : {
+                  "files" : [ ],
+                  "source" : "zuora",
+                  "file_id" : "{{Data.EmailHistory[0].ContentFileId}}",
+                  "filename" : "WelcomeEmail",
+                  "body_type" : "none",
+                  "form_datas" : [ {
+                    "key" : "",
+                    "value" : "",
+                    "upload" : "false"
+                  } ],
+                  "authorization" : {
+                    "type" : "none"
+                  },
+                  "workflow_tags" : [ ],
+                  "include_timestamp" : "true",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "File::DownloadFile",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 17,
+                "css" : {
+                  "top" : "10px",
+                  "left" : "1060px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 19,
+                "name" : "Email Link",
+                "parameters" : {
+                  "email" : {
+                    "cc" : [ ],
+                    "to" : [ "gedi.sf.support@reply.it" ],
+                    "bcc" : [ ],
+                    "from" : "workflow@zuora.com",
+                    "name" : "Test - Recupero Welcome Email",
+                    "subject" : "Recupero Welcome Email",
+                    "reply_to" : "workflow@zuora.com",
+                    "template" : "<p>\r\n  Gentile utente,<br/>\r\n  puoi trovare la welcome email dell'abbonamento {{Data.Workflow.SubscriptionName}} al seguente link.  \r\n</p>\r\n<p>\r\n  {{Data.Files.FileDownload__32144603.presigned_url}}\r\n</p>\r\n<p>\r\n  Grazie\r\n</p>",
+                    "attachments" : {
+                      "file_ids" : [ "" ],
+                      "invoices" : "false"
+                    },
+                    "return_path" : "workflow@zuora.com",
+                    "preview_only" : "false",
+                    "disable_editor" : "true"
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ],
+                  "notification_history_enabled" : "false"
+                },
+                "action_type" : "Email",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 18,
+                "css" : {
+                  "top" : "-260px",
+                  "left" : "1460px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 20,
+                "name" : "Liquid",
+                "parameters" : {
+                  "code" : "{% assign example = Data.Workflow %}\r\n{% assign _example = Data.Workflow %}",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Logic::Liquid",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 18,
+                "css" : {
+                  "top" : "-460px",
+                  "left" : "1270px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 21,
+                "name" : "Email File",
+                "parameters" : {
+                  "email" : {
+                    "cc" : [ ],
+                    "to" : [ "aguo@zuora.com" ],
+                    "bcc" : [ ],
+                    "from" : "workflow@zuora.com",
+                    "name" : "aguo@zuora.com",
+                    "subject" : "Test Welcome Email",
+                    "reply_to" : "workflow@zuora.com",
+                    "template" : "<p>\r\n  Gentile utente,<br/>\r\n  puoi trovare la welcome email dell'abbonamento {{Data.Workflow.SubscriptionName}} nel file allegato.  \r\n</p>\r\n<p>\r\n  Grazie\r\n</p>",
+                    "attachments" : {
+                      "file_ids" : [ "" ],
+                      "invoices" : "false"
+                    },
+                    "return_path" : "workflow@zuora.com",
+                    "preview_only" : "false",
+                    "disable_editor" : "true"
+                  },
+                  "files" : {
+                    "FileDownload__4303" : {
+                      "name" : "WelcomeEmail_{{Data.Workflow.SubscriptionName}}.doc",
+                      "attach" : "true"
+                    }
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "false",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ],
+                  "notification_history_enabled" : "false"
+                },
+                "action_type" : "Email",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 18,
+                "css" : {
+                  "top" : "100px",
+                  "left" : "1460px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 22,
+                "name" : "Liquid test",
+                "parameters" : {
+                  "code" : "{% assign example = Data.Workflow %}\r\n{% assign _example = Data.Workflow %}",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "false",
+                  "disable_validation" : "false",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Logic::Liquid",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 18,
+                "css" : {
+                  "top" : "-280px",
+                  "left" : "770px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : 5,
+                "source_task_id" : null,
+                "target_task_id" : 16,
+                "linkage_type" : "Start"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 16,
+                "target_task_id" : 17,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 17,
+                "target_task_id" : 18,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 18,
+                "target_task_id" : 22,
+                "linkage_type" : "Success"
+              } ]
+            }
+          },
+          "39" : {
+            "Payment to Provision_0.0.1" : {
+              "workflow_definition" : {
+                "name" : "Payment to Provision",
+                "description" : "",
+                "category" : "Default",
+                "ui_page_roles" : [ ]
+              },
+              "workflow" : {
+                "id" : 39,
+                "name" : "Payment to Provision",
+                "description" : "",
+                "parameters" : {
+                  "fields" : [ {
+                    "index" : "0",
+                    "default" : "2c92c0f86669605201667544a5c754cf",
+                    "datatype" : "Text",
+                    "required" : false,
+                    "callout_id" : "AccountId",
+                    "field_name" : "AccountId",
+                    "object_name" : "Workflow"
+                  }, {
+                    "index" : "1",
+                    "default" : "2c92c0fb66810a1001669362606751df",
+                    "datatype" : "Text",
+                    "required" : false,
+                    "callout_id" : "PaymentId",
+                    "field_name" : "PaymentId",
+                    "object_name" : "Workflow"
+                  } ],
+                  "skipping_check" : "redis",
+                  "file_encryption" : "false",
+                  "show_run_prompt" : null,
+                  "callout_response" : "workflow instance",
+                  "secure_error_msgs" : "false",
+                  "disable_pending_status" : true
+                },
+                "data" : { },
+                "type" : "Workflow::Setup",
+                "ondemand_trigger" : true,
+                "callout_trigger" : true,
+                "scheduled_trigger" : false,
+                "interval" : null,
+                "timezone" : null,
+                "status" : "Active",
+                "css" : {
+                  "top" : "40px",
+                  "left" : "30px"
+                },
+                "notifications" : {
+                  "emails" : [ ],
+                  "failure" : false,
+                  "pending" : false,
+                  "success" : false
+                },
+                "call_type" : "ASYNC",
+                "priority" : "Medium",
+                "delete_ttl" : 30,
+                "version" : "0.0.1",
+                "event_trigger" : false,
+                "zuora_org_id" : null,
+                "ui_pages" : { },
+                "solution_id" : null,
+                "zuora_org_ids" : [ ],
+                "extension_id" : null
+              },
+              "tasks" : [ {
+                "id" : 93,
+                "name" : "Query All Subscription IDs on Account",
+                "parameters" : {
+                  "fields" : {
+                    "Subscription" : {
+                      "Id" : "true"
+                    }
+                  },
+                  "placement" : "",
+                  "batch_size" : "2000",
+                  "where_clause" : " InvoiceOwnerId = '{{Data.Workflow.AccountId}}'",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Query",
+                "object" : "Subscription",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : null,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "350px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 94,
+                "name" : "Iterate through Subscriptions",
+                "parameters" : {
+                  "chunk_size" : "0",
+                  "workflow_tags" : [ ],
+                  "iteration_type" : "Unique-Field",
+                  "iteration_field" : "Id",
+                  "strict_variables" : "true",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Iterate",
+                "object" : "Subscription",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 93,
+                "css" : {
+                  "top" : "40px",
+                  "left" : "650px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 95,
+                "name" : "Query II's with $0 Balance Tied to Subscriptions on Account",
+                "parameters" : {
+                  "fields" : {
+                    "InvoiceItem" : {
+                      "SKU" : "true",
+                      "Quantity" : "true",
+                      "ProductId" : "true",
+                      "ChargeName" : "true",
+                      "ProductName" : "true",
+                      "ChargeNumber" : "true",
+                      "ServiceEndDate" : "true",
+                      "SubscriptionId" : "true",
+                      "RatePlanChargeId" : "true",
+                      "ServiceStartDate" : "true",
+                      "SubscriptionNumber" : "true"
+                    }
+                  },
+                  "placement" : "",
+                  "batch_size" : "2000",
+                  "where_clause" : " SubscriptionId = '{{Data.Subscription.Id}}' AND  Balance = '0'",
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "delete_payload_paths" : [ ]
+                },
+                "action_type" : "Query",
+                "object" : "InvoiceItem",
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 94,
+                "css" : {
+                  "top" : "210px",
+                  "left" : "180px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              }, {
+                "id" : 96,
+                "name" : "Callout to Provision",
+                "parameters" : {
+                  "url" : "https://hookbin.com/b92Nm0Zga1F1Md8mq6NW",
+                  "datas" : [ {
+                    "key" : "",
+                    "value" : ""
+                  } ],
+                  "files" : [ ],
+                  "method" : "POST",
+                  "headers" : [ {
+                    "key" : "",
+                    "value" : ""
+                  } ],
+                  "raw_body" : "{% assign group_by = Data.InvoiceItem | group_by: \"SubscriptionNumber\" %}\r\n{{ group_by | to_json }}",
+                  "body_type" : "raw",
+                  "validation" : {
+                    "zuora_call" : "false",
+                    "status_codes" : [ "", "200" ]
+                  },
+                  "retry_rules" : {
+                    "retry_count" : "0",
+                    "retry_window" : "30",
+                    "current_retry_count" : "0"
+                  },
+                  "authorization" : {
+                    "type" : "none"
+                  },
+                  "workflow_tags" : [ ],
+                  "strict_variables" : "true",
+                  "validate_response" : "false",
+                  "validation_scheme" : "",
+                  "delete_payload_paths" : [ ],
+                  "include_response_code" : "false"
+                },
+                "action_type" : "Callout",
+                "object" : null,
+                "object_id" : null,
+                "call_type" : "SOAP",
+                "task_id" : 95,
+                "css" : {
+                  "top" : "210px",
+                  "left" : "670px"
+                },
+                "concurrent_limit" : 9999999,
+                "tags" : [ ],
+                "priority" : "Medium",
+                "assignment" : [ ],
+                "zuora_org_id" : null,
+                "zuora_org_ids" : [ ]
+              } ],
+              "linkages" : [ {
+                "source_workflow_id" : 39,
+                "source_task_id" : null,
+                "target_task_id" : 93,
+                "linkage_type" : "Finish"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 93,
+                "target_task_id" : 94,
+                "linkage_type" : "Success"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 94,
+                "target_task_id" : 95,
+                "linkage_type" : "For Each"
+              }, {
+                "source_workflow_id" : null,
+                "source_task_id" : 95,
+                "target_task_id" : 96,
+                "linkage_type" : "Success"
+              } ]
+            }
+          }
+        },
+        "featureDisabled" : false
+      },
+      "response" : [ {
+        "id" : "783967e5-b838-4460-8280-5845db9ddd89",
+        "key" : "Credit Card Fee_0.0.1",
+        "segregationKey" : "Credit Card Fee",
+        "componentType" : "WorkFlows",
+        "url" : "3",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 3,
+          "name" : "Credit Card Fee",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : false,
+          "scheduledTrigger" : false,
+          "interval" : "",
+          "timezone" : "",
+          "createdAt" : "2024-08-05T23:26:03.921-07:00",
+          "updatedAt" : "2024-08-05T23:26:03.921-07:00",
+          "priority" : "High",
+          "active_version" : {
+            "id" : 3,
+            "name" : "Credit Card Fee",
+            "definitionId" : 3,
+            "definitionName" : "Credit Card Fee",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : false,
+            "scheduledTrigger" : false,
+            "interval" : "",
+            "timezone" : "",
+            "createdAt" : "2024-08-05T23:26:03.921-07:00",
+            "updatedAt" : "2024-08-05T23:26:03.921-07:00",
+            "priority" : "High",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "BillRunStatus",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "1",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "BillingRunId",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "2",
+              "default" : "{{ENTER_CHARGE_ID_HERE}}",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "ChargeID",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "3",
+              "default" : "0.03",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "percentFee",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "4",
+              "default" : "{{ENTER_PLAN_ID_HERE}}",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "PlanID",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "5",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "TargetDate",
+              "object_name" : "Workflow"
+            } ],
+            "created_by" : {
+              "work_email" : "chenxin.sun@zuora.com",
+              "created_at" : "2024-08-05T23:24:59.285-07:00",
+              "updated_at" : "2024-08-05T23:24:59.285-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 3,
+            "name" : "Credit Card Fee",
+            "definitionId" : 3,
+            "definitionName" : "Credit Card Fee",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : false,
+            "scheduledTrigger" : false,
+            "interval" : "",
+            "timezone" : "",
+            "createdAt" : "2024-08-05T23:26:03.921-07:00",
+            "updatedAt" : "2024-08-05T23:26:03.921-07:00",
+            "priority" : "High",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "BillRunStatus",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "1",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "BillingRunId",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "2",
+              "default" : "{{ENTER_CHARGE_ID_HERE}}",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "ChargeID",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "3",
+              "default" : "0.03",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "percentFee",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "4",
+              "default" : "{{ENTER_PLAN_ID_HERE}}",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "PlanID",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "5",
+              "default" : "",
+              "datatype" : "Text",
+              "required" : true,
+              "field_name" : "TargetDate",
+              "object_name" : "Workflow"
+            } ],
+            "created_by" : {
+              "work_email" : "chenxin.sun@zuora.com",
+              "created_at" : "2024-08-05T23:24:59.285-07:00",
+              "updated_at" : "2024-08-05T23:24:59.285-07:00"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "26e54895-c2c9-46ca-8e7d-8016978d1634"
+      }, {
+        "id" : "a19d3805-2e82-47e5-b41c-954ba9c2cd1b",
+        "key" : "workflow created for config template_2024-07-05_0.0.1",
+        "segregationKey" : "workflow created for config template_2024-07-05",
+        "componentType" : "WorkFlows",
+        "url" : "5",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 5,
+          "name" : "workflow created for config template_2024-07-05",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : "",
+          "timezone" : "",
+          "createdAt" : "2025-02-18T23:12:59.915-08:00",
+          "updatedAt" : "2025-02-18T23:12:59.915-08:00",
+          "priority" : "High",
+          "active_version" : {
+            "id" : 5,
+            "name" : "workflow created for config template_2024-07-05",
+            "definitionId" : 5,
+            "definitionName" : "workflow created for config template_2024-07-05",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "",
+            "timezone" : "",
+            "createdAt" : "2025-02-18T23:12:59.915-08:00",
+            "updatedAt" : "2025-02-18T23:12:59.915-08:00",
+            "priority" : "High",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "A-S00000043",
+              "datatype" : "Text",
+              "required" : false,
+              "callout_id" : "SubscriptionName",
+              "field_name" : "SubscriptionName",
+              "object_name" : "Workflow"
+            } ],
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ {
+            "id" : 5,
+            "name" : "workflow created for config template_2024-07-05",
+            "definitionId" : 5,
+            "definitionName" : "workflow created for config template_2024-07-05",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : "",
+            "timezone" : "",
+            "createdAt" : "2025-02-18T23:12:59.915-08:00",
+            "updatedAt" : "2025-02-18T23:12:59.915-08:00",
+            "priority" : "High",
+            "status" : "Inactive",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "A-S00000043",
+              "datatype" : "Text",
+              "required" : false,
+              "callout_id" : "SubscriptionName",
+              "field_name" : "SubscriptionName",
+              "object_name" : "Workflow"
+            } ],
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          } ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "26e54895-c2c9-46ca-8e7d-8016978d1634"
+      }, {
+        "id" : "9cec089f-9e06-4e0d-9288-99992a5e89c9",
+        "key" : "Payment to Provision_0.0.1",
+        "segregationKey" : "Payment to Provision",
+        "componentType" : "WorkFlows",
+        "url" : "39",
+        "pathPattern" : null,
+        "method" : "GET",
+        "payload" : {
+          "id" : 39,
+          "name" : "Payment to Provision",
+          "description" : "",
+          "status" : "Active",
+          "ondemandTrigger" : true,
+          "calloutTrigger" : true,
+          "scheduledTrigger" : false,
+          "interval" : null,
+          "timezone" : null,
+          "createdAt" : "2025-03-12T23:24:40.753-07:00",
+          "updatedAt" : "2025-03-12T23:24:40.753-07:00",
+          "priority" : "Medium",
+          "active_version" : {
+            "id" : 39,
+            "name" : "Payment to Provision",
+            "definitionId" : 39,
+            "definitionName" : "Payment to Provision",
+            "description" : "",
+            "type" : "Workflow::Setup",
+            "version" : "0.0.1",
+            "ondemandTrigger" : true,
+            "calloutTrigger" : true,
+            "scheduledTrigger" : false,
+            "interval" : null,
+            "timezone" : null,
+            "createdAt" : "2025-03-12T23:24:40.753-07:00",
+            "updatedAt" : "2025-03-12T23:24:40.753-07:00",
+            "priority" : "Medium",
+            "status" : "Active",
+            "inputFields" : [ {
+              "index" : "0",
+              "default" : "2c92c0f86669605201667544a5c754cf",
+              "datatype" : "Text",
+              "required" : false,
+              "callout_id" : "AccountId",
+              "field_name" : "AccountId",
+              "object_name" : "Workflow"
+            }, {
+              "index" : "1",
+              "default" : "2c92c0fb66810a1001669362606751df",
+              "datatype" : "Text",
+              "required" : false,
+              "callout_id" : "PaymentId",
+              "field_name" : "PaymentId",
+              "object_name" : "Workflow"
+            } ],
+            "created_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            },
+            "updated_by" : {
+              "work_email" : "N/A",
+              "created_at" : "N/A",
+              "updated_at" : "N/A"
+            }
+          },
+          "latest_inactive_versions" : [ ]
+        },
+        "child" : null,
+        "childUniqueField" : null,
+        "selectedChild" : [ ],
+        "result" : "DONE",
+        "error" : "-",
+        "templateId" : "26e54895-c2c9-46ca-8e7d-8016978d1634"
+      } ],
+      "errors" : [ ]
+    } ],
+    "customFields" : [ ],
+    "dataAccessControl" : [ ],
+    "customObjects" : [ ],
+    "reporting" : [ ],
+    "mediation" : [ ],
+    "customLogic" : [ ],
+    "revenue" : [ ],
+    "awsInfo" : null
+  }
+}
